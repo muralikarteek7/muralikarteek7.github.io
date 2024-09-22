@@ -1,9 +1,9 @@
 # Associations
 # comment out the urls if you do not wish to display them
 
-- organization: PETA
-  role: Volunteer
-  year: 2001 &mdash; 2010
+- organization: Konica Minolta
+  role: Robotics Engineer
+  year: 2021 &mdash; 2024
   url: https://www.peta.org/
   summary: Organized fund drives and participated in fundraising events for the benefit of PETA's local Springfield operations.
 
