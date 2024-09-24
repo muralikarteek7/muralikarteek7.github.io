@@ -2,15 +2,17 @@
 # uncomment the urls if you wish to display them, and add your own URL
 
 # jazznotes.io
-- project: jazznotes.io
-  role: Founder & Primary Developer
-  duration: 2012 &mdash; Present
+- project: PORTRS : PAYLOAD ORGANIZATION AND TRANSPORTATION ROBOTIC SYSTEM
+  company: Konica Minolta & Japan Aerospace Exploration Agency
+  role: Computer Vision Engineer
+  duration: 2023 &mdash; 2024
   # url: "#"
-  description: Jazz Notes is an open source node/ember app that helps you keep track of your music compositions and new ideas.
+  description: Collaborated with JAXA Japanese Space Agency to create a novel solution for visually assisting multi-limbed robot. Designed and optimized an AI model for grasping the existing in-ship interface and manipulating various objects inside International Space Station.
 
 # Springfield Community Outreach Group
-- project: Springfield Community Outreach Group
-  role: Co-Founder & Organizer
-  duration: 2007 &mdash; Present
+- project: Multitask Learning with Language using AIRL
+  company: Konica Minolta & Georgia Tech
+  role: Robotics Engineer
+  duration: 2021 &mdash; 2023
   # url: "#"
-  description: SCOG is a local monthly meetup in Springfield where we share opportunities to volunteer in the community and organize support for families and neighborhoods in need of assistance that the community can provide.
+  description: Achieved a remarkable 72\% accuracy milestone, demonstrating up to a 200\% enhancement in zero-shot task success rates and accelerated skill transfer to novel tasks, showcasing the power of language-based goal specification in robotics.
