@@ -1,67 +1,662 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karteek | Photography Portfolio</title>
-    <link rel="stylesheet" href="camerastyle.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karteek Gandiboyina | Photography</title>
+  <link rel="icon" type="image/png" href="teasers/icon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #05080f;
+      --surface:   #0c1018;
+      --border:    #1a2030;
+      --text:      #c8d0dc;
+      --muted:     #4a5568;
+      --accent:    #f59e0b;
+      --white:     #f1f5f9;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* ── NAV ─────────────────────────────── */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 clamp(1.2rem, 5vw, 3rem);
+      height: 58px;
+      background: rgba(5, 8, 15, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-brand {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--white);
+      text-decoration: none;
+      letter-spacing: -0.3px;
+    }
+
+    .nav-brand span { color: var(--accent); }
+
+    .nav-links { display: flex; align-items: center; gap: 0.5rem; }
+
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 500;
+      padding: 6px 13px;
+      border-radius: 6px;
+      transition: background 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover { background: var(--border); color: var(--white); }
+
+    .nav-links a.active {
+      background: rgba(245,158,11,0.15);
+      color: var(--accent);
+    }
+
+    .nav-links a.back-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* ── HERO ─────────────────────────────── */
+    .hero {
+      padding-top: 58px;
+      height: 38vh;
+      min-height: 240px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(5,8,15,0.2) 0%, rgba(5,8,15,0.85) 100%),
+                  url('camera/_DSC2262-Enhanced-NR.jpg') center/cover no-repeat;
+      filter: brightness(0.45);
+      z-index: 0;
+    }
+
+    .hero-content { position: relative; z-index: 1; padding: 0 1rem; }
+
+    .hero-eyebrow {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+
+    .hero-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+      margin-bottom: 0.8rem;
+    }
+
+    .hero-sub {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.55);
+      max-width: 420px;
+    }
+
+    .photo-count {
+      margin-top: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.4);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 4px 14px;
+      border-radius: 20px;
+    }
+
+    /* ── GALLERY ──────────────────────────── */
+    .gallery-section {
+      padding: 3rem clamp(0.75rem, 4vw, 2.5rem) 4rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    /* Masonry via CSS columns */
+    .masonry {
+      columns: 4 240px;
+      column-gap: 10px;
+    }
+
+    .masonry-item {
+      break-inside: avoid;
+      margin-bottom: 10px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 6px;
+      cursor: pointer;
+      background: var(--border);
+    }
+
+    .masonry-item img {
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: transform 0.4s ease, filter 0.3s ease;
+      filter: brightness(0.92);
+    }
+
+    .masonry-item:hover img {
+      transform: scale(1.04);
+      filter: brightness(1.05);
+    }
+
+    .masonry-item .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s;
+    }
+
+    .masonry-item:hover .overlay {
+      background: rgba(0,0,0,0.25);
+    }
+
+    .masonry-item .overlay i {
+      color: white;
+      font-size: 1.4rem;
+      opacity: 0;
+      transform: scale(0.8);
+      transition: opacity 0.25s, transform 0.25s;
+    }
+
+    .masonry-item:hover .overlay i {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* ── LIGHTBOX ─────────────────────────── */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: rgba(0,0,0,0.96);
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn 0.2s ease;
+    }
+
+    .lightbox.open { display: flex; }
+
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    .lightbox-img-wrap {
+      position: relative;
+      max-width: 92vw;
+      max-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox-img-wrap img {
+      max-width: 88vw;
+      max-height: 88vh;
+      object-fit: contain;
+      border-radius: 4px;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.7);
+      transition: opacity 0.2s;
+    }
+
+    .lb-btn {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: white;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.2s;
+      z-index: 1010;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .lb-btn:hover { background: rgba(255,255,255,0.18); }
+    .lb-prev { left: clamp(8px, 2vw, 24px); }
+    .lb-next { right: clamp(8px, 2vw, 24px); }
+
+    .lb-close {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1rem;
+      z-index: 1010;
+      transition: background 0.2s;
+    }
+
+    .lb-close:hover { background: rgba(255,255,255,0.2); }
+
+    .lb-counter {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 1px;
+      z-index: 1010;
+    }
+
+    /* ── FOOTER ──────────────────────────── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { color: #fcd34d; }
+
+    /* ── MOBILE ───────────────────────────── */
+    @media (max-width: 600px) {
+      .masonry { columns: 2 140px; column-gap: 6px; }
+      .masonry-item { margin-bottom: 6px; }
+      .lb-btn { width: 38px; height: 38px; }
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <ul>
-                <!-- <li><a href="#">Home</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>-->
-            </ul>
-        </nav>
-    </header>
 
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="index.html" class="nav-brand">KG <span>·</span> Photography</a>
+    <div class="nav-links">
+      <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Portfolio</a>
+      <a href="mailto:gkarteek99@gmail.com" class="active"><i class="fas fa-envelope"></i></a>
+    </div>
+  </nav>
 
-    <section id="gallery">
-        <h2>My Pixels</h2>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Part-time engineer &nbsp;·&nbsp; full-time observer</p>
+      <h1 class="hero-title">Through the Lens</h1>
+      <p class="hero-sub">Moments captured between robotics experiments — mostly travel, nature, and street.</p>
+      <div class="photo-count"><i class="fas fa-images"></i> 57 photographs</div>
+    </div>
+  </section>
 
-        <div class="gallery-grid">
-            
-            <img src="camera/1.jpg" alt="Photo 1" class="full-res">
-            <img src="camera/2.jpg" alt="Photo 2" class="full-res">
-            <img src="camera/3.jpg" alt="Photo 3" class="full-res">
-            <img src="camera/4.jpg" alt="Photo 4" class="full-res">
-            <img src="camera/5.jpg" alt="Photo 5" class="full-res">
-            <img src="camera/6.jpg" alt="Photo 6" class="full-res">
-            <img src="camera/7.jpg" alt="Photo 7" class="full-res">
-            <img src="camera/8.jpg" alt="Photo 8" class="full-res">
-            <img src="camera/9.jpg" alt="Photo 9" class="full-res">
-            <img src="camera/10.jpg" alt="Photo 10" class="full-res">
-            <img src="camera/11.jpg" alt="Photo 11" class="full-res">
-            <img src="camera/12.jpg" alt="Photo 12" class="full-res">
-            <img src="camera/13.jpg" alt="Photo 13" class="full-res">
+  <!-- GALLERY -->
+  <section class="gallery-section">
+    <div class="masonry" id="gallery">
 
+      <div class="masonry-item" onclick="openLightbox(0)">
+        <img src="camera/1.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(1)">
+        <img src="camera/2.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(2)">
+        <img src="camera/3.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(3)">
+        <img src="camera/4.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(4)">
+        <img src="camera/5.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(5)">
+        <img src="camera/6.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(6)">
+        <img src="camera/7.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(7)">
+        <img src="camera/8.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(8)">
+        <img src="camera/9.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(9)">
+        <img src="camera/10.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(10)">
+        <img src="camera/11.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(11)">
+        <img src="camera/12.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(12)">
+        <img src="camera/13.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(13)">
+        <img src="camera/DSC05756-Enhanced-NR.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(14)">
+        <img src="camera/DSC05844-Enhanced-NR-2 Copy.JPG" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(15)">
+        <img src="camera/DSC06410-Enhanced-NR.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(16)">
+        <img src="camera/DSC07404.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(17)">
+        <img src="camera/DSC07457.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(18)">
+        <img src="camera/DSC07626.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(19)">
+        <img src="camera/DSC07638.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(20)">
+        <img src="camera/DSC07691.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(21)">
+        <img src="camera/DSC08037.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(22)">
+        <img src="camera/DSC08116.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(23)">
+        <img src="camera/_DSC0413-Enhanced-NR.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(24)">
+        <img src="camera/_DSC0510-Enhanced-NR-2.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(25)">
+        <img src="camera/_DSC1220-Enhanced-NR.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(26)">
+        <img src="camera/_DSC1223-Enhanced-NR.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(27)">
+        <img src="camera/_DSC1632-Enhanced-NR.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(28)">
+        <img src="camera/_DSC1816-Enhanced-NR.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(29)">
+        <img src="camera/_DSC2090-Enhanced-NR-2.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(30)">
+        <img src="camera/_DSC2121-Enhanced-NR.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(31)">
+        <img src="camera/_DSC2262-Enhanced-NR.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(32)">
+        <img src="camera/_DSC2321-Enhanced-NR.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(33)">
+        <img src="camera/_DSC2384-Enhanced-NR.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(34)">
+        <img src="camera/_DSC3859-Enhanced-NR.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(35)">
+        <img src="camera/_DSC3912-Enhanced-NR.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(36)">
+        <img src="camera/_DSC4208-Enhanced-NR.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(37)">
+        <img src="camera/_DSC4318-Enhanced-NR.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(38)">
+        <img src="camera/_DSC4593-Enhanced-NR.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(39)">
+        <img src="camera/_DSC5361-Enhanced-NR.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(40)">
+        <img src="camera/_DSC5400-Enhanced-NR.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(41)">
+        <img src="camera/_DSC5568-Enhanced-NR.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(42)">
+        <img src="camera/_DSC5877-Enhanced-NR.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(43)">
+        <img src="camera/_DSC5945-Enhanced-NR.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(44)">
+        <img src="camera/_DSC7262-Enhanced-NR.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(45)">
+        <img src="camera/_DSC7347-Enhanced-NR.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(46)">
+        <img src="camera/_DSC7404-Enhanced-NR.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(47)">
+        <img src="camera/_DSC7468-Enhanced-NR.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(48)">
+        <img src="camera/_DSC7470-Enhanced-NR-2.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(49)">
+        <img src="camera/_DSC7598-Enhanced-NR.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(50)">
+        <img src="camera/_DSC7920-Enhanced-NR.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(51)">
+        <img src="camera/_DSC8023-Enhanced-NR.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(52)">
+        <img src="camera/_DSC8047-Enhanced-NR.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(53)">
+        <img src="camera/_DSC8169-Enhanced-NR-2.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(54)">
+        <img src="camera/_DSC8215-Enhanced-NR-2.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(55)">
+        <img src="camera/_DSC8273-Enhanced-NR.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(56)">
+        <img src="camera/_DSC8302-Enhanced-NR-2.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(57)">
+        <img src="camera/_DSC8917-Enhanced-NR.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="masonry-item" onclick="openLightbox(58)">
+        <img src="camera/_DSC9185-Enhanced-NR.jpg" alt="Photo" loading="lazy" />
+        <div class="overlay"><i class="fas fa-expand"></i></div>
+      </div>
 
-        </div>
-    </section>
+    </div>
+  </section>
 
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" onclick="handleLbClick(event)">
+    <button class="lb-close" onclick="closeLightbox()" aria-label="Close"><i class="fas fa-times"></i></button>
+    <button class="lb-btn lb-prev" onclick="event.stopPropagation(); shiftLightbox(-1)" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+    <div class="lightbox-img-wrap">
+      <img id="lb-img" src="" alt="Full photo" />
+    </div>
+    <button class="lb-btn lb-next" onclick="event.stopPropagation(); shiftLightbox(1)" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+    <div class="lb-counter" id="lb-counter"></div>
+  </div>
 
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Karteek Gandiboyina &nbsp;·&nbsp;
+      <a href="index.html">Portfolio</a> &nbsp;·&nbsp;
+      <a href="mailto:gkarteek99@gmail.com">gkarteek99@gmail.com</a>
+    </p>
+  </footer>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <form action="#">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name">
+  <script>
+    // Collect all image srcs from gallery items
+    const items = document.querySelectorAll('.masonry-item img');
+    const srcs  = Array.from(items).map(img => img.src);
+    let   cur   = 0;
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email">
+    function openLightbox(idx) {
+      cur = idx;
+      document.getElementById('lb-img').src = srcs[cur];
+      document.getElementById('lb-counter').textContent = (cur + 1) + ' / ' + srcs.length;
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message"></textarea>
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
 
-            <button type="submit">Send</button>
-        </form>
-    </section>
+    function shiftLightbox(dir) {
+      cur = (cur + dir + srcs.length) % srcs.length;
+      const img = document.getElementById('lb-img');
+      img.style.opacity = '0';
+      setTimeout(() => {
+        img.src = srcs[cur];
+        img.style.opacity = '1';
+        document.getElementById('lb-counter').textContent = (cur + 1) + ' / ' + srcs.length;
+      }, 150);
+    }
 
-    <footer>
-        <p>© 2024 Karteek Gandiboyina. All rights reserved.</p>
-    </footer>
+    function handleLbClick(e) {
+      if (e.target === document.getElementById('lightbox')) closeLightbox();
+    }
+
+    document.addEventListener('keydown', e => {
+      const lb = document.getElementById('lightbox');
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'Escape')      closeLightbox();
+      if (e.key === 'ArrowRight')  shiftLightbox(1);
+      if (e.key === 'ArrowLeft')   shiftLightbox(-1);
+    });
+
+    // Touch swipe support
+    let touchStartX = 0;
+    document.getElementById('lightbox').addEventListener('touchstart', e => {
+      touchStartX = e.touches[0].clientX;
+    });
+    document.getElementById('lightbox').addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 40) shiftLightbox(dx < 0 ? 1 : -1);
+    });
+  </script>
+
 </body>
 </html>
