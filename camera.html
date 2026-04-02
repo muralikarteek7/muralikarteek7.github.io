@@ -418,6 +418,12 @@
       'v1775091758/_DSC0413-Enhanced-NR_yvykwg.jpg',
     ];
 
+    // Shuffle (Fisher-Yates)
+    for (let i = photos.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [photos[i], photos[j]] = [photos[j], photos[i]];
+    }
+
     // Build masonry grid
     const gallery = document.getElementById('gallery');
     photos.forEach((path, i) => {
