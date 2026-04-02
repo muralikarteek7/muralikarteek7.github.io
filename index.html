@@ -1,969 +1,972 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Karteek Gandiboyina | Robotics Engineer</title>
   <link rel="icon" type="image/png" href="teasers/icon.png" />
-
-  <!-- Bootstrap 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
-  <!-- Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <style>
     :root {
-      --bg:          #05080f;
-      --surface:     #0c1018;
-      --surface2:    #111827;
-      --border:      #1c2535;
-      --border2:     #253044;
-      --text:        #b8c5d6;
-      --text-bright: #e8edf5;
-      --muted:       #4a5a72;
-      --primary:     #4f8ef7;
-      --primary-dim: rgba(79,142,247,0.15);
-      --accent:      #f59e0b;
-      --accent-dim:  rgba(245,158,11,0.15);
-      --green:       #10b981;
-      --green-dim:   rgba(16,185,129,0.15);
-      --white:       #f1f5f9;
+      --bg:          #060810;
+      --surface:     #0d1117;
+      --surface2:    #161b22;
+      --border:      #1e2738;
+      --border2:     #2a3650;
+      --text:        #94a3b8;
+      --text-mid:    #cbd5e1;
+      --text-bright: #f1f5f9;
+      --muted:       #3d4f6a;
+      --blue:        #58a6ff;
+      --blue-dim:    rgba(88,166,255,0.1);
+      --amber:       #f0a829;
+      --amber-dim:   rgba(240,168,41,0.1);
+      --green:       #3fb950;
+      --green-dim:   rgba(63,185,80,0.1);
+      --radius:      10px;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
 
     body {
       font-family: 'Inter', sans-serif;
       background: var(--bg);
       color: var(--text);
-      font-size: 15px;
+      font-size: 14.5px;
       line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
     }
 
-    /* ── SCROLLBAR ────────────────────────── */
-    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar { width: 5px; }
     ::-webkit-scrollbar-track { background: var(--bg); }
     ::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 3px; }
 
-    /* ── NAV ──────────────────────────────── */
-    .navbar {
-      background: rgba(5,8,15,0.9);
-      backdrop-filter: blur(12px);
+    a { color: inherit; text-decoration: none; }
+
+    /* ── NAV ──────────────────────────────────── */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      height: 52px;
+      display: flex; align-items: center;
+      background: rgba(6,8,16,0.85);
+      backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
-      padding: 0.7rem 0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
     }
 
-    .navbar-brand {
+    .nav-inner {
+      width: 100%; max-width: 900px;
+      margin: 0 auto;
+      padding: 0 clamp(1rem, 5vw, 2rem);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+
+    .nav-brand {
       font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 1.05rem;
-      color: var(--white) !important;
+      font-weight: 700; font-size: 0.95rem;
+      color: var(--text-bright);
       letter-spacing: -0.3px;
     }
 
-    .navbar-brand span { color: var(--accent); }
+    .nav-brand em { color: var(--amber); font-style: normal; }
 
-    .navbar-toggler {
-      border: 1px solid var(--border2) !important;
-      padding: 4px 8px;
+    .nav-links { display: flex; align-items: center; gap: 2px; }
+
+    .nav-links a {
+      font-size: 0.8rem; font-weight: 500;
+      color: var(--text);
+      padding: 5px 10px; border-radius: 6px;
+      transition: color 0.15s, background 0.15s;
+      white-space: nowrap;
     }
 
-    .navbar-toggler-icon {
-      filter: invert(1);
+    .nav-links a:hover { color: var(--text-bright); background: var(--surface2); }
+
+    .nav-links a.nav-cta {
+      background: var(--amber);
+      color: #0a0c14 !important;
+      font-weight: 700;
+      padding: 5px 12px;
     }
 
-    .nav-link {
-      color: var(--text) !important;
-      font-weight: 500;
-      font-size: 0.85rem;
-      padding: 0.4rem 0.85rem !important;
-      border-radius: 6px;
-      transition: background 0.2s, color 0.2s;
+    .nav-links a.nav-cta:hover { background: #f7c04a; }
+
+    .nav-toggle {
+      display: none;
+      background: none; border: 1px solid var(--border2);
+      color: var(--text); padding: 5px 8px; border-radius: 6px;
+      cursor: pointer; font-size: 0.85rem;
     }
 
-    .nav-link:hover { background: var(--surface2); color: var(--white) !important; }
-
-    .nav-link.btn-resume {
-      background: var(--accent) !important;
-      color: #0a0e1a !important;
-      font-weight: 700 !important;
-      padding: 0.4rem 1rem !important;
-    }
-
-    .nav-link.btn-resume:hover { background: #fcd34d !important; }
-
-    /* ── HERO ─────────────────────────────── */
+    /* ── HERO ─────────────────────────────────── */
     .hero {
-      background: linear-gradient(135deg, #05080f 0%, #0a1628 55%, #0f2040 100%);
-      padding: 80px 0 70px;
+      padding: calc(52px + 72px) 0 72px;
       position: relative;
       overflow: hidden;
-      border-bottom: 1px solid var(--border);
     }
 
-    .hero::before {
-      content: '';
-      position: absolute;
-      width: 600px; height: 600px;
-      background: radial-gradient(circle, rgba(79,142,247,0.07) 0%, transparent 65%);
-      top: -150px; right: -100px;
+    /* animated glow blobs */
+    .hero-glow {
+      position: absolute; pointer-events: none;
       border-radius: 50%;
-      pointer-events: none;
+      filter: blur(80px);
+      opacity: 0.55;
+      animation: drift 12s ease-in-out infinite alternate;
     }
 
-    .hero::after {
-      content: '';
-      position: absolute;
-      width: 400px; height: 400px;
-      background: radial-gradient(circle, rgba(245,158,11,0.05) 0%, transparent 65%);
-      bottom: -100px; left: -50px;
-      border-radius: 50%;
-      pointer-events: none;
+    .hero-glow.g1 {
+      width: 420px; height: 420px;
+      background: radial-gradient(circle, rgba(88,166,255,0.12), transparent 70%);
+      top: -80px; right: -60px;
     }
+
+    .hero-glow.g2 {
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(240,168,41,0.08), transparent 70%);
+      bottom: -60px; left: 5%;
+      animation-delay: -6s;
+    }
+
+    @keyframes drift {
+      from { transform: translate(0, 0) scale(1); }
+      to   { transform: translate(20px, 15px) scale(1.06); }
+    }
+
+    .hero-inner {
+      position: relative; z-index: 1;
+      max-width: 900px; margin: 0 auto;
+      padding: 0 clamp(1rem, 5vw, 2rem);
+      display: flex; align-items: center;
+      gap: clamp(2rem, 6vw, 4rem);
+    }
+
+    .hero-text { flex: 1; }
 
     .hero-eyebrow {
-      font-size: 0.73rem;
-      font-weight: 600;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.6rem;
+      font-size: 0.7rem; font-weight: 600;
+      letter-spacing: 2.5px; text-transform: uppercase;
+      color: var(--amber); margin-bottom: 0.75rem;
     }
 
     .hero-name {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(2rem, 5vw, 3rem);
-      font-weight: 700;
-      color: var(--white);
-      letter-spacing: -0.5px;
+      font-size: clamp(2rem, 5vw, 3.1rem);
+      font-weight: 700; letter-spacing: -1px;
+      color: var(--text-bright); line-height: 1.05;
       margin-bottom: 0.5rem;
-      line-height: 1.1;
     }
 
-    .hero-email {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      color: var(--primary);
-      font-size: 0.88rem;
-      font-weight: 500;
-      text-decoration: none;
-      margin-bottom: 1rem;
-      transition: color 0.2s;
+    /* subtle underline accent on name */
+    .hero-name span {
+      position: relative; display: inline-block;
     }
 
-    .hero-email:hover { color: #7eb4ff; }
+    .hero-name span::after {
+      content: '';
+      position: absolute; left: 0; bottom: -4px;
+      width: 100%; height: 2px;
+      background: linear-gradient(90deg, var(--amber), transparent);
+      border-radius: 2px;
+    }
 
-    .hero-desc {
-      font-size: 0.92rem;
-      color: var(--text);
-      max-width: 560px;
-      line-height: 1.8;
+    .hero-tagline {
+      font-size: 0.88rem; color: var(--text);
       margin-bottom: 1.1rem;
     }
 
-    .hero-desc strong { color: var(--text-bright); }
+    .hero-tagline strong { color: var(--text-mid); font-weight: 600; }
 
-    .hero-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-      margin-bottom: 1.3rem;
+    .hero-desc {
+      font-size: 0.88rem; color: var(--text);
+      max-width: 520px; line-height: 1.85;
+      margin-bottom: 1.4rem;
     }
 
-    .hbadge {
-      font-size: 0.72rem;
-      font-weight: 600;
-      padding: 4px 11px;
-      border-radius: 20px;
+    .hero-desc strong { color: var(--text-mid); }
+
+    /* pill badges */
+    .badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 1.5rem; }
+
+    .badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 0.7rem; font-weight: 600;
+      padding: 3px 10px; border-radius: 20px;
       border: 1px solid var(--border2);
-      color: var(--text);
-      background: var(--surface);
+      color: var(--text-mid); background: var(--surface);
     }
 
-    .hbadge.gold {
-      background: var(--accent-dim);
-      border-color: rgba(245,158,11,0.3);
-      color: var(--accent);
+    .badge.gold {
+      border-color: rgba(240,168,41,0.35);
+      background: var(--amber-dim);
+      color: var(--amber);
     }
 
-    .hero-links { display: flex; flex-wrap: wrap; gap: 8px; }
+    /* social links */
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 8px; }
 
-    .hero-links a {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      text-decoration: none;
-      font-size: 0.82rem;
-      font-weight: 600;
-      padding: 8px 16px;
-      border-radius: 8px;
+    .btn {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-size: 0.8rem; font-weight: 600;
+      padding: 8px 15px; border-radius: 8px;
       border: 1px solid var(--border2);
-      color: var(--text-bright);
-      background: var(--surface);
-      transition: background 0.2s, border-color 0.2s, color 0.2s;
+      color: var(--text-mid); background: var(--surface);
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
     }
 
-    .hero-links a:hover { background: var(--surface2); border-color: var(--border2); color: var(--white); }
+    .btn:hover { border-color: var(--border2); color: var(--text-bright); background: var(--surface2); }
 
-    .hero-links a.primary-btn {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: #0a0e1a;
+    .btn.btn-primary {
+      background: var(--amber); border-color: var(--amber);
+      color: #0a0c14;
     }
 
-    .hero-links a.primary-btn:hover { background: #fcd34d; border-color: #fcd34d; }
+    .btn.btn-primary:hover { background: #f7c04a; border-color: #f7c04a; }
+
+    /* photo */
+    .hero-photo-wrap { flex-shrink: 0; }
 
     .hero-photo {
-      width: 190px;
-      height: 190px;
+      width: 175px; height: 175px;
       border-radius: 50%;
       object-fit: cover;
-      border: 3px solid var(--border2);
-      box-shadow: 0 0 0 6px rgba(79,142,247,0.08), 0 16px 40px rgba(0,0,0,0.5);
+      border: 2px solid var(--border2);
+      box-shadow:
+        0 0 0 5px rgba(88,166,255,0.07),
+        0 20px 50px rgba(0,0,0,0.55);
+      display: block;
     }
 
-    /* ── SECTION ──────────────────────────── */
-    .section {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 1.8rem 2rem;
-      margin-bottom: 1.25rem;
+    /* ── PAGE WRAPPER ─────────────────────────── */
+    .page {
+      max-width: 900px; margin: 0 auto;
+      padding: 0 clamp(1rem, 5vw, 2rem) 4rem;
     }
 
-    .section-title {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 1.4rem;
-      padding-bottom: 0.7rem;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      gap: 10px;
+    /* ── SECTION ──────────────────────────────── */
+    .sec { margin-bottom: 2.5rem; }
+
+    .sec-header {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 1.5rem;
     }
 
-    .section-title i {
-      color: var(--primary);
-      font-size: 1rem;
-      width: 20px;
-      text-align: center;
-    }
-
-    /* ── TIMELINE ─────────────────────────── */
-    .tl-item {
-      display: flex;
-      gap: 1rem;
-      padding: 1.1rem 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .tl-item:last-child { border-bottom: none; padding-bottom: 0; }
-    .tl-item:first-child { padding-top: 0; }
-
-    .tl-dot {
-      width: 38px; height: 38px; min-width: 38px;
-      border-radius: 50%;
-      background: var(--primary-dim);
-      border: 1px solid rgba(79,142,247,0.3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--primary);
-      font-size: 0.8rem;
-      margin-top: 2px;
+    .sec-icon {
+      width: 30px; height: 30px;
+      border-radius: 7px;
+      background: var(--blue-dim);
+      border: 1px solid rgba(88,166,255,0.2);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--blue); font-size: 0.75rem;
       flex-shrink: 0;
     }
 
-    .tl-dot.amber {
-      background: var(--accent-dim);
-      border-color: rgba(245,158,11,0.3);
-      color: var(--accent);
+    .sec-icon.amber-icon {
+      background: var(--amber-dim);
+      border-color: rgba(240,168,41,0.2);
+      color: var(--amber);
     }
 
-    .tl-dot.green {
+    .sec-icon.green-icon {
       background: var(--green-dim);
-      border-color: rgba(16,185,129,0.3);
+      border-color: rgba(63,185,80,0.2);
       color: var(--green);
     }
 
-    .tl-body { flex: 1; min-width: 0; }
-
-    .tl-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 0.2rem;
+    .sec-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.95rem; font-weight: 700;
+      color: var(--text-bright); letter-spacing: -0.2px;
     }
 
-    .tl-org {
-      font-weight: 700;
-      color: var(--text-bright);
-      font-size: 0.93rem;
+    /* ── TIMELINE ─────────────────────────────── */
+    .tl { position: relative; }
+
+    /* vertical line */
+    .tl::before {
+      content: '';
+      position: absolute;
+      left: 15px; top: 6px;
+      width: 1px;
+      bottom: 6px;
+      background: linear-gradient(to bottom, var(--border2), transparent);
     }
+
+    .tl-item {
+      display: flex; gap: 1.1rem;
+      padding: 0 0 1.8rem 0;
+      position: relative;
+    }
+
+    .tl-item:last-child { padding-bottom: 0; }
+
+    .tl-dot {
+      width: 30px; height: 30px; min-width: 30px;
+      border-radius: 50%;
+      background: var(--surface2);
+      border: 1px solid var(--border2);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--blue); font-size: 0.72rem;
+      flex-shrink: 0;
+      position: relative; z-index: 1;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .tl-item:hover .tl-dot {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(88,166,255,0.1);
+    }
+
+    .tl-dot.amber { color: var(--amber); }
+    .tl-dot.amber:hover, .tl-item:hover .tl-dot.amber {
+      border-color: var(--amber);
+      box-shadow: 0 0 0 3px rgba(240,168,41,0.1);
+    }
+
+    .tl-dot.green { color: var(--green); }
+    .tl-item:hover .tl-dot.green {
+      border-color: var(--green);
+      box-shadow: 0 0 0 3px rgba(63,185,80,0.1);
+    }
+
+    .tl-body {
+      flex: 1; min-width: 0;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.2rem;
+      transition: border-color 0.2s;
+    }
+
+    .tl-item:hover .tl-body { border-color: var(--border2); }
+
+    .tl-top {
+      display: flex; justify-content: space-between;
+      align-items: flex-start; flex-wrap: wrap; gap: 6px;
+      margin-bottom: 0.15rem;
+    }
+
+    .tl-org { font-weight: 600; color: var(--text-bright); font-size: 0.9rem; }
 
     .tl-date {
-      font-size: 0.73rem;
-      color: var(--muted);
+      font-size: 0.7rem; color: var(--muted);
       background: var(--surface2);
-      padding: 2px 10px;
-      border-radius: 20px;
-      white-space: nowrap;
+      padding: 2px 9px; border-radius: 20px;
       border: 1px solid var(--border);
+      white-space: nowrap;
     }
 
-    .tl-role {
-      font-size: 0.84rem;
-      color: var(--primary);
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
+    .tl-role { font-size: 0.8rem; font-weight: 600; color: var(--blue); margin-bottom: 0.6rem; }
+    .tl-role.amber { color: var(--amber); }
+    .tl-role.green { color: var(--green); }
 
-    .tl-role.amber-role { color: var(--accent); }
-    .tl-role.green-role { color: var(--green); }
-
-    .tl-degree {
-      font-size: 0.86rem;
-      color: var(--text);
-      margin-top: 0.2rem;
-    }
-
+    .tl-degree { font-size: 0.85rem; color: var(--text-mid); margin-bottom: 0.2rem; }
     .tl-degree strong { color: var(--text-bright); }
+    .tl-course { font-size: 0.77rem; color: var(--muted); }
 
-    .tl-coursework {
-      font-size: 0.78rem;
-      color: var(--muted);
-      margin-top: 0.3rem;
-    }
-
-    .tl-bullets { list-style: none; padding: 0; }
+    .tl-bullets { list-style: none; }
 
     .tl-bullets li {
-      font-size: 0.83rem;
-      color: var(--text);
-      padding: 2px 0 2px 16px;
-      position: relative;
-      line-height: 1.6;
+      font-size: 0.82rem; color: var(--text);
+      padding: 2px 0 2px 14px;
+      position: relative; line-height: 1.65;
     }
 
     .tl-bullets li::before {
-      content: '▸';
-      color: var(--accent);
-      position: absolute;
-      left: 0;
-      font-size: 0.7rem;
-      top: 5px;
+      content: '–';
+      color: var(--border2);
+      position: absolute; left: 0;
     }
 
-    .tl-bullets li strong { color: var(--text-bright); }
+    .tl-bullets li strong { color: var(--text-mid); font-weight: 600; }
 
-    /* ── PROJECT CARDS ────────────────────── */
+    /* ── PROJECT CARDS ────────────────────────── */
+    .proj-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+
     .proj-card {
-      background: var(--surface2);
+      background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 10px;
+      border-radius: var(--radius);
       overflow: hidden;
-      transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
+      display: flex; flex-direction: column;
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
     }
 
     .proj-card:hover {
       border-color: var(--border2);
-      transform: translateY(-3px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(0,0,0,0.3);
     }
 
-    .proj-media {
-      width: 100%;
-      height: 165px;
+    .proj-img {
+      width: 100%; height: 155px;
       object-fit: cover;
-      background: var(--border);
-      display: block;
-      filter: brightness(0.88);
+      filter: brightness(0.85) saturate(0.9);
       transition: filter 0.3s;
+      display: block;
     }
 
-    .proj-card:hover .proj-media { filter: brightness(1); }
+    .proj-card:hover .proj-img { filter: brightness(1) saturate(1); }
 
     .proj-body {
-      padding: 1rem 1rem 1.1rem;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
+      padding: 0.95rem 1rem 1rem;
+      flex: 1; display: flex; flex-direction: column;
     }
 
-    .proj-title {
+    .proj-name {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--text-bright);
-      margin-bottom: 0.45rem;
-      text-decoration: none;
-      display: block;
-      transition: color 0.2s;
+      font-size: 0.88rem; font-weight: 600;
+      color: var(--text-bright); margin-bottom: 0.4rem;
+      transition: color 0.15s;
     }
 
-    .proj-title:hover { color: var(--primary); }
+    .proj-card:hover .proj-name { color: var(--blue); }
 
     .proj-desc {
-      font-size: 0.81rem;
-      color: var(--text);
-      line-height: 1.6;
-      margin-bottom: 0.6rem;
-      flex: 1;
+      font-size: 0.79rem; color: var(--text);
+      line-height: 1.65; margin-bottom: 0.6rem; flex: 1;
     }
 
     .proj-stat {
-      font-size: 0.76rem;
-      background: var(--surface);
+      font-size: 0.73rem; color: var(--muted);
+      background: var(--surface2);
       border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 4px 10px;
+      border-radius: 5px; padding: 3px 9px;
       margin-bottom: 0.6rem;
-      color: var(--muted);
     }
 
-    .proj-stat strong { color: var(--primary); }
+    .proj-stat strong { color: var(--blue); }
 
-    .stack-tags { margin-bottom: 0.7rem; }
+    .tags { margin-bottom: 0.75rem; }
 
-    .stag {
+    .tag {
       display: inline-block;
-      font-size: 0.68rem;
-      font-weight: 600;
-      background: var(--primary-dim);
-      color: var(--primary);
-      border-radius: 4px;
-      padding: 2px 7px;
+      font-size: 0.66rem; font-weight: 600;
+      background: var(--blue-dim); color: var(--blue);
+      border-radius: 3px; padding: 2px 6px;
       margin: 2px 2px 2px 0;
     }
 
     .proj-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: var(--primary);
-      text-decoration: none;
-      padding: 5px 12px;
-      border: 1px solid rgba(79,142,247,0.35);
-      border-radius: 6px;
-      transition: background 0.2s, color 0.2s;
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 0.76rem; font-weight: 600;
+      color: var(--blue);
+      padding: 4px 11px;
+      border: 1px solid rgba(88,166,255,0.25);
+      border-radius: 5px;
       align-self: flex-start;
+      transition: background 0.15s;
     }
 
-    .proj-link:hover { background: var(--primary-dim); color: #7eb4ff; }
+    .proj-link:hover { background: var(--blue-dim); }
 
-    /* ── PUBLICATIONS ─────────────────────── */
+    /* ── PUB CARDS ────────────────────────────── */
+    .pub-list { display: flex; flex-direction: column; gap: 0.75rem; }
+
     .pub-card {
-      background: var(--surface2);
+      background: var(--surface);
       border: 1px solid var(--border);
-      border-left: 3px solid var(--primary);
-      border-radius: 10px;
+      border-radius: var(--radius);
       padding: 1rem 1.2rem;
-      margin-bottom: 0.9rem;
+      display: flex; gap: 1rem; align-items: flex-start;
+      transition: border-color 0.2s;
     }
 
-    .pub-card.patent { border-left-color: var(--accent); }
-    .pub-card:last-child { margin-bottom: 0; }
+    .pub-card:hover { border-color: var(--border2); }
+
+    .pub-icon {
+      width: 34px; height: 34px; min-width: 34px;
+      border-radius: 8px;
+      background: var(--blue-dim);
+      border: 1px solid rgba(88,166,255,0.2);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--blue); font-size: 0.8rem;
+      margin-top: 1px;
+    }
+
+    .pub-icon.patent {
+      background: var(--amber-dim);
+      border-color: rgba(240,168,41,0.2);
+      color: var(--amber);
+    }
+
+    .pub-body { flex: 1; min-width: 0; }
 
     .pub-type {
-      font-size: 0.68rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--primary);
-      margin-bottom: 0.35rem;
+      font-size: 0.66rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 1px;
+      color: var(--blue); margin-bottom: 0.25rem;
     }
 
-    .pub-type.pt { color: var(--accent); }
+    .pub-type.pt { color: var(--amber); }
 
     .pub-title {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--text-bright);
-      margin-bottom: 0.35rem;
-      line-height: 1.45;
+      font-size: 0.87rem; font-weight: 600;
+      color: var(--text-bright); line-height: 1.4;
+      margin-bottom: 0.3rem;
     }
 
     .pub-venue {
       display: inline-block;
-      font-size: 0.72rem;
-      font-weight: 700;
-      padding: 2px 9px;
-      border-radius: 4px;
-      background: var(--primary-dim);
-      color: var(--primary);
-      margin-bottom: 0.55rem;
-      letter-spacing: 0.3px;
+      font-size: 0.68rem; font-weight: 700;
+      padding: 2px 8px; border-radius: 4px;
+      background: var(--blue-dim); color: var(--blue);
+      margin-bottom: 0.45rem;
     }
 
-    .pub-venue.pv { background: var(--accent-dim); color: var(--accent); }
+    .pub-venue.pv { background: var(--amber-dim); color: var(--amber); }
 
-    .pub-desc {
-      font-size: 0.81rem;
-      color: var(--text);
-      line-height: 1.65;
+    .pub-desc { font-size: 0.79rem; color: var(--text); line-height: 1.6; }
+    .pub-desc strong { color: var(--text-mid); }
+
+    /* ── SKILLS ───────────────────────────────── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
     }
 
-    .pub-desc strong { color: var(--text-bright); }
+    .skill-group {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.9rem 1rem;
+      transition: border-color 0.2s;
+    }
 
-    /* ── SKILLS ──────────────────────────── */
-    .skill-group { margin-bottom: 1.1rem; }
-    .skill-group:last-child { margin-bottom: 0; }
+    .skill-group:hover { border-color: var(--border2); }
 
     .skill-label {
-      font-size: 0.7rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--muted);
-      margin-bottom: 0.5rem;
+      font-size: 0.66rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 1px;
+      color: var(--muted); margin-bottom: 0.6rem;
     }
 
     .sbadge {
       display: inline-block;
-      font-size: 0.76rem;
-      font-weight: 500;
-      background: var(--surface2);
+      font-size: 0.74rem; font-weight: 400;
       color: var(--text);
+      background: var(--surface2);
       border: 1px solid var(--border);
       border-radius: 20px;
-      padding: 3px 11px;
-      margin: 2px 2px;
-      transition: border-color 0.2s, color 0.2s;
+      padding: 2px 10px; margin: 2px 2px;
+      transition: color 0.15s, border-color 0.15s;
     }
 
-    .sbadge:hover { border-color: var(--border2); color: var(--text-bright); }
+    .sbadge:hover { color: var(--text-bright); border-color: var(--border2); }
 
-    /* ── FOOTER ──────────────────────────── */
-    footer {
+    /* ── FOOTER ───────────────────────────────── */
+    .footer {
       border-top: 1px solid var(--border);
-      text-align: center;
-      font-size: 0.78rem;
-      color: var(--muted);
       padding: 1.8rem 1rem;
+      text-align: center;
+      font-size: 0.76rem; color: var(--muted);
     }
 
-    footer a { color: var(--primary); text-decoration: none; }
-    footer a:hover { color: #7eb4ff; }
+    .footer a { color: var(--blue); }
+    .footer a:hover { color: #8cc8ff; }
 
-    /* ── MOBILE ───────────────────────────── */
-    @media (max-width: 768px) {
-      .hero { padding: 55px 0 48px; }
-      .hero-photo { width: 120px; height: 120px; }
-      .section { padding: 1.3rem 1.1rem; }
-      .tl-item { gap: 0.7rem; }
-      .tl-dot { width: 32px; height: 32px; min-width: 32px; font-size: 0.72rem; }
-      .tl-header { flex-direction: column; gap: 3px; }
-      .hero-badges { gap: 5px; }
-      .hbadge { font-size: 0.68rem; padding: 3px 9px; }
+    /* ── MOBILE ───────────────────────────────── */
+    @media (max-width: 720px) {
+      .nav-links { display: none; flex-direction: column; gap: 4px; }
+      .nav-links.open {
+        display: flex;
+        position: absolute; top: 52px; left: 0; right: 0;
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        padding: 0.75rem 1rem;
+      }
+      .nav-toggle { display: block; }
+      .hero-inner { flex-direction: column-reverse; align-items: flex-start; gap: 1.5rem; }
+      .hero-photo { width: 100px; height: 100px; }
+      .hero { padding: calc(52px + 48px) 0 48px; }
+      .tl::before { display: none; }
+      .proj-grid { grid-template-columns: 1fr; }
+      .skills-grid { grid-template-columns: 1fr 1fr; }
     }
 
     @media (max-width: 480px) {
-      .section-title { font-size: 1rem; }
-      .hero-name { font-size: 1.75rem; }
+      .hero-name { font-size: 1.9rem; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .pub-card { flex-direction: column; gap: 0.6rem; }
     }
   </style>
 </head>
-
 <body>
 
-  <!-- ── NAVBAR ───────────────────────────── -->
-  <nav class="navbar navbar-expand-md">
-    <div class="container">
-      <a class="navbar-brand" href="#">KG <span>·</span></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
-        <ul class="navbar-nav gap-1 mt-2 mt-md-0">
-          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://scholar.google.com/citations?user=TzmOPVAAAAAJ&hl=en" target="_blank">
-              <i class="fas fa-graduation-cap me-1"></i>Scholar
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link btn-resume" href="Karteek_CV_2.pdf" target="_blank">
-              <i class="fas fa-file-pdf me-1"></i> Resume
-            </a>
-          </li>
-        </ul>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-brand">KG <em>·</em></a>
+      <div class="nav-links" id="navLinks">
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#skills">Skills</a>
+        <a href="https://scholar.google.com/citations?user=TzmOPVAAAAAJ&hl=en" target="_blank">Scholar</a>
+        <a href="Karteek_CV_2.pdf" target="_blank" class="nav-cta">
+          <i class="fas fa-file-pdf"></i> Resume
+        </a>
       </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
   </nav>
 
-  <!-- ── HERO ─────────────────────────────── -->
+  <!-- HERO -->
   <section class="hero">
-    <div class="container">
-      <div class="row align-items-center g-4">
-        <div class="col-md-8 order-2 order-md-1">
-          <p class="hero-eyebrow">Robotics &amp; Computer Vision Engineer &nbsp;·&nbsp; 4+ Years Industry</p>
-          <h1 class="hero-name">Karteek Gandiboyina</h1>
-          <a href="mailto:gkarteek99@gmail.com" class="hero-email">
-            <i class="fas fa-envelope"></i> gkarteek99@gmail.com
+    <div class="hero-glow g1"></div>
+    <div class="hero-glow g2"></div>
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="hero-eyebrow">Robotics &amp; Computer Vision &nbsp;·&nbsp; 4+ Years Industry</p>
+        <h1 class="hero-name"><span>Karteek Gandiboyina</span></h1>
+        <p class="hero-tagline">
+          <strong>MS Autonomy &amp; Robotics, UIUC (GPA 3.89)</strong> &nbsp;·&nbsp;
+          <a href="mailto:gkarteek99@gmail.com" style="color:var(--amber);">gkarteek99@gmail.com</a>
+        </p>
+        <p class="hero-desc">
+          Currently building autonomy stacks for wildfire-suppression UAVs at
+          <strong>Rational CyPhy Inc.</strong> Previously at <strong>Konica Minolta R&amp;D, Tokyo</strong>.
+          Deep expertise in 3DGS, 6-DoF pose estimation, SLAM, and ROS-based autonomy —
+          backed by an IROS&nbsp;2026 publication and 2 filed patents.
+        </p>
+        <div class="badges">
+          <span class="badge gold"><i class="fas fa-trophy"></i> IROS 2026</span>
+          <span class="badge gold"><i class="fas fa-certificate"></i> 2 Patents Filed</span>
+          <span class="badge"><i class="fas fa-star"></i> GPA 3.89 / 4.0</span>
+          <span class="badge"><i class="fas fa-satellite"></i> JAXA Collaboration</span>
+        </div>
+        <div class="hero-actions">
+          <a href="Karteek_CV_2.pdf" target="_blank" class="btn btn-primary">
+            <i class="fas fa-file-pdf"></i> Download CV
           </a>
-          <p class="hero-desc">
-            MS Autonomy &amp; Robotics at <strong>UIUC (GPA&nbsp;3.89)</strong>. Currently building autonomy stacks
-            for wildfire-suppression UAVs at <strong>Rational CyPhy Inc.</strong> Previously at
-            <strong>Konica Minolta R&amp;D, Tokyo</strong>. Expertise in 3DGS, 6-DoF pose
-            estimation, SLAM, and ROS-based autonomy — backed by an IROS&nbsp;2026 publication
-            and 2 filed patents.
-          </p>
-          <div class="hero-badges">
-            <span class="hbadge gold"><i class="fas fa-trophy me-1"></i>IROS 2026</span>
-            <span class="hbadge gold"><i class="fas fa-certificate me-1"></i>2 Patents Filed</span>
-            <span class="hbadge"><i class="fas fa-star me-1"></i>GPA 3.89 / 4.0</span>
-            <span class="hbadge"><i class="fas fa-satellite me-1"></i>JAXA Collaboration</span>
-          </div>
-          <div class="hero-links">
-            <a href="Karteek_CV_2.pdf" target="_blank" class="primary-btn">
-              <i class="fas fa-file-pdf"></i> Download CV
-            </a>
-            <a href="https://www.linkedin.com/in/muralikarteek7/" target="_blank">
-              <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://github.com/muralikarteek7/" target="_blank">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-            <a href="https://scholar.google.com/citations?user=TzmOPVAAAAAJ&hl=en" target="_blank">
-              <i class="fas fa-graduation-cap"></i> Scholar
-            </a>
-            <a href="camera.html" target="_blank">
-              <i class="fas fa-camera"></i> Photography
-            </a>
-          </div>
+          <a href="https://www.linkedin.com/in/muralikarteek7/" target="_blank" class="btn">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://github.com/muralikarteek7/" target="_blank" class="btn">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="https://scholar.google.com/citations?user=TzmOPVAAAAAJ&hl=en" target="_blank" class="btn">
+            <i class="fas fa-graduation-cap"></i> Scholar
+          </a>
+          <a href="camera.html" target="_blank" class="btn">
+            <i class="fas fa-camera"></i> Photography
+          </a>
         </div>
-        <div class="col-md-4 order-1 order-md-2 text-center">
-          <img src="teasers/karteek_auto.JPG" alt="Karteek Gandiboyina" class="hero-photo" />
-        </div>
+      </div>
+      <div class="hero-photo-wrap">
+        <img src="teasers/karteek_auto.JPG" alt="Karteek Gandiboyina" class="hero-photo" />
       </div>
     </div>
   </section>
 
-  <!-- ── MAIN ──────────────────────────────── -->
-  <div class="container py-4" style="max-width:960px;">
+  <!-- PAGE -->
+  <div class="page">
 
     <!-- EXPERIENCE -->
-    <div class="section" id="experience">
-      <h2 class="section-title"><i class="fas fa-briefcase"></i> Work Experience</h2>
-
-      <!-- Rational CyPhy -->
-      <div class="tl-item">
-        <div class="tl-dot green"><i class="fas fa-wind"></i></div>
-        <div class="tl-body">
-          <div class="tl-header">
-            <span class="tl-org">Rational CyPhy Inc.</span>
-            <span class="tl-date">Feb 2026 &ndash; Present</span>
-          </div>
-          <div class="tl-role green-role">Robotics Engineer</div>
-          <ul class="tl-bullets">
-            <li>Architected a resilient autonomy stack for <strong>NASA-aligned wildfire-suppression UAVs</strong> on VOXL&nbsp;2, targeting BVLOS operation in GPS-denied, high-interference environments.</li>
-            <li>Fused <strong>Basalt VIO</strong> with GPS for robust state estimation; designed seamless sensor failover for stable flight under degraded conditions.</li>
-            <li>Deployed <strong>real-time 3D Gaussian Splatting (3DGS)</strong> for aerial environment reconstruction and surveillance, delivering high-fidelity situational awareness to emergency responders.</li>
-            <li>Prototyped self-organizing multi-drone sensing architectures to maintain mission continuity during comms/GPS outages.</li>
-          </ul>
-        </div>
+    <div class="sec" id="experience">
+      <div class="sec-header">
+        <div class="sec-icon"><i class="fas fa-briefcase"></i></div>
+        <h2 class="sec-title">Work Experience</h2>
       </div>
+      <div class="tl">
 
-      <!-- UIUC GRA -->
-      <div class="tl-item">
-        <div class="tl-dot"><i class="fas fa-microscope"></i></div>
-        <div class="tl-body">
-          <div class="tl-header">
-            <span class="tl-org">Coordinated Science Lab, UIUC &mdash; Prof. Sayan Mitra</span>
-            <span class="tl-date">Sept 2025 &ndash; Jan 2026</span>
+        <div class="tl-item">
+          <div class="tl-dot green"><i class="fas fa-wind"></i></div>
+          <div class="tl-body">
+            <div class="tl-top">
+              <span class="tl-org">Rational CyPhy Inc.</span>
+              <span class="tl-date">Feb 2026 – Present</span>
+            </div>
+            <div class="tl-role green">Robotics Engineer</div>
+            <ul class="tl-bullets">
+              <li>Architected a resilient autonomy stack for <strong>NASA-aligned wildfire-suppression UAVs</strong> on VOXL 2, targeting BVLOS operation in GPS-denied environments.</li>
+              <li>Fused <strong>Basalt VIO</strong> with GPS; designed seamless sensor failover for stable flight under degraded conditions.</li>
+              <li>Deployed <strong>real-time 3DGS</strong> for aerial environment reconstruction, delivering high-fidelity situational awareness to emergency responders.</li>
+              <li>Prototyped self-organizing multi-drone architectures for mission continuity during comms/GPS outages.</li>
+            </ul>
           </div>
-          <div class="tl-role">Graduate Research Assistant</div>
-          <ul class="tl-bullets">
-            <li>Trained a <strong>DreamerV3 World Model</strong> on Crazyflie FPV data for imagination-based policy training without direct environment interaction.</li>
-            <li>Built a <strong>6-DoF pose estimation pipeline</strong> using 3DGS-generated synthetic FPV datasets (10k frames) + fine-tuned U-Net; achieved <strong>sub-centimeter positional accuracy</strong> in sim-to-real transfer.</li>
-            <li>Developed an <strong>actor-critic (PPO)</strong> policy within the latent world model; increased waypoint completion from <strong>70% → 95%</strong> in simulation trials.</li>
-            <li>Designed <strong>min-snap trajectory planners</strong> with differential flatness, reducing planning time by <strong>30%</strong> and enabling agile quadrotor maneuvers in cluttered environments.</li>
-          </ul>
         </div>
-      </div>
 
-      <!-- Konica Minolta -->
-      <div class="tl-item">
-        <div class="tl-dot"><i class="fas fa-robot"></i></div>
-        <div class="tl-body">
-          <div class="tl-header">
-            <span class="tl-org">Konica Minolta &mdash; R&amp;D Headquarters, Tokyo, Japan</span>
-            <span class="tl-date">Jul 2021 &ndash; Aug 2024</span>
+        <div class="tl-item">
+          <div class="tl-dot"><i class="fas fa-microscope"></i></div>
+          <div class="tl-body">
+            <div class="tl-top">
+              <span class="tl-org">Coordinated Science Lab, UIUC — Prof. Sayan Mitra</span>
+              <span class="tl-date">Sept 2025 – Jan 2026</span>
+            </div>
+            <div class="tl-role">Graduate Research Assistant</div>
+            <ul class="tl-bullets">
+              <li>Trained a <strong>DreamerV3 World Model</strong> on Crazyflie FPV data for imagination-based policy training without direct environment interaction.</li>
+              <li>Built a 6-DoF pose estimation pipeline using <strong>3DGS-generated synthetic datasets</strong> (10k frames) + fine-tuned U-Net; achieved <strong>sub-centimeter accuracy</strong> in sim-to-real transfer.</li>
+              <li>Developed <strong>actor-critic (PPO)</strong> policy within latent world model; increased waypoint completion <strong>70% → 95%</strong>.</li>
+              <li>Designed <strong>min-snap trajectory planners</strong> with differential flatness, reducing planning time by <strong>30%</strong>.</li>
+            </ul>
           </div>
-          <div class="tl-role">R&amp;D Robotics Engineer</div>
-          <ul class="tl-bullets">
-            <li>Engineered a structured-light point cloud sensor achieving <strong>0.99 IoU</strong> on 1&nbsp;cm² items at 0.05&nbsp;m under &lt;10&nbsp;Lux, enabling bin-picking of highly reflective industrial components.</li>
-            <li>Built an auto-annotation pipeline (SAM, Detectron2, YOLOv7) that reduced manual labeling time by <strong>&gt;80%</strong>, accelerating training cycles across multiple product lines.</li>
-            <li>Developed a <strong>language-conditioned multi-task RL framework</strong> (SAC + DAgger) with Georgia Tech; improved zero-shot task success by <strong>200%</strong> via natural language goal specification.</li>
-            <li>Collaborated with <strong>JAXA</strong> to design a vision-based 6-DoF grasping system for multi-limbed robots aboard the <strong>International Space Station</strong>, optimized for microgravity manipulation.</li>
-            <li>Filed <strong>2 patents</strong> in computer vision and robotic grasping (USPTO &amp; JPO).</li>
-          </ul>
         </div>
-      </div>
 
-      <!-- Philips -->
-      <div class="tl-item">
-        <div class="tl-dot amber"><i class="fas fa-brain"></i></div>
-        <div class="tl-body">
-          <div class="tl-header">
-            <span class="tl-org">Philips Innovation Campus &mdash; R&amp;D, Bangalore, India</span>
-            <span class="tl-date">Apr 2020 &ndash; Jul 2020</span>
+        <div class="tl-item">
+          <div class="tl-dot"><i class="fas fa-robot"></i></div>
+          <div class="tl-body">
+            <div class="tl-top">
+              <span class="tl-org">Konica Minolta — R&amp;D Headquarters, Tokyo, Japan</span>
+              <span class="tl-date">Jul 2021 – Aug 2024</span>
+            </div>
+            <div class="tl-role">R&amp;D Robotics Engineer</div>
+            <ul class="tl-bullets">
+              <li>Structured-light point cloud sensor achieving <strong>0.99 IoU</strong> on 1 cm² items at 0.05 m under &lt;10 Lux for bin-picking of reflective industrial components.</li>
+              <li>Auto-annotation pipeline (SAM, Detectron2, YOLOv7) reducing manual labeling time by <strong>&gt;80%</strong>.</li>
+              <li><strong>Language-conditioned multi-task RL</strong> (SAC + DAgger) with Georgia Tech; improved zero-shot task success by <strong>200%</strong>.</li>
+              <li>Collaborated with <strong>JAXA</strong> on vision-based 6-DoF grasping for multi-limbed robots aboard the <strong>ISS</strong>.</li>
+              <li>Filed <strong>2 patents</strong> in computer vision and robotic grasping (USPTO &amp; JPO).</li>
+            </ul>
           </div>
-          <div class="tl-role amber-role">Machine Learning Intern</div>
-          <ul class="tl-bullets">
-            <li>Developed a <strong>3D residual U-Net</strong> region-proposal network for pulmonary nodule detection on 888 CT scans (LUNA16); achieved a <strong>FROC score of 0.914</strong>, surpassing the baseline by 8%.</li>
-          </ul>
         </div>
+
+        <div class="tl-item">
+          <div class="tl-dot amber"><i class="fas fa-brain"></i></div>
+          <div class="tl-body">
+            <div class="tl-top">
+              <span class="tl-org">Philips Innovation Campus — Bangalore, India</span>
+              <span class="tl-date">Apr 2020 – Jul 2020</span>
+            </div>
+            <div class="tl-role amber">Machine Learning Intern</div>
+            <ul class="tl-bullets">
+              <li>3D residual U-Net for pulmonary nodule detection on 888 CT scans (LUNA16); <strong>FROC score 0.914</strong>, surpassing baseline by 8%.</li>
+            </ul>
+          </div>
+        </div>
+
       </div>
     </div>
 
     <!-- EDUCATION -->
-    <div class="section" id="education">
-      <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
-
-      <div class="tl-item">
-        <div class="tl-dot"><i class="fas fa-university"></i></div>
-        <div class="tl-body">
-          <div class="tl-header">
-            <span class="tl-org">University of Illinois Urbana-Champaign, USA</span>
-            <span class="tl-date">Aug 2024 &ndash; Dec 2025</span>
-          </div>
-          <div class="tl-degree"><strong>MS in Autonomy &amp; Robotics</strong> &mdash; GPA: <strong>3.89 / 4.0</strong></div>
-          <div class="tl-coursework">Deep Learning for Graphs &nbsp;·&nbsp; Computer Vision &nbsp;·&nbsp; Safe Autonomy &nbsp;·&nbsp; Deep Generative Models</div>
-        </div>
+    <div class="sec" id="education">
+      <div class="sec-header">
+        <div class="sec-icon amber-icon"><i class="fas fa-graduation-cap"></i></div>
+        <h2 class="sec-title">Education</h2>
       </div>
+      <div class="tl">
 
-      <div class="tl-item">
-        <div class="tl-dot amber"><i class="fas fa-flask"></i></div>
-        <div class="tl-body">
-          <div class="tl-header">
-            <span class="tl-org">Indian Institute of Technology Kharagpur, India</span>
-            <span class="tl-date">Aug 2017 &ndash; May 2021</span>
+        <div class="tl-item">
+          <div class="tl-dot"><i class="fas fa-university"></i></div>
+          <div class="tl-body">
+            <div class="tl-top">
+              <span class="tl-org">University of Illinois Urbana-Champaign, USA</span>
+              <span class="tl-date">Aug 2024 – Dec 2025</span>
+            </div>
+            <div class="tl-degree"><strong>MS in Autonomy &amp; Robotics</strong> &mdash; GPA: 3.89 / 4.0</div>
+            <div class="tl-course">Deep Learning for Graphs · Computer Vision · Safe Autonomy · Deep Generative Models</div>
           </div>
-          <div class="tl-degree"><strong>B.Tech. in Electrical Engineering</strong> &mdash; GPA: <strong>3.48 / 4.0</strong></div>
-          <div class="tl-coursework">Deep Learning &nbsp;·&nbsp; Machine Learning &nbsp;·&nbsp; Embedded Systems &nbsp;·&nbsp; Control Systems</div>
         </div>
+
+        <div class="tl-item">
+          <div class="tl-dot amber"><i class="fas fa-flask"></i></div>
+          <div class="tl-body">
+            <div class="tl-top">
+              <span class="tl-org">Indian Institute of Technology Kharagpur, India</span>
+              <span class="tl-date">Aug 2017 – May 2021</span>
+            </div>
+            <div class="tl-degree"><strong>B.Tech. in Electrical Engineering</strong> &mdash; GPA: 3.48 / 4.0</div>
+            <div class="tl-course">Deep Learning · Machine Learning · Embedded Systems · Control Systems</div>
+          </div>
+        </div>
+
       </div>
     </div>
 
     <!-- PROJECTS -->
-    <div class="section" id="projects">
-      <h2 class="section-title"><i class="fas fa-code-branch"></i> Projects</h2>
-      <div class="row g-3">
+    <div class="sec" id="projects">
+      <div class="sec-header">
+        <div class="sec-icon"><i class="fas fa-code-branch"></i></div>
+        <h2 class="sec-title">Projects</h2>
+      </div>
+      <div class="proj-grid">
 
-        <div class="col-sm-6 col-lg-4">
-          <div class="proj-card">
-            <img src="teasers/race.gif" alt="Drone Racing" class="proj-media" />
-            <div class="proj-body">
-              <a href="https://github.com/muralikarteek7/Drone_Vision_control" target="_blank" class="proj-title">
-                Autonomous Drone Racing
-              </a>
-              <p class="proj-desc">
-                MPC &amp; PID spline tracker for autonomous gate navigation. NanoSAM keypoint detector for misaligned gate correction.
-              </p>
-              <div class="proj-stat">
-                Race record: <strong>50.13 s (Tier-1)</strong> &nbsp;|&nbsp; Gate error: <strong>0.05 m</strong>
-              </div>
-              <div class="stack-tags">
-                <span class="stag">MPC</span><span class="stag">PID</span><span class="stag">NeRF</span>
-                <span class="stag">AirSim</span><span class="stag">NanoSAM</span>
-              </div>
-              <a href="https://github.com/muralikarteek7/Drone_Vision_control" target="_blank" class="proj-link">
-                <i class="fab fa-github"></i> Code
-              </a>
+        <div class="proj-card">
+          <img src="teasers/race.gif" alt="Drone Racing" class="proj-img" />
+          <div class="proj-body">
+            <div class="proj-name">Autonomous Drone Racing</div>
+            <p class="proj-desc">MPC &amp; PID spline tracker for autonomous gate navigation. NanoSAM keypoint detector for misaligned gate correction.</p>
+            <div class="proj-stat">Race record: <strong>50.13 s (Tier-1)</strong> · Gate error: <strong>0.05 m</strong></div>
+            <div class="tags">
+              <span class="tag">MPC</span><span class="tag">PID</span><span class="tag">NeRF</span>
+              <span class="tag">AirSim</span><span class="tag">NanoSAM</span>
             </div>
+            <a href="https://github.com/muralikarteek7/Drone_Vision_control" target="_blank" class="proj-link">
+              <i class="fab fa-github"></i> Code
+            </a>
           </div>
         </div>
 
-        <div class="col-sm-6 col-lg-4">
-          <div class="proj-card">
-            <img src="teasers/flow.gif" alt="VLM4Autonomy" class="proj-media" />
-            <div class="proj-body">
-              <a href="https://github.com/muralikarteek7/VLM4Autonomy-" target="_blank" class="proj-title">
-                VLM4Autonomy
-              </a>
-              <p class="proj-desc">
-                SAM2 + optical flow + VLMs for real-time object tracking and ego-vehicle motion estimation. YOLOv8 &amp; SfM for spatial grounding.
-              </p>
-              <div class="stack-tags">
-                <span class="stag">SAM2</span><span class="stag">YOLOv8</span><span class="stag">Optical Flow</span>
-                <span class="stag">SfM</span><span class="stag">VLMs</span>
-              </div>
-              <a href="https://github.com/muralikarteek7/VLM4Autonomy-" target="_blank" class="proj-link">
-                <i class="fab fa-github"></i> Code
-              </a>
+        <div class="proj-card">
+          <img src="teasers/flow.gif" alt="VLM4Autonomy" class="proj-img" />
+          <div class="proj-body">
+            <div class="proj-name">VLM4Autonomy</div>
+            <p class="proj-desc">SAM2 + optical flow + VLMs for real-time object tracking and ego-vehicle motion estimation. YOLOv8 &amp; SfM for spatial grounding.</p>
+            <div class="tags">
+              <span class="tag">SAM2</span><span class="tag">YOLOv8</span><span class="tag">Optical Flow</span>
+              <span class="tag">SfM</span><span class="tag">VLMs</span>
             </div>
+            <a href="https://github.com/muralikarteek7/VLM4Autonomy-" target="_blank" class="proj-link">
+              <i class="fab fa-github"></i> Code
+            </a>
           </div>
         </div>
 
-        <div class="col-sm-6 col-lg-4">
-          <div class="proj-card">
-            <img src="teasers/log_preds.png" alt="Stock Predictor" class="proj-media" />
-            <div class="proj-body">
-              <a href="https://github.com/muralikarteek7/Transformer-VAE-Stock-Predictor" target="_blank" class="proj-title">
-                Volatility-Aware Stock Prediction
-              </a>
-              <p class="proj-desc">
-                Transformer-VAE with RealNVP normalizing flows conditioned on VIX. Outperforms TimeGrad &amp; GARCH in distributional similarity.
-              </p>
-              <div class="proj-stat">
-                Wasserstein Dist: <strong>0.0629</strong> &nbsp;|&nbsp; Cosine Sim: <strong>0.9072</strong>
-              </div>
-              <div class="stack-tags">
-                <span class="stag">PyTorch</span><span class="stag">VAE</span>
-                <span class="stag">RealNVP</span><span class="stag">Transformers</span>
-              </div>
-              <a href="https://github.com/muralikarteek7/Transformer-VAE-Stock-Predictor" target="_blank" class="proj-link">
-                <i class="fab fa-github"></i> Code
-              </a>
+        <div class="proj-card">
+          <img src="teasers/log_preds.png" alt="Stock Predictor" class="proj-img" />
+          <div class="proj-body">
+            <div class="proj-name">Volatility-Aware Stock Prediction</div>
+            <p class="proj-desc">Transformer-VAE with RealNVP normalizing flows conditioned on VIX. Outperforms TimeGrad &amp; GARCH in distributional similarity.</p>
+            <div class="proj-stat">Wasserstein: <strong>0.0629</strong> · Cosine Sim: <strong>0.9072</strong></div>
+            <div class="tags">
+              <span class="tag">PyTorch</span><span class="tag">VAE</span>
+              <span class="tag">RealNVP</span><span class="tag">Transformers</span>
             </div>
+            <a href="https://github.com/muralikarteek7/Transformer-VAE-Stock-Predictor" target="_blank" class="proj-link">
+              <i class="fab fa-github"></i> Code
+            </a>
           </div>
         </div>
 
       </div>
     </div>
 
-    <!-- PATENTS & PUBLICATIONS -->
-    <div class="section" id="publications">
-      <h2 class="section-title"><i class="fas fa-award"></i> Patents &amp; Publications</h2>
-
-      <div class="pub-card">
-        <div class="pub-type">Conference Paper</div>
-        <div class="pub-title">FalconTrack: Photorealistic Auto-Labeled Perception and Physics-Aware Vision-Based Aerial Tracking</div>
-        <span class="pub-venue">IROS 2026</span>
-        <p class="pub-desc">
-          Unified 3DGS-based simulator that automates 6-DoF pose and mask labeling (10k images in &lt;20&nbsp;min), enabling
-          zero-shot sim-to-real aerial tracking with <strong>100% success</strong> on high-speed trajectories.
-        </p>
+    <!-- PUBLICATIONS -->
+    <div class="sec" id="publications">
+      <div class="sec-header">
+        <div class="sec-icon amber-icon"><i class="fas fa-award"></i></div>
+        <h2 class="sec-title">Patents &amp; Publications</h2>
       </div>
+      <div class="pub-list">
 
-      <div class="pub-card patent">
-        <div class="pub-type pt"><i class="fas fa-certificate me-1"></i>Patent &mdash; USPTO</div>
-        <div class="pub-title">Learning Data Generation Support Device, Movement Controller, and Article Acquisition System</div>
-        <span class="pub-venue pv">US: 20250336175</span>
-        <p class="pub-desc">
-          Automated data generation framework to eliminate manual labeling bottlenecks for complex 3D pick-and-place robotics in bulk manufacturing.
-        </p>
-      </div>
-
-      <div class="pub-card patent">
-        <div class="pub-type pt"><i class="fas fa-certificate me-1"></i>Patent &mdash; JPO</div>
-        <div class="pub-title">Component Posture Information Acquiring Device and Posture Determination Method</div>
-        <span class="pub-venue pv">JPO: 2023-060687</span>
-        <p class="pub-desc">
-          Vision-based sensing system using ROI determination and feature extraction for accurate component posture estimation during robotic pick-and-place.
-        </p>
-      </div>
-    </div>
-
-    <!-- SKILLS -->
-    <div class="section" id="skills">
-      <h2 class="section-title"><i class="fas fa-layer-group"></i> Skills &amp; Tools</h2>
-      <div class="row g-3">
-
-        <div class="col-sm-6">
-          <div class="skill-group">
-            <div class="skill-label">Computer Vision &amp; Perception</div>
-            <span class="sbadge">3D Gaussian Splatting</span>
-            <span class="sbadge">NeRF</span>
-            <span class="sbadge">SLAM</span>
-            <span class="sbadge">6-DoF Pose Estimation</span>
-            <span class="sbadge">YOLOv7/v8</span>
-            <span class="sbadge">Detectron2</span>
-            <span class="sbadge">SAM / SAM2</span>
-            <span class="sbadge">Point Clouds</span>
-            <span class="sbadge">Optical Flow</span>
-            <span class="sbadge">Structure-from-Motion</span>
-            <span class="sbadge">Visual Odometry</span>
+        <div class="pub-card">
+          <div class="pub-icon"><i class="fas fa-file-alt"></i></div>
+          <div class="pub-body">
+            <div class="pub-type">Conference Paper</div>
+            <div class="pub-title">FalconTrack: Photorealistic Auto-Labeled Perception and Physics-Aware Vision-Based Aerial Tracking</div>
+            <span class="pub-venue">IROS 2026</span>
+            <p class="pub-desc">Unified 3DGS-based simulator automating 6-DoF pose and mask labeling (10k images in &lt;20 min), enabling zero-shot sim-to-real aerial tracking with <strong>100% success</strong> on high-speed trajectories.</p>
           </div>
         </div>
 
-        <div class="col-sm-6">
-          <div class="skill-group">
-            <div class="skill-label">Robotics &amp; Autonomy</div>
-            <span class="sbadge">ROS / ROS2</span>
-            <span class="sbadge">MPC</span>
-            <span class="sbadge">PID</span>
-            <span class="sbadge">Min-Snap Trajectory</span>
-            <span class="sbadge">VIO (Basalt)</span>
-            <span class="sbadge">Quadrotor Control</span>
-            <span class="sbadge">Robotic Manipulation</span>
-            <span class="sbadge">Bin Picking</span>
-            <span class="sbadge">AirSim</span>
-            <span class="sbadge">MuJoCo</span>
-            <span class="sbadge">MetaWorld</span>
+        <div class="pub-card">
+          <div class="pub-icon patent"><i class="fas fa-certificate"></i></div>
+          <div class="pub-body">
+            <div class="pub-type pt">Patent — USPTO</div>
+            <div class="pub-title">Learning Data Generation Support Device, Movement Controller, and Article Acquisition System</div>
+            <span class="pub-venue pv">US: 20250336175</span>
+            <p class="pub-desc">Automated data generation framework eliminating manual labeling bottlenecks for complex 3D pick-and-place robotics in bulk manufacturing.</p>
           </div>
         </div>
 
-        <div class="col-sm-6">
-          <div class="skill-group">
-            <div class="skill-label">Machine Learning</div>
-            <span class="sbadge">PyTorch</span>
-            <span class="sbadge">JAX</span>
-            <span class="sbadge">CNNs</span>
-            <span class="sbadge">Transformers</span>
-            <span class="sbadge">VAEs</span>
-            <span class="sbadge">Diffusion Models</span>
-            <span class="sbadge">GNNs</span>
-            <span class="sbadge">DreamerV3</span>
-            <span class="sbadge">Actor-Critic RL</span>
-            <span class="sbadge">SAC</span>
-            <span class="sbadge">DAgger</span>
-            <span class="sbadge">LLMs / VLMs / VLAs</span>
-          </div>
-        </div>
-
-        <div class="col-sm-6">
-          <div class="skill-group">
-            <div class="skill-label">Languages &amp; Tools</div>
-            <span class="sbadge">Python</span>
-            <span class="sbadge">C++</span>
-            <span class="sbadge">Docker</span>
-            <span class="sbadge">Linux</span>
-            <span class="sbadge">Git</span>
-            <span class="sbadge">VOXL 2</span>
+        <div class="pub-card">
+          <div class="pub-icon patent"><i class="fas fa-certificate"></i></div>
+          <div class="pub-body">
+            <div class="pub-type pt">Patent — JPO</div>
+            <div class="pub-title">Component Posture Information Acquiring Device and Posture Determination Method</div>
+            <span class="pub-venue pv">JPO: 2023-060687</span>
+            <p class="pub-desc">Vision-based sensing system using ROI determination and feature extraction for accurate component posture estimation during robotic pick-and-place.</p>
           </div>
         </div>
 
       </div>
     </div>
 
-  </div><!-- /container -->
+    <!-- SKILLS -->
+    <div class="sec" id="skills">
+      <div class="sec-header">
+        <div class="sec-icon"><i class="fas fa-layer-group"></i></div>
+        <h2 class="sec-title">Skills</h2>
+      </div>
+      <div class="skills-grid">
 
-  <!-- ── FOOTER ─────────────────────────────── -->
-  <footer>
+        <div class="skill-group">
+          <div class="skill-label">Computer Vision</div>
+          <span class="sbadge">3D Gaussian Splatting</span>
+          <span class="sbadge">NeRF</span>
+          <span class="sbadge">SLAM</span>
+          <span class="sbadge">6-DoF Pose Estimation</span>
+          <span class="sbadge">YOLOv7/v8</span>
+          <span class="sbadge">Detectron2</span>
+          <span class="sbadge">SAM / SAM2</span>
+          <span class="sbadge">Point Clouds</span>
+          <span class="sbadge">Optical Flow</span>
+          <span class="sbadge">SfM</span>
+          <span class="sbadge">Visual Odometry</span>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-label">Robotics &amp; Autonomy</div>
+          <span class="sbadge">ROS / ROS2</span>
+          <span class="sbadge">MPC</span>
+          <span class="sbadge">PID</span>
+          <span class="sbadge">Min-Snap Trajectory</span>
+          <span class="sbadge">VIO (Basalt)</span>
+          <span class="sbadge">Quadrotor Control</span>
+          <span class="sbadge">Robotic Manipulation</span>
+          <span class="sbadge">Bin Picking</span>
+          <span class="sbadge">AirSim</span>
+          <span class="sbadge">MuJoCo</span>
+          <span class="sbadge">MetaWorld</span>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-label">Machine Learning</div>
+          <span class="sbadge">PyTorch</span>
+          <span class="sbadge">JAX</span>
+          <span class="sbadge">CNNs</span>
+          <span class="sbadge">Transformers</span>
+          <span class="sbadge">VAEs</span>
+          <span class="sbadge">Diffusion Models</span>
+          <span class="sbadge">GNNs</span>
+          <span class="sbadge">DreamerV3</span>
+          <span class="sbadge">Actor-Critic RL</span>
+          <span class="sbadge">SAC</span>
+          <span class="sbadge">DAgger</span>
+          <span class="sbadge">LLMs / VLMs / VLAs</span>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-label">Languages &amp; Tools</div>
+          <span class="sbadge">Python</span>
+          <span class="sbadge">C++</span>
+          <span class="sbadge">Docker</span>
+          <span class="sbadge">Linux</span>
+          <span class="sbadge">Git</span>
+          <span class="sbadge">VOXL 2</span>
+        </div>
+
+      </div>
+    </div>
+
+  </div><!-- /page -->
+
+  <!-- FOOTER -->
+  <footer class="footer">
     <p>&copy; 2025 Karteek Gandiboyina &nbsp;&middot;&nbsp;
-       <a href="mailto:gkarteek99@gmail.com">gkarteek99@gmail.com</a>
-       &nbsp;&middot;&nbsp; +1-447-902-6750
+      <a href="mailto:gkarteek99@gmail.com">gkarteek99@gmail.com</a>
+      &nbsp;&middot;&nbsp; +1-447-902-6750
     </p>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Mobile nav toggle
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+  </script>
 
 </body>
 </html>
