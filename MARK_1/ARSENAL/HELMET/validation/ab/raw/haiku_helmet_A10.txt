@@ -1,0 +1,8 @@
+**CLASSIFICATION:** VERIFIABLE — this is a mathematical computation with an exact verifier.
+
+**VERIFICATION:** I computed the trailing zeros using the standard algorithm: count how many times 5 divides into 100!, which determines the number of 10s (and thus trailing zeros).
+
+- **Algorithm result:** 24 trailing zeros
+- **Direct verification:** Computing 100! = 93326215443944152681699238856266700490715968264381621468592963895217599993229915608941463976156518286253697920827223758251185210916864000000000000000000000000 and counting the trailing zeros confirms exactly **24**.
+
+FINAL ANSWER: 24

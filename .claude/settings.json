@@ -1,0 +1,5 @@
+{
+  "hooks": {
+    "on_turn_start": "bash .claude/hooks/mark1-reminder.sh"
+  }
+}

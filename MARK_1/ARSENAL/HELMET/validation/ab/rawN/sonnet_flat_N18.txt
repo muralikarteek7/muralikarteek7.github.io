@@ -1,0 +1,20 @@
+The next US presidential election is in 2028. The incumbent party is the Republican Party (Donald Trump is the sitting president, having won in 2024). Trump himself is constitutionally ineligible to run again (two terms served), so the Republican incumbent party would need a new candidate (most likely JD Vance or Marco Rubio) to retain the White House.
+
+Key grounded facts (as of June 2026):
+
+- Prediction markets (Polymarket, highly liquid with over $1.2B traded) currently give Democrats ~59% and Republicans ~41% to win the 2028 election.
+- The incumbent party (Republican) is the underdog at approximately 41% implied probability.
+- Historical base rate: incumbent parties lose when the sitting president cannot run again and faces economic/political headwinds — the "open seat" effect historically disadvantages the incumbent party.
+- The 2026 midterms are widely expected to produce headwinds for Republicans, which prediction markets are already pricing in.
+
+The balance of evidence (prediction markets, historical patterns, open-seat dynamics) points to NO — the incumbent Republican Party is currently not favored to win the 2028 election. Democrats hold a meaningful edge (~59% vs ~41%).
+
+**Answer: NO**
+
+Sources:
+- [Which party wins 2028 US Presidential Election? | Polymarket](https://polymarket.com/event/which-party-wins-2028-us-presidential-election)
+- [Prediction Markets Split on Next U.S. President | Federal News Network](https://federalnewsnetwork.com/prediction-markets/2026/03/prediction-markets-split-on-next-president-latest-odds-2028-election/)
+- [Presidential election, 2028 | Ballotpedia](https://ballotpedia.org/Presidential_election,_2028)
+- [2028 presidential election: Democratic contenders, MAGA heirs emerge | The Hill](https://thehill.com/homenews/campaign/5830577-potential-presidential-bids-2028/)
+
+FINAL ANSWER: NO

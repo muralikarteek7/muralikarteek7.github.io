@@ -1,0 +1,11 @@
+{
+  "kappa": 0.5,
+  "domains": ["QUANT_PSYCH", "SOCIAL_SCI"],
+  "task_type": "analyze",
+  "triviality": "substantial",
+  "stakes": "medium",
+  "proxy_only_scorer": true,
+  "groundable": false,
+  "known_vs_open": "open",
+  "reasoning": "Replication check is exact (kappa=1 axis: run test on open data), but policy justification is normative (kappa=0 axis: requires judgment on significance thresholds and stakeholder values); proxy-only scorer unavoidable for the 'justified' verdict; blended task yields kappa=0.5."
+}

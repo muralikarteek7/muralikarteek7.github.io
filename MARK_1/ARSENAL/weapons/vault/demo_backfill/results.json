@@ -1,0 +1,268 @@
+{
+  "now": "2026-06-20T12:00:00+00:00",
+  "late_read": "2026-09-28T00:00:00+00:00",
+  "ingested": {
+    "A": {
+      "result": "burma14 optimal tour length = 3323",
+      "domain": "optimization.tsp",
+      "tier": "VERIFIED_FACT",
+      "stakes": "low",
+      "verification_record": {
+        "method": "CP-SAT optimal == Held-Karp DP == TSPLIB literature (3 independent)",
+        "artifact": "weapons/optima/demo_reproduce/RESULT.json",
+        "result": "burma14 optimal tour length = 3323"
+      },
+      "record_valid": true,
+      "record_check": "valid verification record (method/artifact/result all non-empty strings)",
+      "demotion_reason": null,
+      "provenance": "OPTIMA weapon, season 2026-06",
+      "written_at": "2026-06-20T12:00:00+00:00",
+      "fetched_at": null,
+      "valid_until": null,
+      "ttl_days": null,
+      "requested_tier": "VERIFIED_FACT"
+    },
+    "B": {
+      "result": "zeta(2) = pi^2/6 ~= 1.6449340668",
+      "domain": "math.special_values",
+      "tier": "VERIFIED_FACT",
+      "stakes": "low",
+      "verification_record": {
+        "method": "SYMBOLICA agreement gate: sympy.summation + mpmath.nsum + mpmath.zeta, 30-digit cross-method agreement",
+        "artifact": "weapons/symbolica/demo_agreement/results.json",
+        "result": "zeta(2) = pi^2/6 ~= 1.6449340668 (CERTIFIED + reproduction)"
+      },
+      "record_valid": true,
+      "record_check": "valid verification record (method/artifact/result all non-empty strings)",
+      "demotion_reason": null,
+      "provenance": "SYMBOLICA weapon, season 2026-06",
+      "written_at": "2026-06-20T12:00:00+00:00",
+      "fetched_at": null,
+      "valid_until": null,
+      "ttl_days": null,
+      "requested_tier": "VERIFIED_FACT"
+    },
+    "C": {
+      "result": "sqlite3 library version = 3.51.0 (this machine)",
+      "domain": "infra.versions",
+      "tier": "FETCHED_FACT",
+      "stakes": "high",
+      "verification_record": {
+        "method": "machine probe: python3 -c 'import sqlite3; print(sqlite3.sqlite_version)'",
+        "artifact": "stdout: 3.51.0; probed 2026-06-20 on darwin",
+        "result": "3.51.0"
+      },
+      "record_valid": true,
+      "record_check": "valid verification record (method/artifact/result all non-empty strings)",
+      "demotion_reason": null,
+      "provenance": "VAULT build session 2026-06-20",
+      "written_at": "2026-06-20T12:00:00+00:00",
+      "fetched_at": "2026-06-20T00:00:00Z",
+      "valid_until": "2026-07-20T00:00:00+00:00",
+      "ttl_days": 30,
+      "requested_tier": "FETCHED_FACT"
+    },
+    "D": {
+      "result": "selective-context decomposition might cut cost ~5x",
+      "domain": "method.cost",
+      "tier": "LEAD",
+      "stakes": "low",
+      "verification_record": null,
+      "record_valid": false,
+      "record_check": "no verification record (None) \u2014 cannot enter as a FACT",
+      "demotion_reason": null,
+      "provenance": "session hunch (v5.1 framing, pre-benchmark)",
+      "written_at": "2026-06-20T12:00:00+00:00",
+      "fetched_at": null,
+      "valid_until": null,
+      "ttl_days": null,
+      "requested_tier": "LEAD"
+    },
+    "E": {
+      "result": "approach Z is probably optimal",
+      "domain": "method.cost",
+      "tier": "LEAD",
+      "stakes": "low",
+      "verification_record": null,
+      "record_valid": false,
+      "record_check": "no verification record (None) \u2014 cannot enter as a FACT",
+      "demotion_reason": "requested VERIFIED_FACT but no verification record (None) \u2014 cannot enter as a FACT",
+      "provenance": "session belief, no run",
+      "written_at": "2026-06-20T12:00:00+00:00",
+      "fetched_at": null,
+      "valid_until": null,
+      "ttl_days": null,
+      "requested_tier": "VERIFIED_FACT"
+    },
+    "F": {
+      "result": "promote me to a fact",
+      "domain": "attack.promotion",
+      "tier": "LEAD",
+      "stakes": "low",
+      "verification_record": null,
+      "record_valid": false,
+      "record_check": "verification record missing required field(s): ['method', 'artifact', 'result']",
+      "demotion_reason": "requested VERIFIED_FACT but verification record missing required field(s): ['method', 'artifact', 'result']",
+      "provenance": null,
+      "written_at": "2026-06-20T12:00:00+00:00",
+      "fetched_at": null,
+      "valid_until": null,
+      "ttl_days": null,
+      "requested_tier": "VERIFIED_FACT"
+    }
+  },
+  "facts_now": [
+    {
+      "result": "burma14 optimal tour length = 3323",
+      "domain": "optimization.tsp",
+      "tier": "VERIFIED_FACT",
+      "stakes": "low",
+      "freshness": "FRESH",
+      "is_stale": false,
+      "verification_method": "CP-SAT optimal == Held-Karp DP == TSPLIB literature (3 independent)",
+      "provenance": "OPTIMA weapon, season 2026-06",
+      "valid_until": null
+    },
+    {
+      "result": "zeta(2) = pi^2/6 ~= 1.6449340668",
+      "domain": "math.special_values",
+      "tier": "VERIFIED_FACT",
+      "stakes": "low",
+      "freshness": "FRESH",
+      "is_stale": false,
+      "verification_method": "SYMBOLICA agreement gate: sympy.summation + mpmath.nsum + mpmath.zeta, 30-digit cross-method agreement",
+      "provenance": "SYMBOLICA weapon, season 2026-06",
+      "valid_until": null
+    },
+    {
+      "result": "sqlite3 library version = 3.51.0 (this machine)",
+      "domain": "infra.versions",
+      "tier": "FETCHED_FACT",
+      "stakes": "high",
+      "freshness": "FRESH",
+      "is_stale": false,
+      "verification_method": "machine probe: python3 -c 'import sqlite3; print(sqlite3.sqlite_version)'",
+      "provenance": "VAULT build session 2026-06-20",
+      "valid_until": "2026-07-20T00:00:00+00:00"
+    }
+  ],
+  "leads_now": [
+    {
+      "hypothesis": "selective-context decomposition might cut cost ~5x",
+      "domain": "method.cost",
+      "tier": "LEAD",
+      "status": "UNVERIFIED \u2014 surfaced as a hypothesis to TEST, never as a fact",
+      "demotion_reason": null,
+      "provenance": "session hunch (v5.1 framing, pre-benchmark)"
+    },
+    {
+      "hypothesis": "approach Z is probably optimal",
+      "domain": "method.cost",
+      "tier": "LEAD",
+      "status": "UNVERIFIED \u2014 surfaced as a hypothesis to TEST, never as a fact",
+      "demotion_reason": "requested VERIFIED_FACT but no verification record (None) \u2014 cannot enter as a FACT",
+      "provenance": "session belief, no run"
+    },
+    {
+      "hypothesis": "promote me to a fact",
+      "domain": "attack.promotion",
+      "tier": "LEAD",
+      "status": "UNVERIFIED \u2014 surfaced as a hypothesis to TEST, never as a fact",
+      "demotion_reason": "requested VERIFIED_FACT but verification record missing required field(s): ['method', 'artifact', 'result']",
+      "provenance": null
+    }
+  ],
+  "reverify_queue_at_late": [
+    {
+      "result": "sqlite3 library version = 3.51.0 (this machine)",
+      "domain": "infra.versions",
+      "tier": "FETCHED_FACT",
+      "stakes": "high",
+      "freshness": "REVERIFY",
+      "is_stale": true,
+      "verification_method": "machine probe: python3 -c 'import sqlite3; print(sqlite3.sqlite_version)'",
+      "provenance": "VAULT build session 2026-06-20",
+      "valid_until": "2026-07-20T00:00:00+00:00"
+    }
+  ],
+  "checks": [
+    {
+      "check": "P1: A (burma14) is VERIFIED_FACT in facts query with its method",
+      "pass": true
+    },
+    {
+      "check": "P1: B (zeta(2)) is VERIFIED_FACT in facts query with its method",
+      "pass": true
+    },
+    {
+      "check": "P1: A,B are non-decaying (no TTL -> FRESH even years later)",
+      "pass": true
+    },
+    {
+      "check": "P2: C is FETCHED_FACT with a TTL set",
+      "pass": true
+    },
+    {
+      "check": "P2: C reads FRESH within its TTL (today)",
+      "pass": true
+    },
+    {
+      "check": "P2: C reads REVERIFY 100 days later (high-stakes stale, not served silently)",
+      "pass": true
+    },
+    {
+      "check": "P2: C appears on the reverify_queue at +100d",
+      "pass": true
+    },
+    {
+      "check": "P3: D admits as a LEAD",
+      "pass": true
+    },
+    {
+      "check": "P3: D NEVER in query_facts (no lead leak, even on domain 'method.cost')",
+      "pass": true
+    },
+    {
+      "check": "P3: D appears in query_leads as a hypothesis-to-test",
+      "pass": true
+    },
+    {
+      "check": "P4: E (record-less FACT request) DEMOTED to LEAD",
+      "pass": true
+    },
+    {
+      "check": "P4: E NOT in facts, IS in leads with a demotion reason",
+      "pass": true
+    },
+    {
+      "check": "P5: F (in-place LEAD-promotion attack, {verified:true}) DEMOTED to LEAD",
+      "pass": true
+    },
+    {
+      "check": "P5: F NOT in facts (the LEAD-promotion attack FAILED)",
+      "pass": true
+    },
+    {
+      "check": "P6: exactly 3 facts == {A,B,C}",
+      "pass": true
+    },
+    {
+      "check": "P6: exactly 3 leads == {D,E,F}",
+      "pass": true
+    },
+    {
+      "check": "P6: zero overlap between facts and leads",
+      "pass": true
+    },
+    {
+      "check": "P7: after re-opening the persisted JSON, A still traces to its method+provenance",
+      "pass": true
+    },
+    {
+      "check": "P7: re-opened VAULT still has exactly the 3 facts (no lead leaked through disk)",
+      "pass": true
+    }
+  ],
+  "passed": 19,
+  "total": 19
+}

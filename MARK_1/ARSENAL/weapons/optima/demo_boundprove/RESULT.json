@@ -1,0 +1,16 @@
+{
+  "demo": "BOUND-PROVE \u2014 TSP n=26 under a 2s budget",
+  "n": 26,
+  "seed": 11,
+  "time_limit_s": 2.0,
+  "solver_status": "FEASIBLE",
+  "feasible_incumbent_length": 4284,
+  "gate_feasibility_recheck": true,
+  "gate_verdict": "FEASIBLE_WITH_GAP (no optimality certificate supplied)",
+  "INDEPENDENT_lower_bound": 3572,
+  "INDEPENDENT_gap_pct": 16.62,
+  "solver_self_reported_bound": 3840.0,
+  "solver_self_reported_gap_pct": 10.36,
+  "claimed_optimal": false,
+  "honest_statement": "FEASIBLE tour of length 4284; proven to lie within [3572, 4284] by an INDEPENDENT lower bound (16.62% gap). NOT optimal \u2014 a bound. The solver's own tighter bound 3840.0 is a self-report, labeled as such, not the certificate."
+}

@@ -1,0 +1,21 @@
+HELMET CLASSIFICATION & ANSWER
+
+Question: How many continents are there by the standard count? Give the number.
+
+CLASSIFICATION: SETTLED FACT with a single authoritative answer
+
+ANALYSIS:
+The standard count of continents (as taught in most English-speaking countries and internationally recognized) is 7 continents:
+1. North America
+2. South America
+3. Europe
+4. Africa
+5. Asia
+6. Australia (Oceania)
+7. Antarctica
+
+This 7-continent model is the most widely accepted standard, particularly in the United States and most English-language educational systems.
+
+Note: Alternative models exist (6-continent and 5-continent models), but the 7-continent model is the standard reference count.
+
+FINAL ANSWER: 7

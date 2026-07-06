@@ -1,0 +1,11 @@
+{
+  "kappa": 1.0,
+  "domains": ["MATH_TCS"],
+  "task_type": "prove",
+  "triviality": "oneliner",
+  "stakes": "low",
+  "proxy_only_scorer": false,
+  "groundable": true,
+  "known_vs_open": "known",
+  "reasoning": "Exact verifier exists: high-precision numerical verification or rigorous proof (Euler's Basel problem, settled 1734) both non-gameable and definitive."
+}

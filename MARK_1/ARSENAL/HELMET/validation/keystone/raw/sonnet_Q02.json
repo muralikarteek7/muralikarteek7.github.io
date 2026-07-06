@@ -1,0 +1,11 @@
+{
+  "kappa": 1.0,
+  "domains": ["MATH_TCS", "NAT_SCI"],
+  "task_type": "construct",
+  "triviality": "bounded",
+  "stakes": "medium",
+  "proxy_only_scorer": false,
+  "groundable": false,
+  "known_vs_open": "known",
+  "reasoning": "A rigorous interval enclosure of ∫₀¹ e^(-x²) dx is machine-verifiable via interval arithmetic (e.g. mpmath.iv or MPFI): the computed interval either contains the true value or it doesn't, making the verifier exact and non-gameable, so kappa=1.0 and this routes to a WEAPON (ENCLOSE / interval-arithmetic)."
+}

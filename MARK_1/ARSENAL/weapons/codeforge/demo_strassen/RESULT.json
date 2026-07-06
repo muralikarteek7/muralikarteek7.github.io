@@ -1,0 +1,94 @@
+{
+  "demo": "strassen",
+  "objects": [
+    {
+      "name": "reproduce_strassen_7mult",
+      "verdict": {
+        "sub_weapon": "MATMUL",
+        "kappa": 1,
+        "shape": "(2x2)*(2x2)",
+        "num_mults": 7,
+        "naive_mults": 8,
+        "valid": true,
+        "verdict": "VALID_BILINEAR_SCHEME",
+        "mismatched_C_entries": [],
+        "beats_naive": true,
+        "note": "exact non-commutative identity holds: computes A@B with 7 multiplications (naive uses 8)",
+        "ceiling_note": "MATMUL certifies a bilinear scheme computes A@B with exactly R scalar multiplications via an EXACT non-commutative symbolic identity. It does NOT by itself prove R is a record \u2014 a match to a KNOWN_RANK is a labeled reproduction; R below a proven lower bound flags a BUG, never a discovery.",
+        "known_rank_bound": 7,
+        "rank_status": "MATCHES_KNOWN_RANK"
+      }
+    },
+    {
+      "name": "naive_8mult_control",
+      "verdict": {
+        "sub_weapon": "MATMUL",
+        "kappa": 1,
+        "shape": "(2x2)*(2x2)",
+        "num_mults": 8,
+        "naive_mults": 8,
+        "valid": true,
+        "verdict": "VALID_BILINEAR_SCHEME",
+        "mismatched_C_entries": [],
+        "beats_naive": false,
+        "note": "exact non-commutative identity holds: computes A@B with 8 multiplications (naive uses 8)",
+        "ceiling_note": "MATMUL certifies a bilinear scheme computes A@B with exactly R scalar multiplications via an EXACT non-commutative symbolic identity. It does NOT by itself prove R is a record \u2014 a match to a KNOWN_RANK is a labeled reproduction; R below a proven lower bound flags a BUG, never a discovery.",
+        "known_rank_bound": 7,
+        "rank_status": "VALID_BUT_ABOVE_KNOWN_RANK"
+      }
+    },
+    {
+      "name": "broken_strassen_flipped_W",
+      "verdict": {
+        "sub_weapon": "MATMUL",
+        "kappa": 1,
+        "shape": "(2x2)*(2x2)",
+        "num_mults": 7,
+        "naive_mults": 8,
+        "valid": false,
+        "verdict": "NOT_A_VALID_SCHEME",
+        "mismatched_C_entries": [
+          [
+            0,
+            0
+          ]
+        ],
+        "beats_naive": false,
+        "note": "identity FAILS at C entries [(0, 0)]",
+        "ceiling_note": "MATMUL certifies a bilinear scheme computes A@B with exactly R scalar multiplications via an EXACT non-commutative symbolic identity. It does NOT by itself prove R is a record \u2014 a match to a KNOWN_RANK is a labeled reproduction; R below a proven lower bound flags a BUG, never a discovery."
+      }
+    },
+    {
+      "name": "gaming_dropped_product",
+      "fooled_a_numeric_sample_checker": true,
+      "verdict": {
+        "sub_weapon": "MATMUL",
+        "kappa": 1,
+        "shape": "(2x2)*(2x2)",
+        "num_mults": 8,
+        "naive_mults": 8,
+        "valid": false,
+        "verdict": "NOT_A_VALID_SCHEME",
+        "mismatched_C_entries": [
+          [
+            0,
+            0
+          ]
+        ],
+        "beats_naive": false,
+        "note": "identity FAILS at C entries [(0, 0)]",
+        "ceiling_note": "MATMUL certifies a bilinear scheme computes A@B with exactly R scalar multiplications via an EXACT non-commutative symbolic identity. It does NOT by itself prove R is a record \u2014 a match to a KNOWN_RANK is a labeled reproduction; R below a proven lower bound flags a BUG, never a discovery."
+      }
+    }
+  ],
+  "prediction_checks": {
+    "S1_strassen_valid": true,
+    "S2_strassen_7_beats_naive": true,
+    "S3_strassen_reproduction_label": true,
+    "S4_naive_valid_8": true,
+    "S5_broken_caught": true,
+    "S6_gaming_caught_by_symbolic": true,
+    "no_impossible_below_rank": true
+  },
+  "all_predictions_hit": true
+}

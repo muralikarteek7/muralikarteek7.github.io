@@ -1,0 +1,15 @@
+HELMET CLASSIFICATION & RESPONSE
+
+QUESTION: Who painted the Mona Lisa?
+
+CLASSIFICATION: SETTLED FACT with a single authoritative answer — well-documented historical fact with scholarly consensus.
+
+VERIFICATION: The Mona Lisa is one of the most famous paintings in the world. It was painted by Leonardo da Vinci (1452-1519), an Italian Renaissance master. He created it in the early 16th century, approximately 1503-1519. The painting is now housed in the Louvre Museum in Paris. This attribution is documented in art history texts, museum records, and centuries of scholarly consensus. It is not a matter of debate or interpretation.
+
+GROUND: This is established by:
+- Curatorial records at the Louvre Museum
+- Historical documentation and signatures
+- Art historical scholarship spanning centuries
+- Contemporary accounts and provenance records
+
+FINAL ANSWER: Leonardo da Vinci painted the Mona Lisa.

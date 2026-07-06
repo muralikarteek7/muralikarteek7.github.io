@@ -1,0 +1,11 @@
+{
+  "problem": "Two papers report means for a single 1-7 Likert item: Paper 1 mean=3.94 (N=18); Paper 2 mean=5.19 (N=28). Run a forensic GRIM consistency check on each and report what can be certified.",
+  "domains": ["QUANT_PSYCH"],
+  "task_type": "measure",
+  "kappa": 1.0,
+  "known_vs_open": "known",
+  "has_data": true,
+  "stakes": "medium",
+  "triviality": "bounded",
+  "proxy_only_scorer": false
+}

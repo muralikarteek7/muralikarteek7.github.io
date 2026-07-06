@@ -1,0 +1,83 @@
+{
+  "demo_A": [
+    {
+      "case": "GRIM 5.27/n=43",
+      "predicted": "INCONSISTENT",
+      "matches_prediction": true
+    },
+    {
+      "case": "GRIM 5.26/n=43",
+      "predicted": "consistent",
+      "matches_prediction": true
+    },
+    {
+      "case": "alloc 30/90 ratio 1:1",
+      "predicted": "INCONSISTENT",
+      "matches_prediction": true
+    },
+    {
+      "case": "alloc 60/60 ratio 1:1",
+      "predicted": "consistent",
+      "matches_prediction": true
+    },
+    {
+      "case": "pct 33.3% of n=7",
+      "predicted": "INCONSISTENT",
+      "matches_prediction": true
+    }
+  ],
+  "demo_B": {
+    "n_each": 300,
+    "alpha": 0.001,
+    "clean_flagged": 1,
+    "clean_false_flag_rate_pct": 0.333,
+    "fabrication_caught": 260,
+    "sensitivity_pct": 86.67,
+    "misconduct_affirmations": 0,
+    "examples": {
+      "clean_consistent": {
+        "verdict": "CONSISTENT with simple randomization \u2014 the baseline p-values do not depart from U(0,1) at alpha=0.001. (Not a certificate of validity.)",
+        "stouffer_Z": 0.0821
+      },
+      "fabricated_flagged": {
+        "verdict": "ANOMALY: baseline groups are MORE SIMILAR than expected under SIMPLE randomization (excess of high baseline p-values). This is a SCREEN for investigation, NOT fraud \u2014 see candidate_benign_explanations (stratified allocation is the most common cause).",
+        "stouffer_Z": 4.5555,
+        "benign_explanations": [
+          "stratified / minimized allocation (extremely common and entirely legitimate)",
+          "correlated baseline variables",
+          "cluster randomization"
+        ],
+        "false_positive_modes_count": 7
+      }
+    }
+  },
+  "demo_C": {
+    "k": 7,
+    "fixed_effect": 0.1306,
+    "random_effect": 0.1813,
+    "I2_percent": 67.6,
+    "egger_p": 0.01204,
+    "funnel_asymmetry_flagged": true,
+    "trim_fill_k0": 1,
+    "suppressed_side": "left",
+    "pooled_observed": 0.13058,
+    "pooled_adjusted": 0.125,
+    "pulled_toward_null": true
+  },
+  "demo_D": {
+    "anomaly": true,
+    "verdict": "ANOMALY: baseline groups are MORE SIMILAR than expected under SIMPLE randomization (excess of high baseline p-values). This is a SCREEN for investigation, NOT fraud \u2014 see candidate_benign_explanations (stratified allocation is the most common cause).",
+    "affirms_misconduct": false,
+    "has_design_caveat": true,
+    "stratum_var_excluded": true,
+    "design_caveat": "DESIGN = stratified: this design PRODUCES more-similar groups by construction, so a 'too-similar' signal is EXPECTED and is NOT an anomaly requiring explanation. The Carlisle test is mis-calibrated for non-simple randomization; interpret with this in mind (Carlisle excluded stratified variables)."
+  },
+  "checks": {
+    "demoA_exact_grounded": true,
+    "clean_calibrated": true,
+    "sensitivity_gt_85": true,
+    "zero_misconduct_affirmations": true,
+    "meta_pubbias_toward_null": true,
+    "stratified_guard": true
+  }
+}

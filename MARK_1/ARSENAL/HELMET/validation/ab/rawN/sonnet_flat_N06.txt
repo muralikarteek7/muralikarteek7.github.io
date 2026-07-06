@@ -1,0 +1,14 @@
+I cannot predict whether a major earthquake will strike California within the next 30 days. Earthquake prediction at this level of specificity (exact time window, location, magnitude) is not scientifically possible with current technology.
+
+Key facts:
+
+- California is seismically active and sits on major fault systems (San Andreas, Hayward, etc.)
+- The probability of a M7+ earthquake in California in any given 30-day window is low but non-zero
+- USGS and seismologists can estimate long-term probabilistic hazard (e.g., ~60% chance of M6.7+ in the SF Bay Area over 30 years) but cannot predict specific events
+- No credible scientific method exists for short-term deterministic earthquake prediction
+
+The honest answer is: **this is not predictable**, and any YES or NO answer would be a guess, not a grounded claim.
+
+Per the armor doctrine: load-bearing facts require a fetched source or machine check, not assertion. Predicting a specific geophysical event is beyond current scientific capability, and claiming otherwise would violate the honesty principle.
+
+FINAL ANSWER: NO — but only in the probabilistic sense that M7+ earthquakes in any specific 30-day window are statistically unlikely (base rate is low). This is not a prediction; earthquake occurrence at this specificity cannot be scientifically predicted. The true answer is: unknowable in advance.

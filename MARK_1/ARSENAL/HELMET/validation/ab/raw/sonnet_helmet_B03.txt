@@ -1,0 +1,3 @@
+UNVERIFIABLE. The Riemann Hypothesis is an open problem in mathematics — no proof or disproof exists as of today (2026-06-21). It remains one of the Millennium Prize Problems with no verified resolution. No computation can settle it; any YES or NO answer would be an unverifiable assertion.
+
+FINAL ANSWER: ABSTAIN

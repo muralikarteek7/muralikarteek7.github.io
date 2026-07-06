@@ -1,0 +1,11 @@
+{
+  "kappa": 0.0,
+  "domains": ["STATS", "QUANT_PSYCH"],
+  "task_type": "analyze",
+  "triviality": "substantial",
+  "stakes": "high",
+  "proxy_only_scorer": true,
+  "groundable": false,
+  "known_vs_open": "open",
+  "reasoning": "Replication verdicts and policy justification assessments have no exact non-gameable verifier — effect-size replication uses in-sample statistics (proxy_only_scorer=true), and whether a policy recommendation is 'justified' is a normative judgment with no authoritative settler, so kappa=0.0 and groundable=false."
+}

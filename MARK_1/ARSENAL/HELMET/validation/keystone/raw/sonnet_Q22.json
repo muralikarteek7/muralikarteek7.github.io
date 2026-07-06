@@ -1,0 +1,11 @@
+{
+  "kappa": 1.0,
+  "domains": ["STATS"],
+  "task_type": "analyze",
+  "triviality": "substantial",
+  "stakes": "high",
+  "proxy_only_scorer": false,
+  "groundable": true,
+  "known_vs_open": "known",
+  "reasoning": "The headline effect size can be exactly reproduced from reported summary statistics via deterministic arithmetic (e.g. mean difference, OR, RR from reported counts/means/SDs), and baseline table anomaly checks (GRIM, SPRITE, variance bounds) have exact non-gameable verifiers — both sub-tasks admit cheap exact verification, so kappa=1.0."
+}

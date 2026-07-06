@@ -1,0 +1,3 @@
+3.46 × 13 = 44.98, which is not an integer. Since all 13 ratings are integers, their sum must be an integer, so the mean must be a ratio with denominator dividing 13. The value 3.46 = 346/100 = 173/50, and 173/50 × 13 = 2249/50, which is not an integer.
+
+FINAL ANSWER: NO

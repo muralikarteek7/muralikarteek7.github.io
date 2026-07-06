@@ -1,0 +1,3 @@
+Verified computationally using sympy's deterministic primality test: 1000003 has no factors other than 1 and itself.
+
+FINAL ANSWER: YES

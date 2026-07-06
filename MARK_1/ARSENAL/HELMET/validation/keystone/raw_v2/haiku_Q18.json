@@ -1,0 +1,1 @@
+{"kappa":0.0,"domains":["STATS","CS_ENG"],"task_type":"analyze","triviality":"oneliner","stakes":"high","proxy_only_scorer":true,"groundable":false,"known_vs_open":"known","reasoning":"In-sample R² is a gameable proxy vulnerable to overfitting; genuine predictive validation requires out-of-sample or cross-validation evidence, which the claim lacks."}

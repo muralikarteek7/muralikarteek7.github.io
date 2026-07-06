@@ -1,0 +1,1 @@
+{"kappa":0.0,"domains":["ECON_FIN"],"task_type":"forecast","triviality":"oneliner","stakes":"medium","proxy_only_scorer":false,"groundable":false,"known_vs_open":"open","reasoning":"Future market price is an uncertain event with no computable verifier; no authoritative source can settle the outcome, only empirical observation one year hence."}

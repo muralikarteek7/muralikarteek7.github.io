@@ -1,0 +1,3 @@
+The determinant of the matrix [[2,1,3],[1,0,2],[4,1,8]] is **-1**.
+
+FINAL ANSWER: -1

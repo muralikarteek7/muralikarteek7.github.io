@@ -1,0 +1,1 @@
+{"kappa":0.0,"domains":["MATH_TCS"],"task_type":"prove","triviality":"oneliner","stakes":"high","proxy_only_scorer":false,"groundable":false,"known_vs_open":"open","reasoning":"Open unsolved conjecture with no computable verifier or authoritative settler; requires proof, cannot be answered by computation or lookup."}

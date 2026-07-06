@@ -1,0 +1,1 @@
+{"kappa":1.0,"domains":["MATH_TCS"],"task_type":"analyze","triviality":"oneliner","stakes":"low","proxy_only_scorer":false,"groundable":false,"known_vs_open":"known","reasoning":"144 divided by 12 is plain integer arithmetic (144/12=12), verifiable by running the computation directly, making kappa=1 regardless of the grandiose framing."}

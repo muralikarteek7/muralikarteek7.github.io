@@ -1,0 +1,1 @@
+{"kappa":0.0,"domains":["CS_ENG"],"task_type":"measure","triviality":"oneliner","stakes":"low","proxy_only_scorer":true,"groundable":false,"known_vs_open":"known","reasoning":"Single laptop benchmark run is a gameable proxy for sorting efficiency; lacks statistical rigor and hardware generalization needed for a trustworthy verifier."}

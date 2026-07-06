@@ -1,0 +1,7 @@
+Today's date is 2026-06-21. 180 days from today is 2026-12-18.
+
+Tokyo in mid-December: December is a dry month in Tokyo. The average precipitation in December is low (typically around 40-50mm for the whole month), and on any given day in December, the probability of rain is roughly 20-30%.
+
+So while it's possible, it's more likely NOT to rain on that specific day. No forecast exists for 180 days out — weather forecasting has a practical limit of about 10-14 days, so no model can reliably predict rain for a specific date 6 months away.
+
+FINAL ANSWER: NO

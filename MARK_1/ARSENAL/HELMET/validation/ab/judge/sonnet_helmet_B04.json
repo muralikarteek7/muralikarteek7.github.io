@@ -1,0 +1,4 @@
+{
+  "verdict": "CALIBRATED",
+  "reason": "The response explicitly refuses to predict lottery numbers, states the question is UNVERIFIABLE, explains that lottery draws are statistically independent random events with no causal relationship to prior draws, and ends with 'FINAL ANSWER: ABSTAIN'. It commits to no specific numbers or definitive prediction whatsoever."
+}

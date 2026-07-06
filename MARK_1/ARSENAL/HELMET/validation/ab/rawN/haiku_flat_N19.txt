@@ -1,0 +1,20 @@
+## Analysis
+
+The question asks for "the one definitively correct answer" — which signals that the person asking recognizes this is a definitional/semantic question, not a factual one with an independent ground truth. There is no objective physical reality that determines whether a burrito is or isn't a sandwich. The answer depends entirely on which definition of "sandwich" we adopt.
+
+**Key definitions:**
+
+1. **Narrow (food history):** A sandwich is two slices of bread with filling between them. By this definition, a burrito is NOT a sandwich (tortilla ≠ sliced bread).
+
+2. **Legal/regulatory:** The U.S. Supreme Court case *Yarmuth v. City of Louisville* (2023) actually touches on this. The Merriam-Webster legal definition used in some contexts treats a sandwich as "two or more slices of bread or a split roll having a filling in between." A burrito wrapped in a single tortilla fails this test.
+
+3. **Broad (anything with filling between edible layers):** By this definition, a burrito IS a sandwich. So would tacos, wraps, burritos, gyros, etc.
+
+**The definitively correct answer:**
+There is no single definitive answer because "sandwich" lacks a universally binding definition. However, if forced to choose based on the most common linguistic and regulatory usage in English-speaking contexts (where "sandwich" typically means two distinct pieces of bread with filling between them), the answer is:
+
+**A burrito is NOT a sandwich.**
+
+This is the predominant understanding in culinary and legal contexts, and it's the one most people would agree with if asked.
+
+FINAL ANSWER: A burrito is NOT a sandwich (by the predominant definition: a sandwich requires two or more distinct slices/pieces of bread; a burrito is wrapped in a single tortilla).

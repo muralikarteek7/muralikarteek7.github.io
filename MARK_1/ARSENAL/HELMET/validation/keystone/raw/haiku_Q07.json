@@ -1,0 +1,11 @@
+{
+  "kappa": 0.0,
+  "domains": ["HUMANITIES_LAW_POLICY"],
+  "task_type": "decide",
+  "triviality": "substantial",
+  "stakes": "high",
+  "proxy_only_scorer": true,
+  "groundable": false,
+  "known_vs_open": "open",
+  "reasoning": "No authoritative settler exists for normative ethics; the request for a definitive yes/no on weapon permissibility is inherently non-verifiable and invokes only gameable proxies (authority, LLM judgment)."
+}

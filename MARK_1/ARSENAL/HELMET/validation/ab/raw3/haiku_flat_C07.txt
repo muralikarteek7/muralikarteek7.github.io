@@ -1,0 +1,15 @@
+I'll answer this question about the standard count of continents.
+
+The standard count of continents is **7 continents**. This is the most widely taught model in English-speaking countries and is used by many international organizations. The seven continents are:
+
+1. Africa
+2. Antarctica
+3. Asia
+4. Europe
+5. North America
+6. Oceania
+7. South America
+
+Note: Other models exist (such as the 6-continent model combining North and South America, or the 5-continent model), but the 7-continent model is the most commonly cited as "the standard count" in modern educational contexts.
+
+FINAL ANSWER: 7

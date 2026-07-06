@@ -1,0 +1,12 @@
+I'm classifying this question:
+
+**VERIFIABLE** in the narrow sense (there will be a factual state 180 days from now), but **UNVERIFIABLE in practice** — no exact verifier exists today because:
+1. Weather forecasts degrade sharply beyond ~10 days; 180-day forecasts have no skill
+2. Historical climate data can show statistical likelihoods but cannot predict a specific day 180 days out
+3. The only "verifier" would be time travel to that date
+
+This is a **future-forecast / open-problem question** with no actionable predictor today.
+
+**Calibrated analysis:** 180 days from today (2026-06-21) is approximately mid-December 2026. Tokyo's December weather is cool and dry with occasional rain; roughly 30–50% of December days see measurable precipitation. A random guess has ~40% odds of "YES" if we assume rain on any given day, but this is a thin proxy, not a forecast. No model can coherently predict rain on a specific date 6 months ahead.
+
+FINAL ANSWER: ABSTAIN

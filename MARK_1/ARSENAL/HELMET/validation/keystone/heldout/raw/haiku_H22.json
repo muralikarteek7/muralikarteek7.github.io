@@ -1,0 +1,1 @@
+{"kappa":1.0,"domains":["STATS","QUANT_PSYCH"],"task_type":"analyze","triviality":"bounded","stakes":"high","proxy_only_scorer":false,"groundable":true,"known_vs_open":"known","reasoning":"GRIM is a deterministic, non-gameable arithmetic verifier on reported clinical-trial summary statistics; exact computation exists; high-stakes biostat auditing task."}

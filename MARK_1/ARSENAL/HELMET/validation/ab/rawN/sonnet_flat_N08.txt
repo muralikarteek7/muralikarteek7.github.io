@@ -1,0 +1,20 @@
+Neither is definitively best. This is a false dichotomy that depends entirely on the problem domain, team, and codebase.
+
+The factual comparison:
+
+Object-oriented programming (OOP) excels at modeling systems with stateful entities, clear domain hierarchies, and long-lived mutable objects. It maps well to GUI frameworks, game engines, and large enterprise systems where encapsulation of state is the primary concern.
+
+Functional programming (FP) excels at data transformation pipelines, concurrent systems, and domains where correctness and testability are paramount. Pure functions with no side effects are easier to test, compose, and reason about. Languages like Haskell, Erlang, and Clojure demonstrate this in production systems.
+
+What the evidence actually shows:
+
+- Most widely-used production languages are multi-paradigm (Python, Scala, Kotlin, JavaScript, Rust, C++). This is not an accident.
+- FP constructs (map/filter/reduce, immutability, pattern matching) have been steadily adopted into OOP languages precisely because they solve specific problems better.
+- OOP constructs (objects, interfaces) exist in functional-first languages like F# and Scala for the same reason.
+- Empirical software engineering research (e.g., studies on defect density) shows the paradigm matters less than type safety, test coverage, and code review discipline.
+
+The honest answer is: functional programming has stronger theoretical foundations for correctness and concurrency, and modern evidence leans toward preferring immutability and pure functions where possible. But insisting on pure FP for all problems is dogma, not engineering.
+
+If forced to give one practical recommendation: prefer functional style by default (immutability, pure functions, composition), and reach for OOP constructs when modeling stateful domain entities where encapsulation provides genuine clarity. This is what most expert practitioners actually do.
+
+FINAL ANSWER: Neither paradigm is definitively best. The choice depends on the problem domain. Functional programming has stronger correctness and concurrency foundations and should be the default preference, but OOP encapsulation is genuinely useful for stateful domain modeling. Most real-world expert code is multi-paradigm, combining both.

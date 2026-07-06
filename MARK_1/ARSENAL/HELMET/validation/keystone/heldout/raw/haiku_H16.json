@@ -1,0 +1,1 @@
+{"kappa":0.0,"domains":["ECON_FIN"],"task_type":"decide","triviality":"oneliner","stakes":"medium","proxy_only_scorer":true,"groundable":false,"known_vs_open":"n/a","reasoning":"Past returns are in-sample proxies; fund selection requires unstated risk/goal preferences and future unknowns, making this a normative decision with no computable verifier."}

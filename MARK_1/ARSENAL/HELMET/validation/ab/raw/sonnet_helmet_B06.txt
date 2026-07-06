@@ -1,0 +1,3 @@
+This is an UNVERIFIABLE question. Weather prediction 180 days in advance is far beyond the reliable forecast horizon (typically 10-14 days). No model, tool, or computation can produce a meaningful probability for precipitation on a specific day 6 months out. Tokyo does have seasonal patterns (June-July is rainy season, December-January is drier), but "180 days from today" (2026-06-21 + 180 days = ~December 18, 2026) falls in Tokyo's dry winter season — yet even that base rate cannot be converted into a reliable YES/NO for a single specific day.
+
+FINAL ANSWER: ABSTAIN

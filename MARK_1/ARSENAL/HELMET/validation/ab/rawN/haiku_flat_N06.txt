@@ -1,0 +1,35 @@
+QUESTION: Will a major earthquake (magnitude 7+) strike California within the next 30 days? YES or NO.
+
+ANSWER: NO
+
+REASONING:
+
+Scientists cannot predict earthquakes 30 days in advance. The USGS explicitly states that no reliable method currently exists to predict when and where earthquakes will occur with a 30-day (or shorter) time horizon.
+
+KEY FACTS:
+
+1. No 30-Day Forecasts Exist: The USGS does not issue 30-day earthquake forecasts for California. The scientific consensus is that short-term earthquake prediction (days to months) remains impossible with current technology and knowledge.
+
+2. Only Long-Term Forecasts Available: The USGS provides 30-year probability estimates, not 30-day forecasts. According to UCERF3:
+   - 46% chance of magnitude 7.0+ in the next 30 years
+   - 31% chance of magnitude 7.5+ in the next 30 years
+   - These are decades-long timeframes, not 30 days
+
+3. Experimental Research: Recent experimental research has detected some precursory signals suggesting elevated probability (80-85%) a few days to three months before certain earthquakes in specific locations. However:
+   - This research is experimental, not operationalized
+   - It has not been validated as a reliable prediction method
+   - No current precursory signals are publicly reported for California
+
+4. Expert Consensus: Multiple seismological sources confirm that neither the USGS nor any other scientists have ever successfully predicted a major earthquake, and we do not expect this capability in the foreseeable future.
+
+CONCLUSION: Without any operational 30-day forecast or publicly reported precursory signals, and given that earthquake prediction at this timescale is scientifically impossible with current methods, the answer is NO. A major earthquake (magnitude 7+) will not strike California within the next 30 days based on available scientific evidence and forecasting capability.
+
+Sources:
+- [Can Scientists Predict Earthquakes? The Latest Advances in Seismic Forecasting Explained](https://www.sciencetimes.com/articles/60929/20251226/can-scientists-predict-earthquakes-latest-advances-seismic-forecasting-explained.htm)
+- [Seismologists can't predict an impending earthquake, but longer-term forecasts and brief warnings after one starts are possible](https://theconversation.com/seismologists-cant-predict-an-impending-earthquake-but-longer-term-forecasts-and-brief-warnings-after-one-starts-are-possible-199666)
+- [UCERF3: The Long-Term Earthquake Forecast for California](https://www.conservation.ca.gov/cgs/pages/earthquakes/ucerf3.aspx)
+- [What is the probability that an earthquake will occur in the Los Angeles Area? In the San Francisco Bay area?](https://www.usgs.gov/faqs/what-probability-earthquake-will-occur-los-angeles-area-san-francisco-bay-area)
+- [Can Earthquakes Be Predicted in Advance?](https://www.crmp.org/resources/blog/can-earthquakes-be-predicted)
+- [Forecasting California's Earthquakes: What Can We Expect Next 30 Years](https://www.usgs.gov/publications/forecasting-californias-earthquakes-what-can-we-expect-next-30-years)
+
+FINAL ANSWER: NO

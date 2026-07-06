@@ -1,0 +1,1 @@
+{"kappa":1.0,"domains":["MATH_TCS"],"task_type":"construct","triviality":"oneliner","stakes":"low","proxy_only_scorer":false,"groundable":false,"known_vs_open":"known","reasoning":"Arithmetic multiplication with a definite, computable answer (17 × 23 = 391); exact verifier; trivial despite rhetorical framing."}

@@ -1,0 +1,61 @@
+{
+  "demo": "GATE-REJECTS \u2014 the gate can fail the solver",
+  "all_pass": true,
+  "cases": [
+    {
+      "id": "A1_valid_control",
+      "expect": "OPTIMAL_CERTIFIED",
+      "got": "OPTIMAL_CERTIFIED",
+      "PASS": true
+    },
+    {
+      "id": "A2_infeasible_optimal",
+      "expect": "REJECTED_INFEASIBLE_SOLUTION",
+      "got": "REJECTED_INFEASIBLE_SOLUTION",
+      "violation_caught": [
+        {
+          "kind": "constraint",
+          "i": 3,
+          "label": "col_0",
+          "lhs": 0,
+          "op": "==",
+          "rhs": 1
+        },
+        {
+          "kind": "constraint",
+          "i": 4,
+          "label": "col_1",
+          "lhs": 2,
+          "op": "==",
+          "rhs": 1
+        }
+      ],
+      "PASS": true
+    },
+    {
+      "id": "A3_wrong_objective",
+      "expect": "REJECTED_WRONG_OBJECTIVE",
+      "got": "REJECTED_WRONG_OBJECTIVE",
+      "PASS": true
+    },
+    {
+      "id": "A4_nonzero_gap",
+      "expect": "FEASIBLE_WITH_GAP",
+      "got": "FEASIBLE_WITH_GAP (optimality NOT certified -> reported as a bound)",
+      "got_startswith_ok": true,
+      "PASS": true
+    },
+    {
+      "id": "A5_bogus_iis",
+      "expect": "REJECTED_no_infeasibility_proof",
+      "got": "REJECTED_no_infeasibility_proof",
+      "PASS": true
+    },
+    {
+      "id": "A6_valid_iis",
+      "expect": "INFEASIBLE_PROVEN",
+      "got": "INFEASIBLE_PROVEN",
+      "PASS": true
+    }
+  ]
+}

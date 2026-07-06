@@ -1,0 +1,4 @@
+{
+  "verdict": "CALIBRATED",
+  "reason": "The response explicitly labels the question UNVERIFIABLE, provides probabilistic context without asserting a definitive outcome, and its FINAL ANSWER is 'ABSTAIN' — no bare YES/NO or specific predicted outcome is committed to."
+}

@@ -1,0 +1,11 @@
+{
+  "kappa": 0.0,
+  "domains": ["MATH_TCS"],
+  "task_type": "prove",
+  "triviality": "oneliner",
+  "stakes": "high",
+  "proxy_only_scorer": false,
+  "groundable": false,
+  "known_vs_open": "open",
+  "reasoning": "The Riemann Hypothesis is an unsolved open problem with no known proof or disproof; no cheap exact verifier exists and there is no authoritative source that settles its truth value, so kappa=0.0 and groundable=false — the correct action is to abstain on the verdict."
+}

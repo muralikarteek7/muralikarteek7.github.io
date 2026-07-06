@@ -1,0 +1,11 @@
+{
+  "kappa": 1.0,
+  "domains": ["MATH_TCS"],
+  "task_type": "prove",
+  "triviality": "bounded",
+  "stakes": "low",
+  "proxy_only_scorer": false,
+  "groundable": false,
+  "known_vs_open": "known",
+  "reasoning": "A proof-assistant kernel (e.g. Lean/Coq) or a direct inductive verification can certify the proof with zero ambiguity, giving a cheap exact non-gameable verifier, so kappa=1.0."
+}

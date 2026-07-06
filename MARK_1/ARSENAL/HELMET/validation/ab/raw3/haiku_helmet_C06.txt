@@ -1,0 +1,14 @@
+HELMET CLASSIFICATION: VERIFIABLE (SETTLED FACT)
+
+QUESTION: What is the boiling point of water at sea level in degrees Celsius? Give the number.
+
+ANALYSIS:
+This is a well-established physical constant with a single authoritative answer. The boiling point of water at sea level (1 standard atmosphere of pressure, 101.325 kPa) is exactly 100 degrees Celsius by definition.
+
+Historical grounding: The Celsius temperature scale was historically defined with two fixed points:
+- 0°C: freezing point of water (at 1 atm)
+- 100°C: boiling point of water (at 1 atm)
+
+Modern confirmation: This value is confirmed in contemporary physics and chemistry references. The boiling point of water at standard atmospheric pressure (sea level) remains 100°C.
+
+FINAL ANSWER: 100

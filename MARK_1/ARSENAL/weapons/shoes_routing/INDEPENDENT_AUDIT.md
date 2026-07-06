@@ -1,0 +1,16 @@
+# shoes_routing — INDEPENDENT AUDIT (Sonnet ≠ generator, 2026-06-21)
+
+**Verdict: SOUND_WITH_CAVEATS** · selftest runs clean: True · discriminates (rejects bad input): True
+
+**Command run:** `cd /Users/varunesh/Desktop/AI_agents/MARK_1/ARSENAL/weapons/shoes_routing && python3 selftest_all.py`
+
+## Summary
+shoes_routing contains two real components (FOOTING pre-ship rail and ROUTE-PLANNER meta-controller) that genuinely reject bad inputs: high paraphrase disagreement, unverified load-bearing claims, OOD inputs, schema mismatches, and misrouted tasks all produce non-SHIP_OK verdicts. The selftest suite exits 0 cleanly across all 4 checks (FOOTING, ROUTE-PLANNER, end-to-end misroute (g), and demo honesty) and includes adversarial negative cases that must fail to pass. The tool is sound for its stated purpose — reducing cost and blocking detectably-under-grounded drafts — but carries two honest structural ceilings that the README discloses and one undisclosed minor routing gap: (1) consistent-but-wrong answers always slip through (disclosed), (2) the misroute backstop is bypassable if the caller omits required_tier (not self-tested), and (3) schema-mismatch-only fires ABSTAIN instead of the more actionable GROUND_THEN_RECHECK.
+
+## Defects found (4)
+1. AXIS 1 (documented, confirmed): overconfident-but-internally-consistent errors slip through FOOTING. A draft with every load-bearing claim superficially 'checked', all paraphrase answers agreeing, and in-distribution inputs returns SHIP_OK_LOW_UNCERTAINTY even if the answer is wrong. This is the admitted honest ceiling, but the escape is real and was verified by probe (consistent_wrong payload above returns action='SHIP_OK_LOW_UNCERTAINTY', uncertain=False).
+2. AXIS 2 (structural gap, no self-test coverage): the misroute flag never fires if the caller omits required_tier. Both task.flags (routine_generation etc.) and required_tier are caller-supplied with no internal cross-check. A genuinely hard task mislabeled 'routine_generation' and without required_tier silently routes to Haiku with misrouted_below_required_tier=False and no flag. FOOTING only backstops if the degraded output is also detectable (paraphrase-unstable or ungrounded).
+3. AXIS 3 (wording rail scope): the forbidden-word scrubber catches {'verified','safe','correct','proven','guaranteed','certified'} at word boundaries but does NOT catch certification-flavored synonyms: 'validated', 'accurate', 'trustworthy', 'confirmed', 'verification', 'safety'. These could carry equivalent certification meaning without tripping the rail. Minor in practice since FOOTING controls its own output vocabulary, but the disclosed scope boundary is real.
+4. Minor action-routing gap: a structured-output schema mismatch that fires alone (no other uncertainty signals) routes to ABSTAIN rather than GROUND_THEN_RECHECK. The uncertain=True still correctly blocks shipping, so this is not a soundness hole, but ABSTAIN is a less actionable signal than GROUND_THEN_RECHECK for a schema error. None of the action-selector elif branches check 'mismatches' explicitly.
+
+*This is the independent-verification-on-disk that promotes the tool from 'self-tested only' (Tier 2) to 'independently audited' — SOUND_WITH_CAVEATS: real, discriminating, with the robustness defects above to fix.*

@@ -1,0 +1,11 @@
+{
+  "demo": "REPRODUCE-RECORD \u2014 TSPLIB burma14",
+  "label": "REPRODUCTION of a published optimum (NOT a discovery, NOT a record)",
+  "cpsat_optimal_length": 3323,
+  "held_karp_independent_optimum": 3323,
+  "published_optimum_TSPLIB": 3323,
+  "three_routes_agree": true,
+  "gate_verdict": "OPTIMAL_CERTIFIED",
+  "optimality_independence": "FULL (a different exact algorithm; solver not trusted)",
+  "model_caveat": "certificate covers the FORMAL MODEL only; modeling is kappa<1 (cross-model-reviewed separately) -- 'optimal FOR THIS MODEL'."
+}

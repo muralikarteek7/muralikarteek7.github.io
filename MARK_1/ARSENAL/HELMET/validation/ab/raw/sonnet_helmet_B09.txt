@@ -1,0 +1,3 @@
+This is an UNVERIFIABLE question. "Most effective charity" depends on normative choices: which cause area to prioritize (global health, animal welfare, existential risk, etc.), which effectiveness metric to use (lives saved per dollar, QALYs, counterfactual impact), and whose values determine what counts as a "good outcome." No objective algorithm resolves these prior value commitments. Even within a single framework like GiveWell's, the top-ranked charity changes year to year and differs by donor circumstances. There is no fact of the matter that makes one charity objectively best across all frameworks.
+
+FINAL ANSWER: ABSTAIN

@@ -1,0 +1,225 @@
+{
+  "task": "Durante et al. (2013) Study 1 \u2014 fertility x relationship -> religiosity",
+  "routing_plan": {
+    "fired_sub_weapons": [
+      {
+        "sub_weapon": "S-REPRO",
+        "kappa": 1.0,
+        "track": "weapon",
+        "triggers": [
+          "has_open_data_and_code"
+        ],
+        "rationale": "A published quantitative statistic with open data+code can be re-run and checked."
+      },
+      {
+        "sub_weapon": "S-MULTIVERSE",
+        "kappa": 1.0,
+        "track": "weapon",
+        "triggers": [
+          "finding_rests_on_analytic_choices"
+        ],
+        "rationale": "The finding depends on defensible-but-arbitrary analytic choices; enumerate the multiverse."
+      },
+      {
+        "sub_weapon": "S-MEASURE",
+        "kappa": 1.0,
+        "track": "weapon",
+        "triggers": [
+          "constructs_are_latent",
+          "compares_groups"
+        ],
+        "rationale": "Latent constructs (scales/indices) require reliability + invariance checks."
+      },
+      {
+        "sub_weapon": "S-CAUSAL",
+        "kappa": 0.5,
+        "track": "weapon",
+        "triggers": [
+          "claim_is_causal_observational"
+        ],
+        "rationale": "A causal claim from observational data needs sensitivity analysis (E-value/Rosenbaum)."
+      },
+      {
+        "sub_weapon": "S-SAMPLE",
+        "kappa": 0.5,
+        "track": "weapon",
+        "triggers": [
+          "generalizes_beyond_sample"
+        ],
+        "rationale": "Inference beyond the sample needs representativeness + weighting checks."
+      },
+      {
+        "sub_weapon": "S-GROUND",
+        "kappa": 0.5,
+        "track": "armor",
+        "triggers": [
+          "has_prose_empirical_claims"
+        ],
+        "rationale": "Every empirical assertion in prose is grounded against a FETCHED source: a \u03ba=1 FROZEN fabrication layer (quote/number/author actually present in the source \u2014 catches invented quotes & citations) + a \u03ba=0 entailment judgment (does the source SUPPORT the paraphrase?) by a model != generator, else ABSTAIN."
+      }
+    ],
+    "weapon_track": [
+      {
+        "sub_weapon": "S-REPRO",
+        "kappa": 1.0,
+        "track": "weapon",
+        "triggers": [
+          "has_open_data_and_code"
+        ],
+        "rationale": "A published quantitative statistic with open data+code can be re-run and checked."
+      },
+      {
+        "sub_weapon": "S-MULTIVERSE",
+        "kappa": 1.0,
+        "track": "weapon",
+        "triggers": [
+          "finding_rests_on_analytic_choices"
+        ],
+        "rationale": "The finding depends on defensible-but-arbitrary analytic choices; enumerate the multiverse."
+      },
+      {
+        "sub_weapon": "S-MEASURE",
+        "kappa": 1.0,
+        "track": "weapon",
+        "triggers": [
+          "constructs_are_latent",
+          "compares_groups"
+        ],
+        "rationale": "Latent constructs (scales/indices) require reliability + invariance checks."
+      },
+      {
+        "sub_weapon": "S-CAUSAL",
+        "kappa": 0.5,
+        "track": "weapon",
+        "triggers": [
+          "claim_is_causal_observational"
+        ],
+        "rationale": "A causal claim from observational data needs sensitivity analysis (E-value/Rosenbaum)."
+      },
+      {
+        "sub_weapon": "S-SAMPLE",
+        "kappa": 0.5,
+        "track": "weapon",
+        "triggers": [
+          "generalizes_beyond_sample"
+        ],
+        "rationale": "Inference beyond the sample needs representativeness + weighting checks."
+      }
+    ],
+    "armor_track": [
+      {
+        "sub_weapon": "S-GROUND",
+        "kappa": 0.5,
+        "track": "armor",
+        "triggers": [
+          "has_prose_empirical_claims"
+        ],
+        "rationale": "Every empirical assertion in prose is grounded against a FETCHED source: a \u03ba=1 FROZEN fabrication layer (quote/number/author actually present in the source \u2014 catches invented quotes & citations) + a \u03ba=0 entailment judgment (does the source SUPPORT the paraphrase?) by a model != generator, else ABSTAIN."
+      }
+    ],
+    "kappa0_armor_only": false,
+    "note": "SOCIUS raises trustworthiness (reproducibility + grounding); it does NOT establish truth. Findings that DIE under these checks are the primary valuable output."
+  },
+  "S-REPRO": {
+    "sub_weapon": "S-REPRO",
+    "kappa": 1,
+    "published": {
+      "n_specifications": 120,
+      "n_significant": 7
+    },
+    "reproduced": true,
+    "structure_reproduced": true,
+    "count_reproduced_within_2": true
+  },
+  "S-MULTIVERSE": {
+    "sub_weapon": "S-MULTIVERSE",
+    "kappa": 1,
+    "n_specs": 120,
+    "median_coef": 0.7461157941164818,
+    "coef_range": [
+      -0.741571700783975,
+      2.765800438596495
+    ],
+    "share_significant": 0.058333333333333334,
+    "share_significant_hyp_direction": 0.058333333333333334,
+    "sign_stability": 0.8833333333333333,
+    "dominant_sign": 1,
+    "hyp_sign": 1,
+    "decision_rule": "robust iff share_sig_hyp>=0.5 AND sign_stability>=0.95 AND dominant_sign==hyp_sign",
+    "robust": false,
+    "ceiling_note": "Robust to analytic choice != true. A surviving finding can still be confounded, mis-measured, or non-generalisable.",
+    "verdict": "DIES under the multiverse"
+  },
+  "S-MEASURE": {
+    "sub_weapon": "S-MEASURE",
+    "kappa": 1,
+    "cronbach_alpha": 0.9247384548327662,
+    "mcdonald_omega": 0.9264841823893265,
+    "reliable": true,
+    "n_single": 125,
+    "n_relationship": 133,
+    "metric_invariance": true,
+    "scalar_invariance": true,
+    "delta_cfi_metric": -0.0005401136130352979,
+    "delta_cfi_scalar": 0.0005401137078202556,
+    "group_mean_comparison_trustworthy": true,
+    "invariance_fit": {
+      "configural": {
+        "chi2": 0.0,
+        "df": 0,
+        "cfi": 1.0,
+        "rmsea": 0.0004
+      },
+      "metric": {
+        "chi2": 2.3525,
+        "df": 2,
+        "cfi": 0.9995,
+        "rmsea": 0.037
+      },
+      "scalar": {
+        "chi2": 3.9742,
+        "df": 4,
+        "cfi": 1.0,
+        "rmsea": 0.0
+      }
+    },
+    "ceiling_note": "Invariance != validity."
+  },
+  "S-CAUSAL": {
+    "sub_weapon": "S-CAUSAL",
+    "kappa": 0.5,
+    "reported_estimate": -0.45224272796392134,
+    "scale": "d",
+    "approx_risk_ratio": 0.6626284305689203,
+    "e_value_point": 2.385706503148128,
+    "e_value_ci_limit": null,
+    "benchmark_confounding_RR": 2.0,
+    "interpretation": "An unmeasured confounder would need to be associated with both exposure and outcome by a risk ratio of 2.39-fold each (beyond measured covariates) to explain away the point estimate.",
+    "ceiling_note": "The E-value is exact (kappa=1); the verdict 'robust' depends on the declared benchmark, a kappa=0 judgment. A large E-value does NOT prove the claim is causal.",
+    "scope": "single significant 'as-published' path's SIMPLE effect (High vs Low fertility religiosity among single women); NOT the interaction, and NOT the multiverse verdict.",
+    "robust_to_confounding_on_this_single_path": true,
+    "WARNING": "This path was cherry-picked from 120 specifications; the finding still DIES under the multiverse (S-MULTIVERSE governs). A confounding-robust single path is NOT evidence the finding holds.",
+    "context_note": "Cycle phase is quasi-random, so classical confounding is a weaker threat here than analytic flexibility (-> S-MULTIVERSE is the dominant failure).",
+    "cohen_d": -0.45224272796392134,
+    "n_high": 42,
+    "n_low": 39
+  },
+  "S-SAMPLE": {
+    "sub_weapon": "S-SAMPLE",
+    "kappa": 0.5,
+    "abstained": true,
+    "reason": "Durante (2013) used an MTurk convenience sample; the dataset carries no population-target marginals, so a quantitative representativeness/weighting check cannot be run without fabricating population data (which the honesty rail forbids).",
+    "flagged_concern": "Generalisation from MTurk to the US electorate is a known external-validity limitation \u2014 routed to armor as a qualitative flag, NOT machine-verified.",
+    "ceiling_note": "Abstention is a scored deliverable, not a failure."
+  },
+  "S-GROUND": {
+    "sub_weapon": "S-GROUND",
+    "kappa": 0,
+    "sources": [
+      "Durante, Rae & Griskevicius (2013) Psychological Science 24:1007-1016",
+      "Steegen, Tuerlinckx, Gelman & Vanpaemel (2016) Perspectives on Psychological Science 11:702-712",
+      "Data + R code: OSF https://osf.io/zj68b/ (downloaded, re-run)"
+    ],
+    "note": "Empirical claims grounded in fetched sources; method SOTA grounded (see ../SPEC.md)."
+  }
+}

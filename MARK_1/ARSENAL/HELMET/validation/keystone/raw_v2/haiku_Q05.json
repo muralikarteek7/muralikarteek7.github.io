@@ -1,0 +1,1 @@
+{"kappa":1.0,"domains":["CS_ENG_OR"],"task_type":"construct","triviality":"bounded","stakes":"low","proxy_only_scorer":false,"groundable":false,"known_vs_open":"known","reasoning":"Assignment optimality is verifiable by computing total cost and checking dual feasibility / reduced-cost optimality certificate via Hungarian algorithm—a computable proof, not a lookup."}

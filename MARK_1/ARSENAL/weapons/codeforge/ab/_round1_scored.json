@@ -1,0 +1,90 @@
+{
+  "best_of_4": {
+    "s_n5b12": {
+      "oneshot": true,
+      "best4": true,
+      "per_attempt_ok": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "sizes": [
+        10,
+        10,
+        9,
+        8
+      ]
+    },
+    "s_n6b16": {
+      "oneshot": true,
+      "best4": true,
+      "per_attempt_ok": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "sizes": [
+        12,
+        15,
+        13,
+        14
+      ]
+    },
+    "y_reset": {
+      "oneshot": true,
+      "best4": true,
+      "per_attempt_ok": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "sizes": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "y_countsmaller": {
+      "oneshot": true,
+      "best4": true,
+      "per_attempt_ok": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "sizes": [
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  },
+  "iterate_r1": {
+    "s_n5b12": {
+      "r1_ok": true,
+      "feedback": "VERIFIED: valid sorting network within budget.",
+      "size": 9
+    },
+    "s_n6b16": {
+      "r1_ok": true,
+      "feedback": "VERIFIED: valid sorting network within budget.",
+      "size": 13
+    },
+    "y_reset": {
+      "r1_ok": true,
+      "feedback": "VERIFIED.",
+      "size": null
+    },
+    "y_countsmaller": {
+      "r1_ok": true,
+      "feedback": "VERIFIED.",
+      "size": null
+    }
+  }
+}

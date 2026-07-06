@@ -1,0 +1,391 @@
+[
+ {
+  "id": "Q01",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "CS_ENG",
+    "MATH_TCS"
+   ],
+   "task_type": "construct",
+   "triviality": "substantial",
+   "stakes": "medium",
+   "proxy_only_scorer": false,
+   "groundable": true,
+   "known_vs_open": "known",
+   "reasoning": "The 0-1 principle provides a cheap, exact, non-gameable verifier: exhaustively test all 2^8=256 binary inputs in deterministic finite computation; the optimal 19-comparator network for 8 inputs is a settled known result."
+  }
+ },
+ {
+  "id": "Q02",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "MATH_TCS",
+    "NAT_SCI"
+   ],
+   "task_type": "construct",
+   "triviality": "bounded",
+   "stakes": "medium",
+   "proxy_only_scorer": false,
+   "groundable": false,
+   "known_vs_open": "known",
+   "reasoning": "A rigorous interval enclosure of \u222b\u2080\u00b9 e^(-x\u00b2) dx is machine-verifiable via interval arithmetic (e.g. mpmath.iv or MPFI): the computed interval either contains the true value or it doesn't, making the verifier exact and non-gameable, so kappa=1.0 and this routes to a WEAPON (ENCLOSE / interval-arithmetic)."
+  }
+ },
+ {
+  "id": "Q03",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "MATH_TCS"
+   ],
+   "task_type": "prove",
+   "triviality": "bounded",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": false,
+   "known_vs_open": "known",
+   "reasoning": "A proof-assistant kernel (e.g. Lean/Coq) or a direct inductive verification can certify the proof with zero ambiguity, giving a cheap exact non-gameable verifier, so kappa=1.0."
+  }
+ },
+ {
+  "id": "Q04",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "STATS",
+    "MATH_TCS"
+   ],
+   "task_type": "analyze",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": true,
+   "known_vs_open": "known",
+   "reasoning": "Exact GRIM arithmetic: with 28 integer responses on 1-7, the achievable means are multiples of 1/28, so we can compute whether 5.19 = 519/100 equals some k/28 (k integer, 28<=k<=196) \u2014 a deterministic divisibility check with no gameable proxy."
+  }
+ },
+ {
+  "id": "Q05",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "CS_ENG_OR"
+   ],
+   "task_type": "construct",
+   "triviality": "bounded",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": false,
+   "known_vs_open": "known",
+   "reasoning": "The Hungarian algorithm produces an optimal assignment with a dual certificate (complementary slackness conditions) that can be verified exactly in O(n^2), making this a kappa=1 problem with a non-gameable exact verifier."
+  }
+ },
+ {
+  "id": "Q06",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "MATH_TCS"
+   ],
+   "task_type": "prove",
+   "triviality": "bounded",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": true,
+   "known_vs_open": "known",
+   "reasoning": "The Basel problem (sum 1/k^2 = pi^2/6) is a settled mathematical fact provable by exact interval arithmetic via mpmath or a proof assistant, giving a cheap, non-gameable verifier; kappa=1.0."
+  }
+ },
+ {
+  "id": "Q07",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "HUMANITIES_LAW_POLICY"
+   ],
+   "task_type": "decide",
+   "triviality": "bounded",
+   "stakes": "high",
+   "proxy_only_scorer": false,
+   "groundable": false,
+   "known_vs_open": "open",
+   "reasoning": "No exact non-gameable verifier exists; this is a normative ethics/law/policy question with no single authoritative settler, so kappa=0.0 and groundable=false \u2014 a definitive yes/no verdict must be abstained on."
+  }
+ },
+ {
+  "id": "Q08",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "HUMANITIES_LAW_POLICY"
+   ],
+   "task_type": "decide",
+   "triviality": "substantial",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": false,
+   "known_vs_open": "open",
+   "reasoning": "Libertarian free will is a normative/metaphysical open problem with no authoritative settler and no exact non-gameable verifier \u2014 the verdict is irreducibly contested across philosophy, neuroscience, and theology."
+  }
+ },
+ {
+  "id": "Q09",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "ECON_FIN"
+   ],
+   "task_type": "forecast",
+   "triviality": "oneliner",
+   "stakes": "medium",
+   "proxy_only_scorer": false,
+   "groundable": false,
+   "known_vs_open": "open",
+   "reasoning": "No exact non-gameable verifier exists for a future market price; the outcome is a normative/stochastic forecast with no authoritative settler, making it a non-groundable open question where abstention on the verdict is required."
+  }
+ },
+ {
+  "id": "Q10",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "MATH_TCS"
+   ],
+   "task_type": "prove",
+   "triviality": "oneliner",
+   "stakes": "high",
+   "proxy_only_scorer": false,
+   "groundable": false,
+   "known_vs_open": "open",
+   "reasoning": "P vs NP is an unsolved open problem with no authoritative settler and no cheap exact verifier; no proof or disproof exists, so kappa=0.0 and groundable=false \u2014 the correct action is to abstain on the verdict."
+  }
+ },
+ {
+  "id": "Q11",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "HUMANITIES_LAW_POLICY"
+   ],
+   "task_type": "explain",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": true,
+   "known_vs_open": "known",
+   "reasoning": "The capital of Australia is a settled, authoritatively sourced fact (Canberra), so kappa=0.0 with groundable=true; no gameable proxy involved."
+  }
+ },
+ {
+  "id": "Q12",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "HUMANITIES_LAW_POLICY"
+   ],
+   "task_type": "explain",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": true,
+   "known_vs_open": "known",
+   "reasoning": "The Peace of Westphalia is a settled historical fact with a single authoritative date (1648), making it groundable with no exact verifier needed and kappa=0."
+  }
+ },
+ {
+  "id": "Q13",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "STATS"
+   ],
+   "task_type": "explain",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": true,
+   "known_vs_open": "known",
+   "reasoning": "The definition of a p-value is a settled, authoritative fact in frequentist statistics (probability of observing data at least as extreme as the sample, assuming H0 is true), with no exact verifier needed \u2014 ground and answer."
+  }
+ },
+ {
+  "id": "Q14",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "NAT_SCI"
+   ],
+   "task_type": "explain",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": true,
+   "known_vs_open": "known",
+   "reasoning": "The speed of light in vacuum is an exact defined constant (299,792,458 m/s by SI definition since 1983), making it a settled fact with a single authoritative source and an exact non-gameable verifier."
+  }
+ },
+ {
+  "id": "Q15",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "ECON_FIN"
+   ],
+   "task_type": "decide",
+   "triviality": "bounded",
+   "stakes": "high",
+   "proxy_only_scorer": true,
+   "groundable": false,
+   "known_vs_open": "open",
+   "reasoning": "The in-sample backtested Sharpe ratio is a classic gameable proxy \u2014 it can be maximized by overfitting to historical noise, so selecting 'best strategy' by this metric does not constitute an exact, non-gameable verifier; kappa=0.0 and proxy_only_scorer=true per C14."
+  }
+ },
+ {
+  "id": "Q16",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "HUMANITIES_LAW_POLICY"
+   ],
+   "task_type": "decide",
+   "triviality": "bounded",
+   "stakes": "low",
+   "proxy_only_scorer": true,
+   "groundable": false,
+   "known_vs_open": "n/a",
+   "reasoning": "The only available verifier is an LLM-judge or human aesthetic rating \u2014 a paradigmatic gameable proxy \u2014 so kappa=0.0 and proxy_only_scorer=true; 'best-written' has no authoritative settler, so groundable=false."
+  }
+ },
+ {
+  "id": "Q17",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "HUMANITIES_LAW_POLICY"
+   ],
+   "task_type": "decide",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": true,
+   "groundable": false,
+   "known_vs_open": "open",
+   "reasoning": "MMLU score is a gameable benchmark proxy \u2014 using it to declare overall capability is a textbook C14 proxy trap, so kappa=0.0 and proxy_only_scorer=true; no authoritative settler exists for 'overall capability' verdicts."
+  }
+ },
+ {
+  "id": "Q18",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "STATS",
+    "ECON_FIN"
+   ],
+   "task_type": "analyze",
+   "triviality": "oneliner",
+   "stakes": "medium",
+   "proxy_only_scorer": true,
+   "groundable": false,
+   "known_vs_open": "known",
+   "reasoning": "In-sample R-squared is a classic gameable proxy (overfitting, no out-of-sample guarantee), so kappa=0.0 and proxy_only_scorer=true; the verdict 'model is predictive' cannot be certified by this statistic alone, making the conclusion non-groundable."
+  }
+ },
+ {
+  "id": "Q19",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "HUMANITIES_LAW_POLICY"
+   ],
+   "task_type": "explain",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": true,
+   "known_vs_open": "known",
+   "reasoning": "The capital of Brazil is a settled, verifiable fact (Bras\u00edlia) with an authoritative source; the elaborate multi-disciplinary framing is decoration on a simple lookup, earning kappa=1.0 because plain lookup or arithmetic confirms it exactly."
+  }
+ },
+ {
+  "id": "Q20",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "MATH_TCS"
+   ],
+   "task_type": "analyze",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": true,
+   "known_vs_open": "known",
+   "reasoning": "17 * 23 = 391 is exact arithmetic with a deterministic, non-gameable verifier; the grandiose framing is irrelevant dressing on a trivial multiplication."
+  }
+ },
+ {
+  "id": "Q21",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "STATS",
+    "QUANT_PSYCH"
+   ],
+   "task_type": "analyze",
+   "triviality": "substantial",
+   "stakes": "high",
+   "proxy_only_scorer": true,
+   "groundable": false,
+   "known_vs_open": "open",
+   "reasoning": "Replication verdicts and policy justification assessments have no exact non-gameable verifier \u2014 effect-size replication uses in-sample statistics (proxy_only_scorer=true), and whether a policy recommendation is 'justified' is a normative judgment with no authoritative settler, so kappa=0.0 and groundable=false."
+  }
+ },
+ {
+  "id": "Q22",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "STATS"
+   ],
+   "task_type": "analyze",
+   "triviality": "substantial",
+   "stakes": "high",
+   "proxy_only_scorer": false,
+   "groundable": true,
+   "known_vs_open": "known",
+   "reasoning": "The headline effect size can be exactly reproduced from reported summary statistics via deterministic arithmetic (e.g. mean difference, OR, RR from reported counts/means/SDs), and baseline table anomaly checks (GRIM, SPRITE, variance bounds) have exact non-gameable verifiers \u2014 both sub-tasks admit cheap exact verification, so kappa=1.0."
+  }
+ },
+ {
+  "id": "Q23",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "MATH_TCS"
+   ],
+   "task_type": "prove",
+   "triviality": "oneliner",
+   "stakes": "high",
+   "proxy_only_scorer": false,
+   "groundable": false,
+   "known_vs_open": "open",
+   "reasoning": "The Riemann Hypothesis is an unsolved open problem with no known proof or disproof; no cheap exact verifier exists and there is no authoritative source that settles its truth value, so kappa=0.0 and groundable=false \u2014 the correct action is to abstain on the verdict."
+  }
+ },
+ {
+  "id": "Q24",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "MATH_TCS"
+   ],
+   "task_type": "prove",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": true,
+   "known_vs_open": "known",
+   "reasoning": "A deterministic primality test (e.g. trial division up to sqrt or Miller-Rabin with fixed witnesses) is a cheap, exact, non-gameable verifier; 2^31-1=2147483647 is the known Mersenne prime M31, so kappa=1.0 and the result is a settled fact."
+  }
+ }
+]

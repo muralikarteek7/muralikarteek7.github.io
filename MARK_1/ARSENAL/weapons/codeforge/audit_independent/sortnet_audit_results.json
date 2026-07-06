@@ -1,0 +1,124 @@
+{
+  "n8_batcher": {
+    "permutation": {
+      "method": "PERMUTATION (n! distinct)",
+      "n": 8,
+      "permutations_tested": 40320,
+      "valid": true,
+      "first_failures": [],
+      "num_comparators": 19
+    },
+    "binary": {
+      "method": "BINARY SWEEP (2^n)",
+      "n": 8,
+      "binary_inputs_tested": 256,
+      "valid": true,
+      "first_failures": [],
+      "num_comparators": 19
+    }
+  },
+  "n6_greedy": {
+    "permutation": {
+      "method": "PERMUTATION (n! distinct)",
+      "n": 6,
+      "permutations_tested": 720,
+      "valid": true,
+      "first_failures": [],
+      "num_comparators": 13
+    },
+    "binary": {
+      "method": "BINARY SWEEP (2^n)",
+      "n": 6,
+      "binary_inputs_tested": 64,
+      "valid": true,
+      "first_failures": [],
+      "num_comparators": 13
+    }
+  },
+  "n7_greedy": {
+    "permutation": {
+      "method": "PERMUTATION (n! distinct)",
+      "n": 7,
+      "permutations_tested": 5040,
+      "valid": true,
+      "first_failures": [],
+      "num_comparators": 18
+    },
+    "binary": {
+      "method": "BINARY SWEEP (2^n)",
+      "n": 7,
+      "binary_inputs_tested": 128,
+      "valid": true,
+      "first_failures": [],
+      "num_comparators": 18
+    }
+  },
+  "gaming_attempts": [
+    {
+      "game_attempt": "craft broken n=4 network, check if sample verifier fooled",
+      "network": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "binary_passed": 12,
+      "binary_total": 16,
+      "binary_failures_count": 4,
+      "perm_passed": 8,
+      "perm_total": 24,
+      "perm_failures_count": 16,
+      "sample_10_random_all_passed": false,
+      "conclusion": "GAME FAILED: the broken network also fails random samples",
+      "exhaustive_catches_it": true
+    },
+    {
+      "error": "test network isn't valid to begin with",
+      "debug": {
+        "method": "BINARY SWEEP (2^n)",
+        "n": 6,
+        "binary_inputs_tested": 64,
+        "valid": false,
+        "first_failures": [
+          [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1,
+            1,
+            0,
+            0
+          ]
+        ],
+        "num_comparators": 15
+      }
+    }
+  ]
+}

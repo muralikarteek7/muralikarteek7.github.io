@@ -1,0 +1,1 @@
+{"kappa":1.0,"domains":["MATH_TCS","CS_ENG_OR"],"task_type":"prove","triviality":"bounded","stakes":"medium","proxy_only_scorer":false,"groundable":false,"known_vs_open":"known","reasoning":"TSP on 6 cities admits exact exhaustive enumeration (60 tours) and arithmetic verification of route distance—computable, non-gameable verifier routes to a weapon."}

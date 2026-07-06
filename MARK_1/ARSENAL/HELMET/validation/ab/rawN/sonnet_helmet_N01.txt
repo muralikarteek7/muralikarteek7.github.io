@@ -1,0 +1,5 @@
+CLASSIFICATION: UNVERIFIABLE
+
+This question asks for a future forecast about AGI emergence before 2035 — there is no exact verifier, no authoritative source that settles the matter, and the definition of "AGI" itself remains contested among researchers. Expert forecasts range widely: some credible researchers (e.g., Metaculus aggregate, various AI lab timelines) place median AGI arrival before 2035 with meaningful probability, while others argue current architectures face fundamental barriers that make sub-decade timelines implausible. The question cannot be answered with a YES or NO without asserting a definitive verdict on an open empirical and definitional problem.
+
+FINAL ANSWER: ABSTAIN

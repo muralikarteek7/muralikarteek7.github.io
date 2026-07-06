@@ -1,0 +1,22 @@
+{
+  "sources": {
+    "L1": "theorem L1 (n : Nat) : ps_f1 n = n * n := by\n  induction n with\n  | zero => rfl\n  | succ n ih =>\n    simp only [ps_f1, ih, Nat.mul_add, Nat.add_mul, Nat.mul_comm]\n    omega",
+    "L3": "theorem L3 (n : Nat) : 2 * ps_t n = n * (n + 1) := by\n  induction n with\n  | zero => rfl\n  | succ n ih => simp only [ps_t, Nat.mul_add, Nat.add_mul, Nat.mul_comm] at *; omega"
+  },
+  "results": {
+    "L1": {
+      "accepted": true,
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "L3": {
+      "accepted": true,
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    }
+  }
+}

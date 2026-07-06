@@ -1,0 +1,18 @@
+HELMET DISCIPLINE RESPONSE
+
+QUESTION:
+What is the chemical symbol for gold?
+
+CLASSIFICATION:
+SETTLED FACT with a single authoritative answer. The chemical symbol for gold is a defined value in chemistry, universally documented and standardized.
+
+ANSWER:
+The chemical symbol for gold is Au.
+
+GROUNDING:
+This symbol derives from the Latin name "aurum" and is the official periodic table symbol used universally in chemistry and scientific communication. This is a settled, verifiable fact with no ambiguity.
+
+VERIFICATION:
+This claim is machine-verifiable and grounded in standard chemistry references. No uncertainty or open questions apply to this question.
+
+FINAL ANSWER: Au

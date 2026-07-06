@@ -1,0 +1,24 @@
+{
+  "_provenance": "Verbatim abstracts + metadata fetched from the OpenAlex API (api.openalex.org) on 2026-06-20. Stored so the S-GROUND demo runs offline + deterministically against the recorded source text.",
+  "durante2013": {
+    "authors": "Kristina M. Durante, Ashley Rae, Vladas Griskevicius",
+    "year": 2013,
+    "title": "The Fluctuating Female Vote",
+    "url": "https://openalex.org/works?filter=title.search:fluctuating%20female%20vote",
+    "abstract": "Each month, many women experience an ovulatory cycle that regulates fertility. Although research has found that this cycle influences women's mating preferences, we proposed that it might also change women's political and religious views. Building on theory suggesting that political and religious orientation are linked to reproductive goals, we tested how fertility influenced women's politics, religiosity, and voting in the 2012 U.S. presidential election. In two studies with large and diverse samples, ovulation had drastically different effects on single women and women in committed relationships. Ovulation led single women to become more liberal, less religious, and more likely to vote for Barack Obama. In contrast, ovulation led women in committed relationships to become more conservative, more religious, and more likely to vote for Mitt Romney. In addition, ovulation-induced changes in political orientation mediated women's voting behavior. Overall, the ovulatory cycle not only influences women's politics but also appears to do so differently for single women than for women in relationships."
+  },
+  "steegen2016": {
+    "authors": "Sara Steegen, Francis Tuerlinckx, Andrew Gelman, Wolf Vanpaemel",
+    "year": 2016,
+    "title": "Increasing Transparency Through a Multiverse Analysis",
+    "url": "https://api.openalex.org/works?search=increasing%20transparency%20through%20a%20multiverse%20analysis",
+    "abstract": "Empirical research inevitably includes constructing a data set by processing raw data into a form ready for statistical analysis. Data processing often involves choices among several reasonable options for excluding, transforming, and coding data. We suggest that instead of performing only one analysis, researchers could perform a multiverse analysis, which involves performing all analyses across the whole set of alternatively processed data sets corresponding to a large set of reasonable scenarios. Using an example focusing on the effect of fertility on religiosity and political attitudes, we show that analyzing a single data set can be misleading and propose a multiverse analysis as an alternative practice. A multiverse analysis offers an idea of how much the conclusions change because of arbitrary choices in data construction and gives pointers as to which choices are most consequential in the fragility of the result."
+  },
+  "scott_pound2015": {
+    "authors": "Isabel M. Scott, Nicholas Pound",
+    "year": 2015,
+    "title": "Menstrual Cycle Phase Does Not Predict Political Conservatism",
+    "url": "https://api.openalex.org/works?search=fluctuating%20female%20vote%20politics%20religion%20ovulatory%20cycle",
+    "abstract": "Recent authors have reported a relationship between women's fertility status, as indexed by menstrual cycle phase, and conservatism in moral, social and political values. We conducted a survey to test for the existence of a relationship between menstrual cycle day and conservatism. 2213 women reporting regular menstrual cycles provided data about their political views. Of these women, 2208 provided information about their cycle date, 1260 provided additional evidence of reliability in self-reported cycle date, and of these, 750 also indicated an absence of hormonal disruptors such as recent hormonal contraception use, breastfeeding or pregnancy. Cycle day was used to estimate day-specific fertility rate (probability of conception); political conservatism was measured via direct self-report and via responses to the \"Moral Foundations\" questionnaire. We also recorded relationship status, which has been reported to interact with menstrual cycle phase in determining political preferences. We found no evidence of a relationship between estimated cyclical fertility changes and conservatism, and no evidence of an interaction between relationship status and cyclical fertility in determining political attitudes. Our findings were robust to multiple inclusion/exclusion criteria and to different methods of estimating fertility and measuring conservatism. In summary, the relationship between cycle-linked reproductive parameters and conservatism may be weaker or less reliable than previously thought."
+  }
+}

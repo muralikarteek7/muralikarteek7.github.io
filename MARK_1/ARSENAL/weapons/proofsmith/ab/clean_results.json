@@ -1,0 +1,164 @@
+{
+  "blind": {
+    "L1": [
+      {
+        "accepted": false,
+        "axioms": [
+          "propext",
+          "sorryAx"
+        ],
+        "full_output": null,
+        "errors": [
+          "/var/folders/kc/k5xb3wkn7fv1ljw0mncxvy500000gn/T/tmp4tfpv0b2.lean:31:36: error: omega could not prove the goal:"
+        ]
+      },
+      {
+        "accepted": false,
+        "axioms": [
+          "sorryAx"
+        ],
+        "full_output": null,
+        "errors": [
+          "/var/folders/kc/k5xb3wkn7fv1ljw0mncxvy500000gn/T/tmpye_wc2_i.lean:34:5: error: unknown tactic",
+          "/var/folders/kc/k5xb3wkn7fv1ljw0mncxvy500000gn/T/tmpye_wc2_i.lean:31:14: error: unsolved goals"
+        ]
+      },
+      {
+        "accepted": false,
+        "axioms": [
+          "sorryAx"
+        ],
+        "full_output": null,
+        "errors": [
+          "/var/folders/kc/k5xb3wkn7fv1ljw0mncxvy500000gn/T/tmpr1yatbfm.lean:30:31: error: No goals to be solved",
+          "/var/folders/kc/k5xb3wkn7fv1ljw0mncxvy500000gn/T/tmpr1yatbfm.lean:34:4: error: omega could not prove the goal:"
+        ]
+      }
+    ],
+    "L2": [
+      {
+        "accepted": true,
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "full_output": null,
+        "errors": []
+      },
+      {
+        "accepted": false,
+        "axioms": [
+          "propext",
+          "sorryAx"
+        ],
+        "full_output": null,
+        "errors": [
+          "/var/folders/kc/k5xb3wkn7fv1ljw0mncxvy500000gn/T/tmpuimo8mur.lean:31:14: error: unsolved goals"
+        ]
+      },
+      {
+        "accepted": true,
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "full_output": null,
+        "errors": []
+      }
+    ],
+    "L3": [
+      {
+        "accepted": false,
+        "axioms": [
+          "sorryAx"
+        ],
+        "full_output": null,
+        "errors": [
+          "/var/folders/kc/k5xb3wkn7fv1ljw0mncxvy500000gn/T/tmpjtop7q67.lean:33:4: error: omega could not prove the goal:"
+        ]
+      },
+      {
+        "accepted": false,
+        "axioms": [
+          "propext",
+          "sorryAx"
+        ],
+        "full_output": null,
+        "errors": [
+          "/var/folders/kc/k5xb3wkn7fv1ljw0mncxvy500000gn/T/tmpbf3tzqcu.lean:33:5: error: unknown tactic",
+          "/var/folders/kc/k5xb3wkn7fv1ljw0mncxvy500000gn/T/tmpbf3tzqcu.lean:32:42: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern"
+        ]
+      },
+      {
+        "accepted": false,
+        "axioms": [
+          "propext",
+          "sorryAx"
+        ],
+        "full_output": null,
+        "errors": [
+          "/var/folders/kc/k5xb3wkn7fv1ljw0mncxvy500000gn/T/tmp1x394zjv.lean:33:4: error: omega could not prove the goal:"
+        ]
+      }
+    ],
+    "L4": [
+      {
+        "accepted": false,
+        "axioms": [
+          "sorryAx"
+        ],
+        "full_output": null,
+        "errors": [
+          "/var/folders/kc/k5xb3wkn7fv1ljw0mncxvy500000gn/T/tmpzqrxi_u1.lean:35:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern"
+        ]
+      },
+      {
+        "accepted": false,
+        "axioms": [],
+        "full_output": null,
+        "errors": [
+          "/var/folders/kc/k5xb3wkn7fv1ljw0mncxvy500000gn/T/tmpqe06zzxa.lean:34:5: error: unknown tactic"
+        ]
+      },
+      {
+        "accepted": false,
+        "axioms": [
+          "propext",
+          "sorryAx"
+        ],
+        "full_output": null,
+        "errors": [
+          "/var/folders/kc/k5xb3wkn7fv1ljw0mncxvy500000gn/T/tmpeg0cdcm1.lean:34:4: error: omega could not prove the goal:"
+        ]
+      }
+    ]
+  },
+  "REF": {
+    "L1": "forall (n : Nat), ps_f1 n = n * n",
+    "L2": "forall (n : Nat), ps_g n = 3 * n",
+    "L3": "forall (n : Nat), 2 * ps_t n = n * (n + 1)",
+    "L4": "forall (n : Nat), ps_d (n + 1) = ps_t n"
+  },
+  "BLIND_SOURCES": {
+    "L1": [
+      "theorem L1 (n : Nat) : ps_f1 n = n * n := by\n  induction n with\n  | zero => simp only [ps_f1]\n  | succ n ih => simp only [ps_f1]; omega",
+      "theorem L1 (n : Nat) : ps_f1 n = n * n := by\n  induction n with\n  | zero => rw [ps_f1]\n  | succ n ih =>\n    rw [ps_f1]\n    rw [ih]\n    ring",
+      "theorem L1 (n : Nat) : ps_f1 n = n * n := by\n  induction n with\n  | zero => simp only [ps_f1]; rfl\n  | succ n ih =>\n    simp only [ps_f1]\n    rw [ih]\n    omega"
+    ],
+    "L2": [
+      "theorem L2 (n : Nat) : ps_g n = 3 * n := by\n  induction n with\n  | zero => simp only [ps_g]\n  | succ n ih => simp only [ps_g, ih]; omega",
+      "theorem L2 (n : Nat) : ps_g n = 3 * n := by\n  induction n with\n  | zero => simp [ps_g]\n  | succ n ih => simp [ps_g, ih, Nat.succ_mul]",
+      "theorem L2 (n : Nat) : ps_g n = 3 * n := by\n  induction n with\n  | zero => simp [ps_g]\n  | succ n ih => simp [ps_g, ih]; omega"
+    ],
+    "L3": [
+      "theorem L3 (n : Nat) : 2 * ps_t n = n * (n + 1) := by\n  induction n with\n  | zero => rfl\n  | succ n ih =>\n    simp only [ps_t]\n    omega",
+      "theorem L3 (n : Nat) : 2 * ps_t n = n * (n + 1) := by\n  induction n with\n  | zero => simp [ps_t]\n  | succ n ih =>\n    rw [ps_t, Nat.succ_mul, Nat.mul_succ, ih]\n    ring",
+      "theorem L3 (n : Nat) : 2 * ps_t n = n * (n + 1) := by\n  induction n with\n  | zero => simp [ps_t]\n  | succ n ih =>\n    simp [ps_t]\n    omega"
+    ],
+    "L4": [
+      "theorem L4 (n : Nat) : ps_d (n + 1) = ps_t n := by\n  induction n with\n  | zero => rfl\n  | succ n ih =>\n    show ps_d (n + 1 + 1) = ps_t (n + 1)\n    rw [show n + 1 + 1 = n + 2 by omega]\n    simp only [ps_d]\n    rw [show ps_d (n + 1) = ps_t n from ih]\n    simp only [ps_t]\n    omega",
+      "theorem L4 (n : Nat) : ps_d (n + 1) = ps_t n := by\n  induction n with\n  | zero => rfl\n  | succ n ih =>\n    unfold ps_d ps_t\n    rw [ih]\n    ring",
+      "theorem L4 (n : Nat) : ps_d (n + 1) = ps_t n := by\n  induction n with\n  | zero =>\n    simp [ps_d, ps_t]\n  | succ n ih =>\n    simp [ps_d, ps_t]\n    omega"
+    ]
+  }
+}

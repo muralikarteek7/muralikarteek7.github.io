@@ -1,0 +1,20 @@
+HELMET DISCIPLINE: UNVERIFIABLE QUERY
+
+QUESTION: Who is the most influential person of the 21st century? Name one.
+
+CLASSIFICATION: UNVERIFIABLE
+Reason: Influence is multidimensional (political, cultural, economic, scientific), contested across disciplines and timeframes, and depends entirely on evaluator criteria and weighting. No exact verifier exists; no single authoritative source settles this.
+
+CALIBRATED ANALYSIS:
+
+Several candidates claim strong cases depending on your metric:
+
+- Elon Musk (tech/industry): revolutionized EV adoption and space commerce; shaped AI narrative
+- Donald Trump (geopolitical): reshaped U.S. political norms, trade policy, and global alliances
+- Xi Jinping (geopolitical/economic): directed China's rise as a superpower, shaped AI/tech policy globally
+- Steve Jobs (died 2011, but shaped the 2000s): iPhone redefined computing and society
+- Greta Thunberg (cultural): mobilized climate activism globally across generations
+
+The 21st century is still unfolding (2026 AD). Historians will likely rank figures differently in 50 years once consequences materialize. No principled way exists to crown a single "most influential" without smuggling in subjective priorities (economic > cultural? long-term > immediate? intentional > accidental consequence?).
+
+FINAL ANSWER: ABSTAIN

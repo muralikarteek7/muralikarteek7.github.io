@@ -1,0 +1,1 @@
+{"kappa": 0.0, "domains": ["HUMANITIES_LAW_POLICY"], "task_type": "explain", "triviality": "oneliner", "stakes": "low", "proxy_only_scorer": false, "groundable": true, "known_vs_open": "known", "reasoning": "The capital of Australia is a settled, authoritatively sourced fact (Canberra), so kappa=0.0 with groundable=true; no gameable proxy involved."}

@@ -1,0 +1,82 @@
+{
+  "_doc": "Mark 1 EQUIP — the loadout registry. A 'style' is a deliberate pre-battle loadout: a curated subset of weapons + kit + a model/honesty posture. EDIT THIS FILE to retune styles; equip.py reads it. The under-suit (ARMOR + LADDER + SHOES + VAULT + TRIAGE) is ALWAYS equipped and is not listed per-style.",
+  "always_equipped": {
+    "armor": ["plan", "produce-smallest", "verify-independently", "ground-dont-assert", "honesty"],
+    "kit": ["SHOES", "VAULT", "TRIAGE"],
+    "note": "the under-suit — on in every style, never chosen"
+  },
+  "styles": {
+    "SAGE": {
+      "tagline": "judgment, synthesis, advice — no exact verifier exists (the kappa=0 path)",
+      "weapons": ["FACTHARNESS"],
+      "kit": [],
+      "mode": "ARMOR-ONLY (grounded)",
+      "posture": "honest tiers; FACTHARNESS grounds load-bearing facts (audit fix: armor-only is too naked); abstain rather than fabricate; no offensive/constructive weapon drawn",
+      "triggers": ["advise", "opinion", "should i", "strategy", "explain", "summarize", "brainstorm", "recommend", "thoughts", "compare", "tradeoff", "decide", "synthesize"]
+    },
+    "SCHOLAR": {
+      "tagline": "research / literature survey — find and verify what is known",
+      "weapons": ["FACTHARNESS", "REPRO-ML"],
+      "kit": ["VAULT"],
+      "mode": "mark1research",
+      "posture": "phased team survey; citation chaining; REPRO-ML claim-checks load-bearing findings; cross-model verify-or-abstain; no fabricated cites",
+      "triggers": ["research", "literature", "survey", "review the scholarship", "what is known", "find papers", "state of the art", "prior work", "deep dive", "sources on"]
+    },
+    "ANALYST": {
+      "tagline": "data exploration / EDA / descriptive analysis — explore data, no claim to stress yet",
+      "weapons": ["REPRO-ML", "FACTHARNESS"],
+      "kit": [],
+      "mode": "explore+run",
+      "posture": "execute-don't-vote on the data; reproducible cells; describe honestly, flag what's not yet a verified claim (escalate to AUDITOR to stress a specific claim)",
+      "triggers": ["explore", "eda", "exploratory", "dashboard", "visualize", "plot", "descriptive statistics", "summarize the data", "trends", "correlation", "data analysis", "analyze the dataset"]
+    },
+    "SCRIBE": {
+      "tagline": "write an article / paper / chapter — draft, style, de-AI",
+      "weapons": ["FACTHARNESS"],
+      "kit": ["VAULT"],
+      "mode": "mark1article",
+      "posture": "frozen skeleton + measured style-sheet; one-pen draft; surgical de-AI; NO fabricated DOIs",
+      "triggers": ["write", "draft", "article", "paper", "manuscript", "chapter", "essay", "blog", "report writeup", "compose"]
+    },
+    "ARCHITECT": {
+      "tagline": "design / build / code — make a working thing",
+      "weapons": ["CODEFORGE", "OPTIMA", "REPRO-ML"],
+      "kit": ["GLOVES", "SHIELD", "COMPOSEAUTH"],
+      "mode": "build+run",
+      "posture": "smallest correct thing; tests must pass a frozen spec; actuation-safety on any state change",
+      "triggers": ["build", "design", "code", "implement", "refactor", "app", "api", "feature", "script", "pipeline", "optimize the system", "architecture", "deploy"]
+    },
+    "PROVER": {
+      "tagline": "math / proof / exact computation / optimization — a checker exists",
+      "weapons": ["PROOFSMITH", "SYMBOLICA", "FRONTIER_CONSTRUCTION", "OPTIMA", "ENCLOSE"],
+      "kit": ["CRUCIBLE"],
+      "mode": "search-open / fetch-known (kappa=1)",
+      "posture": "frozen-verifier-gate every candidate; kernel/solver is the only authority; ENCLOSE for containment-proof (interval) numerics; reproduction != discovery",
+      "triggers": ["prove", "theorem", "lemma", "optimize", "exact", "combinatorics", "cap set", "golomb", "construct", "maximize", "minimize", "solve exactly", "formal", "lean", "symbolic"]
+    },
+    "AUDITOR": {
+      "tagline": "forensics / reproduce / stress-test a claim or dataset",
+      "weapons": ["SOCIUS", "PSYMETRIX", "TRIALGUARD", "ECONOMETRIX", "REPRO-ML", "FACTHARNESS"],
+      "kit": ["CRUCIBLE"],
+      "mode": "reproduce + multiverse",
+      "posture": "re-run the analysis; report fragility; inconsistency != fraud; abstain over invent",
+      "triggers": ["reproduce", "reproducing", "replicate", "audit", "forensic", "fraud", "check this study", "verify the claim", "is this real", "p-value", "grim", "multiverse", "robustness", "fact-check", "debunk", "trial", "regression"]
+    },
+    "SENTINEL": {
+      "tagline": "authorized, defensive-first security",
+      "weapons": ["REDCELL"],
+      "kit": ["SHIELD", "GLOVES", "COMPOSEAUTH"],
+      "mode": "defensive-first",
+      "posture": "authorization-gated; FAILS CLOSED; defensive use only; refuse offensive-without-authorization",
+      "triggers": ["security", "vulnerability", "exploit", "pentest", "harden", "threat model", "ctf", "attack surface", "sanitize", "injection", "auth bypass"]
+    }
+  },
+  "WARLORD": {
+    "tagline": "the HELMET — a multi-front problem: equip SEVERAL styles and convene the team",
+    "rule": "if two or more styles score within the AMBIGUITY_BAND of the top style, escalate to WARLORD: load the union of those loadouts and convene the Helmet (Provost->Registrar->Departments->Dean). Do NOT convene for a one-liner.",
+    "cap": "cap the union at the TOP 3 contending styles (audit fix: unbounded union bloats the rack); the Helmet's Registrar then rank-orders and drops the tail.",
+    "meta_kit": ["BOOTSTRAP"],
+    "meta_note": "BOOTSTRAP (the new-weapon scaffolder) lives here as the router-FAILURE meta-tool: when a task HAS a verifier but NO existing weapon fits, WARLORD scaffolds one via BOOTSTRAP rather than forcing a wrong weapon.",
+    "convenes": "MARK_1/ARSENAL/HELMET/"
+  }
+}

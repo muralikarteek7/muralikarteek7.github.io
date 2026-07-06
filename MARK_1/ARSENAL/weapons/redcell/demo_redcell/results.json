@@ -1,0 +1,38 @@
+{
+  "results": {
+    "1_gate": {
+      "predicted": "PROCEED",
+      "got": "PROCEED"
+    },
+    "1_flag": {
+      "predicted": "FLAG_VALID",
+      "got": "FLAG_VALID"
+    },
+    "2_wrong_flag": {
+      "predicted": "FLAG_INVALID",
+      "got": "FLAG_INVALID"
+    },
+    "3_gate": {
+      "predicted": "PROCEED",
+      "got": "PROCEED"
+    },
+    "3_patch": {
+      "predicted": "PATCH_VALID",
+      "got": "PATCH_VALID"
+    },
+    "4_noop_patch": {
+      "predicted": "PATCH_INEFFECTIVE",
+      "got": "PATCH_INEFFECTIVE"
+    },
+    "5_refuse_no_auth": {
+      "predicted": "REFUSE",
+      "got": "REFUSE"
+    },
+    "6_refuse_out_of_scope": {
+      "predicted": "REFUSE",
+      "got": "REFUSE"
+    }
+  },
+  "all_predictions_matched": true,
+  "committed_flag_sha256": "61535036fb82ba3a7f61d63d34d502979fa2cc1fd719c42b05f1153cd2f6a28e"
+}

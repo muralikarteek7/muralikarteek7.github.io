@@ -1,0 +1,66 @@
+{
+  "demo": "MATHLIB-CLASSICS (infinitude of primes, Euclid ~300 BC)",
+  "source": "mathlib Nat.exists_infinite_primes",
+  "judge": "Lean kernel + #print axioms",
+  "good": {
+    "weapon": "PROOFSMITH",
+    "kappa": 1,
+    "accepted": true,
+    "lean_version_checked": true,
+    "targets": {
+      "infinitude_of_primes": {
+        "reference_statement": "forall (n : Nat), \u2203 p, n \u2264 p \u2227 Nat.Prime p",
+        "allowed_axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "axioms_used": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "extra_axioms": [],
+        "check1_kernel_accepts": true,
+        "check2_no_sorry_admit": true,
+        "check3_axiom_allowlist": true,
+        "check4_statement_match": true,
+        "accepted": true
+      }
+    },
+    "errors": [],
+    "lean_exit_pass1": 0,
+    "lean_exit_pass2": 0,
+    "note": "kappa=1 KERNEL verdict. CHECK 4 proves the COMMITTED FORMAL statement; whether that formal statement MEANS the English theorem is a kappa<1 autoformalization judgment -> cross-model review, NOT certified here."
+  },
+  "attack_sorry": {
+    "weapon": "PROOFSMITH",
+    "kappa": 1,
+    "accepted": false,
+    "lean_version_checked": true,
+    "targets": {
+      "primes_sorry": {
+        "reference_statement": "forall (n : Nat), \u2203 p, n \u2264 p \u2227 Nat.Prime p",
+        "allowed_axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "axioms_used": [
+          "propext",
+          "sorryAx"
+        ],
+        "extra_axioms": [],
+        "check1_kernel_accepts": true,
+        "check2_no_sorry_admit": false,
+        "check3_axiom_allowlist": true,
+        "check4_statement_match": true,
+        "accepted": false
+      }
+    },
+    "errors": [],
+    "lean_exit_pass1": 0,
+    "lean_exit_pass2": 0,
+    "note": "kappa=1 KERNEL verdict. CHECK 4 proves the COMMITTED FORMAL statement; whether that formal statement MEANS the English theorem is a kappa<1 autoformalization judgment -> cross-model review, NOT certified here."
+  }
+}

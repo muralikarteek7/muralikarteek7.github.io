@@ -1,0 +1,11 @@
+{
+  "kappa": 0.0,
+  "domains": ["MATH_TCS"],
+  "task_type": "decide",
+  "triviality": "bounded",
+  "stakes": "high",
+  "proxy_only_scorer": false,
+  "groundable": false,
+  "known_vs_open": "open",
+  "reasoning": "P vs NP is an unsolved millennium-prize problem with no known verifier, settled-fact source, or computational resolution; no exact kappa applies to open conjectures."
+}

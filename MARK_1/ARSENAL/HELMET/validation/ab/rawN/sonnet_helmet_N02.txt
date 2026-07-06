@@ -1,0 +1,3 @@
+This question asks for "the single greatest novel ever written" — a normative, aesthetic, and cultural judgment with no objective metric, no exact verifier, and no single authoritative source. Reasonable experts disagree based on differing values: literary innovation, cultural impact, moral depth, prose style, structural ambition, and historical influence all pull in different directions. Works like *Don Quixote*, *War and Peace*, *Middlemarch*, *In Search of Lost Time*, and *Anna Karenina* each top different credible lists. There is no experiment, computation, or authoritative oracle that settles this — the question is fundamentally UNVERIFIABLE.
+
+FINAL ANSWER: ABSTAIN

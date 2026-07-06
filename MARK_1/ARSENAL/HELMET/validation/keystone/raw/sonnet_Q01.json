@@ -1,0 +1,11 @@
+{
+  "kappa": 1.0,
+  "domains": ["CS_ENG", "MATH_TCS"],
+  "task_type": "construct",
+  "triviality": "substantial",
+  "stakes": "medium",
+  "proxy_only_scorer": false,
+  "groundable": true,
+  "known_vs_open": "known",
+  "reasoning": "The 0-1 principle provides a cheap, exact, non-gameable verifier: exhaustively test all 2^8=256 binary inputs in deterministic finite computation; the optimal 19-comparator network for 8 inputs is a settled known result."
+}

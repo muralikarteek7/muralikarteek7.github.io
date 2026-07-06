@@ -1,0 +1,16 @@
+HELMET DISCIPLINE RESPONSE
+
+QUESTION:
+Will the next US presidential election be won by the incumbent party? YES or NO.
+
+CLASSIFICATION: UNVERIFIABLE
+
+This is a normative/future-forecast question about an event that has not yet occurred. No exact verifier exists — the outcome depends on political dynamics, candidate quality, economic conditions, voter turnout, and unpredictable events that lie in the future. While polling data and historical patterns exist, they are predictive proxies, not deterministic checks.
+
+CALIBRATED ANALYSIS:
+
+Historical precedent shows incumbent parties win re-election roughly 50% of the time in the modern era (Reagan 1984 won; Carter 1980 lost; Clinton 1996 won; Bush Sr. 1992 lost; Bush Jr. 2004 won; Obama 2012 won; Trump 2020 lost). As of my knowledge cutoff (February 2025), the 2028 US presidential election lies ~2.5 years in the future. Polling at this distance is a weak predictor of outcome, and major political shocks (economic crisis, scandal, third-party emergence, demographic shifts) remain possible. Without access to current real-time data on candidate quality, approval ratings, or emerging events, I cannot ground a directional forecast.
+
+The question asks for binary YES/NO, but the honest answer is that both outcomes have meaningful probability and hinges on contingencies beyond my modeling horizon.
+
+FINAL ANSWER: ABSTAIN

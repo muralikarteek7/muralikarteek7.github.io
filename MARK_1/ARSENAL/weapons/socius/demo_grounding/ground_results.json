@@ -1,0 +1,239 @@
+{
+  "results": {
+    "C1": {
+      "sub_weapon": "S-GROUND",
+      "claim": "Durante et al. (2013): ovulation led single women to become more liberal, less religious.",
+      "source_fetched": true,
+      "layer1_frozen_checks_kappa1": [
+        {
+          "check": "quote",
+          "kappa": 1,
+          "quote": "Ovulation led single women to become more liberal, less religious",
+          "grounded": true,
+          "verdict": "quote_found"
+        }
+      ],
+      "bibliographic_check_kappa0p7": {
+        "check": "bibliography",
+        "kappa": 0.7,
+        "claimed_authors": "Durante Rae Griskevicius",
+        "claimed_year": 2013,
+        "source_authors": "Kristina M. Durante, Ashley Rae, Vladas Griskevicius",
+        "source_year": 2013,
+        "claimed_name_tokens": [
+          "durante",
+          "rae",
+          "griskevicius"
+        ],
+        "matched_tokens": [
+          "durante",
+          "rae",
+          "griskevicius"
+        ],
+        "authors_match": true,
+        "year_match": true,
+        "grounded": true,
+        "verdict": "bib_match"
+      },
+      "layer2_entailment_kappa0": null,
+      "overall": "GROUNDED",
+      "kappa_note": "Layer 1 (quote/number/bib) is \u03ba=1 frozen; entailment is \u03ba=0 judgment (a model \u2260 generator), reported never machine-verified.",
+      "ceiling_note": "Grounding proves the claim is anchored to a real source containing the asserted quote/number \u2014 NOT that the claim is true. Real, correctly-quoted sources can still be wrong."
+    },
+    "C2": {
+      "sub_weapon": "S-GROUND",
+      "claim": "Steegen et al. (2016): conclusions change because of arbitrary choices in data construction.",
+      "source_fetched": true,
+      "layer1_frozen_checks_kappa1": [
+        {
+          "check": "quote",
+          "kappa": 1,
+          "quote": "arbitrary choices in data construction",
+          "grounded": true,
+          "verdict": "quote_found"
+        }
+      ],
+      "bibliographic_check_kappa0p7": {
+        "check": "bibliography",
+        "kappa": 0.7,
+        "claimed_authors": "Steegen Tuerlinckx Gelman Vanpaemel",
+        "claimed_year": 2016,
+        "source_authors": "Sara Steegen, Francis Tuerlinckx, Andrew Gelman, Wolf Vanpaemel",
+        "source_year": 2016,
+        "claimed_name_tokens": [
+          "steegen",
+          "tuerlinckx",
+          "gelman",
+          "vanpaemel"
+        ],
+        "matched_tokens": [
+          "steegen",
+          "tuerlinckx",
+          "gelman",
+          "vanpaemel"
+        ],
+        "authors_match": true,
+        "year_match": true,
+        "grounded": true,
+        "verdict": "bib_match"
+      },
+      "layer2_entailment_kappa0": null,
+      "overall": "GROUNDED",
+      "kappa_note": "Layer 1 (quote/number/bib) is \u03ba=1 frozen; entailment is \u03ba=0 judgment (a model \u2260 generator), reported never machine-verified.",
+      "ceiling_note": "Grounding proves the claim is anchored to a real source containing the asserted quote/number \u2014 NOT that the claim is true. Real, correctly-quoted sources can still be wrong."
+    },
+    "C3": {
+      "sub_weapon": "S-GROUND",
+      "claim": "Scott & Pound (2015): no evidence of a relationship, robust to multiple inclusion/exclusion criteria.",
+      "source_fetched": true,
+      "layer1_frozen_checks_kappa1": [
+        {
+          "check": "quote",
+          "kappa": 1,
+          "quote": "no evidence of a relationship",
+          "grounded": true,
+          "verdict": "quote_found"
+        },
+        {
+          "check": "number",
+          "kappa": 1,
+          "number": "2213",
+          "also_require": "women",
+          "grounded": true,
+          "verdict": "number_found"
+        }
+      ],
+      "bibliographic_check_kappa0p7": {
+        "check": "bibliography",
+        "kappa": 0.7,
+        "claimed_authors": "Scott Pound",
+        "claimed_year": 2015,
+        "source_authors": "Isabel M. Scott, Nicholas Pound",
+        "source_year": 2015,
+        "claimed_name_tokens": [
+          "scott",
+          "pound"
+        ],
+        "matched_tokens": [
+          "scott",
+          "pound"
+        ],
+        "authors_match": true,
+        "year_match": true,
+        "grounded": true,
+        "verdict": "bib_match"
+      },
+      "layer2_entailment_kappa0": null,
+      "overall": "GROUNDED",
+      "kappa_note": "Layer 1 (quote/number/bib) is \u03ba=1 frozen; entailment is \u03ba=0 judgment (a model \u2260 generator), reported never machine-verified.",
+      "ceiling_note": "Grounding proves the claim is anchored to a real source containing the asserted quote/number \u2014 NOT that the claim is true. Real, correctly-quoted sources can still be wrong."
+    },
+    "C4": {
+      "sub_weapon": "S-GROUND",
+      "claim": "Durante et al. (2013) concluded the ovulation effect was weak and likely spurious.",
+      "source_fetched": true,
+      "layer1_frozen_checks_kappa1": [
+        {
+          "check": "quote",
+          "kappa": 1,
+          "quote": "the ovulation effect was weak and likely spurious",
+          "grounded": false,
+          "verdict": "QUOTE_NOT_IN_SOURCE"
+        }
+      ],
+      "bibliographic_check_kappa0p7": null,
+      "layer2_entailment_kappa0": null,
+      "overall": "FABRICATION_FLAG",
+      "kappa_note": "Layer 1 (quote/number/bib) is \u03ba=1 frozen; entailment is \u03ba=0 judgment (a model \u2260 generator), reported never machine-verified.",
+      "ceiling_note": "Grounding proves the claim is anchored to a real source containing the asserted quote/number \u2014 NOT that the claim is true. Real, correctly-quoted sources can still be wrong."
+    },
+    "C5": {
+      "sub_weapon": "S-GROUND",
+      "claim": "Smith & Jones (2013) authored 'The Fluctuating Female Vote'.",
+      "source_fetched": true,
+      "layer1_frozen_checks_kappa1": [],
+      "bibliographic_check_kappa0p7": {
+        "check": "bibliography",
+        "kappa": 0.7,
+        "claimed_authors": "Smith Jones",
+        "claimed_year": 2013,
+        "source_authors": "Kristina M. Durante, Ashley Rae, Vladas Griskevicius",
+        "source_year": 2013,
+        "claimed_name_tokens": [
+          "smith",
+          "jones"
+        ],
+        "matched_tokens": [],
+        "authors_match": false,
+        "year_match": true,
+        "grounded": false,
+        "verdict": "BIB_MISMATCH"
+      },
+      "layer2_entailment_kappa0": null,
+      "overall": "FABRICATION_FLAG",
+      "kappa_note": "Layer 1 (quote/number/bib) is \u03ba=1 frozen; entailment is \u03ba=0 judgment (a model \u2260 generator), reported never machine-verified.",
+      "ceiling_note": "Grounding proves the claim is anchored to a real source containing the asserted quote/number \u2014 NOT that the claim is true. Real, correctly-quoted sources can still be wrong."
+    },
+    "C6": {
+      "sub_weapon": "S-GROUND",
+      "claim": "Steegen et al. (2016) reported exactly 7 of 120 significant specifications.",
+      "source_fetched": true,
+      "layer1_frozen_checks_kappa1": [
+        {
+          "check": "number",
+          "kappa": 1,
+          "number": "120",
+          "also_require": "specifications",
+          "grounded": false,
+          "verdict": "NUMBER_NOT_IN_SOURCE"
+        }
+      ],
+      "bibliographic_check_kappa0p7": null,
+      "layer2_entailment_kappa0": null,
+      "overall": "FABRICATION_FLAG",
+      "kappa_note": "Layer 1 (quote/number/bib) is \u03ba=1 frozen; entailment is \u03ba=0 judgment (a model \u2260 generator), reported never machine-verified.",
+      "ceiling_note": "Grounding proves the claim is anchored to a real source containing the asserted quote/number \u2014 NOT that the claim is true. Real, correctly-quoted sources can still be wrong."
+    },
+    "C7": {
+      "sub_weapon": "S-GROUND",
+      "claim": "The broader literature now questions whether the ovulation-politics effect is reliable.",
+      "source_fetched": true,
+      "layer1_frozen_checks_kappa1": [],
+      "bibliographic_check_kappa0p7": null,
+      "layer2_entailment_kappa0": {
+        "verdict": "entailed",
+        "judge_model": "claude-sonnet-4-6",
+        "rationale": "Steegen (2016) shows the effect is fragile/sensitive to data choices and Scott & Pound (2015, n=2213) found no evidence \u2014 together the reliability of the effect is broadly questioned."
+      },
+      "overall": "GROUNDED_BY_JUDGMENT",
+      "kappa_note": "Layer 1 (quote/number/bib) is \u03ba=1 frozen; entailment is \u03ba=0 judgment (a model \u2260 generator), reported never machine-verified.",
+      "ceiling_note": "Grounding proves the claim is anchored to a real source containing the asserted quote/number \u2014 NOT that the claim is true. Real, correctly-quoted sources can still be wrong."
+    },
+    "C8": {
+      "sub_weapon": "S-GROUND",
+      "claim": "Scott & Pound (2015) confirmed that ovulation reliably increases conservatism.",
+      "source_fetched": true,
+      "layer1_frozen_checks_kappa1": [],
+      "bibliographic_check_kappa0p7": null,
+      "layer2_entailment_kappa0": {
+        "verdict": "not_entailed",
+        "judge_model": "claude-sonnet-4-6",
+        "rationale": "Scott & Pound (2015) explicitly found 'no evidence of a relationship', directly contradicting a 'confirmed' claim."
+      },
+      "overall": "CONTRADICTED_BY_SOURCE",
+      "kappa_note": "Layer 1 (quote/number/bib) is \u03ba=1 frozen; entailment is \u03ba=0 judgment (a model \u2260 generator), reported never machine-verified.",
+      "ceiling_note": "Grounding proves the claim is anchored to a real source containing the asserted quote/number \u2014 NOT that the claim is true. Real, correctly-quoted sources can still be wrong."
+    }
+  },
+  "predicted": {
+    "C1": "GROUNDED",
+    "C2": "GROUNDED",
+    "C3": "GROUNDED",
+    "C4": "FABRICATION_FLAG",
+    "C5": "FABRICATION_FLAG",
+    "C6": "FABRICATION_FLAG",
+    "C7": "GROUNDED_BY_JUDGMENT",
+    "C8": "CONTRADICTED_BY_SOURCE"
+  },
+  "n_correct": 8
+}

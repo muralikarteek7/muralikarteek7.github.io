@@ -1,0 +1,16 @@
+I will classify this question and apply the HELMET discipline.
+
+**Classification: UNVERIFIABLE**
+
+This question asks for an "objective" ranking of global charity effectiveness. While some metrics exist (cost per life saved, impact per dollar, etc.), there is no single universally agreed verifier because:
+
+1. **Metric choice is normative** — whether to measure lives saved, disability-adjusted life years (DALYs), happiness gained, systemic change, or other outcomes depends on values, not objective fact.
+2. **Beneficiary groups differ** — malaria nets save lives in low-income countries; AI safety research aims to prevent existential risk; education changes trajectories over decades. Comparing across these requires value judgments.
+3. **Counterfactual uncertainty** — measuring "actual impact" requires knowing what *would* have happened without the charity, which is inherently speculative.
+4. **Time horizons clash** — immediate vs. long-term benefits can't be objectively ranked without a discount rate (another value choice).
+
+Organizations like GiveWell produce rigorous cost-effectiveness analyses within their chosen framework (e.g., cost per DALY in global health), but they explicitly don't claim to identify the single "most effective" charity across all cause areas—only the most effective *within* specific domains and under specific assumptions.
+
+**Calibrated take:** Within narrow cause areas (malaria prevention, deworming, cash transfers in sub-Saharan Africa), GiveWell's top-ranked charities have strong empirical support. But naming one "objectively most effective in the world" requires smuggling in a specific value system, not discovering an objective fact.
+
+FINAL ANSWER: ABSTAIN — no single verifier exists; the question conflates metric choice (normative) with measurement (empirical). Recommend specifying cause area or impact metric first.

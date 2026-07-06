@@ -1,0 +1,12 @@
+Classification: UNVERIFIABLE
+
+This is a normative question about value, optimization, and tradeoffs—not a machine-checkable fact, not a settled empirical question with a single authoritative source. There is no exact verifier for "best." The question conflates three distinct domains:
+1. **Descriptive**: What outcomes does free-market capitalism produce? (empirical, partially verifiable)
+2. **Normative**: Which outcomes matter most? (value judgment, unverifiable)
+3. **Comparative**: Against which alternatives? (depends on criteria, unverifiable)
+
+Free-market capitalism does produce measurable goods: innovation incentives, efficiency in resource allocation, and historical correlation with material prosperity in some contexts. It also produces measurable harms: inequality, externalities (pollution, labor exploitation), financial instability, and market failures in healthcare, education, and public goods. Alternative systems (mixed economies, state-directed models, socialist frameworks) show tradeoffs: sometimes stronger safety nets, sometimes innovation collapse or authoritarianism.
+
+No amount of evidence definitively settles which tradeoff is "best"—that requires a weighting of values (liberty vs. equality vs. security vs. growth) that reasonable people dispute. Calling capitalism "best" assumes a specific value hierarchy; the opposite claim assumes a different one.
+
+FINAL ANSWER: ABSTAIN

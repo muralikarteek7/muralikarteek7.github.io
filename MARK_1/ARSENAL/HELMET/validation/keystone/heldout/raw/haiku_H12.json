@@ -1,0 +1,1 @@
+{"kappa":0.0,"domains":["HUMANITIES_LAW_POLICY","NAT_SCI"],"task_type":"explain","triviality":"oneliner","stakes":"low","proxy_only_scorer":false,"groundable":true,"known_vs_open":"known","reasoning":"Atomic number of gold is a stipulated constant from the periodic table, verifiable only via authoritative reference, not computation."}

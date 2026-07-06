@@ -1,0 +1,66 @@
+{
+  "tally": {
+    "L1": {
+      "one_shot": false,
+      "best_of_3": false,
+      "repair": false
+    },
+    "L2": {
+      "one_shot": true,
+      "best_of_3": true,
+      "repair": true
+    },
+    "L3": {
+      "one_shot": false,
+      "best_of_3": false,
+      "repair": false
+    },
+    "L4": {
+      "one_shot": false,
+      "best_of_3": false,
+      "repair": false
+    }
+  },
+  "rates": {
+    "one_shot": 1,
+    "best_of_3": 1,
+    "repair": 1
+  },
+  "r3": {
+    "L1": {
+      "src": "theorem L1 (n : Nat) : ps_f1 n = n * n := by\n  induction n with\n  | zero => rfl\n  | succ n ih =>\n    simp only [ps_f1]\n    rw [ih]\n    have h : (n + 1) * (n + 1) = n * n + 2 * n + 1 := by\n      rw [Nat.succ_mul, Nat.mul_succ, Nat.mul_succ]\n      omega\n    rw [h]",
+      "accepted": false,
+      "axioms": [
+        "sorryAx"
+      ],
+      "full_output": null,
+      "errors": [
+        "/var/folders/kc/k5xb3wkn7fv1ljw0mncxvy500000gn/T/tmpn_ng16ph.lean:35:38: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern",
+        "/var/folders/kc/k5xb3wkn7fv1ljw0mncxvy500000gn/T/tmpn_ng16ph.lean:31:14: error: unsolved goals"
+      ]
+    },
+    "L3": {
+      "src": "theorem L3 (n : Nat) : 2 * ps_t n = n * (n + 1) := by\n  induction n with\n  | zero => rfl\n  | succ n ih =>\n    show 2 * ps_t (n + 1) = (n + 1) * (n + 2)\n    simp only [ps_t]\n    rw [ih]\n    ring",
+      "accepted": false,
+      "axioms": [
+        "sorryAx"
+      ],
+      "full_output": null,
+      "errors": [
+        "/var/folders/kc/k5xb3wkn7fv1ljw0mncxvy500000gn/T/tmpv5yfsn0l.lean:35:5: error: unknown tactic",
+        "/var/folders/kc/k5xb3wkn7fv1ljw0mncxvy500000gn/T/tmpv5yfsn0l.lean:34:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern"
+      ]
+    },
+    "L4": {
+      "src": "theorem L4 (n : Nat) : ps_d (n + 1) = ps_t n := by\n  induction n with\n  | zero => rfl\n  | succ n ih =>\n    show ps_d (n + 1 + 1) = ps_t (n + 1)\n    simp only [ps_d, ps_t]\n    rw [ih]\n    omega",
+      "accepted": false,
+      "axioms": [
+        "sorryAx"
+      ],
+      "full_output": null,
+      "errors": [
+        "/var/folders/kc/k5xb3wkn7fv1ljw0mncxvy500000gn/T/tmpmas3eow7.lean:34:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern"
+      ]
+    }
+  }
+}

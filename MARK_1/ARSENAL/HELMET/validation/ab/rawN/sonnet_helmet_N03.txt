@@ -1,0 +1,7 @@
+This question asks whether the Goldbach conjecture is true. Let me classify it.
+
+Classification: UNVERIFIABLE. The Goldbach conjecture (every even integer greater than 2 is the sum of two primes) is an open problem in mathematics — unproven and unrefuted as of 2026. No exact verifier exists that can decide it in general; verification for any specific even number is computable, but the universal statement over all even integers has no known proof or counterexample. It is not a settled fact, and no cheap exact verifier can resolve it.
+
+The conjecture has been computationally verified for all even integers up to at least 4 × 10^18, and the consensus among number theorists is that it is almost certainly true based on probabilistic heuristics and empirical evidence. However, "almost certainly true by heuristics" is not a proof. It remains one of the oldest unsolved problems in mathematics, and asserting YES or NO would be a definitive claim I cannot justify.
+
+FINAL ANSWER: ABSTAIN

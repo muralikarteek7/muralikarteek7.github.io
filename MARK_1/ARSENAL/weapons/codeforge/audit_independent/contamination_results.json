@@ -1,0 +1,247 @@
+{
+  "feedback_disjoint": {
+    "y_reset": {
+      "hidden_inputs": [
+        [],
+        [
+          -1,
+          -1
+        ],
+        [
+          0,
+          4,
+          -2,
+          3,
+          3
+        ],
+        [
+          5
+        ]
+      ],
+      "feedback_inputs": [
+        [
+          -5,
+          1
+        ],
+        [
+          3,
+          -1,
+          2,
+          2
+        ]
+      ],
+      "overlap": [],
+      "disjoint": true
+    },
+    "y_countsmaller": {
+      "hidden_inputs": [
+        [],
+        [
+          1,
+          2,
+          3,
+          1
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          7
+        ]
+      ],
+      "feedback_inputs": [
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          3,
+          1,
+          4,
+          1,
+          5
+        ]
+      ],
+      "overlap": [],
+      "disjoint": true
+    }
+  },
+  "self_reports_ignored": {
+    "check": "self_reports_ignored",
+    "task": "y_reset",
+    "candidate_has_verification_claim_in_comment": true,
+    "scored_by_verifier": true,
+    "caught_as_wrong": true,
+    "verdict": "FAILED_HIDDEN",
+    "conclusion": "CORRECT: harness ignores self-reports, re-verifies with frozen verifier"
+  },
+  "memorization_risk": {
+    "s_n4b8": {
+      "n": 4,
+      "budget": 8,
+      "known_optimal": 5,
+      "memorization_risk": "HIGH",
+      "note": "n=4 with budget=8: the optimal network (known comps) is described in textbooks (Knuth TAOCP). A model could recall it. Budget is loose (8 vs optimal 5), so memorization is a valid success path."
+    },
+    "s_n5b12": {
+      "n": 5,
+      "budget": 12,
+      "known_optimal": 9,
+      "memorization_risk": "HIGH",
+      "note": "n=5 with budget=12: the optimal network (known comps) is described in textbooks (Knuth TAOCP). A model could recall it. Budget is loose (12 vs optimal 9), so memorization is a valid success path."
+    },
+    "s_n6b16": {
+      "n": 6,
+      "budget": 16,
+      "known_optimal": 12,
+      "memorization_risk": "MEDIUM",
+      "note": "n=6 with budget=16: the optimal network (known comps) is described in textbooks (Knuth TAOCP). A model could recall it. Budget is loose (16 vs optimal 12), so memorization is a valid success path."
+    },
+    "s_n7b21": {
+      "n": 7,
+      "budget": 21,
+      "known_optimal": 16,
+      "memorization_risk": "MEDIUM",
+      "note": "n=7 with budget=21: the optimal network (known comps) is described in textbooks (Knuth TAOCP). A model could recall it. Budget is loose (21 vs optimal 16), so memorization is a valid success path."
+    },
+    "s_n8b28": {
+      "n": 8,
+      "budget": 28,
+      "known_optimal": 19,
+      "memorization_risk": "LOW",
+      "note": "n=8 with budget=28: the optimal network (known comps) is described in textbooks (Knuth TAOCP). A model could recall it. Budget is loose (28 vs optimal 19), so memorization is a valid success path."
+    },
+    "y_reset": {
+      "description": "running max that resets to 0 on negative",
+      "memorization_risk": "LOW-MEDIUM",
+      "note": "Compositionally novel: combines running-max + conditional-reset. Not a standard LeetCode problem verbatim. However, the individual components (running max, conditional logic) are standard. A capable model could assemble this from parts without it being a canonical memorized solution."
+    },
+    "y_countsmaller": {
+      "description": "count smaller elements before each index",
+      "memorization_risk": "HIGH",
+      "note": "This is structurally identical to LeetCode #315 'Count of Smaller Numbers After Self' adapted to 'before' instead of 'after'. High memorization risk. The direction change (before not after) is a light mutation. A model that memorized LC#315 and adapts it would succeed without the feedback mechanism being the active ingredient."
+    }
+  },
+  "n7_narrative": {
+    "n7_oneshot": 0,
+    "n7_bestof4": 1,
+    "n7_iterate": 1,
+    "n7_iter_rounds": 2,
+    "iterate_minus_bestof4_pp": 0.0,
+    "trajectory": {
+      "r1": "16-comparator network \u2014 INVALID (fails to sort [1,1,0,0,0,0,0]); feedback given",
+      "r2": "20-comparator network \u2014 VALID (used the rich feedback). 2 of 4 calls used.",
+      "bestof4_on_n7": "VALID via blind resampling (1 of 4 independent attempts valid)",
+      "verdict": "iterate USED feedback and reached success, but best-of-4 ALSO succeeded at equal budget -> +0pp"
+    },
+    "verdict_consistent": true,
+    "honest_narrative_check": "CONSISTENT: n7 shows iterate used feedback (r2) and succeeded, best-of-4 also succeeded at equal budget, so iterate - best-of-4 = 0. The negative is honestly derived."
+  },
+  "router_honesty": [
+    {
+      "task": {
+        "design_or_architecture_judgment": true
+      },
+      "description": "kappa=0 design -> armor only",
+      "expected_armor_only": true,
+      "weapon_fired": false,
+      "correct": true
+    },
+    {
+      "task": {
+        "code_quality_taste": true
+      },
+      "description": "kappa=0 quality/taste -> armor only",
+      "expected_armor_only": true,
+      "weapon_fired": false,
+      "correct": true
+    },
+    {
+      "task": {
+        "proxy_only_scorer": true
+      },
+      "description": "proxy scorer -> armor only",
+      "expected_armor_only": true,
+      "weapon_fired": false,
+      "correct": true
+    },
+    {
+      "task": {
+        "spec_with_hidden_tests": true,
+        "proxy_only_scorer": true
+      },
+      "description": "conflict: positive+negative -> negative wins",
+      "expected_armor_only": true,
+      "weapon_fired": false,
+      "correct": true
+    },
+    {
+      "task": {
+        "sorting_network_target": true,
+        "known_target": true
+      },
+      "description": "known sortnet -> ALGO-DISCOVER reproduction",
+      "expected_armor_only": false,
+      "weapon_fired": true,
+      "correct": true
+    },
+    {
+      "task": {
+        "spec_with_hidden_tests": true
+      },
+      "description": "synth spec -> SYNTH-VERIFY",
+      "expected_armor_only": false,
+      "weapon_fired": true,
+      "correct": true
+    }
+  ],
+  "record_claim_check": {
+    "/Users/varunesh/Desktop/AI_agents/Expanding_Frontiers/weapons/codeforge/SPEC.md": {
+      "red_flags_found": [],
+      "honesty_markers_found": [
+        "reproduction",
+        "labeled reproduction",
+        "honest negative",
+        "ceiling"
+      ],
+      "clean": true
+    },
+    "/Users/varunesh/Desktop/AI_agents/Expanding_Frontiers/weapons/codeforge/GROUNDING.md": {
+      "red_flags_found": [],
+      "honesty_markers_found": [
+        "reproduction",
+        "honest negative",
+        "ceiling"
+      ],
+      "clean": true
+    },
+    "/Users/varunesh/Desktop/AI_agents/Expanding_Frontiers/weapons/codeforge/demo_sortnet/RESULT.json": {
+      "red_flags_found": [],
+      "honesty_markers_found": [
+        "reproduction",
+        "ceiling"
+      ],
+      "clean": true
+    },
+    "/Users/varunesh/Desktop/AI_agents/Expanding_Frontiers/weapons/codeforge/demo_strassen/RESULT.json": {
+      "red_flags_found": [],
+      "honesty_markers_found": [
+        "reproduction",
+        "labeled reproduction",
+        "ceiling"
+      ],
+      "clean": true
+    },
+    "/Users/varunesh/Desktop/AI_agents/Expanding_Frontiers/weapons/codeforge/ab/RESULT.md": {
+      "red_flags_found": [],
+      "honesty_markers_found": [
+        "honest negative",
+        "no promotion"
+      ],
+      "clean": true
+    }
+  }
+}

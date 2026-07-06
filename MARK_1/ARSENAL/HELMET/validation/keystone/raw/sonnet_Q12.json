@@ -1,0 +1,1 @@
+{"kappa": 0.0, "domains": ["HUMANITIES_LAW_POLICY"], "task_type": "explain", "triviality": "oneliner", "stakes": "low", "proxy_only_scorer": false, "groundable": true, "known_vs_open": "known", "reasoning": "The Peace of Westphalia is a settled historical fact with a single authoritative date (1648), making it groundable with no exact verifier needed and kappa=0."}

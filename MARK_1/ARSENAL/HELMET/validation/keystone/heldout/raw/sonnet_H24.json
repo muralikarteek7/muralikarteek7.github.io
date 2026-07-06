@@ -1,0 +1,1 @@
+{"kappa":1.0,"domains":["MATH_TCS"],"task_type":"prove","triviality":"oneliner","stakes":"low","proxy_only_scorer":false,"groundable":false,"known_vs_open":"known","reasoning":"Primality of 2^61-1 is decidable by a deterministic computation (Miller-Rabin or Lucas-Lehmer) that I can run myself, giving an exact non-gameable verifier, so kappa=1.0."}

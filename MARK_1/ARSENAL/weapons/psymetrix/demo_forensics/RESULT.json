@@ -1,0 +1,53 @@
+{
+  "demo_A": [
+    {
+      "case": "GRIM 5.27/n=43",
+      "predicted": "INCONSISTENT",
+      "verdict": "INCONSISTENT",
+      "matches_prediction": true,
+      "detail": "INCONSISTENT: no integer total k gives this mean for the stated N/scale (rounding/typo/reporting error are possible explanations)"
+    },
+    {
+      "case": "GRIM 5.26/n=43",
+      "predicted": "consistent",
+      "verdict": "consistent",
+      "matches_prediction": true,
+      "detail": "CONSISTENT with stated N/scale"
+    },
+    {
+      "case": "GRIM 5.90/n=40/3item",
+      "predicted": "consistent",
+      "verdict": "consistent",
+      "matches_prediction": true,
+      "detail": "no discriminating power (N_eff >= 10^decimals): a mean at this precision is always GRIM-consistent"
+    },
+    {
+      "case": "GRIMMER 3.44/2.47/18",
+      "predicted": "INCONSISTENT",
+      "verdict": "INCONSISTENT",
+      "matches_prediction": true,
+      "detail": "INCONSISTENT (parity): an SS reproduces the SD but its parity differs from the integer sum \u2014 no integer sample can yield both this mean and SD (rounding/typo/reporting error are possible explanations)"
+    }
+  ],
+  "demo_B": {
+    "n_rows": 400,
+    "clean_total": 200,
+    "clean_flagged": 0,
+    "specificity_pct": 100.0,
+    "typo_total": 200,
+    "typo_caught": 143,
+    "sensitivity_pct": 71.5,
+    "sensitivity_by_n_bucket": {
+      "20-40": 0.985,
+      "41-60": 0.871,
+      "61-80": 0.324
+    },
+    "false_positives": []
+  },
+  "checks": {
+    "demoA_matches_literature": true,
+    "specificity_100": true,
+    "sensitivity_strictly_between": true,
+    "sensitivity_monotone_in_n": true
+  }
+}

@@ -1,0 +1,17 @@
+Classification: UNVERIFIABLE
+
+This question asks for an exact count of grains of sand on Earth's beaches "right now." Let me explain why this is unverifiable:
+
+1. **No exact verifier exists**: There is no machine, instrument, or method that can count individual sand grains across all beaches in real time. The state space is too large, dynamic, and inherently unmeasurable.
+
+2. **Inherent instability**: The answer changes constantly—waves move sand, erosion occurs, people disturb beaches, storms reshape coastlines. "Right now" is temporally undefined at any precision level.
+
+3. **Impossibility of complete observation**: We cannot observe and count all beaches simultaneously, nor do we have complete data on sand grain sizes, density distributions, or beach depth profiles globally.
+
+This is a **normative/unanswerable problem**, not a settled fact or verifiable computation.
+
+**Calibrated Analysis:**
+
+Estimates of total sand grains on Earth vary wildly (10^18 to 10^24 depending on assumptions about grain size, beach depth, and how much of seafloor counts as "beach"). These are order-of-magnitude approximations, not exact numbers. The famous Archimedes' *Sand Reckoner* explored this conceptually, concluding even the universe couldn't contain an exact count—and that was with far fewer grains. Modern estimates are similar in spirit: plausible ranges, not precise values. No credible scientific source claims an *exact* current number.
+
+FINAL ANSWER: ABSTAIN

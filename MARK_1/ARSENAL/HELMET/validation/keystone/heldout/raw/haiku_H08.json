@@ -1,0 +1,1 @@
+{"kappa":0.0,"domains":["NAT_SCI"],"task_type":"forecast","triviality":"oneliner","stakes":"low","proxy_only_scorer":false,"groundable":false,"known_vs_open":"open","reasoning":"Future weather cannot be verified by computation or authority; it is an open contingency with no computable or settlement verifier."}

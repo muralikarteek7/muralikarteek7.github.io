@@ -1,0 +1,11 @@
+{
+  "kappa": 1.0,
+  "domains": ["STATS", "MATH_TCS"],
+  "task_type": "analyze",
+  "triviality": "oneliner",
+  "stakes": "low",
+  "proxy_only_scorer": false,
+  "groundable": true,
+  "known_vs_open": "known",
+  "reasoning": "Exact GRIM arithmetic: with 28 integer responses on 1-7, the achievable means are multiples of 1/28, so we can compute whether 5.19 = 519/100 equals some k/28 (k integer, 28<=k<=196) — a deterministic divisibility check with no gameable proxy."
+}

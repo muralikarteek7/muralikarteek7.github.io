@@ -1,0 +1,6 @@
+{
+  "L1": "/var/folders/kc/k5xb3wkn7fv1ljw0mncxvy500000gn/T/tmphv3xlj5n.lean:34:4: error: omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  c \u2265 0\n  b \u2265 0\n  a \u2265 0\n  a - b + 2*c \u2264 -2\nwhere\n a := \u2191n * \u2191n\n b := \u2191(n + 1) * \u2191(n + 1)\n c := \u2191n\n",
+  "L2": "/var/folders/kc/k5xb3wkn7fv1ljw0mncxvy500000gn/T/tmpffj4hodq.lean:31:45: error: unknown tactic\n/var/folders/kc/k5xb3wkn7fv1ljw0mncxvy500000gn/T/tmpffj4hodq.lean:31:14: error: unsolved goals\ncase succ\nn : Nat\nih : ps_g n = 3 * n\n\u22a2 3 * n + 3 = 3 * (n + 1)\n",
+  "L3": "/var/folders/kc/k5xb3wkn7fv1ljw0mncxvy500000gn/T/tmpwrycfe5v.lean:31:35: error: omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  c \u2265 0\n  b \u2265 0\n  a \u2265 0\n  a \u2265 0\n  a + c \u2265 -1\n  2*a - b + 2*c \u2264 -3\nwhere\n a := \u2191(ps_t n)\n b := \u2191(n + 1) * \u2191(n + 1 + 1)\n c := \u2191n\n",
+  "L4": "/var/folders/kc/k5xb3wkn7fv1ljw0mncxvy500000gn/T/tmpy2e_06ci.lean:33:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern\n  ps_d (n + 1)\nin the target expression\n  ps_d n + n + (n + 1) = ps_t n + (n + 1)\n\ncase succ\nn : Nat\nih : ps_d (n + 1) = ps_t n\n\u22a2 ps_d n + n + (n + 1) = ps_t n + (n + 1)\n"
+}

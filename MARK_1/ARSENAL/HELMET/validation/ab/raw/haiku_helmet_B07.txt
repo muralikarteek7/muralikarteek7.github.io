@@ -1,0 +1,11 @@
+I need to classify this question under the HELMET discipline.
+
+**Classification: UNVERIFIABLE**
+
+This is a normative/definitional question with no exact verifier. "Sandwich" has no universally agreed definition—it's a matter of convention and linguistic choice, not a checkable fact. Some definitions require bread on opposite sides (excluding hot dogs); others define it structurally as "filling between bread" (including hot dogs). Food taxonomists, linguists, and legal authorities disagree.
+
+There is no "definitively correct answer" because the correctness depends on which definitional framework you adopt, and those frameworks are human conventions, not natural laws or computable facts.
+
+**Analysis:** If you adopt the narrow "two separate bread slices" definition (USDA, most sandwich shops), a hot dog is not a sandwich. If you adopt the broad structural definition (filling + bread), it is. The Earl of Sandwich's original construction used bread slices, which pulls toward the first. Most English speakers use "sandwich" narrowly. But no empirical test resolves this—it's a word-boundary question.
+
+FINAL ANSWER: ABSTAIN — the question admits no definitive answer; the verdict depends on which definitional convention you accept. Linguistically and culinarily, "sandwich" is ambiguous by design.

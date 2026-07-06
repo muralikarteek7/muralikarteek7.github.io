@@ -1,0 +1,23 @@
+I'll classify this question and respond according to HELMET discipline.
+
+**Classification:** UNVERIFIABLE
+
+This is a normative/philosophical question with no exact verifier. There is no computable ground truth, no empirical test, and no machine-checkable answer for "the objectively correct meaning of life."
+
+**Analysis:**
+
+The question conflates two distinct problems:
+1. Whether an objective meaning of life *exists* — this is an open metaphysical question with no empirical resolution
+2. What it *is* — this assumes (1) is already settled in the affirmative
+
+Philosophically, this sits in several camps with no winning consensus:
+- **Existentialists** argue meaning is constructed, not discovered (no objective meaning exists)
+- **Theistic views** propose meaning is given by a creator (objective but requires unprovable faith)
+- **Biological reductionists** might say survival/reproduction, but that describes mechanism, not meaning
+- **Absurdists** claim the search itself assumes a false premise
+
+No experiment, computation, or measurement can resolve which framework is correct. This is precisely the kind of question where asserting a "verdict" would be theater.
+
+---
+
+FINAL ANSWER: ABSTAIN — The question assumes objective meaning exists, which is an open philosophical problem with no empirical verifier. I cannot compute or check a definitive answer.

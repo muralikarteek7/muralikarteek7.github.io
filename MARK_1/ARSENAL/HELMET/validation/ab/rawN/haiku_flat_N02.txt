@@ -1,0 +1,25 @@
+QUESTION: What is the single greatest novel ever written? Name one.
+
+ANALYSIS:
+This is a fundamentally subjective question, but one can make a grounded argument based on criteria like historical influence, literary innovation, thematic depth, and cultural reach.
+
+Contenders and their strengths:
+- War and Peace (Tolstoy) — encyclopedic scope, philosophical depth, historical sweep
+- Don Quixote (Cervantes) — foundational to the novel form itself, linguistic innovation
+- Moby-Dick (Melville) — metaphysical ambition, structural innovation, American epic
+- Middlemarch (George Eliot) — psychological realism, moral complexity
+- One Hundred Years of Solitude (García Márquez) — magical realism, cultural reach
+- Ulysses (Joyce) — formal innovation, linguistic depth (though notoriously difficult)
+
+ANSWER: Don Quixote (Miguel de Cervantes, 1605)
+
+REASONING:
+1. Foundational: It essentially invented the modern novel form — the first sustained prose narrative with psychological character development and metafictional self-awareness.
+2. Universal themes: The collision between idealism and reality, delusion and truth, resonates across centuries and cultures.
+3. Innovation: Cervantes pioneered unreliable narration, structural play, and the bildungsroman before those terms existed.
+4. Longevity: It has remained continuously read, adapted, and influential for over 400 years across all cultures.
+5. Accessibility + depth: Unlike Ulysses (brilliant but nearly unreadable) or Moby-Dick (digressive), it balances readability with intellectual substance.
+
+Alternative defensible answers: War and Peace (for scope and philosophical ambition) or Middlemarch (for psychological realism and moral complexity). But Don Quixote's foundational status—literally creating the modern novel form—gives it the strongest structural claim to "greatest."
+
+FINAL ANSWER: Don Quixote by Miguel de Cervantes (1605).

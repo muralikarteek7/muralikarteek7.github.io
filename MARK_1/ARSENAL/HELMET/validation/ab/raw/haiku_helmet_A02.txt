@@ -1,0 +1,5 @@
+**Classification:** VERIFIABLE — primality is machine-checkable via deterministic testing.
+
+**Result:** 2^67 - 1 = 147,573,952,589,676,412,927 is **composite**. It factors as 193,707,721 × 761,838,257,287.
+
+FINAL ANSWER: NO

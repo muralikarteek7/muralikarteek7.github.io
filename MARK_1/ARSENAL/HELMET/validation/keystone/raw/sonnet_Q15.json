@@ -1,0 +1,11 @@
+{
+  "kappa": 0.0,
+  "domains": ["ECON_FIN"],
+  "task_type": "decide",
+  "triviality": "bounded",
+  "stakes": "high",
+  "proxy_only_scorer": true,
+  "groundable": false,
+  "known_vs_open": "open",
+  "reasoning": "The in-sample backtested Sharpe ratio is a classic gameable proxy — it can be maximized by overfitting to historical noise, so selecting 'best strategy' by this metric does not constitute an exact, non-gameable verifier; kappa=0.0 and proxy_only_scorer=true per C14."
+}

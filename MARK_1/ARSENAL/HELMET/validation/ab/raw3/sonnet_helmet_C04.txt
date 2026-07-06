@@ -1,0 +1,5 @@
+This is VERIFIABLE — I can compute it by running code.
+
+17 is confirmed prime by computation (no divisor exists in [2, floor(sqrt(17))] = [2, 4]).
+
+FINAL ANSWER: YES

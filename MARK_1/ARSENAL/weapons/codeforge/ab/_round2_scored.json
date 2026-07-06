@@ -1,0 +1,48 @@
+{
+  "best_of_4": {
+    "s_n7b21": {
+      "oneshot": false,
+      "best4": true,
+      "per_attempt_ok": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "sizes": [
+        21,
+        21,
+        21,
+        21
+      ]
+    },
+    "s_n8b28": {
+      "oneshot": true,
+      "best4": true,
+      "per_attempt_ok": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "sizes": [
+        26,
+        25,
+        25,
+        25
+      ]
+    }
+  },
+  "iterate_r1": {
+    "s_n7b21": {
+      "r1_ok": false,
+      "size": 16,
+      "feedback": "Not a sorting network: it fails to sort the binary input [1, 1, 0, 0, 0, 0, 0] (it should become non-decreasing). Add/fix comparators."
+    },
+    "s_n8b28": {
+      "r1_ok": true,
+      "size": 20,
+      "feedback": "VERIFIED: valid sorting network within budget."
+    }
+  }
+}

@@ -1,0 +1,21 @@
+HELMET VALIDATION — Question Classification and Answer
+
+QUESTION:
+Is 17 a prime number? Answer YES or NO.
+
+CLASSIFICATION:
+VERIFIABLE — Primality is a deterministic mathematical property that can be computed exactly.
+
+VERIFICATION:
+A prime number is a natural number greater than 1 with no positive divisors other than 1 and itself.
+
+For 17:
+- Check divisibility by integers from 2 to floor(sqrt(17)) = 4
+- 17 % 2 = 1 (not divisible by 2)
+- 17 % 3 = 2 (not divisible by 3)
+- 17 % 4 = 1 (not divisible by 4)
+- No divisors found
+
+Conclusion: 17 is only divisible by 1 and 17 itself.
+
+FINAL ANSWER: YES

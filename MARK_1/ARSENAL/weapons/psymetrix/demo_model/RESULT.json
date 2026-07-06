@@ -1,0 +1,111 @@
+{
+  "fit_3factor": {
+    "test": "CFA/SEM",
+    "CFI": 0.9306,
+    "TLI": 0.8958,
+    "RMSEA": 0.0923,
+    "SRMR": 0.0652,
+    "chi2": 85.306,
+    "df": 24,
+    "chi2_df": 3.554,
+    "index_tiers": {
+      "CFI": "acceptable",
+      "RMSEA": "poor",
+      "SRMR": "good"
+    },
+    "fit_verdict": "mixed",
+    "note": "MIXED \u2014 fit indices DISAGREE (some acceptable/good, at least one poor); report all, do NOT auto-fail on one index (Marsh 2004). NOT the same as uniformly poor \u2014 fit != truth; cutoffs are benchmarks, not golden rules."
+  },
+  "fit_1factor": {
+    "test": "CFA/SEM",
+    "CFI": 0.6769,
+    "TLI": 0.5692,
+    "RMSEA": 0.1877,
+    "SRMR": 0.1432,
+    "chi2": 312.264,
+    "df": 27,
+    "chi2_df": 11.565,
+    "index_tiers": {
+      "CFI": "poor",
+      "RMSEA": "poor",
+      "SRMR": "poor"
+    },
+    "fit_verdict": "poor",
+    "note": "POOR fit: every conventional index rejects the model \u2014 fit != truth; cutoffs are benchmarks, not golden rules."
+  },
+  "comparison": {
+    "test": "model_comparison",
+    "3factor": {
+      "test": "CFA/SEM",
+      "CFI": 0.9306,
+      "TLI": 0.8958,
+      "RMSEA": 0.0923,
+      "SRMR": 0.0652,
+      "chi2": 85.306,
+      "df": 24,
+      "chi2_df": 3.554,
+      "index_tiers": {
+        "CFI": "acceptable",
+        "RMSEA": "poor",
+        "SRMR": "good"
+      },
+      "fit_verdict": "mixed",
+      "note": "MIXED \u2014 fit indices DISAGREE (some acceptable/good, at least one poor); report all, do NOT auto-fail on one index (Marsh 2004). NOT the same as uniformly poor \u2014 fit != truth; cutoffs are benchmarks, not golden rules."
+    },
+    "1factor": {
+      "test": "CFA/SEM",
+      "CFI": 0.6769,
+      "TLI": 0.5692,
+      "RMSEA": 0.1877,
+      "SRMR": 0.1432,
+      "chi2": 312.264,
+      "df": 27,
+      "chi2_df": 11.565,
+      "index_tiers": {
+        "CFI": "poor",
+        "RMSEA": "poor",
+        "SRMR": "poor"
+      },
+      "fit_verdict": "poor",
+      "note": "POOR fit: every conventional index rejects the model \u2014 fit != truth; cutoffs are benchmarks, not golden rules."
+    },
+    "delta_CFI": 0.2537,
+    "delta_RMSEA": 0.0954,
+    "data_prefer": "3factor",
+    "note": "data prefer model 3factor; delta-CFI=+0.254. A model winning a comparison is 'less wrong than the alternative tested', not 'true'."
+  },
+  "efa": {
+    "test": "EFA_dimensionality",
+    "n": 301,
+    "k_items": 9,
+    "eigenvalues": [
+      3.216,
+      1.639,
+      1.365,
+      0.699,
+      0.584,
+      0.5,
+      0.473,
+      0.286,
+      0.238
+    ],
+    "kaiser_n_factors": 3,
+    "parallel_analysis_n_factors": 3,
+    "note": "Glorfeld-95 parallel analysis is the primary rule; Kaiser>1 over-extracts. Dimensionality, not validity."
+  },
+  "reliability": {
+    "test": "omega_reliability",
+    "k_items": 9,
+    "omega_total": 0.7644,
+    "cronbach_alpha": 0.7605,
+    "alpha_omega_gap": -0.0039,
+    "note": "omega preferred when loadings differ; alpha is a lower bound. Reliability != validity."
+  },
+  "checks": {
+    "1factor_poor": true,
+    "data_prefer_3factor_big_margin": true,
+    "SRMR_matches_lavaan_ref": true,
+    "EFA_recovers_3": true,
+    "pred1_3factor_verdict_hit": false
+  }
+}

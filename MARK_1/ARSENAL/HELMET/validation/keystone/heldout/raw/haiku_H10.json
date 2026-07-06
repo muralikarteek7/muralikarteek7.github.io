@@ -1,0 +1,1 @@
+{"kappa":0.0,"domains":["MATH_TCS"],"task_type":"prove","triviality":"substantial","stakes":"high","proxy_only_scorer":false,"groundable":false,"known_vs_open":"open","reasoning":"Collatz conjecture is an unsolved problem with no computable verifier; only abstention is honest."}

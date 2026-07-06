@@ -1,0 +1,5 @@
+The greatest common divisor of 2166 and 6099 is **57**.
+
+This was verified: 2166 ÷ 57 = 38 and 6099 ÷ 57 = 107 (both divisions are exact with no remainder).
+
+FINAL ANSWER: 57

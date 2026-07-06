@@ -1,0 +1,11 @@
+{
+  "problem": "Construct a Sidon set (B2 set: all pairwise sums a+b distinct) of size 8 contained in {1,...,35}, certify it, and state whether 8 is the maximum achievable in that range.",
+  "domains": ["MATH_TCS"],
+  "task_type": "construct",
+  "kappa": 1.0,
+  "known_vs_open": "known",
+  "has_data": false,
+  "stakes": "medium",
+  "triviality": "bounded",
+  "proxy_only_scorer": false
+}

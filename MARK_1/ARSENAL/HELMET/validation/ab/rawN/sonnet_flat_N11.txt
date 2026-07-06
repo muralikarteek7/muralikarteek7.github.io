@@ -1,0 +1,14 @@
+The Collatz conjecture (for any positive integer n: if n is even divide by 2, if odd multiply by 3 and add 1, repeat — the conjecture states you always reach 1) is one of the most famous unsolved problems in mathematics.
+
+Current state of the field:
+- No proof or disproof exists as of my knowledge cutoff (August 2025)
+- Terence Tao's 2019 paper showed "almost all" Collatz orbits eventually reach a value below any diverging function — the closest significant result yet, but not a proof
+- The problem is notoriously resistant to known mathematical machinery
+- Experts including Tao himself have suggested the problem may require fundamentally new mathematics that does not yet exist
+- Paul Erdos famously said "Mathematics is not yet ready for such problems"
+
+Per the ARMOR doctrine in this project: load-bearing claims require grounding, not assertion. The honest answer is grounded in the record: no credible mathematical community consensus expects a proof within a decade, no major breakthrough has occurred that would plausibly close the gap in 10 years, and the structure of the problem (it resists both number theory and dynamical systems approaches) suggests it will remain open.
+
+The answer is NO.
+
+FINAL ANSWER: NO

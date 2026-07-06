@@ -1,0 +1,7 @@
+The Goldbach conjecture is an open problem in mathematics, stating that every even integer greater than 2 can be expressed as the sum of two primes. As of February 2025, this conjecture remains unproven. No mathematical proof has established it as true, and no counterexample has been found. It has been verified computationally for extremely large numbers, but computational verification is not mathematical proof.
+
+Per the ARMOR discipline: "Be honest — flag the unverified; claim no win without proof; never claim to solve an open problem." The truth value of the Goldbach conjecture is not determined by current mathematics.
+
+If a binary YES/NO must be given: the answer is NO, because we cannot affirm the conjecture as proven true.
+
+FINAL ANSWER: NO

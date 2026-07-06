@@ -1,0 +1,39 @@
+{
+  "demo": "EXACT-SOLVE certified optimality",
+  "cases": [
+    {
+      "problem": "assignment_4x4",
+      "solver_status": "OPTIMAL",
+      "objective": 13,
+      "independent_optimum": 13,
+      "gate_verdict": "OPTIMAL_CERTIFIED",
+      "independence": "FULL (a different exact algorithm; solver not trusted)"
+    },
+    {
+      "problem": "knapsack_0_1",
+      "solver_status": "OPTIMAL",
+      "objective": 13,
+      "independent_optimum": 13,
+      "gate_verdict": "OPTIMAL_CERTIFIED",
+      "independence": "FULL (a different exact algorithm; solver not trusted)"
+    },
+    {
+      "problem": "tsp_5cities_MTZ",
+      "solver_status": "OPTIMAL",
+      "objective": 156,
+      "independent_optimum": 156,
+      "brute_force_tour": [
+        0,
+        1,
+        4,
+        2,
+        3
+      ],
+      "gate_verdict": "OPTIMAL_CERTIFIED",
+      "independence": "FULL (a different exact algorithm; solver not trusted)"
+    }
+  ],
+  "all_certified": true,
+  "all_independent_agree": true,
+  "model_caveat": "certificate covers the FORMAL MODEL only; modeling is kappa<1 (cross-model-reviewed separately) -- 'optimal FOR THIS MODEL'."
+}

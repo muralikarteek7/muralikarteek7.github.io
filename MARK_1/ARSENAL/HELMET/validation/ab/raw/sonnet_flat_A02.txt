@@ -1,0 +1,3 @@
+2^67 - 1 = 147,573,952,589,676,412,927, which factors as 193,707,721 × 761,838,257,287. It is not prime.
+
+FINAL ANSWER: NO

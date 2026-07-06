@@ -1,0 +1,20 @@
+HELMET CLASSIFICATION AND RESPONSE
+=====================================
+
+QUESTION: What is the largest planet in our solar system?
+
+CLASSIFICATION: SETTLED FACT
+- Type: Single authoritative astronomical fact
+- Verifier: Direct observation + scientific measurement (non-circular, machine-checkable)
+- Status: Grounded in established planetology data
+
+ANSWER:
+Jupiter is the largest planet in our solar system. It has a mass approximately 318 times that of Earth and a diameter of about 142,984 kilometers (88,846 miles). This is a settled scientific fact verified through direct astronomical observation and measurement.
+
+REASONING:
+- This is NOT unverifiable (it's not normative, open, or a forecast)
+- This is NOT an assertion without grounding (it's backed by NASA/scientific consensus)
+- This is a capital fact: defined by direct measurement and observation
+- No HELMET abstention required; the answer is definitive and grounded
+
+FINAL ANSWER: Jupiter is the largest planet in our solar system, with a diameter of approximately 142,984 kilometers and a mass about 318 times Earth's mass.

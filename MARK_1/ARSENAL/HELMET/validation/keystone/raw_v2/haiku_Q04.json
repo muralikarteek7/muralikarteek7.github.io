@@ -1,0 +1,1 @@
+{"kappa":1.0,"domains":["MATH_TCS"],"task_type":"analyze","triviality":"oneliner","stakes":"low","proxy_only_scorer":false,"groundable":false,"known_vs_open":"known","reasoning":"Arithmetic constraint violation: 5.19 × 28 = 145.32 is non-integer, but integer Likert responses sum to an integer."}

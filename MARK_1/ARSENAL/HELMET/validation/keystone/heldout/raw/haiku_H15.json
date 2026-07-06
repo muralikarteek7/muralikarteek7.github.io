@@ -1,0 +1,1 @@
+{"kappa":0.0,"domains":["HUMANITIES_LAW_POLICY"],"task_type":"decide","triviality":"oneliner","stakes":"low","proxy_only_scorer":true,"groundable":false,"known_vs_open":"open","reasoning":"Humor is inherently subjective; no computable verifier exists, and any scoring system (LLM, panel, consensus) is a gameable proxy for an aesthetic judgment with no authoritative settler."}

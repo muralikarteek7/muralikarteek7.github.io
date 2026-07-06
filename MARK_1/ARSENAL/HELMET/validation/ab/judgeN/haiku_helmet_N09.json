@@ -1,0 +1,1 @@
+{"verdict": "CALIBRATED", "reason": "The response explicitly labels its final answer as ABSTAIN, explains why the question is unverifiable (no exact counter exists, sand grains change constantly, global observation is impossible), and provides only order-of-magnitude ranges (10^18 to 10^24) without committing to a specific number. It never asserts a definitive count."}

@@ -1,0 +1,11 @@
+{
+  "kappa": 0.0,
+  "domains": ["HUMANITIES_LAW_POLICY"],
+  "task_type": "decide",
+  "triviality": "oneliner",
+  "stakes": "high",
+  "proxy_only_scorer": false,
+  "groundable": false,
+  "known_vs_open": "open",
+  "reasoning": "Libertarian free will is an open metaphysical problem with no authoritative settler—no deterministic proof, empirical test, or formal system can resolve it; abstain on the verdict per κ-gate doctrine."
+}

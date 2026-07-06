@@ -1,0 +1,7 @@
+There is no objectively most effective charity in the world. "Most effective" depends on how you define effectiveness: lives saved per dollar, disability-adjusted life years (DALYs) averted, animal welfare impact, existential risk reduction, systemic change, or other metrics. Different frameworks produce different top answers.
+
+That said, if you use the framework of GiveWell's cost-effectiveness analysis (which is the most rigorous, evidence-based, publicly documented methodology available), their current top-rated charity has historically been the **Against Malaria Foundation (AMF)**, which distributes insecticide-treated bed nets to prevent malaria deaths in sub-Saharan Africa. It consistently ranks at or near the top on the specific metric of lives saved per dollar donated, with peer-reviewed evidence behind it.
+
+This is not "objective" in an absolute sense — it reflects GiveWell's particular metric choices. Other serious evaluators (Animal Charity Evaluators, Founders Pledge, Open Philanthropy) reach different conclusions under different frameworks.
+
+FINAL ANSWER: There is no single objectively most effective charity — effectiveness depends on the metric used. Under GiveWell's evidence-based cost-per-life-saved framework, the Against Malaria Foundation (AMF) is the most frequently top-ranked, but this is framework-dependent, not an objective universal fact.

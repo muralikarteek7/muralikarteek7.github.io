@@ -1,0 +1,19 @@
+HELMET DISCIPLINE RESPONSE
+
+QUESTION: What is the single greatest novel ever written? Name one.
+
+CLASSIFICATION: UNVERIFIABLE
+
+This is a normative question asking for a subjective judgment on aesthetic/literary merit. There is no single authoritative source, no computational verifier, and no consensus metric that can definitively identify "the greatest novel ever written." Literary merit is contested across:
+- Different critical traditions (formalist, historical, political, aesthetic)
+- Different readers and cultures with different values
+- Different time periods (what was "greatest" in 1850 may not be in 2026)
+- No objective scoring function for "greatness"
+
+CALIBRATED ANALYSIS:
+
+If forced to name one widely respected candidate, Don Quixote by Miguel de Cervantes (1605) has a strong claim: it's structurally revolutionary (often credited as founding the modern novel), linguistically influential across European literature, has near-universal cultural impact, and scholarly consensus places it among the very top tier. However, War and Peace, Moby-Dick, In Search of Lost Time, One Hundred Years of Solitude, Ulysses, and a dozen others have equally ardent defenders and measurable excellence across different dimensions. The question conflates "most influential," "most aesthetically sophisticated," "most emotionally moving," and "most technically innovative"—and no single work dominates all four.
+
+Naming one commits to a subjective preference, not a factual truth.
+
+FINAL ANSWER: ABSTAIN. The question is normative and unanswerable. If a name is required despite unverifiability, Don Quixote is a defensible candidate on grounds of structural innovation and near-universal scholarly respect, but this reflects a preference, not a fact.

@@ -1,0 +1,5 @@
+Classification: **VERIFIABLE** — the GCD is a mathematical fact that can be computed exactly.
+
+The computation shows that GCD(2166, 6099) = 57.
+
+FINAL ANSWER: 57

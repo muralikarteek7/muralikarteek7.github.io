@@ -1,0 +1,11 @@
+{
+  "kappa": 1.0,
+  "domains": ["MATH_TCS"],
+  "task_type": "prove",
+  "triviality": "oneliner",
+  "stakes": "low",
+  "proxy_only_scorer": false,
+  "groundable": false,
+  "known_vs_open": "known",
+  "reasoning": "Formal proof has an exact, non-gameable verifier (proof kernel); the Gauss summation formula is a closed, computable theorem, not a normative or open problem."
+}

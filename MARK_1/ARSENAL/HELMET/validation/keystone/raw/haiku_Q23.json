@@ -1,0 +1,11 @@
+{
+  "kappa": 0.0,
+  "domains": ["MATH_TCS"],
+  "task_type": "prove",
+  "triviality": "oneliner",
+  "stakes": "high",
+  "proxy_only_scorer": false,
+  "groundable": false,
+  "known_vs_open": "open",
+  "reasoning": "Open conjecture in number theory with no known proof, disproof, or authoritative source; no exact verifier exists; abstain on verdict per doctrine."
+}

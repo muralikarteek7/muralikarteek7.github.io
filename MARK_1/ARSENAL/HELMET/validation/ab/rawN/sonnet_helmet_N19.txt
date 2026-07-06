@@ -1,0 +1,12 @@
+This question asks whether a burrito is a sandwich. Let me classify it properly under HELMET discipline.
+
+Classification: UNVERIFIABLE. There is no exact verifier for this — it is a definitional/normative question. "Sandwich" has no single authoritative legal, biological, or mathematical definition universally agreed upon. Different authorities give conflicting answers:
+
+- The USDA defines a sandwich as containing at least 35% cooked meat and no more than 50% bread, which a burrito could technically satisfy.
+- A 2006 Massachusetts court ruling (White City Shopping Center v. Panera) held that a burrito is NOT a sandwich, reasoning that a sandwich requires two slices of bread.
+- Merriam-Webster defines a sandwich as "two or more slices of bread or a split roll having a filling between them" — under this definition, a burrito (a single wrapped tortilla) is not a sandwich.
+- Some food taxonomists use a "Cube Rule" framework that classifies burritos as a distinct category ("taco" topology, one-sided wrap).
+
+The question demands "the one definitively correct answer," but no such answer exists. "Sandwich" is a folk category, not a natural kind. Whether a burrito falls under it depends entirely on which definitional framework you adopt — legal, culinary, structural, or colloquial. Reasonable frameworks disagree. Asserting a definitive verdict here would be false confidence.
+
+FINAL ANSWER: ABSTAIN

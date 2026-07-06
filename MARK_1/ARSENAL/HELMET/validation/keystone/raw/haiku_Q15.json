@@ -1,0 +1,11 @@
+{
+  "kappa": 0.0,
+  "domains": ["ECON_FIN"],
+  "task_type": "design",
+  "triviality": "bounded",
+  "stakes": "medium",
+  "proxy_only_scorer": true,
+  "groundable": false,
+  "known_vs_open": "open",
+  "reasoning": "In-sample backtested Sharpe is a gameable proxy (overfitting/selection bias); despite numerical exactness, no valid non-gameable verifier exists for future performance, rendering this an open forecasting problem with only a circular proxy scorer."
+}

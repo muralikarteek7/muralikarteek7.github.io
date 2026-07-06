@@ -1,0 +1,11 @@
+{
+  "kappa": 0.0,
+  "domains": ["HUMANITIES_LAW_POLICY"],
+  "task_type": "decide",
+  "triviality": "oneliner",
+  "stakes": "low",
+  "proxy_only_scorer": true,
+  "groundable": false,
+  "known_vs_open": "open",
+  "reasoning": "MMLU score is a gameable benchmark proxy — using it to declare overall capability is a textbook C14 proxy trap, so kappa=0.0 and proxy_only_scorer=true; no authoritative settler exists for 'overall capability' verdicts."
+}

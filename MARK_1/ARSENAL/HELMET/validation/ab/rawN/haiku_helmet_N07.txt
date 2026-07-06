@@ -1,0 +1,6 @@
+**Classification:** UNVERIFIABLE. This is a normative question about food preferences, not a machine-checkable fact, not a settled empirical matter, and not resolvable to a single authoritative source. There is no "one correct answer"—it's a matter of taste, cultural convention, and personal opinion.
+
+**Analysis:**
+Pineapple on pizza (Hawaiian pizza) is culturally polarizing. Some regions and individuals embrace it; others reject it strongly. Food acceptability is fundamentally subjective and varies by cuisine tradition, local custom, and individual preference. No verifiable mechanism, source, or computation can settle this as objectively "acceptable" or "unacceptable" across all contexts.
+
+FINAL ANSWER: ABSTAIN

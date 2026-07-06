@@ -1,0 +1,254 @@
+{
+  "grid_size_N": 42,
+  "assets": [
+    {
+      "asset": "SPY",
+      "market": "us",
+      "n_bars": 1507,
+      "n_trials": 42,
+      "best_insample_param": [
+        8,
+        100
+      ],
+      "insample_sharpe_annualized": 1.1326116816034475,
+      "oos_sharpe_annualized": -0.12606711170592516,
+      "deflated_sharpe_ratio": 0.0066055327352012635,
+      "expected_max_sharpe_SR0": 0.06835842559151153,
+      "var_trial_sharpe": 5.826395123468154e-05,
+      "verdict": "ABSTAIN (no robust OOS edge)",
+      "edge": false,
+      "insample_minus_oos_sharpe": 1.2586787933093726,
+      "walk_forward_folds": [
+        {
+          "fold": 0,
+          "best_param_on_train": [
+            20,
+            100
+          ],
+          "fold_oos_sharpe_ann": -1.51367542582462
+        },
+        {
+          "fold": 1,
+          "best_param_on_train": [
+            10,
+            75
+          ],
+          "fold_oos_sharpe_ann": 0.8308103982877598
+        },
+        {
+          "fold": 2,
+          "best_param_on_train": [
+            10,
+            75
+          ],
+          "fold_oos_sharpe_ann": 0.21606909679140546
+        },
+        {
+          "fold": 3,
+          "best_param_on_train": [
+            30,
+            200
+          ],
+          "fold_oos_sharpe_ann": -0.46535058557327413
+        },
+        {
+          "fold": 4,
+          "best_param_on_train": [
+            8,
+            100
+          ],
+          "fold_oos_sharpe_ann": 0.5434952187859101
+        }
+      ]
+    },
+    {
+      "asset": "AAPL",
+      "market": "us",
+      "n_bars": 1507,
+      "n_trials": 42,
+      "best_insample_param": [
+        3,
+        200
+      ],
+      "insample_sharpe_annualized": 0.902195493036063,
+      "oos_sharpe_annualized": 0.19736914060750801,
+      "deflated_sharpe_ratio": 0.03153948242585516,
+      "expected_max_sharpe_SR0": 0.06835998947156743,
+      "var_trial_sharpe": 0.00012401718066374235,
+      "verdict": "ABSTAIN (no robust OOS edge)",
+      "edge": false,
+      "insample_minus_oos_sharpe": 0.704826352428555,
+      "walk_forward_folds": [
+        {
+          "fold": 0,
+          "best_param_on_train": [
+            5,
+            200
+          ],
+          "fold_oos_sharpe_ann": 0.0
+        },
+        {
+          "fold": 1,
+          "best_param_on_train": [
+            3,
+            200
+          ],
+          "fold_oos_sharpe_ann": 0.44247508767479937
+        },
+        {
+          "fold": 2,
+          "best_param_on_train": [
+            3,
+            200
+          ],
+          "fold_oos_sharpe_ann": 0.523923647056082
+        },
+        {
+          "fold": 3,
+          "best_param_on_train": [
+            3,
+            200
+          ],
+          "fold_oos_sharpe_ann": 0.0
+        },
+        {
+          "fold": 4,
+          "best_param_on_train": [
+            3,
+            200
+          ],
+          "fold_oos_sharpe_ann": -0.11875834260662217
+        }
+      ]
+    },
+    {
+      "asset": "BTC-USD",
+      "market": "crypto",
+      "n_bars": 2191,
+      "n_trials": 42,
+      "best_insample_param": [
+        5,
+        100
+      ],
+      "insample_sharpe_annualized": 0.9533393441166395,
+      "oos_sharpe_annualized": -0.22605687072924288,
+      "deflated_sharpe_ratio": 0.0027818950182020687,
+      "expected_max_sharpe_SR0": 0.0565802661589569,
+      "var_trial_sharpe": 6.22158067481233e-05,
+      "verdict": "ABSTAIN (no robust OOS edge)",
+      "edge": false,
+      "insample_minus_oos_sharpe": 1.1793962148458823,
+      "walk_forward_folds": [
+        {
+          "fold": 0,
+          "best_param_on_train": [
+            8,
+            100
+          ],
+          "fold_oos_sharpe_ann": -0.08061668441364883
+        },
+        {
+          "fold": 1,
+          "best_param_on_train": [
+            8,
+            100
+          ],
+          "fold_oos_sharpe_ann": 0.26972211421676323
+        },
+        {
+          "fold": 2,
+          "best_param_on_train": [
+            8,
+            100
+          ],
+          "fold_oos_sharpe_ann": -1.2529388537239412
+        },
+        {
+          "fold": 3,
+          "best_param_on_train": [
+            5,
+            100
+          ],
+          "fold_oos_sharpe_ann": 1.0163234465790119
+        },
+        {
+          "fold": 4,
+          "best_param_on_train": [
+            5,
+            100
+          ],
+          "fold_oos_sharpe_ann": -0.9574805731575383
+        }
+      ]
+    },
+    {
+      "asset": "RELIANCE_NS",
+      "market": "india",
+      "n_bars": 1489,
+      "n_trials": 42,
+      "best_insample_param": [
+        10,
+        200
+      ],
+      "insample_sharpe_annualized": 0.16855135704329832,
+      "oos_sharpe_annualized": -0.22863846876707528,
+      "deflated_sharpe_ratio": 0.0028700596968342464,
+      "expected_max_sharpe_SR0": 0.0686906626383135,
+      "var_trial_sharpe": 6.443721671933069e-05,
+      "verdict": "ABSTAIN (no robust OOS edge)",
+      "edge": false,
+      "insample_minus_oos_sharpe": 0.3971898258103736,
+      "walk_forward_folds": [
+        {
+          "fold": 0,
+          "best_param_on_train": [
+            5,
+            200
+          ],
+          "fold_oos_sharpe_ann": 0.0
+        },
+        {
+          "fold": 1,
+          "best_param_on_train": [
+            5,
+            200
+          ],
+          "fold_oos_sharpe_ann": 1.1033653249885242
+        },
+        {
+          "fold": 2,
+          "best_param_on_train": [
+            10,
+            200
+          ],
+          "fold_oos_sharpe_ann": -0.4288577978968254
+        },
+        {
+          "fold": 3,
+          "best_param_on_train": [
+            10,
+            200
+          ],
+          "fold_oos_sharpe_ann": -0.8102895148586918
+        },
+        {
+          "fold": 4,
+          "best_param_on_train": [
+            10,
+            200
+          ],
+          "fold_oos_sharpe_ann": 0.0
+        }
+      ]
+    }
+  ],
+  "leakage_demo": {
+    "asset": "SPY",
+    "clean_leaked": false,
+    "clean_insample_sharpe_ann": 0.8357095878191121,
+    "leaky_leaked": true,
+    "leaky_insample_sharpe_ann": 10.133273168803813,
+    "leaky_indices_flagged": 61
+  },
+  "abstain_count": 4
+}

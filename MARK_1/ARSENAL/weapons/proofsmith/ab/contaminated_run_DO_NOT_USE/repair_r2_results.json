@@ -1,0 +1,29 @@
+{
+  "L1": {
+    "accepted": false,
+    "axioms": [
+      "sorryAx"
+    ],
+    "err": "/var/folders/kc/k5xb3wkn7fv1ljw0mncxvy500000gn/T/tmpk3h12t5v.lean:34:4: error: 'show' tactic failed, pattern"
+  },
+  "L2": {
+    "accepted": true,
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ],
+    "err": null
+  },
+  "L3": {
+    "accepted": false,
+    "axioms": [
+      "sorryAx"
+    ],
+    "err": "/var/folders/kc/k5xb3wkn7fv1ljw0mncxvy500000gn/T/tmp5ptf_ozy.lean:31:75: error: omega could not prove the goal:"
+  },
+  "L4": {
+    "accepted": true,
+    "axioms": [],
+    "err": null
+  }
+}

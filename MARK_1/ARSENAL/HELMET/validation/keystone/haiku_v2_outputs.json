@@ -1,0 +1,390 @@
+[
+ {
+  "id": "Q01",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "CS_ENG",
+    "MATH_TCS"
+   ],
+   "task_type": "construct",
+   "triviality": "substantial",
+   "stakes": "medium",
+   "proxy_only_scorer": false,
+   "groundable": false,
+   "known_vs_open": "known",
+   "reasoning": "Sorting network minimization with exhaustive verification over all 40,320 permutations of 8 elements is a computable invariant; kappa=1 via machine-checkable test, not lookup-only."
+  }
+ },
+ {
+  "id": "Q02",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "MATH_TCS"
+   ],
+   "task_type": "construct",
+   "triviality": "bounded",
+   "stakes": "medium",
+   "proxy_only_scorer": false,
+   "groundable": false,
+   "known_vs_open": "known",
+   "reasoning": "Rigorous interval enclosure of a definite integral is verifiable via computable error bounds (interval arithmetic, Taylor series, or quadrature certificates), not via lookup or gameable proxy."
+  }
+ },
+ {
+  "id": "Q03",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "MATH_TCS"
+   ],
+   "task_type": "prove",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": false,
+   "known_vs_open": "known",
+   "reasoning": "Closed-form summation identity with computable verifier via inductive proof or direct algebraic confirmation; routes to proof weapon."
+  }
+ },
+ {
+  "id": "Q04",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "MATH_TCS"
+   ],
+   "task_type": "analyze",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": false,
+   "known_vs_open": "known",
+   "reasoning": "Arithmetic constraint violation: 5.19 \u00d7 28 = 145.32 is non-integer, but integer Likert responses sum to an integer."
+  }
+ },
+ {
+  "id": "Q05",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "CS_ENG_OR"
+   ],
+   "task_type": "construct",
+   "triviality": "bounded",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": false,
+   "known_vs_open": "known",
+   "reasoning": "Assignment optimality is verifiable by computing total cost and checking dual feasibility / reduced-cost optimality certificate via Hungarian algorithm\u2014a computable proof, not a lookup."
+  }
+ },
+ {
+  "id": "Q06",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "MATH_TCS"
+   ],
+   "task_type": "prove",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": true,
+   "known_vs_open": "known",
+   "reasoning": "Exact computable verifier exists via partial sums and rigorous proof; Basel problem admits multiple executable certificate methods (Fourier, residue, interval arithmetic)."
+  }
+ },
+ {
+  "id": "Q07",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "HUMANITIES_LAW_POLICY"
+   ],
+   "task_type": "decide",
+   "triviality": "substantial",
+   "stakes": "high",
+   "proxy_only_scorer": false,
+   "groundable": false,
+   "known_vs_open": "open",
+   "reasoning": "Normative ethical question with no computable verifier and no single authoritative source; abstain on verdict per doctrine."
+  }
+ },
+ {
+  "id": "Q08",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "HUMANITIES_LAW_POLICY"
+   ],
+   "task_type": "decide",
+   "triviality": "oneliner",
+   "stakes": "high",
+   "proxy_only_scorer": false,
+   "groundable": false,
+   "known_vs_open": "open",
+   "reasoning": "Libertarian free will is a metaphysical question with no computable verifier and no single authoritative source; it is an open philosophical problem requiring normative stance, not derivable fact."
+  }
+ },
+ {
+  "id": "Q09",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "ECON_FIN"
+   ],
+   "task_type": "forecast",
+   "triviality": "oneliner",
+   "stakes": "medium",
+   "proxy_only_scorer": false,
+   "groundable": false,
+   "known_vs_open": "open",
+   "reasoning": "Future market price is an uncertain event with no computable verifier; no authoritative source can settle the outcome, only empirical observation one year hence."
+  }
+ },
+ {
+  "id": "Q10",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "MATH_TCS"
+   ],
+   "task_type": "prove",
+   "triviality": "oneliner",
+   "stakes": "high",
+   "proxy_only_scorer": false,
+   "groundable": false,
+   "known_vs_open": "open",
+   "reasoning": "P vs NP is an unsolved Millennium Prize Problem with no computable verifier and no authoritative settled answer; abstain on the verdict."
+  }
+ },
+ {
+  "id": "Q11",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "HUMANITIES_LAW_POLICY"
+   ],
+   "task_type": "explain",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": true,
+   "known_vs_open": "known",
+   "reasoning": "Settled factual lookup (Canberra) with no computable verifier; groundable via authoritative source."
+  }
+ },
+ {
+  "id": "Q12",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "HUMANITIES_LAW_POLICY"
+   ],
+   "task_type": "explain",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": true,
+   "known_vs_open": "known",
+   "reasoning": "Historical fact requiring source consultation, not computation; settled authoritative answer exists but only verifiable by lookup, not proof or algorithm."
+  }
+ },
+ {
+  "id": "Q13",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "STATS"
+   ],
+   "task_type": "explain",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": true,
+   "known_vs_open": "known",
+   "reasoning": "Definition of p-value is a settled statistical concept with authoritative sources; no computable verifier exists, only lookup against standard references."
+  }
+ },
+ {
+  "id": "Q14",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "HUMANITIES_LAW_POLICY"
+   ],
+   "task_type": "explain",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": true,
+   "known_vs_open": "known",
+   "reasoning": "Defined SI constant\u2014lookup via authoritative standard source, no computable verifier."
+  }
+ },
+ {
+  "id": "Q15",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "ECON_FIN"
+   ],
+   "task_type": "design",
+   "triviality": "oneliner",
+   "stakes": "medium",
+   "proxy_only_scorer": true,
+   "groundable": false,
+   "known_vs_open": "open",
+   "reasoning": "In-sample backtested Sharpe ratio is a gameable proxy; no exact computable verifier exists for out-of-sample performance, and strategy selection is an open problem with no authoritative answer."
+  }
+ },
+ {
+  "id": "Q16",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "HUMANITIES_LAW_POLICY"
+   ],
+   "task_type": "decide",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": true,
+   "groundable": false,
+   "known_vs_open": "n/a",
+   "reasoning": "Essay quality is a normative aesthetic judgment with only gameable proxies (LLM-judge, human rating); no computable verifier exists."
+  }
+ },
+ {
+  "id": "Q17",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "CS_ENG",
+    "QUANT_PSYCH"
+   ],
+   "task_type": "measure",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": true,
+   "groundable": true,
+   "known_vs_open": "open",
+   "reasoning": "MMLU is a gameable proxy for overall capability; no computable verifier exists beyond the benchmark score itself."
+  }
+ },
+ {
+  "id": "Q18",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "STATS",
+    "CS_ENG"
+   ],
+   "task_type": "analyze",
+   "triviality": "oneliner",
+   "stakes": "high",
+   "proxy_only_scorer": true,
+   "groundable": false,
+   "known_vs_open": "known",
+   "reasoning": "In-sample R\u00b2 is a gameable proxy vulnerable to overfitting; genuine predictive validation requires out-of-sample or cross-validation evidence, which the claim lacks."
+  }
+ },
+ {
+  "id": "Q19",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "HUMANITIES_LAW_POLICY"
+   ],
+   "task_type": "explain",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": true,
+   "known_vs_open": "known",
+   "reasoning": "Capital of Brazil is a settled institutional fact (Bras\u00edlia) verified only by consulting authoritative source, not computation; kappa=0.0 but fully groundable."
+  }
+ },
+ {
+  "id": "Q20",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "MATH_TCS"
+   ],
+   "task_type": "construct",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": false,
+   "known_vs_open": "known",
+   "reasoning": "Arithmetic multiplication with a definite, computable answer (17 \u00d7 23 = 391); exact verifier; trivial despite rhetorical framing."
+  }
+ },
+ {
+  "id": "Q21",
+  "descriptor": {
+   "kappa": 0.5,
+   "domains": [
+    "STATS",
+    "ECON_FIN"
+   ],
+   "task_type": "analyze",
+   "triviality": "substantial",
+   "stakes": "medium",
+   "proxy_only_scorer": false,
+   "groundable": true,
+   "known_vs_open": "mixed",
+   "reasoning": "Replication of effect is computable (kappa=1.0); policy justification is normative (kappa=0.0, not groundable); weighted average kappa=0.5 reflecting both computable and value-laden sub-questions."
+  }
+ },
+ {
+  "id": "Q22",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "STATS"
+   ],
+   "task_type": "analyze",
+   "triviality": "bounded",
+   "stakes": "high",
+   "proxy_only_scorer": false,
+   "groundable": true,
+   "known_vs_open": "known",
+   "reasoning": "Effect size reproduction and baseline anomaly detection are computable verifications: arithmetic over reported summary statistics + statistical tests against known anomaly criteria."
+  }
+ },
+ {
+  "id": "Q23",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "MATH_TCS"
+   ],
+   "task_type": "prove",
+   "triviality": "oneliner",
+   "stakes": "high",
+   "proxy_only_scorer": false,
+   "groundable": false,
+   "known_vs_open": "open",
+   "reasoning": "Open unsolved conjecture with no computable verifier or authoritative settler; requires proof, cannot be answered by computation or lookup."
+  }
+ },
+ {
+  "id": "Q24",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "MATH_TCS"
+   ],
+   "task_type": "prove",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": true,
+   "known_vs_open": "known",
+   "reasoning": "Primality is verifiable via deterministic computation; 2^31-1 (Mersenne M31) has an exact, computable, non-gameable verifier."
+  }
+ }
+]

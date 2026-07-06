@@ -1,0 +1,155 @@
+{
+  "demo": "FORMALIZE-VERIFY",
+  "judge": "Lean 4.31.0 kernel + #print axioms + z3",
+  "lean_available": true,
+  "good": {
+    "weapon": "PROOFSMITH",
+    "kappa": 1,
+    "accepted": true,
+    "lean_version_checked": true,
+    "targets": {
+      "and_comm_demo": {
+        "reference_statement": "forall (p q : Prop), p \u2227 q \u2192 q \u2227 p",
+        "allowed_axioms": [],
+        "axioms_used": [],
+        "extra_axioms": [],
+        "check1_kernel_accepts": true,
+        "check2_no_sorry_admit": true,
+        "check3_axiom_allowlist": true,
+        "check4_statement_match": true,
+        "accepted": true
+      },
+      "even_or_odd_demo": {
+        "reference_statement": "forall (n : Nat), \u2203 k, n = 2 * k \u2228 n = 2 * k + 1",
+        "allowed_axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "axioms_used": [
+          "propext",
+          "Quot.sound"
+        ],
+        "extra_axioms": [],
+        "check1_kernel_accepts": true,
+        "check2_no_sorry_admit": true,
+        "check3_axiom_allowlist": true,
+        "check4_statement_match": true,
+        "accepted": true
+      },
+      "gauss_demo": {
+        "reference_statement": "forall (n : Nat), 2 * sumTo n = n * (n + 1)",
+        "allowed_axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "axioms_used": [
+          "propext",
+          "Quot.sound"
+        ],
+        "extra_axioms": [],
+        "check1_kernel_accepts": true,
+        "check2_no_sorry_admit": true,
+        "check3_axiom_allowlist": true,
+        "check4_statement_match": true,
+        "accepted": true
+      }
+    },
+    "errors": [],
+    "lean_exit_pass1": 0,
+    "lean_exit_pass2": 0,
+    "note": "kappa=1 KERNEL verdict. CHECK 4 proves the COMMITTED FORMAL statement; whether that formal statement MEANS the English theorem is a kappa<1 autoformalization judgment -> cross-model review, NOT certified here."
+  },
+  "attack_sorry": {
+    "weapon": "PROOFSMITH",
+    "kappa": 1,
+    "accepted": false,
+    "lean_version_checked": true,
+    "targets": {
+      "gauss_sorry": {
+        "reference_statement": "forall (n : Nat), 2 * sumTo n = n * (n + 1)",
+        "allowed_axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "axioms_used": [
+          "sorryAx"
+        ],
+        "extra_axioms": [],
+        "check1_kernel_accepts": true,
+        "check2_no_sorry_admit": false,
+        "check3_axiom_allowlist": true,
+        "check4_statement_match": true,
+        "accepted": false
+      }
+    },
+    "errors": [],
+    "lean_exit_pass1": 0,
+    "lean_exit_pass2": 0,
+    "note": "kappa=1 KERNEL verdict. CHECK 4 proves the COMMITTED FORMAL statement; whether that formal statement MEANS the English theorem is a kappa<1 autoformalization judgment -> cross-model review, NOT certified here."
+  },
+  "attack_bogus_axiom": {
+    "weapon": "PROOFSMITH",
+    "kappa": 1,
+    "accepted": false,
+    "lean_version_checked": true,
+    "targets": {
+      "gauss_via_axiom": {
+        "reference_statement": "forall (n : Nat), 2 * sumTo n = n * (n + 1)",
+        "allowed_axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "axioms_used": [
+          "gauss_cheat"
+        ],
+        "extra_axioms": [
+          "gauss_cheat"
+        ],
+        "check1_kernel_accepts": true,
+        "check2_no_sorry_admit": true,
+        "check3_axiom_allowlist": false,
+        "check4_statement_match": true,
+        "accepted": false
+      }
+    },
+    "errors": [],
+    "lean_exit_pass1": 0,
+    "lean_exit_pass2": 0,
+    "note": "kappa=1 KERNEL verdict. CHECK 4 proves the COMMITTED FORMAL statement; whether that formal statement MEANS the English theorem is a kappa<1 autoformalization judgment -> cross-model review, NOT certified here."
+  },
+  "attack_wrong_statement": {
+    "weapon": "PROOFSMITH",
+    "kappa": 1,
+    "accepted": false,
+    "lean_version_checked": true,
+    "targets": {
+      "and_comm_demo": {
+        "reference_statement": "forall (p q : Prop), p \u2228 q \u2192 q \u2227 p",
+        "allowed_axioms": [],
+        "axioms_used": [],
+        "extra_axioms": [],
+        "check1_kernel_accepts": true,
+        "check2_no_sorry_admit": true,
+        "check3_axiom_allowlist": true,
+        "check4_statement_match": false,
+        "accepted": false
+      }
+    },
+    "errors": [],
+    "lean_exit_pass1": 0,
+    "lean_exit_pass2": 1,
+    "note": "kappa=1 KERNEL verdict. CHECK 4 proves the COMMITTED FORMAL statement; whether that formal statement MEANS the English theorem is a kappa<1 autoformalization judgment -> cross-model review, NOT certified here."
+  },
+  "z3_cross_check_T1": {
+    "weapon": "PROOFSMITH-SMT",
+    "kappa": 1,
+    "scope": "DECIDABLE fragment (propositional / QF & linear arithmetic) ONLY \u2014 NOT a general proof assistant",
+    "valid": true,
+    "verdict": "VALID (negation is UNSAT)",
+    "countermodel": null
+  }
+}

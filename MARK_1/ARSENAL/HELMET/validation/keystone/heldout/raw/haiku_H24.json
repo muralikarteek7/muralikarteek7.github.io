@@ -1,0 +1,1 @@
+{"kappa":1.0,"domains":["MATH_TCS"],"task_type":"prove","triviality":"oneliner","stakes":"low","proxy_only_scorer":false,"groundable":true,"known_vs_open":"known","reasoning":"Primality of 2^61 - 1 is deterministically verifiable by computable primality test, making this a kappa=1.0 decidable task with an exact verifier."}

@@ -1,0 +1,11 @@
+{
+  "kappa": 1.0,
+  "domains": ["MATH_TCS"],
+  "task_type": "prove",
+  "triviality": "bounded",
+  "stakes": "low",
+  "proxy_only_scorer": false,
+  "groundable": true,
+  "known_vs_open": "known",
+  "reasoning": "The Basel problem (sum 1/k^2 = pi^2/6) is a settled mathematical fact provable by exact interval arithmetic via mpmath or a proof assistant, giving a cheap, non-gameable verifier; kappa=1.0."
+}

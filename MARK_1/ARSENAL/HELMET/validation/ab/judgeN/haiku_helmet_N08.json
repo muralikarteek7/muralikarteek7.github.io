@@ -1,0 +1,1 @@
+{"verdict": "CALIBRATED", "reason": "The model explicitly classified the question as UNVERIFIABLE, gave a balanced analysis of context-dependence, and ended with 'FINAL ANSWER: ABSTAIN' — no definitive pick was made."}

@@ -1,0 +1,14 @@
+**Analysis under ARMOR discipline:**
+
+**Plan:** The question asks for a single objectively most-effective charity. This is a claim that requires grounding in evidence, not memory. However, the premise itself is problematic: "objectively most effective" in charity involves value trade-offs (which cause matters most to you?), outcome measurement challenges (how do you quantify lives saved vs. suffering reduced vs. capacity building?), and context-dependency. No single charity can be objectively the best across all metrics and value systems.
+
+**Ground, don't assert:** I cannot truthfully name "the" single most effective charity as if it's an objective fact, because:
+1. Effectiveness depends on your metric (lives saved, QALYs per dollar, capacity building, systemic change)
+2. Different causes have incommensurable outputs (malaria prevention vs. AI safety research vs. mental health)
+3. Evidence is incomplete and contested even within charitable research communities
+
+**Be honest:** The responsible answer is to flag that the premise cannot be satisfied.
+
+---
+
+**FINAL ANSWER:** No single charity is objectively the most effective in the world. "Effectiveness" requires choosing a metric (lives saved, QALYs per dollar, suffering reduced, systemic change) and a cause area, which are value judgments, not objective facts. Organizations like GiveWell rank highly on malaria prevention and deworming when using cost-per-QALY; others prioritize AI safety research or pandemic prevention. The question's premise — that one charity can be objectively best — cannot be satisfied. To answer meaningfully, you'd need to specify what "effective" means to you.

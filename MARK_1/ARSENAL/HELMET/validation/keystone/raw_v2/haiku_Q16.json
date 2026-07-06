@@ -1,0 +1,1 @@
+{"kappa":0.0,"domains":["HUMANITIES_LAW_POLICY"],"task_type":"decide","triviality":"oneliner","stakes":"low","proxy_only_scorer":true,"groundable":false,"known_vs_open":"n/a","reasoning":"Essay quality is a normative aesthetic judgment with only gameable proxies (LLM-judge, human rating); no computable verifier exists."}

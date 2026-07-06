@@ -1,0 +1,1 @@
+{"kappa":1.0,"domains":["MATH_TCS","QUANT_PSYCH"],"task_type":"prove","triviality":"oneliner","stakes":"low","proxy_only_scorer":false,"groundable":false,"known_vs_open":"known","reasoning":"Arithmetic feasibility of a mean 3.875 over 40 integer-rated items is computable via solving sum = 155; verifiable by construction, not lookup."}

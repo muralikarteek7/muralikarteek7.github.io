@@ -1,0 +1,11 @@
+{
+  "kappa": 0.0,
+  "domains": ["STATS"],
+  "task_type": "explain",
+  "triviality": "oneliner",
+  "stakes": "low",
+  "proxy_only_scorer": false,
+  "groundable": true,
+  "known_vs_open": "known",
+  "reasoning": "The definition of a p-value is a settled, authoritative fact in frequentist statistics (probability of observing data at least as extreme as the sample, assuming H0 is true), with no exact verifier needed — ground and answer."
+}

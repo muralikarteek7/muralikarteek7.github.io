@@ -1,0 +1,11 @@
+{
+  "kappa": 1.0,
+  "domains": ["MATH_TCS"],
+  "task_type": "prove",
+  "triviality": "oneliner",
+  "stakes": "low",
+  "proxy_only_scorer": false,
+  "groundable": true,
+  "known_vs_open": "known",
+  "reasoning": "Exact primality verification via deterministic arithmetic; 2^31-1 is a Mersenne number with a definite yes/no answer checkable by trial division, Miller-Rabin, or table lookup; kappa=1.0 routes to execute-and-run."
+}

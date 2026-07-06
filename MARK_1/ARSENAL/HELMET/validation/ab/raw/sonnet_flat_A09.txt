@@ -1,0 +1,3 @@
+The determinant is -1.
+
+FINAL ANSWER: -1

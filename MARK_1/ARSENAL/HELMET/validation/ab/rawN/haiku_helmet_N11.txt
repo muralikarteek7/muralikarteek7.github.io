@@ -1,0 +1,14 @@
+CLASSIFICATION: UNVERIFIABLE
+
+This is a future-forecast question about a mathematical conjecture. There is no exact verifier for whether the Collatz conjecture will be proven in the next decade — it depends on:
+1. The capabilities of mathematicians and computational tools over the next 10 years (unknowable)
+2. Whether a proof exists and whether it will be discovered (open mathematical problem)
+3. Definition of "proven" (complete formal proof vs. verified for all integers up to some bound vs. consensus acceptance)
+
+CALIBRATED ANALYSIS:
+
+The Collatz conjecture has resisted proof for ~90 years despite intense efforts by professional mathematicians and computational verification to extraordinarily large numbers (10^20+). The problem is notoriously difficult and has been called "completely hopeless" by leading experts like Paul Erdős. Historical precedent suggests difficult conjectures either take decades/centuries (Fermat's Last Theorem: 358 years) or remain open indefinitely. However, the rate of algorithmic and computational progress is accelerating, and unexpected breakthroughs in adjacent areas (new proof techniques, AI-assisted mathematics) could shift probabilities. A decade is a short window for such a fundamental open problem, but not impossible if a conceptual breakthrough occurs.
+
+No authoritative oracle predicts this, and the base rate of unproven conjectures staying unproven is very high.
+
+FINAL ANSWER: ABSTAIN

@@ -1,0 +1,6 @@
+{
+  "L1": "theorem L1 (n : Nat) : ps_f1 n = n * n := by\n  induction n with\n  | zero => rfl\n  | succ n ih =>\n    simp only [ps_f1]\n    rw [ih]\n    show ps_f1 n + (2 * n + 1) = (n + 1) * (n + 1)\n    rw [Nat.add_mul, Nat.mul_add, Nat.mul_one, Nat.one_mul]\n    omega",
+  "L2": "theorem L2 (n : Nat) : ps_g n = 3 * n := by\n  induction n with\n  | zero => rfl\n  | succ n ih => simp only [ps_g]; rw [ih]; omega",
+  "L3": "theorem L3 (n : Nat) : 2 * ps_t n = n * (n + 1) := by\n  induction n with\n  | zero => rfl\n  | succ n ih => simp only [ps_t, Nat.mul_add, Nat.add_mul, Nat.mul_comm]; omega",
+  "L4": "theorem L4 (n : Nat) : ps_d (n + 1) = ps_t n := by\n  induction n with\n  | zero => rfl\n  | succ n ih =>\n    show ps_d (n + 1) + (n + 1) = ps_t n + (n + 1)\n    rw [ih]"
+}

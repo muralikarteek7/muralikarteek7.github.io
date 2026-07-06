@@ -1,0 +1,3 @@
+UNVERIFIABLE. The Collatz conjecture is an open problem in mathematics with no known proof strategy that experts broadly consider likely to succeed. Terence Tao's 2019 result showed that almost all Collatz orbits reach below any given function, which is progress, but falls well short of a full proof. Predicting whether a specific open conjecture will be proved within a fixed decade is a future-forecast over a normative/community process — no exact verifier exists, and mathematical proof timelines are notoriously unpredictable.
+
+FINAL ANSWER: ABSTAIN

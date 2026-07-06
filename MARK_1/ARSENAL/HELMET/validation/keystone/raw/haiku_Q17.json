@@ -1,0 +1,11 @@
+{
+  "kappa": 0.0,
+  "domains": ["CS_ENG"],
+  "task_type": "measure",
+  "triviality": "oneliner",
+  "stakes": "low",
+  "proxy_only_scorer": true,
+  "groundable": false,
+  "known_vs_open": "n/a",
+  "reasoning": "MMLU rank is exact but gameable; conflating benchmark score with 'overall capability' is a proxy trap with no authoritative verifier of capability independent of the metric itself."
+}

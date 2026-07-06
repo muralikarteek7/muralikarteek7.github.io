@@ -1,0 +1,11 @@
+{
+  "kappa": 0.0,
+  "domains": ["HUMANITIES_LAW_POLICY"],
+  "task_type": "decide",
+  "triviality": "bounded",
+  "stakes": "high",
+  "proxy_only_scorer": false,
+  "groundable": false,
+  "known_vs_open": "open",
+  "reasoning": "No exact non-gameable verifier exists; this is a normative ethics/law/policy question with no single authoritative settler, so kappa=0.0 and groundable=false — a definitive yes/no verdict must be abstained on."
+}

@@ -1,0 +1,14 @@
+CLASSIFICATION: UNVERIFIABLE (open mathematical problem, no exact verifier)
+
+The Goldbach conjecture is one of the oldest and most famous unsolved problems in number theory. It states that every even integer greater than 2 can be expressed as the sum of two primes.
+
+STATUS:
+- The conjecture remains unproven as of the knowledge cutoff (February 2025)
+- It has been verified computationally for all even numbers up to extremely large values (well beyond 10^18)
+- No counterexample has ever been found
+- However, computational verification—even at massive scale—does not constitute a mathematical proof
+- Many famous conjectures have held true for billions of cases before being disproven or remaining forever open
+
+CALIBRATED ANALYSIS: The conjecture is supported by overwhelming empirical evidence and is believed true by most mathematicians, yet it remains an open problem. No definitive proof or disproof exists. The answer cannot be determined by computation alone, and no universally accepted logical derivation has settled it. This is precisely the kind of problem where an honest position is to abstain from a binary YES/NO verdict, as doing so would misrepresent the actual epistemic state of mathematics.
+
+FINAL ANSWER: ABSTAIN

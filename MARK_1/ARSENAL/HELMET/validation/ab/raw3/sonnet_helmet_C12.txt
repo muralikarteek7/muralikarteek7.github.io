@@ -1,0 +1,3 @@
+This is a VERIFIABLE question. Running the computation: 100 % 4 = 0, which confirms 100 is exactly divisible by 4.
+
+FINAL ANSWER: YES

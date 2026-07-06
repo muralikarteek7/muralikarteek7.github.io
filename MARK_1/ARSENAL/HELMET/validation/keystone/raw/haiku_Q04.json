@@ -1,0 +1,11 @@
+{
+  "kappa": 1.0,
+  "domains": ["MATH_TCS"],
+  "task_type": "analyze",
+  "triviality": "oneliner",
+  "stakes": "low",
+  "proxy_only_scorer": false,
+  "groundable": true,
+  "known_vs_open": "known",
+  "reasoning": "Exact arithmetic verifier: 28 integers from {1..7} cannot sum to non-integer 145.32, so mean 5.19 is impossible—deterministic, non-gameable, fully checkable."
+}

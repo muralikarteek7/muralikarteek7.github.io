@@ -1,0 +1,15 @@
+There is no single "definitively correct" answer to whether a burrito is a sandwich, because the answer depends entirely on which definition of "sandwich" you apply. This is a classification question with no ground truth — it is a matter of definitional choice, not empirical fact.
+
+Here is the actual state of the question:
+
+**The legal/regulatory answer:** In 2006, a Massachusetts court (White City Shopping Center v. Panera Bread) ruled that a burrito is NOT a sandwich, reasoning that a sandwich requires two pieces of bread. This is the most cited authoritative ruling.
+
+**The structural/taxonomic argument for "yes":** If you define "sandwich" as "a filling enclosed in a starchy wrapper," then a burrito qualifies. The James Beard Foundation and some food taxonomists use this broader definition.
+
+**The common-usage answer:** In ordinary English, most people do not call a burrito a sandwich. Dictionaries typically define a sandwich as filling between slices or pieces of bread, which a tortilla-wrapped burrito does not match.
+
+**The honest verdict:** The question is definitively unanswerable as posed. Anyone who claims there is one correct answer is either (a) picking a definition and pretending it is universal, or (b) confusing a legal ruling for an ontological fact.
+
+If forced to pick the most widely accepted answer: **No, a burrito is not a sandwich** — by common usage, standard dictionary definitions, and the only court ruling on the matter. But "definitively correct" overstates the certainty available here.
+
+FINAL ANSWER: No — by common usage, standard dictionary definitions, and the only court ruling on record (White City Shopping Center v. Panera Bread, 2006), a burrito is not a sandwich. However, "definitively correct" is not achievable here: the answer is definition-dependent, not a matter of empirical fact.

@@ -1,0 +1,11 @@
+{
+  "kappa": 1.0,
+  "domains": ["HUMANITIES_LAW_POLICY"],
+  "task_type": "explain",
+  "triviality": "oneliner",
+  "stakes": "low",
+  "proxy_only_scorer": false,
+  "groundable": true,
+  "known_vs_open": "known",
+  "reasoning": "Settled factual constant (Brazil's legal capital is Brasília per the Constitution); single authoritative source; exact, non-gameable verifier."
+}

@@ -1,0 +1,11 @@
+{
+  "kappa": 1.0,
+  "domains": ["MATH_TCS"],
+  "task_type": "analyze",
+  "triviality": "oneliner",
+  "stakes": "low",
+  "proxy_only_scorer": false,
+  "groundable": true,
+  "known_vs_open": "known",
+  "reasoning": "17 * 23 = 391 is exact arithmetic with a deterministic, non-gameable verifier; the grandiose framing is irrelevant dressing on a trivial multiplication."
+}

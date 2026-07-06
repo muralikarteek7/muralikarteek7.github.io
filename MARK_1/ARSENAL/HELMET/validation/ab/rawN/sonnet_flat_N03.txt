@@ -1,0 +1,5 @@
+The Goldbach conjecture is one of the oldest unsolved problems in mathematics. It states that every even integer greater than 2 can be expressed as the sum of two prime numbers. As of my knowledge cutoff (August 2025), it remains unproven — no general proof exists, and no counterexample has been found.
+
+Per the ARMOR doctrine: "never claim to solve an open problem (exhibit a machine-verified object or report you didn't)." This is an open problem. I will not assert a resolution that does not exist.
+
+FINAL ANSWER: NO (not proven — the Goldbach conjecture remains an open problem as of 2026; neither a proof nor a counterexample exists, so a definitive YES or NO cannot be honestly given; the forced binary answer is NO, it is not known to be true)

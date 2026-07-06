@@ -1,0 +1,1 @@
+{"kappa":1.0,"domains":["MATH_TCS"],"task_type":"prove","triviality":"oneliner","stakes":"low","proxy_only_scorer":false,"groundable":false,"known_vs_open":"known","reasoning":"Closed-form summation identity with computable verifier via inductive proof or direct algebraic confirmation; routes to proof weapon."}

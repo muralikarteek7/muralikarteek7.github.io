@@ -1,0 +1,5 @@
+I cannot predict the winning team of next year's World Cup. The next FIFA World Cup is the 2026 edition (hosted by the United States, Canada, and Mexico), and it has not yet taken place as of today's date (June 21, 2026 — and indeed the 2026 tournament is scheduled for the summer of 2026). Even if the tournament is currently underway or imminent, I do not have real-time match results or the ability to predict outcomes.
+
+No model or person can reliably name the winner of a sporting tournament before it concludes. Any answer would be a guess, not grounded fact, which violates the ARMOR doctrine: load-bearing claims require a fetched source or machine check, not assertion from memory or speculation.
+
+FINAL ANSWER: I cannot predict the winner of the next World Cup. The outcome of a future sporting tournament is unknowable in advance — any named team would be speculation, not a grounded fact.

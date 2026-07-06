@@ -1,0 +1,60 @@
+{
+  "p_repro_religious": {
+    "test": "P-REPRO",
+    "focal": "religious",
+    "family": "logit",
+    "coef_statsmodels": -0.375646,
+    "coef_numpy_independent": -0.375646,
+    "p_value": 3.099745993903774e-27,
+    "dual_path_agree": true,
+    "claimed_value": null,
+    "matches_claimed": null,
+    "reproduced": true,
+    "note": "REPRODUCED: two independent computations agree. Reproduction != truth."
+  },
+  "p_repro_rate_marriage": {
+    "test": "P-REPRO",
+    "focal": "rate_marriage",
+    "family": "logit",
+    "coef_statsmodels": -0.715485,
+    "coef_numpy_independent": -0.715485,
+    "p_value": 6.891170724895388e-115,
+    "dual_path_agree": true,
+    "claimed_value": null,
+    "matches_claimed": null,
+    "reproduced": true,
+    "note": "REPRODUCED: two independent computations agree. Reproduction != truth."
+  },
+  "p_multiverse": {
+    "test": "P-MULTIVERSE",
+    "focal": "religious",
+    "n_specifications": 256,
+    "median_coef": -0.3773,
+    "coef_min": -0.4201,
+    "coef_max": -0.2889,
+    "coef_std": 0.0276,
+    "coef_cv": 0.0731,
+    "pct_significant": 1.0,
+    "pct_same_sign_as_median": 1.0,
+    "pct_significant_in_dominant_sign": 1.0,
+    "robustness_verdict": "robust",
+    "pcurve_evidential_value": true,
+    "pcurve_caveat": "specs are non-independent (nested subsets) -> illustrative only",
+    "caveats": [
+      "ROBUST != TRUE/CAUSAL: a robust verdict means the effect is not an artifact of the analytic choices TESTED \u2014 not that it is causally true (esp. observational data).",
+      "CONDITIONAL ON THE COVARIATE POOL: the verifier cannot certify the pool is complete; omitting a real confounder (omitted-variable bias) can make even a NULL effect look robust. The pool must be defensibly exhaustive \u2014 that is the analyst's burden, not checkable here.",
+      "P-CURVE ASSUMES INDEPENDENT TESTS: these specs are NESTED, non-independent subsets of one dataset, so their p-values are highly correlated \u2014 pcurve_evidential_value here is ILLUSTRATIVE, not a valid independent-evidence test.",
+      "LARGE-N SIGNIFICANCE: 100% of specs are significant \u2014 at large n almost any nonzero effect is. Judge robustness by the SIGN stability and the effect-size spread (coef CV=0.073), NOT by the significance rate alone."
+    ],
+    "note": "ROBUST: sign-stable across the multiverse and significant in a majority of specs \u2014 NOT an artifact of the analytic choices TESTED (see caveats: conditional on a complete covariate pool). Robust != true."
+  },
+  "n_specs": 256,
+  "checks": {
+    "repro_dual_path_agrees": true,
+    "repro_coef_in_band": true,
+    "multiverse_robust": true,
+    "sign_stable_95": true,
+    "median_in_band": true,
+    "rate_marriage_stronger": true
+  }
+}

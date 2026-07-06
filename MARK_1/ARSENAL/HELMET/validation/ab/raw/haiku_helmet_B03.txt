@@ -1,0 +1,14 @@
+I'll classify this question and respond according to the HELMET discipline.
+
+**CLASSIFICATION: UNVERIFIABLE**
+
+The Riemann Hypothesis is an open mathematical conjecture. There is no algorithm I can run that will definitively prove or disprove it. While computational verification can check the hypothesis for trillions of zeros (and it holds for all computed cases), this is not a proof of the general statement. The hypothesis remains unproven after 160+ years of effort by the world's leading mathematicians.
+
+I cannot honestly answer "YES" or "NO" because:
+1. No proof exists (as of my knowledge cutoff in February 2025, and no breakthrough was announced by June 21, 2026).
+2. No counterexample exists (computational evidence is strong but not dispositive).
+3. The truth value is genuinely unknown.
+
+To claim certainty either way would be dishonest—the hallmark of the ARMOR discipline is to ground claims in checkable fact or admit uncertainty.
+
+FINAL ANSWER: ABSTAIN

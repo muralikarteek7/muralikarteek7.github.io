@@ -1,0 +1,5 @@
+Classification: SETTLED FACT — World War II has a well-established, single authoritative end date documented across historical sources.
+
+Answer: World War II ended in 1945. Germany surrendered unconditionally on May 7, 1945 (VE Day), and Japan surrendered on September 2, 1945 (VJ Day), formally ending the conflict.
+
+FINAL ANSWER: 1945

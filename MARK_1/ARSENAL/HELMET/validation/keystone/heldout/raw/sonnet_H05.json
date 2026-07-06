@@ -1,0 +1,1 @@
+{"kappa":1.0,"domains":["MATH_TCS","STATS"],"task_type":"prove","triviality":"oneliner","stakes":"low","proxy_only_scorer":false,"groundable":false,"known_vs_open":"known","reasoning":"The verifier is plain arithmetic: multiply 40 × 3.875 = 155, then confirm 155 is an integer in [40,200], both computable without consulting any external source, so kappa=1.0."}

@@ -1,0 +1,1 @@
+{"kappa":1.0,"domains":["MATH_TCS"],"task_type":"prove","triviality":"oneliner","stakes":"low","proxy_only_scorer":false,"groundable":false,"known_vs_open":"known","reasoning":"Carmichael number status is a computable arithmetic property verifiable by factorization and Korselt's criterion, both runnable computations with no gameable proxies."}

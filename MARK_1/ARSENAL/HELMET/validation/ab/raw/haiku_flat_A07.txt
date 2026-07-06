@@ -1,0 +1,7 @@
+The calculation is clear:
+
+- If we have 13 integer ratings, each on a 1-7 scale, the **sum of all ratings must be an integer**.
+- For the mean to be exactly 3.46, the sum would need to be: 3.46 × 13 = **44.98**
+- Since 44.98 is **not an integer**, and the sum of integers must always be an integer, a mean of exactly 3.46 is **impossible**.
+
+FINAL ANSWER: NO

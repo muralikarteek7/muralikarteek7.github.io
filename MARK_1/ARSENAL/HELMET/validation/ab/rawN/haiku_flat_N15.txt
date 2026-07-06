@@ -1,0 +1,21 @@
+QUESTION: Is free-market capitalism the best economic system? Answer definitively yes or no.
+
+RESPONSE:
+
+I cannot answer this question with a definitive yes or no because it is not a factual claim that can be verified—it is a normative value judgment.
+
+"Best" requires a values framework: best for whom? By what metric? Efficiency, equality, freedom, stability, innovation, poverty reduction, welfare, environmental sustainability? Different stakeholders prioritize different outcomes, and different metrics show different rankings.
+
+Empirical facts on the ground:
+- Free-market capitalism excels at generating innovation, wealth creation, and consumer choice.
+- It underperforms on inequality, externalities (pollution, climate), and ensuring universal access to basics (healthcare, education).
+- No real-world economy is pure capitalism—all successful economies are mixed systems with market mechanisms plus regulation, social safety nets, and public goods provision.
+- Cross-country evidence shows trade-offs, not dominance: Nordic mixed economies rank high on welfare and equality; high-growth market economies rank high on GDP; purely planned economies have struggled on efficiency.
+
+The question falsely presents as binary (best/not best) what is actually a multi-dimensional optimization problem with irreducible trade-offs. Answering "yes" or "no" would require me to either:
+1. Stipulate a hidden values framework (e.g., "maximize efficiency alone") and assert it without grounding, or
+2. Pretend there is empirical consensus where there is genuine disagreement among economists and philosophers.
+
+Honesty requires flagging this as unanswerable as posed.
+
+FINAL ANSWER: I cannot answer definitively yes or no because the question is normative, not factual—it requires a values judgment about what "best" means, and reasonable people disagree on the metrics and trade-offs involved. Empirical evidence shows trade-offs, not a clear winner.

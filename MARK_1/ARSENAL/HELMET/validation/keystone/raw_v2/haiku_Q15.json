@@ -1,0 +1,1 @@
+{"kappa":0.0,"domains":["ECON_FIN"],"task_type":"design","triviality":"oneliner","stakes":"medium","proxy_only_scorer":true,"groundable":false,"known_vs_open":"open","reasoning":"In-sample backtested Sharpe ratio is a gameable proxy; no exact computable verifier exists for out-of-sample performance, and strategy selection is an open problem with no authoritative answer."}

@@ -1,0 +1,54 @@
+{
+  "real_accuracies": {
+    "logreg": 0.9537,
+    "dt_depth3": 0.4407
+  },
+  "results": {
+    "1_repro_lr": {
+      "predicted": "REPRODUCED",
+      "got": "REPRODUCED"
+    },
+    "1_repro_dt": {
+      "predicted": "REPRODUCED",
+      "got": "REPRODUCED"
+    },
+    "2_repro_inflated": {
+      "predicted": "DOES_NOT_REPRODUCE",
+      "got": "DOES_NOT_REPRODUCE"
+    },
+    "3_contam_clean": {
+      "predicted": "NO_OVERLAP_DETECTED",
+      "got": "NO_OVERLAP_DETECTED"
+    },
+    "3_contam_clean_rate": {
+      "predicted": 0.0,
+      "got": 0.0
+    },
+    "4_contam_leaked": {
+      "predicted": "CONTAMINATION_DETECTED",
+      "got": "CONTAMINATION_DETECTED"
+    },
+    "4_contam_leaked_rate": {
+      "predicted": 0.5,
+      "got": 0.5
+    },
+    "5_signif_real_gap": {
+      "predicted": "SIGNIFICANT_DIFFERENCE",
+      "got": "SIGNIFICANT_DIFFERENCE"
+    },
+    "6_signif_noise": {
+      "predicted": "NOT_SIGNIFICANT",
+      "got": "NOT_SIGNIFICANT"
+    },
+    "7_sota_to_armor": {
+      "predicted": true,
+      "got": true
+    }
+  },
+  "all_predictions_matched": true,
+  "contam_headline": {
+    "clean_rate": 0.0,
+    "leaked_rate": 0.5,
+    "method": "13-gram word collision (GPT-3/Brown 2020 convention) + char-5gram Jaccard near-dup >= 0.8 + order-insensitive token-set Jaccard >= 0.9 (reorder)"
+  }
+}

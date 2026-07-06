@@ -1,0 +1,17 @@
+What will the price of gold be (USD/oz) exactly two years from today? Give a number.
+
+Analysis:
+Current date: June 21, 2026
+Forecast date: June 21, 2028
+
+The gold price prediction requires consideration of multiple factors:
+- Current price baseline: ~$2,340-2,380 USD/oz (early 2026)
+- Historical range: $1,600-$2,500 over the past decade
+- Inflation dynamics: Persistent inflation supports higher prices
+- Interest rate environment: Policy paths uncertain over 2 years
+- Geopolitical risk premium: Structural uncertainty remains
+- Long-term equilibrium: Historical average ~$1,800-2,200
+
+Reasoning: Over a two-year forecast horizon, gold prices tend to exhibit partial mean reversion from elevated levels. Current prices are relatively high historically. Structural factors (elevated debt, monetary accommodation bias) provide support above pre-2020 levels, but some moderation from current peaks is likely. The forecast balances these competing dynamics.
+
+FINAL ANSWER: 2150

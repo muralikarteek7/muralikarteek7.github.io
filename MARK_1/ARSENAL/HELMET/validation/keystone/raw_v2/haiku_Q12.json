@@ -1,0 +1,1 @@
+{"kappa":0.0,"domains":["HUMANITIES_LAW_POLICY"],"task_type":"explain","triviality":"oneliner","stakes":"low","proxy_only_scorer":false,"groundable":true,"known_vs_open":"known","reasoning":"Historical fact requiring source consultation, not computation; settled authoritative answer exists but only verifiable by lookup, not proof or algorithm."}

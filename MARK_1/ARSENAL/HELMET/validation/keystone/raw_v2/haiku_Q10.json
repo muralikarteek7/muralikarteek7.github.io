@@ -1,0 +1,1 @@
+{"kappa":0.0,"domains":["MATH_TCS"],"task_type":"prove","triviality":"oneliner","stakes":"high","proxy_only_scorer":false,"groundable":false,"known_vs_open":"open","reasoning":"P vs NP is an unsolved Millennium Prize Problem with no computable verifier and no authoritative settled answer; abstain on the verdict."}

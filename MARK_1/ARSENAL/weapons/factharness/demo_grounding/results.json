@@ -1,0 +1,247 @@
+{
+  "results": [
+    {
+      "claim": "Strassen published the algorithm in 1969.",
+      "predicted": "GROUNDED",
+      "overall": "GROUNDED",
+      "detail": {
+        "facility": "FACTHARNESS",
+        "claim": "Strassen published the algorithm in 1969.",
+        "source_fetched": true,
+        "layer1_frozen_checks_kappa1": [
+          {
+            "check": "F-QUOTE",
+            "kappa": 1,
+            "quote": "Volker Strassen first published this algorithm in 1969",
+            "grounded": true,
+            "verdict": "quote_found"
+          },
+          {
+            "check": "F-NUMBER",
+            "kappa": 1,
+            "number": "1969",
+            "also_require": "published",
+            "grounded": true,
+            "verdict": "number_found"
+          }
+        ],
+        "bibliographic_check_kappa0p7": null,
+        "layer2_entailment_kappa0": null,
+        "overall": "GROUNDED",
+        "candidate_causes": null,
+        "kappa_note": "F-QUOTE/F-NUMBER are kappa=1 frozen; F-CITE is kappa=0.7 advisory; entailment is kappa=0 judgment (a model != generator), reported never machine-verified.",
+        "ceiling_note": "Grounded means anchored to a real source containing the asserted quote/number -- NOT that the claim is true. A FABRICATION_FLAG means 'does not check against the supplied source', NOT fraud."
+      }
+    },
+    {
+      "claim": "Strassen requires only six multiplications.",
+      "predicted": "FABRICATION_FLAG",
+      "overall": "FABRICATION_FLAG",
+      "detail": {
+        "facility": "FACTHARNESS",
+        "claim": "Strassen requires only six multiplications.",
+        "source_fetched": true,
+        "layer1_frozen_checks_kappa1": [
+          {
+            "check": "F-QUOTE",
+            "kappa": 1,
+            "quote": "the algorithm requires only six multiplications instead of eight",
+            "grounded": false,
+            "verdict": "QUOTE_NOT_IN_SOURCE"
+          }
+        ],
+        "bibliographic_check_kappa0p7": null,
+        "layer2_entailment_kappa0": null,
+        "overall": "FABRICATION_FLAG",
+        "candidate_causes": [
+          "paraphrase mismatch (not verbatim)",
+          "wrong source attached",
+          "OCR/transcription error",
+          "the quote/number/cite was invented"
+        ],
+        "kappa_note": "F-QUOTE/F-NUMBER are kappa=1 frozen; F-CITE is kappa=0.7 advisory; entailment is kappa=0 judgment (a model != generator), reported never machine-verified.",
+        "ceiling_note": "Grounded means anchored to a real source containing the asserted quote/number -- NOT that the claim is true. A FABRICATION_FLAG means 'does not check against the supplied source', NOT fraud."
+      }
+    },
+    {
+      "claim": "Strassen uses 11 multiplications.",
+      "predicted": "FABRICATION_FLAG",
+      "overall": "FABRICATION_FLAG",
+      "detail": {
+        "facility": "FACTHARNESS",
+        "claim": "Strassen uses 11 multiplications.",
+        "source_fetched": true,
+        "layer1_frozen_checks_kappa1": [
+          {
+            "check": "F-NUMBER",
+            "kappa": 1,
+            "number": "11",
+            "also_require": "multiplications",
+            "grounded": false,
+            "verdict": "NUMBER_NOT_IN_SOURCE"
+          }
+        ],
+        "bibliographic_check_kappa0p7": null,
+        "layer2_entailment_kappa0": null,
+        "overall": "FABRICATION_FLAG",
+        "candidate_causes": [
+          "paraphrase mismatch (not verbatim)",
+          "wrong source attached",
+          "OCR/transcription error",
+          "the quote/number/cite was invented"
+        ],
+        "kappa_note": "F-QUOTE/F-NUMBER are kappa=1 frozen; F-CITE is kappa=0.7 advisory; entailment is kappa=0 judgment (a model != generator), reported never machine-verified.",
+        "ceiling_note": "Grounded means anchored to a real source containing the asserted quote/number -- NOT that the claim is true. A FABRICATION_FLAG means 'does not check against the supplied source', NOT fraud."
+      }
+    },
+    {
+      "claim": "Per Williams and Page (1969), ...",
+      "predicted": "FABRICATION_FLAG",
+      "overall": "FABRICATION_FLAG",
+      "detail": {
+        "facility": "FACTHARNESS",
+        "claim": "Per Williams and Page (1969), ...",
+        "source_fetched": true,
+        "layer1_frozen_checks_kappa1": [],
+        "bibliographic_check_kappa0p7": {
+          "check": "F-CITE",
+          "kappa": 0.7,
+          "claimed_authors": "Williams and Page",
+          "claimed_year": 1969,
+          "source_authors": "Volker Strassen",
+          "source_year": 1969,
+          "claimed_name_tokens": [
+            "williams",
+            "page"
+          ],
+          "matched_tokens": [],
+          "authors_match": false,
+          "year_match": true,
+          "grounded": false,
+          "verdict": "CITE_MISMATCH"
+        },
+        "layer2_entailment_kappa0": null,
+        "overall": "FABRICATION_FLAG",
+        "candidate_causes": [
+          "paraphrase mismatch (not verbatim)",
+          "wrong source attached",
+          "OCR/transcription error",
+          "the quote/number/cite was invented"
+        ],
+        "kappa_note": "F-QUOTE/F-NUMBER are kappa=1 frozen; F-CITE is kappa=0.7 advisory; entailment is kappa=0 judgment (a model != generator), reported never machine-verified.",
+        "ceiling_note": "Grounded means anchored to a real source containing the asserted quote/number -- NOT that the claim is true. A FABRICATION_FLAG means 'does not check against the supplied source', NOT fraud."
+      }
+    },
+    {
+      "claim": "Strassen uses 7 multiplications instead of 8.",
+      "predicted": "GROUNDED",
+      "overall": "GROUNDED",
+      "detail": {
+        "facility": "FACTHARNESS",
+        "claim": "Strassen uses 7 multiplications instead of 8.",
+        "source_fetched": true,
+        "layer1_frozen_checks_kappa1": [
+          {
+            "check": "F-NUMBER",
+            "kappa": 1,
+            "number": "7",
+            "also_require": "multiplications",
+            "grounded": true,
+            "verdict": "number_found"
+          },
+          {
+            "check": "F-NUMBER",
+            "kappa": 1,
+            "number": "1969",
+            "also_require": "published",
+            "grounded": true,
+            "verdict": "number_found"
+          }
+        ],
+        "bibliographic_check_kappa0p7": null,
+        "layer2_entailment_kappa0": null,
+        "overall": "GROUNDED",
+        "candidate_causes": null,
+        "kappa_note": "F-QUOTE/F-NUMBER are kappa=1 frozen; F-CITE is kappa=0.7 advisory; entailment is kappa=0 judgment (a model != generator), reported never machine-verified.",
+        "ceiling_note": "Grounded means anchored to a real source containing the asserted quote/number -- NOT that the claim is true. A FABRICATION_FLAG means 'does not check against the supplied source', NOT fraud."
+      }
+    },
+    {
+      "claim": "Strassen changes the asymptotic behaviour of matrix multiplication.",
+      "predicted": "ABSTAIN",
+      "overall": "ABSTAIN",
+      "detail": {
+        "facility": "FACTHARNESS",
+        "claim": "Strassen changes the asymptotic behaviour of matrix multiplication.",
+        "source_fetched": true,
+        "layer1_frozen_checks_kappa1": [],
+        "bibliographic_check_kappa0p7": null,
+        "layer2_entailment_kappa0": {
+          "verdict": "uncertain",
+          "judge_model": "sonnet (cross-model, != generator)",
+          "rationale": "the source states a better asymptotic complexity but the phrasing 'changes the asymptotic behaviour' is a paraphrase the source neither verbatim states nor clearly refutes"
+        },
+        "overall": "ABSTAIN",
+        "candidate_causes": null,
+        "kappa_note": "F-QUOTE/F-NUMBER are kappa=1 frozen; F-CITE is kappa=0.7 advisory; entailment is kappa=0 judgment (a model != generator), reported never machine-verified.",
+        "ceiling_note": "Grounded means anchored to a real source containing the asserted quote/number -- NOT that the claim is true. A FABRICATION_FLAG means 'does not check against the supplied source', NOT fraud."
+      }
+    }
+  ],
+  "firewall": {
+    "ship_ok": false,
+    "grounded": [
+      {
+        "text": "Strassen published the algorithm in 1969.",
+        "overall": "GROUNDED",
+        "candidate_causes": null
+      },
+      {
+        "text": "Strassen uses 7 multiplications instead of 8.",
+        "overall": "GROUNDED",
+        "candidate_causes": null
+      }
+    ],
+    "needs_label": [
+      {
+        "text": "Strassen changes the asymptotic behaviour of matrix multiplication.",
+        "overall": "ABSTAIN",
+        "candidate_causes": null
+      }
+    ],
+    "blocked": [
+      {
+        "text": "Strassen requires only six multiplications.",
+        "overall": "FABRICATION_FLAG",
+        "candidate_causes": [
+          "paraphrase mismatch (not verbatim)",
+          "wrong source attached",
+          "OCR/transcription error",
+          "the quote/number/cite was invented"
+        ]
+      },
+      {
+        "text": "Strassen uses 11 multiplications.",
+        "overall": "FABRICATION_FLAG",
+        "candidate_causes": [
+          "paraphrase mismatch (not verbatim)",
+          "wrong source attached",
+          "OCR/transcription error",
+          "the quote/number/cite was invented"
+        ]
+      },
+      {
+        "text": "Per Williams and Page (1969), ...",
+        "overall": "FABRICATION_FLAG",
+        "candidate_causes": [
+          "paraphrase mismatch (not verbatim)",
+          "wrong source attached",
+          "OCR/transcription error",
+          "the quote/number/cite was invented"
+        ]
+      }
+    ],
+    "rule": "FACTHARNESS firewall: GROUNDED ships; GROUNDED_BY_JUDGMENT/ABSTAIN ship ONLY behind an explicit unverified label; FABRICATION_FLAG/CONTRADICTED BLOCK shipping. Grounded != true; flag != fraud."
+  },
+  "all_predictions_matched": true
+}

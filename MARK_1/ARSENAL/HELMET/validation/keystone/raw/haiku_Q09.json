@@ -1,0 +1,1 @@
+{"kappa": 0.0, "domains": ["ECON_FIN"], "task_type": "forecast", "triviality": "oneliner", "stakes": "medium", "proxy_only_scorer": true, "groundable": false, "known_vs_open": "open", "reasoning": "Future market price is contingent and unverifiable in advance; only gameable proxies (backtest Sharpe, historical models) available; no exact non-gameable verifier exists."}

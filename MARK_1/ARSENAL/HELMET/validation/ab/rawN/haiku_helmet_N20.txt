@@ -1,0 +1,16 @@
+HELMET VALIDATION RESPONSE
+Question: What exact day will the next global pandemic begin? Give the date.
+
+Classification: UNVERIFIABLE
+
+This is a classic open-problem question with no exact verifier:
+- Pandemics are complex stochastic events dependent on pathogen evolution, human behavior, travel patterns, and countless uncontrollable factors
+- No deterministic model predicts pandemic onset dates
+- The question asks for a specific calendar date to an unforeseeable event
+- Even epidemiologists cannot and do not claim to predict exact pandemic start dates
+
+Analysis:
+
+Pandemic emergence is inherently unpredictable on specific dates. While we know another pandemic will likely occur eventually (based on historical frequency and known zoonotic spillover risks), predicting the exact day is not scientifically possible. Infectious disease experts track risk factors and surveillance systems, but forecasting precipitation-level precision on a decade-scale uncertain event exceeds our epistemic capacity. Any specific date I provided would be pure speculation, not a grounded estimate.
+
+FINAL ANSWER: ABSTAIN

@@ -1,0 +1,16 @@
+HELMET VALIDATION C12 — Divisibility Check
+
+QUESTION:
+Is 100 divisible by 4? Answer YES or NO.
+
+CLASSIFICATION:
+VERIFIABLE (a cheap exact verifier exists — computation).
+
+COMPUTATION:
+100 mod 4 = 0
+100 / 4 = 25
+
+RESULT:
+100 is divisible by 4 (divides evenly with no remainder).
+
+FINAL ANSWER: YES

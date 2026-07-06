@@ -1,0 +1,11 @@
+{
+  "kappa": 0.0,
+  "domains": ["ECON_FIN"],
+  "task_type": "forecast",
+  "triviality": "oneliner",
+  "stakes": "medium",
+  "proxy_only_scorer": false,
+  "groundable": false,
+  "known_vs_open": "open",
+  "reasoning": "No exact non-gameable verifier exists for a future market price; the outcome is a normative/stochastic forecast with no authoritative settler, making it a non-groundable open question where abstention on the verdict is required."
+}

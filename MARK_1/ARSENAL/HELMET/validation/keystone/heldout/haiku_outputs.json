@@ -1,0 +1,392 @@
+[
+ {
+  "id": "H01",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "MATH_TCS"
+   ],
+   "task_type": "construct",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": true,
+   "known_vs_open": "known",
+   "reasoning": "Determinant computation is fully computable via exact algorithms (cofactor expansion, row reduction); verification is independent machine-checkable arithmetic with no ambiguity."
+  }
+ },
+ {
+  "id": "H02",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "MATH_TCS"
+   ],
+   "task_type": "prove",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": false,
+   "known_vs_open": "known",
+   "reasoning": "Carmichael number status is a computable arithmetic property verifiable by factorization and Korselt's criterion, both runnable computations with no gameable proxies."
+  }
+ },
+ {
+  "id": "H03",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "MATH_TCS"
+   ],
+   "task_type": "prove",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": false,
+   "known_vs_open": "known",
+   "reasoning": "Elementary proof with computable verification: proof-checking is deductive, not lookup-based; kappa=1 gates to a WEAPON despite low stakes and canonical status."
+  }
+ },
+ {
+  "id": "H04",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "MATH_TCS"
+   ],
+   "task_type": "construct",
+   "triviality": "bounded",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": false,
+   "known_vs_open": "known",
+   "reasoning": "Integral bounds are computable via numerical integration with interval arithmetic or analytical proof; verifier is exact and non-gameable."
+  }
+ },
+ {
+  "id": "H05",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "MATH_TCS",
+    "QUANT_PSYCH"
+   ],
+   "task_type": "prove",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": false,
+   "known_vs_open": "known",
+   "reasoning": "Arithmetic feasibility of a mean 3.875 over 40 integer-rated items is computable via solving sum = 155; verifiable by construction, not lookup."
+  }
+ },
+ {
+  "id": "H06",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "MATH_TCS",
+    "CS_ENG_OR"
+   ],
+   "task_type": "prove",
+   "triviality": "bounded",
+   "stakes": "medium",
+   "proxy_only_scorer": false,
+   "groundable": false,
+   "known_vs_open": "known",
+   "reasoning": "TSP on 6 cities admits exact exhaustive enumeration (60 tours) and arithmetic verification of route distance\u2014computable, non-gameable verifier routes to a weapon."
+  }
+ },
+ {
+  "id": "H07",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "HUMANITIES_LAW_POLICY"
+   ],
+   "task_type": "decide",
+   "triviality": "oneliner",
+   "stakes": "high",
+   "proxy_only_scorer": true,
+   "groundable": false,
+   "known_vs_open": "open",
+   "reasoning": "Capital punishment morality is an open normative question with competing ethical frameworks and no computable verifier; only gameable proxies (LLM judgment, polling) exist as pseudo-verifiers."
+  }
+ },
+ {
+  "id": "H08",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "NAT_SCI"
+   ],
+   "task_type": "forecast",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": false,
+   "known_vs_open": "open",
+   "reasoning": "Future weather cannot be verified by computation or authority; it is an open contingency with no computable or settlement verifier."
+  }
+ },
+ {
+  "id": "H09",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "HUMANITIES_LAW_POLICY"
+   ],
+   "task_type": "decide",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": false,
+   "known_vs_open": "open",
+   "reasoning": "Normative metaphysical question with no computable verifier and no single authoritative source; open philosophical problem requiring abstention per \u03ba-GATE."
+  }
+ },
+ {
+  "id": "H10",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "MATH_TCS"
+   ],
+   "task_type": "prove",
+   "triviality": "substantial",
+   "stakes": "high",
+   "proxy_only_scorer": false,
+   "groundable": false,
+   "known_vs_open": "open",
+   "reasoning": "Collatz conjecture is an unsolved problem with no computable verifier; only abstention is honest."
+  }
+ },
+ {
+  "id": "H11",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "HUMANITIES_LAW_POLICY"
+   ],
+   "task_type": "explain",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": true,
+   "known_vs_open": "known",
+   "reasoning": "Settled historical fact (Jane Austen) with no computable verifier; pure lookup from authoritative literary sources."
+  }
+ },
+ {
+  "id": "H12",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "HUMANITIES_LAW_POLICY",
+    "NAT_SCI"
+   ],
+   "task_type": "explain",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": true,
+   "known_vs_open": "known",
+   "reasoning": "Atomic number of gold is a stipulated constant from the periodic table, verifiable only via authoritative reference, not computation."
+  }
+ },
+ {
+  "id": "H13",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "HUMANITIES_LAW_POLICY"
+   ],
+   "task_type": "explain",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": true,
+   "known_vs_open": "known",
+   "reasoning": "Settled historical fact with authoritative sources; verifiable only via documentary evidence, not computation; requires grounding to reliable historical record."
+  }
+ },
+ {
+  "id": "H14",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "MATH_TCS"
+   ],
+   "task_type": "explain",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": true,
+   "known_vs_open": "known",
+   "reasoning": "Settled mathematical definition retrievable from authoritative game theory sources; no computable verifier needed, only source lookup."
+  }
+ },
+ {
+  "id": "H15",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "HUMANITIES_LAW_POLICY"
+   ],
+   "task_type": "decide",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": true,
+   "groundable": false,
+   "known_vs_open": "open",
+   "reasoning": "Humor is inherently subjective; no computable verifier exists, and any scoring system (LLM, panel, consensus) is a gameable proxy for an aesthetic judgment with no authoritative settler."
+  }
+ },
+ {
+  "id": "H16",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "ECON_FIN"
+   ],
+   "task_type": "decide",
+   "triviality": "oneliner",
+   "stakes": "medium",
+   "proxy_only_scorer": true,
+   "groundable": false,
+   "known_vs_open": "n/a",
+   "reasoning": "Past returns are in-sample proxies; fund selection requires unstated risk/goal preferences and future unknowns, making this a normative decision with no computable verifier."
+  }
+ },
+ {
+  "id": "H17",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "CS_ENG"
+   ],
+   "task_type": "measure",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": true,
+   "groundable": false,
+   "known_vs_open": "known",
+   "reasoning": "Single laptop benchmark run is a gameable proxy for sorting efficiency; lacks statistical rigor and hardware generalization needed for a trustworthy verifier."
+  }
+ },
+ {
+  "id": "H18",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "HUMANITIES_LAW_POLICY",
+    "SOCIAL_SCI"
+   ],
+   "task_type": "decide",
+   "triviality": "oneliner",
+   "stakes": "high",
+   "proxy_only_scorer": true,
+   "groundable": false,
+   "known_vs_open": "n/a",
+   "reasoning": "Culture fit ranking is a normative judgment with no computable verifier; the only scorer is an AI proxy (gameable, not exact)."
+  }
+ },
+ {
+  "id": "H19",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "HUMANITIES_LAW_POLICY",
+    "NAT_SCI"
+   ],
+   "task_type": "explain",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": true,
+   "known_vs_open": "known",
+   "reasoning": "Settled biological fact (46 chromosomes in humans) verifiable only by consulting authoritative sources, not by computation or proof; no computable verifier exists."
+  }
+ },
+ {
+  "id": "H20",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "MATH_TCS"
+   ],
+   "task_type": "construct",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": true,
+   "known_vs_open": "known",
+   "reasoning": "Exact arithmetic computation: 144/12 = 12, verifiable by multiplication proof."
+  }
+ },
+ {
+  "id": "H21",
+  "descriptor": {
+   "kappa": 0.5,
+   "domains": [
+    "ECON_FIN"
+   ],
+   "task_type": "analyze",
+   "triviality": "bounded",
+   "stakes": "medium",
+   "proxy_only_scorer": false,
+   "groundable": false,
+   "known_vs_open": "mixed",
+   "reasoning": "Replication part is computable (kappa=1.0), but causal validity judgment is methodological/open (kappa=0.0, not groundable); mixed task routes to analysis with limited verifiability on the causal claim."
+  }
+ },
+ {
+  "id": "H22",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "STATS",
+    "QUANT_PSYCH"
+   ],
+   "task_type": "analyze",
+   "triviality": "bounded",
+   "stakes": "high",
+   "proxy_only_scorer": false,
+   "groundable": true,
+   "known_vs_open": "known",
+   "reasoning": "GRIM is a deterministic, non-gameable arithmetic verifier on reported clinical-trial summary statistics; exact computation exists; high-stakes biostat auditing task."
+  }
+ },
+ {
+  "id": "H23",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "STATS"
+   ],
+   "task_type": "analyze",
+   "triviality": "bounded",
+   "stakes": "high",
+   "proxy_only_scorer": false,
+   "groundable": false,
+   "known_vs_open": "known",
+   "reasoning": "Stability of a survey finding across multiverse analysis specifications is computable via effect-size consistency, confidence interval overlap, and statistical significance checks across analytical choices; no gameable proxy, pure arithmetic verification."
+  }
+ },
+ {
+  "id": "H24",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "MATH_TCS"
+   ],
+   "task_type": "prove",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": true,
+   "known_vs_open": "known",
+   "reasoning": "Primality of 2^61 - 1 is deterministically verifiable by computable primality test, making this a kappa=1.0 decidable task with an exact verifier."
+  }
+ }
+]

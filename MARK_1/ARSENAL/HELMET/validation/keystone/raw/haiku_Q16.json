@@ -1,0 +1,1 @@
+{"kappa": 0.0, "domains": ["HUMANITIES_LAW_POLICY"], "task_type": "decide", "triviality": "oneliner", "stakes": "low", "proxy_only_scorer": true, "groundable": false, "known_vs_open": "open", "reasoning": "No exact non-gameable verifier exists; 'best-written' is a normative aesthetic judgment with only proxy raters (LLM/human) available, making it unsettled and subjective."}

@@ -1,0 +1,35 @@
+{
+  "scenario_A_clean": {
+    "pretrends_p": 0.4920892346532928,
+    "parallel_trends_plausible": true,
+    "recovered_post_effect": 3.3832445611771353,
+    "true_effect": 3.0,
+    "cohen_d": 1.526844890292247,
+    "e_value_point": 7.489346530549164
+  },
+  "scenario_B_confounded": {
+    "pretrends_p": 1.1204999016972152e-53,
+    "parallel_trends_plausible": false,
+    "design_flagged": true,
+    "naive_did_estimate": 3.7559685809120356,
+    "naive_did_pvalue": 4.846755980636535e-31,
+    "true_effect": 0.0
+  },
+  "oster_delta": {
+    "robust": {
+      "delta": 12.458333333333337,
+      "robust_to_selection": true
+    },
+    "fragile": {
+      "delta": 0.4333333333333334,
+      "robust_to_selection": false
+    }
+  },
+  "e_repro_card_krueger_1994": {
+    "recomputed_DiD": 2.7499999999999964,
+    "published_DiD": 2.76,
+    "reproduced": true,
+    "abs_diff": 0.01000000000000334,
+    "note": "2-period DiD -> pre-trends UNtestable here; reported as a labelled reproduction."
+  }
+}

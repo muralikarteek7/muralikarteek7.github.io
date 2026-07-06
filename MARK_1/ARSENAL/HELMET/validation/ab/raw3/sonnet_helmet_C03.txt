@@ -1,0 +1,5 @@
+This is a SETTLED FACT with a single authoritative answer from the periodic table of elements.
+
+Gold has the chemical symbol **Au**, derived from the Latin word *aurum*.
+
+FINAL ANSWER: Au

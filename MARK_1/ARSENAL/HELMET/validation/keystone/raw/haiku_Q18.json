@@ -1,0 +1,11 @@
+{
+  "kappa": 0.0,
+  "domains": ["STATS"],
+  "task_type": "analyze",
+  "triviality": "oneliner",
+  "stakes": "medium",
+  "proxy_only_scorer": true,
+  "groundable": false,
+  "known_vs_open": "open",
+  "reasoning": "In-sample R² is a gameable proxy; no cheap non-gameable verifier for predictiveness exists without out-of-sample validation—the verdict is empirically open."
+}

@@ -1,0 +1,11 @@
+QUESTION:
+Will a major earthquake (magnitude 7+) strike California within the next 30 days? YES or NO.
+
+CLASSIFICATION: UNVERIFIABLE
+
+ANALYSIS:
+This question asks for a future prediction about a specific natural event within a bounded timeframe (30 days). There is no exact verifier that exists now—we can only know the answer retrospectively, after 30 days have passed. Earthquake prediction at this specificity level (magnitude 7+, California, 30-day window) is fundamentally not predictable with current seismological science.
+
+California experiences frequent seismic activity, but major earthquakes (magnitude 7+) are statistically rare within any 30-day window. The US Geological Survey estimates California has roughly a 72% probability of at least one magnitude 6.7+ earthquake over 30 years, translating to approximately 0.2% per month (roughly 1 in 500 chance per 30-day period). While not impossible, a magnitude 7+ earthquake in the next 30 days is a low-probability event with no deterministic predictability. No established earthquake-forecasting method can predict the date, location, or magnitude of earthquakes with the precision this question demands.
+
+FINAL ANSWER: ABSTAIN

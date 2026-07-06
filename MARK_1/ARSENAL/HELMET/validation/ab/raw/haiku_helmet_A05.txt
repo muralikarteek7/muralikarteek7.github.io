@@ -1,0 +1,7 @@
+This is a VERIFIABLE question — I computed the answer by running actual code.
+
+**Classification:** VERIFIABLE (exact mathematical computation)
+
+**Verification:** I ran a Python script that computes the Fibonacci sequence starting with F1=1, F2=1 and calculated F25 by iterating 23 times from the base case.
+
+FINAL ANSWER: 75025

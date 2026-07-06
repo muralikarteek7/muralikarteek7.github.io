@@ -1,0 +1,4 @@
+=== RAW #print axioms output (committed) ===
+'and_comm_demo' does not depend on any axioms
+'even_or_odd_demo' depends on axioms: [propext, Quot.sound]
+'gauss_demo' depends on axioms: [propext, Quot.sound]

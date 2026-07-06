@@ -1,0 +1,158 @@
+{
+  "note": "ILLUSTRATION on a tiny synthetic task set \u2014 NOT a benchmark. No kappa=0 quality claim.",
+  "honesty_audit_DEFECT2": "This demo generates NO model output and compares none. P1 (cost) is the only empirical A/B claim. P2 is a STRUCTURAL INVARIANT (same deterministic verifier on both arms) that is TRUE BY CONSTRUCTION \u2014 NOT evidence of 'no quality regression' on model output (that is explicitly NOT claimed).",
+  "arm_A_always_opus": {
+    "arm": "A_always_opus",
+    "total_cost": 320.0,
+    "quality_machinecheckable": {
+      "checked": 4,
+      "passed": 4
+    }
+  },
+  "arm_B_route_planner": {
+    "arm": "B_route_planner",
+    "total_cost": 43.0,
+    "quality_machinecheckable": {
+      "checked": 4,
+      "passed": 4
+    },
+    "routes": [
+      {
+        "id": "t1_sum",
+        "tier": "execute",
+        "track": "weapon",
+        "cost": 0.0,
+        "misrouted": false
+      },
+      {
+        "id": "t2_prime",
+        "tier": "execute",
+        "track": "weapon",
+        "cost": 0.0,
+        "misrouted": false
+      },
+      {
+        "id": "t3_gcd",
+        "tier": "execute",
+        "track": "weapon",
+        "cost": 0.0,
+        "misrouted": false
+      },
+      {
+        "id": "t4_boilerplate",
+        "tier": "haiku",
+        "track": "armor",
+        "cost": 1.0,
+        "misrouted": false
+      },
+      {
+        "id": "t5_hard_reasoning",
+        "tier": "opus",
+        "track": "armor",
+        "cost": 40.0,
+        "misrouted": false
+      },
+      {
+        "id": "t6_interpretation",
+        "tier": "haiku",
+        "track": "armor",
+        "cost": 1.0,
+        "misrouted": false
+      },
+      {
+        "id": "t7_factorial",
+        "tier": "execute",
+        "track": "weapon",
+        "cost": 0.0,
+        "misrouted": false
+      },
+      {
+        "id": "t8_misroute_adversary",
+        "tier": "haiku",
+        "track": "armor",
+        "cost": 1.0,
+        "misrouted": true
+      }
+    ],
+    "misroutes_flagged": [
+      "t8_misroute_adversary"
+    ]
+  },
+  "cost_ratio_B_over_A": 0.134375,
+  "cost_cut_pct": 86.6,
+  "footing_on_drafts": {
+    "bad": [
+      {
+        "name": "under_grounded",
+        "uncertain": true,
+        "action": "GROUND_THEN_RECHECK"
+      },
+      {
+        "name": "paraphrase_unstable",
+        "uncertain": true,
+        "action": "ROUTE_UP"
+      },
+      {
+        "name": "ood_input",
+        "uncertain": true,
+        "action": "GROUND_THEN_RECHECK"
+      }
+    ],
+    "clean": [
+      {
+        "name": "grounded",
+        "uncertain": false,
+        "action": "SHIP_OK_LOW_UNCERTAINTY"
+      },
+      {
+        "name": "paraphrase_stable",
+        "uncertain": false,
+        "action": "SHIP_OK_LOW_UNCERTAINTY"
+      },
+      {
+        "name": "in_distribution",
+        "uncertain": false,
+        "action": "SHIP_OK_LOW_UNCERTAINTY"
+      }
+    ],
+    "misroute_draft": {
+      "uncertain": true,
+      "action": "ROUTE_UP",
+      "misrouted_below_required_tier": true
+    }
+  },
+  "stuck_detector": {
+    "stuck_search": {
+      "stuck": true,
+      "action": "STRATEGY_SWITCH_OR_IMPASSE",
+      "reason": "3 consecutive iterations with verified-fact-delta<=0 on the weapon track (field 'gate_passed_objects') -> the search is not producing verified facts; SWITCH STRATEGY or report an honest impasse (anti-loop hard cap).",
+      "recent_deltas": [
+        0,
+        0,
+        0
+      ],
+      "track": "weapon",
+      "ceiling": "This is a routing judgment (kappa<1) on an EXACT count (kappa=1): the counters do not lie, but 'switch now' vs 'one more try' is a judgment."
+    },
+    "productive_search": {
+      "stuck": false,
+      "action": "CONTINUE",
+      "reason": "verified-fact advanced within the last 3 iterations on the weapon track",
+      "recent_deltas": [
+        1,
+        1,
+        1
+      ],
+      "track": "weapon"
+    }
+  },
+  "predictions": {
+    "P1_cost_cut_over_50pct": true,
+    "P2_execute_preserves_exact_verifier_pass_BY_CONSTRUCTION_not_a_quality_claim": true,
+    "P3_footing_flags_all_bad_none_clean": true,
+    "P4_misroute_caught_by_at_least_one_rail": true,
+    "P4_misroute_caught_by_BOTH_rails": true,
+    "P5_stuck_detector_ends_dead_search": true
+  },
+  "ALL_PREDICTIONS_PASS": true
+}

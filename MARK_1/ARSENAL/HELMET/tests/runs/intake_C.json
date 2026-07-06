@@ -1,0 +1,11 @@
+{
+  "problem": "Should a mid-sized European country adopt a nationally mandated four-day (32-hour) work week? Give the answer.",
+  "domains": ["ECON_FIN", "SOCIAL_SCI", "HUMANITIES_LAW_POLICY"],
+  "task_type": "decide",
+  "kappa": 0.0,
+  "known_vs_open": "n/a",
+  "has_data": false,
+  "stakes": "high",
+  "triviality": "substantial",
+  "proxy_only_scorer": false
+}

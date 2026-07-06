@@ -1,0 +1,15 @@
+Classification: UNVERIFIABLE
+
+This is a future-forecast question about a commodity price (gold) exactly two years from today (2026-06-21 → 2028-06-21). There is no exact verifier that exists today — the future price of gold depends on macroeconomic variables, geopolitical events, monetary policy, supply/demand dynamics, and market sentiment that cannot be predicted with certainty. Even the most sophisticated econometric models produce probabilistic forecasts with wide confidence intervals, not point predictions.
+
+Calibrated Analysis:
+
+As of mid-2026, gold trades in the range of approximately $2,300–$2,500 USD/oz depending on market conditions. Two-year commodity forecasts are inherently uncertain and highly sensitive to:
+- Inflation expectations and central bank policy
+- Geopolitical instability and safe-haven demand
+- Real interest rates and USD strength
+- Mining production and industrial/jewelry demand
+
+Consensus forecasts from commodity analysts typically project modest real price appreciation over a 2-year horizon in a low-inflation scenario, but this is a weak-dominance view with significant uncertainty bands (±15–20% easily plausible). No model produces a defensible point forecast.
+
+FINAL ANSWER: ABSTAIN

@@ -1,0 +1,11 @@
+{
+  "kappa": 1.0,
+  "domains": ["MATH_TCS"],
+  "task_type": "prove",
+  "triviality": "oneliner",
+  "stakes": "low",
+  "proxy_only_scorer": false,
+  "groundable": true,
+  "known_vs_open": "known",
+  "reasoning": "A deterministic primality test (e.g. trial division up to sqrt or Miller-Rabin with fixed witnesses) is a cheap, exact, non-gameable verifier; 2^31-1=2147483647 is the known Mersenne prime M31, so kappa=1.0 and the result is a settled fact."
+}

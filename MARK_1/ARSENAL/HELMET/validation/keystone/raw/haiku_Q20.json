@@ -1,0 +1,11 @@
+{
+  "kappa": 1.0,
+  "domains": ["MATH_TCS"],
+  "task_type": "construct",
+  "triviality": "oneliner",
+  "stakes": "low",
+  "proxy_only_scorer": false,
+  "groundable": false,
+  "known_vs_open": "known",
+  "reasoning": "Exact arithmetic with deterministic verification; 17 × 23 = 391 is machine-verifiable with zero ambiguity."
+}

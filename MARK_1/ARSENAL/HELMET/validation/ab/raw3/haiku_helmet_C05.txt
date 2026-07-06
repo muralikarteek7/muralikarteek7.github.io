@@ -1,0 +1,17 @@
+HELMET VALIDATION C05
+
+QUESTION:
+What is 144 divided by 12? Give the number.
+
+CLASSIFICATION:
+VERIFIABLE — arithmetic, deterministic, computable
+
+COMPUTATION:
+144 ÷ 12 = 12
+
+VERIFICATION:
+Executed: python3 -c "result = 144 / 12; print(f'144 ÷ 12 = {result}')"
+Output: 144 ÷ 12 = 12.0
+Status: CONFIRMED
+
+FINAL ANSWER: 12

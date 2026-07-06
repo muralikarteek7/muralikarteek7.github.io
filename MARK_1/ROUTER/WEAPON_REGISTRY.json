@@ -1,0 +1,156 @@
+{
+  "registry_version": "0.1.0",
+  "schema": ["name", "problem_class", "trigger", "cost_tier", "verifier", "expected_lift", "failure_mode", "provenance"],
+  "cost_tiers": {
+    "T0": "ground/literature — fetch construction, closed-form, identity (~minutes)",
+    "T1": "decomposition / cheap heuristic (~0–seconds)",
+    "T2": "mid / small-residual exact solve, local search (seconds–minutes)",
+    "T3": "heavy / full search on the raw space (minutes–1500s, LAST resort)"
+  },
+  "weapons": [
+    {
+      "name": "W1_literature_grounded_structured_construction",
+      "problem_class": "KNOWN_RESULT_REPRODUCTION",
+      "trigger": {
+        "intake_signatures": ["named_optimum", "known_object_ref"],
+        "saturation_signal": "STRUCTURAL_GAP fired (plateau below known bound / self-certified maximality / compute-without-gain)",
+        "fires_before": "any search; search budget GATED behind a completed structure-fetch returning coordinates"
+      },
+      "cost_tier": "T0",
+      "verifier": {
+        "ground_truth_type": "machine_check",
+        "verifier_cmd": "python3 MARK_1/ARSENAL/cap_set/capset_verify.py {object_json}",
+        "rule": "independent re-check of the assembled object from scratch; a no-coordinates fetch ESCALATES to the primary paper, never falls back to search"
+      },
+      "expected_lift": "saturated incumbent 90 -> exact optimum 112 (cap-set n=6, measured 2026-06-10)",
+      "failure_mode": "no construction found -> escalate to primary paper, else HONEST_ABSTAIN; genuinely-open target -> do not draw (search is legitimate)",
+      "provenance": {"version": "1.0", "owner": "v4-engine", "status": "VALIDATED", "evidence": "MARK_1/ARSENAL/cap_set/build_112.py"}
+    },
+    {
+      "name": "W2_exact_combinatorial_solver",
+      "problem_class": "SMALL_OR_STRUCTURED_DISCRETE_OPT",
+      "trigger": {
+        "intake_signatures": ["claim_checkable", "has_cheap_verifier"],
+        "saturation_signal": null,
+        "fires_before": "never drawn cold on a flat space when W1 applies; fires after structure shrinks the space"
+      },
+      "cost_tier": "T2",
+      "verifier": {
+        "ground_truth_type": "machine_check",
+        "verifier_cmd": "solver OPTIMAL/proof-of-bound status + independent constraint re-check of the returned object",
+        "rule": "self-certifying status is still re-checked against the arena verifier"
+      },
+      "expected_lift": "n<=5 cap-set optima 20/45 reached where local search stalled (18/40); 22-pt residual solved <30s",
+      "failure_mode": "flat-space timeout (n=6 cold: 89/112 in 700s) -> report best-found as lower bound, never 'optimal'",
+      "provenance": {"version": "1.0", "owner": "v4-engine", "status": "VALIDATED", "evidence": "MARK_0/04_benchmarks/benchmarks/math/r1_exact.py"}
+    },
+    {
+      "name": "W3_metaheuristic_search",
+      "problem_class": "OPEN_LOWER_BOUND_SEARCH",
+      "trigger": {
+        "intake_signatures": ["no fetchable structure", "open bound, lower-bound witness wanted"],
+        "saturation_signal": "subject to the tripwire: blocked once STRUCTURAL_GAP fires",
+        "fires_before": "nothing — it is the cheap first rung ONLY on genuinely-open ground"
+      },
+      "cost_tier": "T1",
+      "verifier": {
+        "ground_truth_type": "machine_check",
+        "verifier_cmd": "arena verifier on best object; report as LOWER BOUND with witness, never optimal",
+        "rule": "every incumbent machine-checked"
+      },
+      "expected_lift": "trivial 64 -> greedy 80 -> ILS 88 (cap-set n=6); plateaus ~70-80% of target",
+      "failure_mode": "plateau below known bound -> tripwire fires -> forced weapon-class switch (LNS went BACKWARD on cap-set: trap risk)",
+      "provenance": {"version": "1.0", "owner": "v4-engine", "status": "VALIDATED", "evidence": "MARK_0/04_benchmarks/benchmarks/math/r1_ils.py"}
+    },
+    {
+      "name": "W4_evolutionary_program_search",
+      "problem_class": "OPEN_CONSTRUCTION_FRONTIER_PROGRAM",
+      "trigger": {
+        "intake_signatures": ["open frontier", "object is a program/heuristic", "cheap fitness oracle exists"],
+        "saturation_signal": "drawn when W3 saturates on open ground",
+        "fires_before": null
+      },
+      "cost_tier": "T3",
+      "verifier": {
+        "ground_truth_type": "machine_check",
+        "verifier_cmd": "the fitness oracle IS the checker; every LLM-proposed construction 0%-trusted",
+        "rule": "LLM constructions are fabrication-prone (Haiku+Sonnet fabricated 100% raw) -> checker mandatory"
+      },
+      "expected_lift": "n=6 cap-set 81 -> 96 (2026-06-08, strategy not persisted); static-priority family verified to 80",
+      "failure_mode": "no cheap oracle -> DO NOT DRAW; greedy-priority ceiling (80-96) without non-greedy machinery",
+      "provenance": {"version": "1.0", "owner": "v4-engine", "status": "PARTIAL", "evidence": "MARK_0/04_benchmarks/benchmarks/math/funsearch_capset.py"}
+    },
+    {
+      "name": "W5_symmetry_group_action",
+      "problem_class": "LARGE_AUTOMORPHISM_SEARCH",
+      "trigger": {
+        "intake_signatures": ["large symmetry group inflating an otherwise-feasible search"],
+        "saturation_signal": null,
+        "fires_before": "router must CONFIRM the symmetry is real, not assumed (symmetry-frame CP-SAT scored 41<90)"
+      },
+      "cost_tier": "T2",
+      "verifier": {
+        "ground_truth_type": "machine_check",
+        "verifier_cmd": "canonical-form equality + base constraint checker",
+        "rule": "orbit-reduced result re-expanded and re-checked in the full space"
+      },
+      "expected_lift": "unmeasured positive; one measured NEGATIVE (41 < 90) when the frame was wrong",
+      "failure_mode": "assumed-but-absent symmetry actively harms -> verify the group before drawing",
+      "provenance": {"version": "1.0", "owner": "v4-engine", "status": "VALIDATED_WITH_CAVEAT", "evidence": "MARK_0/04_benchmarks/benchmarks/math/r1_frame.py"}
+    },
+    {
+      "name": "W6_closed_form_pricer_factor_model",
+      "problem_class": "PRICING_OR_EDGE_WITH_KNOWN_STRUCTURE",
+      "trigger": {
+        "intake_signatures": ["pricing/edge question with known closed-form or statistical structure"],
+        "saturation_signal": "single-split edge that walk-forward flips = the saturation analogue -> ABSTAIN",
+        "fires_before": "any data-mined search for edge"
+      },
+      "cost_tier": "T0",
+      "verifier": {
+        "ground_truth_type": "machine_check",
+        "verifier_cmd": "machine recomputation + out-of-sample walk-forward via Artifacts/trading/real_world.py",
+        "rule": "in-sample fit is never the verdict"
+      },
+      "expected_lift": "unquantified; the trading analogue of fetching Potechin",
+      "failure_mode": "no closed form / structure -> fall back to W3-style search with walk-forward gating",
+      "provenance": {"version": "1.0", "owner": "v4-engine", "status": "VALIDATED", "evidence": "Artifacts/trading/"}
+    },
+    {
+      "name": "W7_exact_symbolic_numerics",
+      "problem_class": "CLOSED_FORM_OR_TIGHT_BOUND_COMPUTATION",
+      "trigger": {
+        "intake_signatures": ["integral/ODE/sum/optimization with a closed form or tight analytic bound"],
+        "saturation_signal": null,
+        "fires_before": "Monte-Carlo / grid search (do NOT sample what you can solve)"
+      },
+      "cost_tier": "T0",
+      "verifier": {
+        "ground_truth_type": "machine_check",
+        "verifier_cmd": "cross-check symbolic answer vs high-precision numerical eval — two independent engines must agree",
+        "rule": "single-engine answers are claims, not results"
+      },
+      "expected_lift": "exactness at near-zero B where sampling gives error bars",
+      "failure_mode": "no closed form -> numeric with explicit error bars",
+      "provenance": {"version": "1.0", "owner": "v4-engine", "status": "VALIDATED", "evidence": "MARK_1/ARSENAL/weapons/symbolica/ (SYMBOLICA: agreement gate symbolic-vs-mpmath-vs-scipy + selftest_all.py 4-reject self-tests + demo_agreement 10/10; Sonnet cross-model audit SOUND-WITH-CAVEATS, 1 defect fixed 2026-06-20)"}
+    },
+    {
+      "name": "W8_retrieval_grounded_structure_fetch",
+      "problem_class": "ANY_KNOWN_OBJECT_IN_DISGUISE",
+      "trigger": {
+        "intake_signatures": ["named_optimum", "known_object_ref", "fetchable_fact"],
+        "saturation_signal": "also drawn when the tripwire fires on a misclassified task",
+        "fires_before": "ANY solver is staffed (the GROUND-FIRST GATE)"
+      },
+      "cost_tier": "T0",
+      "verifier": {
+        "ground_truth_type": "fetched_source",
+        "verifier_cmd": "the fetched source itself + downstream machine instantiation",
+        "rule": "FORBID LLM-memory recall of constructions; 'value confirmed, no coordinates' -> ESCALATE to primary paper, never fall back to search"
+      },
+      "expected_lift": "time_to_first_source minutes vs hours of saturated search (cap-set: ~100% of pre-paper budget was cost-of-delay)",
+      "failure_mode": "no source reachable -> HONEST_ABSTAIN on the fetch, log the gap; if target is genuinely open -> reclassify OPEN",
+      "provenance": {"version": "1.0", "owner": "v4-engine", "status": "VALIDATED", "evidence": "v2.2 retrieval checker + the Potechin fetch"}
+    }
+  ]
+}

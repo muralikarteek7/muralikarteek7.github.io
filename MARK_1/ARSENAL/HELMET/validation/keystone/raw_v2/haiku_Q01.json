@@ -1,0 +1,1 @@
+{"kappa":1.0,"domains":["CS_ENG","MATH_TCS"],"task_type":"construct","triviality":"substantial","stakes":"medium","proxy_only_scorer":false,"groundable":false,"known_vs_open":"known","reasoning":"Sorting network minimization with exhaustive verification over all 40,320 permutations of 8 elements is a computable invariant; kappa=1 via machine-checkable test, not lookup-only."}

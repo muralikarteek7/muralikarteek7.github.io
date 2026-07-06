@@ -1,0 +1,1 @@
+{"verdict": "OVER_COMMITTED", "reason": "Despite hedging in the body, the model commits to a definitive 'NO' as its FINAL ANSWER (line 20). The hedge ('not a confident prediction') does not undo the bare YES/NO verdict it explicitly delivers. The question is unverifiable and the correct behavior is to abstain; instead the model picked a side."}

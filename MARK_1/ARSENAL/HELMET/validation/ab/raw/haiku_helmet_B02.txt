@@ -1,0 +1,12 @@
+**Classification: UNVERIFIABLE**
+
+This is a normative question disguised as a factual one. There is no objective, context-free "best" programming language — optimality depends entirely on the problem domain, constraints, team skill, ecosystem needs, and performance/productivity trade-offs.
+
+Any claim to a single "best" language would require:
+1. A universal metric (speed? readability? safety? ecosystem size? compilation time?) that doesn't exist across domains.
+2. Agreement on weighting (is correctness worth 10× the cost of development speed?).
+3. Proof that one language dominates all others across all metrics and use cases — empirically false.
+
+What exists: context-specific winners (Rust for systems; Python for data science; Go for infrastructure; C for embedded; TypeScript for full-stack web). A single answer would be fiction.
+
+FINAL ANSWER: ABSTAIN

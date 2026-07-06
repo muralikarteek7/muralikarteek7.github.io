@@ -1,0 +1,11 @@
+{
+  "kappa": 1.0,
+  "domains": ["HUMANITIES_LAW_POLICY"],
+  "task_type": "explain",
+  "triviality": "oneliner",
+  "stakes": "low",
+  "proxy_only_scorer": false,
+  "groundable": true,
+  "known_vs_open": "known",
+  "reasoning": "Settled factual claim with single authoritative source (Australian government); verifiable via standard reference materials; no gameable proxy."
+}

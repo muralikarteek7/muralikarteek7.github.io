@@ -1,0 +1,302 @@
+{
+  "predictions": {
+    "1": "CERTIFIED",
+    "2": "CERTIFIED",
+    "3": "CERTIFIED",
+    "4": "REJECTED",
+    "5": "REJECTED"
+  },
+  "summary": [
+    {
+      "case": 1,
+      "predicted": "CERTIFIED",
+      "got": "CERTIFIED",
+      "pass": true,
+      "label": "exact closed form (symbolic antiderivative == claimed; verified to 30 digits by 2-3 numeric families)"
+    },
+    {
+      "case": 2,
+      "predicted": "CERTIFIED",
+      "got": "CERTIFIED",
+      "pass": true,
+      "label": "verified to 30 digits (mpmath.nsum + symbolic summation agree \u2014 2 independent families)"
+    },
+    {
+      "case": 3,
+      "predicted": "CERTIFIED",
+      "got": "CERTIFIED",
+      "pass": true,
+      "label": "symbolically proven (sympy.simplify->0; not kernel-grade)"
+    },
+    {
+      "case": 4,
+      "predicted": "REJECTED",
+      "got": "REJECTED",
+      "pass": true,
+      "label": "methods disagree with claimed value -> NOT this closed form"
+    },
+    {
+      "case": 5,
+      "predicted": "REJECTED",
+      "got": "REJECTED",
+      "pass": true,
+      "label": "numeric disagreement (not an identity on this domain)"
+    }
+  ],
+  "extra": [
+    [
+      "case1 NOT labeled 'proven' (numeric-strong, not symbolic collapse)",
+      true
+    ],
+    [
+      "case3 IS labeled 'proven' (unconditional symbolic collapse)",
+      true
+    ],
+    [
+      "case2 reproduction matches fetched reference",
+      true
+    ],
+    [
+      "case5 CERTIFIED only when restricted to x>0 sub-domain",
+      true
+    ],
+    [
+      "case1 agreement on >=2 independent methods",
+      true
+    ]
+  ],
+  "passed": 10,
+  "total": 10,
+  "results": {
+    "1": {
+      "mode": "CLOSED-FORM",
+      "verdict": "CERTIFIED",
+      "label": "exact closed form (symbolic antiderivative == claimed; verified to 30 digits by 2-3 numeric families)",
+      "integral": "integrate(exp(-x**2), (x, 0, oo))",
+      "claimed": "sqrt(pi)/2",
+      "claimed_value": "0.88622692545275801365",
+      "n_independent_methods": 3,
+      "diversified_3rd_method": true,
+      "worst_agreed_digits": 16.086074036065984,
+      "symbolic_closed_form": "sqrt(pi)/2",
+      "checks": [
+        {
+          "method": "NUMERIC-AP(mpmath)",
+          "value": "0.886226925452758",
+          "digit_floor": 30,
+          "agrees_with_claimed": true,
+          "digits": Infinity
+        },
+        {
+          "method": "NUMERIC-DP(scipy)",
+          "value": "0.886226925452758",
+          "digit_floor": 12,
+          "agrees_with_claimed": true,
+          "digits": 16.086074036065984
+        },
+        {
+          "method": "SYMBOLIC(integrate)",
+          "value": "0.886226925452758",
+          "digit_floor": 30,
+          "agrees_with_claimed": true,
+          "digits": Infinity
+        }
+      ],
+      "methods": [
+        "NUMERIC-AP(mpmath)",
+        "NUMERIC-DP(scipy)",
+        "SYMBOLIC(integrate)"
+      ],
+      "note": "CERTIFIED: >=2 independent methods (incl. a diversified family) agree with the claimed value."
+    },
+    "2": {
+      "mode": "SERIES",
+      "verdict": "CERTIFIED",
+      "label": "verified to 30 digits (mpmath.nsum + symbolic summation agree \u2014 2 independent families)",
+      "series": "Sum(n**(-2), (n, 1, oo))",
+      "claimed": "pi**2/6",
+      "claimed_value": "1.6449340668482264365",
+      "numeric_value": "1.6449340668482264365",
+      "numeric_agrees": true,
+      "numeric_digits": Infinity,
+      "symbolic_closed_form": "pi**2/6",
+      "symbolic_agrees": true,
+      "n_independent_methods": 2,
+      "convergence": {
+        "convergent": true,
+        "symbolic_is_convergent": true,
+        "numeric_partial_sum_converges": true,
+        "tail_estimate": "4.49988e-5",
+        "note": "CONVERGENT by symbolic test + numeric partial sums"
+      },
+      "methods": [
+        "NUMERIC-AP(mpmath.nsum)",
+        "SYMBOLIC(summation)"
+      ],
+      "note": "CERTIFIED by convergence + agreement of 2 independent families."
+    },
+    "2_reproduction": {
+      "mode": "SPECIAL-VALUE",
+      "verdict": "REPRODUCED",
+      "label": "reproduction of a fetched known value (NOT an original result)",
+      "expr": "pi**2/6",
+      "expr_value": "1.644934066848226436472415",
+      "reference_value": "1.644934066848226436472415",
+      "source": "mpmath.zeta(2) independent special-function impl; closed form zeta(2)=pi^2/6 (Euler, Basel)",
+      "agrees": true,
+      "digits": 45.1345136600386,
+      "note": "REPRODUCED: symbolic value matches the fetched reference to 30 digits. Labeled reproduction."
+    },
+    "3": {
+      "mode": "IDENTITY-PROVE",
+      "verdict": "CERTIFIED",
+      "label": "symbolically proven (sympy.simplify->0; not kernel-grade)",
+      "lhs": "sin(3*x)",
+      "rhs": "-4*sin(x)**3 + 3*sin(x)",
+      "domain": [
+        -3,
+        3
+      ],
+      "points_tested": 20,
+      "points_skipped": 0,
+      "worst_agreed_digits": 49.47569545644117,
+      "symbolic_simplify_zero": true,
+      "series_zero": true,
+      "disagreements": [],
+      "methods": [
+        "SYMBOLIC(simplify)",
+        "NUMERIC-AP(mpmath@50)",
+        "SERIES(3rd)"
+      ],
+      "note": "CERTIFIED by independent agreement; 'proven' label used ONLY on an unconditional symbolic collapse (still not kernel-grade)."
+    },
+    "4": {
+      "mode": "CLOSED-FORM",
+      "verdict": "REJECTED",
+      "label": "methods disagree with claimed value -> NOT this closed form",
+      "integral": "integrate(exp(-x**2), (x, 0, oo))",
+      "claimed": "sqrt(pi)",
+      "claimed_value": "1.7724538509055160273",
+      "n_independent_methods": 3,
+      "diversified_3rd_method": true,
+      "worst_agreed_digits": 0.30102999566398114,
+      "symbolic_closed_form": "sqrt(pi)/2",
+      "checks": [
+        {
+          "method": "NUMERIC-AP(mpmath)",
+          "value": "0.886226925452758",
+          "digit_floor": 30,
+          "agrees_with_claimed": false,
+          "digits": 0.3010299956639812
+        },
+        {
+          "method": "NUMERIC-DP(scipy)",
+          "value": "0.886226925452758",
+          "digit_floor": 12,
+          "agrees_with_claimed": false,
+          "digits": 0.30102999566398114
+        },
+        {
+          "method": "SYMBOLIC(integrate)",
+          "value": "0.886226925452758",
+          "digit_floor": 30,
+          "agrees_with_claimed": false,
+          "digits": 0.3010299956639812
+        }
+      ],
+      "methods": [
+        "NUMERIC-AP(mpmath)",
+        "NUMERIC-DP(scipy)",
+        "SYMBOLIC(integrate)"
+      ],
+      "note": "REJECTED: at least one independent method disagrees with `claimed`."
+    },
+    "5": {
+      "mode": "IDENTITY-PROVE",
+      "verdict": "REJECTED",
+      "label": "numeric disagreement (not an identity on this domain)",
+      "lhs": "Abs(x)",
+      "rhs": "x",
+      "domain": [
+        -3,
+        3
+      ],
+      "points_tested": 20,
+      "points_skipped": 0,
+      "worst_agreed_digits": -0.3010299956639812,
+      "symbolic_simplify_zero": false,
+      "series_zero": true,
+      "disagreements": [
+        {
+          "point": [
+            -0.4559246975582827
+          ],
+          "lhs": "0.455924697558",
+          "rhs": "-0.455924697558",
+          "agreed_digits": -0.3010299956639812
+        },
+        {
+          "point": [
+            -0.7561657999868325
+          ],
+          "lhs": "0.756165799987",
+          "rhs": "-0.756165799987",
+          "agreed_digits": -0.3010299956639812
+        },
+        {
+          "point": [
+            -1.2263958149813259
+          ],
+          "lhs": "1.22639581498",
+          "rhs": "-1.22639581498",
+          "agreed_digits": -0.3010299956639812
+        },
+        {
+          "point": [
+            -1.1958836481435087
+          ],
+          "lhs": "1.19588364814",
+          "rhs": "-1.19588364814",
+          "agreed_digits": -0.3010299956639812
+        },
+        {
+          "point": [
+            -1.398064830114965
+          ],
+          "lhs": "1.39806483011",
+          "rhs": "-1.39806483011",
+          "agreed_digits": -0.3010299956639812
+        }
+      ],
+      "methods": [
+        "SYMBOLIC(simplify)",
+        "NUMERIC-AP(mpmath@50)",
+        "SERIES(3rd)"
+      ],
+      "note": "REJECTED: methods DISAGREE at >=1 sampled point \u2014 not an identity here."
+    },
+    "5_restricted_pos": {
+      "mode": "IDENTITY-PROVE",
+      "verdict": "CERTIFIED",
+      "label": "verified to 30 digits at 20 pts + series->0 (3rd method)",
+      "lhs": "Abs(x)",
+      "rhs": "x",
+      "domain": [
+        "1/10",
+        3
+      ],
+      "points_tested": 20,
+      "points_skipped": 0,
+      "worst_agreed_digits": null,
+      "symbolic_simplify_zero": false,
+      "series_zero": true,
+      "disagreements": [],
+      "methods": [
+        "SYMBOLIC(simplify)",
+        "NUMERIC-AP(mpmath@50)",
+        "SERIES(3rd)"
+      ],
+      "note": "CERTIFIED by independent agreement; 'proven' label used ONLY on an unconditional symbolic collapse (still not kernel-grade)."
+    }
+  }
+}

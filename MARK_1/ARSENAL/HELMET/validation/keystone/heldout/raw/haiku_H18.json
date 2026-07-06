@@ -1,0 +1,1 @@
+{"kappa":0.0,"domains":["HUMANITIES_LAW_POLICY","SOCIAL_SCI"],"task_type":"decide","triviality":"oneliner","stakes":"high","proxy_only_scorer":true,"groundable":false,"known_vs_open":"n/a","reasoning":"Culture fit ranking is a normative judgment with no computable verifier; the only scorer is an AI proxy (gameable, not exact)."}

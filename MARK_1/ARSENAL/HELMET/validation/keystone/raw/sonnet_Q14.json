@@ -1,0 +1,11 @@
+{
+  "kappa": 1.0,
+  "domains": ["NAT_SCI"],
+  "task_type": "explain",
+  "triviality": "oneliner",
+  "stakes": "low",
+  "proxy_only_scorer": false,
+  "groundable": true,
+  "known_vs_open": "known",
+  "reasoning": "The speed of light in vacuum is an exact defined constant (299,792,458 m/s by SI definition since 1983), making it a settled fact with a single authoritative source and an exact non-gameable verifier."
+}

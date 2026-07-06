@@ -1,0 +1,5 @@
+This is a VERIFIABLE question — I can compute it directly.
+
+The square root of 169 is exactly 13. Verified: 13 squared equals 169.
+
+FINAL ANSWER: 13

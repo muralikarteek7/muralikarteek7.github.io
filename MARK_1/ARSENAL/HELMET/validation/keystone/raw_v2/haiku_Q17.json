@@ -1,0 +1,1 @@
+{"kappa":0.0,"domains":["CS_ENG","QUANT_PSYCH"],"task_type":"measure","triviality":"oneliner","stakes":"low","proxy_only_scorer":true,"groundable":true,"known_vs_open":"open","reasoning":"MMLU is a gameable proxy for overall capability; no computable verifier exists beyond the benchmark score itself."}

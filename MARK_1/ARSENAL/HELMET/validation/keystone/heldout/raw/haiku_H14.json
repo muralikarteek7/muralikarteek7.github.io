@@ -1,0 +1,1 @@
+{"kappa":0.0,"domains":["MATH_TCS"],"task_type":"explain","triviality":"oneliner","stakes":"low","proxy_only_scorer":false,"groundable":true,"known_vs_open":"known","reasoning":"Settled mathematical definition retrievable from authoritative game theory sources; no computable verifier needed, only source lookup."}

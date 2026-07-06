@@ -1,0 +1,11 @@
+{
+  "problem": "Drawing on the intersecting lenses of constitutional history, urban geography, political economy, comparative federalism, and linguistic anthropology, and convening whatever interdisciplinary expertise is warranted, determine: what is the capital city of Australia?",
+  "domains": ["HUMANITIES_LAW_POLICY"],
+  "task_type": "explain",
+  "kappa": 0.0,
+  "known_vs_open": "n/a",
+  "has_data": false,
+  "stakes": "low",
+  "triviality": "oneliner",
+  "proxy_only_scorer": false
+}

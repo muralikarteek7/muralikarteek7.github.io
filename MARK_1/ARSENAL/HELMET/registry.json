@@ -1,0 +1,142 @@
+{
+  "registry_version": "0.1.0",
+  "doc": "HELMET / University-Mode department registry. Each department maps a problem-class to a WEAPON (kappa>0 build/verify) or an ARMOR method-cluster (kappa=0 judgment) or MIXED (routes internally). The Provost convenes departments; the Dean integrates. This registry is data; provost.py is the routing logic; orchestrator is the runnable lifecycle. NOTHING here makes the model smarter — it makes it organized: the right specialist, grounded, peer-reviewed, honest.",
+  "lifecycle_stages": ["INTAKE_FREEZE", "LITERATURE", "DESIGN", "EXECUTE", "PEER_REVIEW", "REVISE", "DELIVER"],
+  "scale_tiers": {
+    "DESK": "one-line / factual / trivial -> ONE specialist answers directly; NO full lifecycle, NO committee. The anti-theater floor.",
+    "STANDARD": "one department, abbreviated lifecycle (intake->execute->peer-review->deliver). Single-discipline, bounded.",
+    "FULL": "one department, full 7-stage lifecycle incl. literature + design + revise. Stakes/novelty warrant it.",
+    "CROSS": "two or more departments + the Dean integrates. Genuinely multi-disciplinary."
+  },
+  "departments": [
+    {
+      "key": "MATH_TCS",
+      "name": "Mathematics & Theoretical CS",
+      "covers": "construct or PROVE a CHECKABLE object: extremal combinatorics, packing/coding records, SAT/CP witnesses, exact optimization; AND formal proofs of theorems/lemmas (kernel-checked)",
+      "track": "weapon",
+      "kappa": 1.0,
+      "draws": "CONSTRUCT: Frontier Construction Engine (Expanding_Frontiers/cap_set/frontier_engine.py, capset_verify.py; SAT/CP; exact solvers). PROVE: PROOFSMITH (Expanding_Frontiers/weapons/proofsmith/proofsmith_router.py, proof_gate.py) -- Lean 4 kernel + #print axioms 4-check gate; z3 SMT decidable-slice fallback.",
+      "ceiling": "verifies/reproduces/extends reliably; invents the load-bearing NEW idea rarely. Reproduction != discovery; never claims to solve an open problem OR prove an open conjecture. Kernel-checked != correct English theorem (autoformalization is kappa<1 -> cross-model review)."
+    },
+    {
+      "key": "STATS",
+      "name": "Statistics & Methodology (core facility, cross-cuts all) — incl. clinical trials & biostatistics",
+      "covers": "reproduce a statistic, multiverse/robustness, power, meta-analysis, causal-from-observational; AND clinical-trial / biostat forensics: GRIM/GRIMMER on trial means, allocation-ratio & percentage consistency, Carlisle baseline-anomaly screen, Kaplan-Meier + Cox PH survival reproduction, meta-analysis with publication-bias (Egger/trim-and-fill)",
+      "track": "mixed",
+      "kappa": 0.6,
+      "draws": "reproduction/verifier armor + shared methods of SOCIUS & PSYMETRIX; clinical-trial slice = TRIALGUARD (Expanding_Frontiers/weapons/trialguard/trialguard_router.py; forensics_trial_verify.py = Carlisle + exact GRIM/allocation/percentage + E-value; survival_verify.py; meta_trial_verify.py)",
+      "ceiling": "raises trustworthiness (reproducibility/robustness/consistency), does NOT manufacture clinical truth or efficacy. INCONSISTENCY/ANOMALY != FRAUD (the strictest rail; clinical domain — patients & reputations)."
+    },
+    {
+      "key": "QUANT_PSYCH",
+      "name": "Quantitative Psychology",
+      "covers": "psychometrics, measurement, reliability/dimensionality, statistical FORENSICS (GRIM/GRIMMER/SPRITE)",
+      "track": "mixed",
+      "kappa": 0.8,
+      "draws": "PSYMETRIX (Expanding_Frontiers/weapons/psymetrix/psymetrix_router.py)",
+      "ceiling": "certifies CONSISTENCY/FIT/ROBUSTNESS, never TRUTH. INCONSISTENCY != FRAUD."
+    },
+    {
+      "key": "SOCIAL_SCI",
+      "name": "Social Sciences",
+      "covers": "empirical social research WITH data: reproducibility, multiverse, measurement-invariance, causal, sampling",
+      "track": "mixed",
+      "kappa": 0.5,
+      "draws": "SOCIUS (Expanding_Frontiers/weapons/socius/socius_router.py)",
+      "ceiling": "raises trustworthiness; findings that DIE under stress are the primary valuable output."
+    },
+    {
+      "key": "CS_ENG",
+      "name": "Computer Science & Engineering",
+      "covers": "algorithms, systems, code with executable tests; synthesis, superoptimization, algorithm discovery (sorting nets, matmul schemes)",
+      "track": "mixed",
+      "kappa": 0.9,
+      "draws": "CODEFORGE (Expanding_Frontiers/weapons/codeforge/codeforge_router.py): SYNTH-VERIFY (hidden+property+differential), SUPEROPT (differential correctness + measured benchmark), ALGO-DISCOVER (sorting net via 0/1 principle, matmul scheme via non-commutative symbolic identity); kappa=0 design/taste -> armor. ML-EVAL RIGOR FACILITY = REPRO-ML/BENCHWATCH (Expanding_Frontiers/weapons/reproml/reproml_router.py): R-REPRO (recompute a benchmark metric from open artifacts), R-CONTAM (13-gram + char-Jaccard + token-set train/test overlap -> a contamination RATE + method label), R-SIGNIF (paired McNemar + bootstrap CI + Bonferroni); 'X is best/SOTA/capable' -> kappa=0 armor. Can also harden the box's own hidden-test hygiene.",
+      "ceiling": "ships only frozen-verifier-passed objects; reproduction != discovery; SYNTH/SUPEROPT are as strong as their held-out battery; un-runnable design/taste claims drop to armor. Capability A/B (iterate vs best-of-k) = +0pp honest negative. REPRO-ML: a benchmark number is NEVER a capability (no SOTA crown -> armor); contamination is a measured rate, not 'clean' (NO_OVERLAP_DETECTED != clean -- misses rephrased leakage); significance carries CIs + multiple-comparison correction."
+    },
+    {
+      "key": "CS_ENG_SECURITY",
+      "name": "Security (CS_ENG facility) -- AUTHORIZATION-GATED, defensive-first",
+      "covers": "AUTHORIZED and DEFENSIVE security only: CTF challenges, scoped penetration tests (with explicit authorization), security research in a sandbox, patch/detection validation, education. REFUSES by default: destructive techniques, DoS, mass targeting, supply-chain compromise, malware-for-deployment, detection-evasion for malicious use, any unauthorized/real-world target.",
+      "track": "weapon",
+      "kappa": 1.0,
+      "draws": "REDCELL (Expanding_Frontiers/weapons/redcell/redcell_router.py) -- ONLY after auth_gate.py ALLOWs (fail-closed: explicit authorization_context + target_is_owned_or_sandbox==True + recognized mode required; out-of-scope category -> REFUSE regardless of context): CTF-SOLVE (flag validates, flag_verify.py), PATCH-VALIDATE (differential PoC fires-unpatched/fails-patched in a sandbox, patch_verify.py), VULN-REPRO (sandboxed repro -> detection signature). The authorization gate is the most-audited component.",
+      "ceiling": "authorized/defensive scope only; the gate FAILS CLOSED (a fail-open is a blocking defect); the gate enforces the DECLARED policy, not free-text intent (sits behind the model's own policy reading); the sandbox is subprocess+rlimit, not OS-level isolation (trusted build code only); kappa=1 is on the artifact's outcome, not a general 'secure' claim (absence of one PoC != absence of vulnerabilities); outputs are fixes + detections, NEVER deployable weapons."
+    },
+    {
+      "key": "CS_ENG_OR",
+      "name": "Operations Research / Optimization (CS_ENG facility)",
+      "covers": "discrete/combinatorial optimization: scheduling, routing, packing, assignment, allocation; feasibility/infeasibility decisions",
+      "track": "weapon",
+      "kappa": 1.0,
+      "draws": "OPTIMA (Expanding_Frontiers/weapons/optima/optima_router.py; CP-SAT solve + the independent 4-part certificate gate optima_gate.py)",
+      "ceiling": "certifies optimality FOR THE FORMAL MODEL (gap=0 / matching dual / a different exact method), never the real-world problem (modeling is kappa<1, cross-model-reviewed); timeouts are bounds-with-gap, never optimal; reproduces published optima labeled as reproductions; never a record without an audited strictly-better certificate."
+    },
+    {
+      "key": "NAT_SCI",
+      "name": "Natural Sciences (physics/chem/bio)",
+      "covers": "quantitative natural-science questions; simulation; closed-form/tight-bound computation",
+      "track": "mixed",
+      "kappa": 0.5,
+      "draws": "SYMBOLICA (../ARSENAL/weapons/symbolica/symbolica_router.py; exact closed-form/identity/sum/special-value via the >=2-independent-method agreement gate symbolica_gate.py: sympy vs mpmath vs scipy/series) + ENCLOSE (../ARSENAL/weapons/enclose/; the CONTAINMENT-PROOF sibling, BUILT 2026-06-20: guaranteed enclosure [a,b] via interval arithmetic with outward rounding + Krawczyk existence-uniqueness gate enclose_gate.py; verified definite integrals incl. non-elementary erf, root existence/uniqueness, recomputable constants -- on mpmath.iv, no new dep) + executable simulation + literature grounding; wet-lab claims are kappa=0 -> design + abstain",
+      "ceiling": "SYMBOLICA certifies exact-BY-AGREEMENT (not kernel-proven; PROOFSMITH is the kernel weapon): a single CAS answer is a CLAIM, >=2 independent families must agree; 'proven' (symbolic collapse) != 'verified to D digits'; no closed form -> numeric WITH error bars. ENCLOSE is sharper where it applies: a CONTAINMENT PROOF (interval inclusion property), categorically stronger than agreement (which can share a blind spot) -- but its rectangle-rule quadrature is LOOSE (ABSTAINs on a true claim tighter than its enclosure) and the residual is mpmath.iv's own rounding correctness. what a result MEANS physically is kappa=0 -> abstain. Empirical wet-lab truth is NOT machine-checkable here -> abstain."
+    },
+    {
+      "key": "ECON_FIN",
+      "name": "Economics & Finance",
+      "covers": "markets, pricing, policy evaluation",
+      "track": "mixed",
+      "kappa": 0.4,
+      "draws": "ECONOMETRIX (Expanding_Frontiers/weapons/econometrix/econometrix_router.py): E-BACKTEST (walk-forward OOS + Deflated Sharpe Ratio + net costs + a frozen look-ahead detector; built on Artifacts/trading/real_world.py), E-CAUSAL (DiD pre-trends / McCrary density / weak-IV first-stage F / Oster delta / E-value), E-ROBUST + E-REPRO (reused from SOCIUS); forecast/normative/market-direction -> kappa=0 armor. The FIRST guarded-kappa weapon: an in-sample fit is NEVER the verdict (C14 Sharpe-overfit trap -> a backtest score is gameable, NOT a real verifier).",
+      "ceiling": "an in-sample/backtest score is gameable -> it does not raise kappa to 1; edge that flips out-of-sample -> ABSTAIN; a backtest is not a forecast (the unseen future is kappa=0); causal claims carry their testable diagnostics + a sensitivity number, never a bare 'X caused Y'."
+    },
+    {
+      "key": "HUMANITIES_LAW_POLICY",
+      "name": "Humanities, Law & Policy",
+      "covers": "interpretive / normative / strategic / synthesis questions (kappa=0)",
+      "track": "armor",
+      "kappa": 0.0,
+      "draws": "ARMOR ONLY: literature grounding + argument-mapping + cross-model panel + scored ABSTENTION",
+      "ceiling": "no exact verifier exists -> deliver grounded analysis + calibrated bounds + honest abstention; NEVER fabricated certainty."
+    }
+  ],
+  "dean": {
+    "key": "DEAN",
+    "name": "Dean of Cross-Disciplinary Integration",
+    "role": "convened ONLY for CROSS-scale problems (>=2 departments). Integrates per-department deliverables into ONE honest artifact; reconciles conflicts; carries forward every abstention and limit unflattened."
+  },
+  "integrity_office": {
+    "role": "the box honesty rules, institutionalized & non-waivable",
+    "core_facility": "FACTHARNESS (Expanding_Frontiers/weapons/factharness/factharness_router.py; ground() + firewall()) -- the cross-cutting grounding/fabrication facility EVERY department + the Provost call. kappa=1 F-QUOTE/F-NUMBER (verbatim quote/number present in the fetched source) + kappa=0.7 F-CITE (exact-word author match) + kappa=0 F-ENTAIL (does the source SUPPORT the paraphrase? -> cross-model judge != generator, unsure -> ABSTAIN). The firewall blocks shipping any FABRICATION_FLAG/CONTRADICTED claim; ABSTAIN/GROUNDED_BY_JUDGMENT ship only behind an unverified label. Promoted+hardened from SOCIUS S-GROUND; carries its 3 audit fixes + 3 new audit-caught fixes (U+2212 sign-strip, bib particle, substring context). Ceiling: grounded != true; FABRICATION_FLAG != fraud.",
+    "rules": [
+      "no claim ships without proof (machine check or fetched source)",
+      "independent cross-model peer review (auditor model != generator model) is MANDATORY before any result ships; Fable inactive -> Sonnet/Haiku, never Opus-audits-Opus",
+      "reproduction is labeled reproduction (source+date); never claim to solve an open problem",
+      "kappa=0 work ends in grounded analysis + honest ABSTENTION, never fabricated breakthrough",
+      "a weak/gameable proxy (LLM-judge, in-sample score, human rating) does NOT raise kappa -> decline it as a verifier",
+      "INCONSISTENCY != FRAUD (forensics reports arithmetic, never accuses)"
+    ]
+  },
+  "registrar": {
+    "role": "budget & scaling; the anti-theater control",
+    "rules": [
+      "match institute size to the problem: cheapest path that clears the bar",
+      "a one-line/factual question gets ONE specialist (DESK), never a faculty",
+      "convening a department that adds no verified value over one specialist is a DEFECT (theater) the registrar fails",
+      "log value x open-defects / cost; permission to stop when the done-criterion is met"
+    ]
+  },
+  "equipment_kit": {
+    "doc": "The KIT/EQUIPMENT layer (added 2026-06-20, EVOLUTION_LOG C48): cross-cutting facilities worn OVER armor+weapons+helmet. Each passed the kappa-gate on its own (the knight's-kit metaphor is motivation, not architecture). Built gate-first via multi-agent workflow, cross-model audited (which FOUND real false-accepts the builders missed), fixed + regression-tested, independently re-verified ALL-CLOSED. CAPABILITY EXPANSION, not a >=10% promotion; ratchet stays OPEN at v3. Home: Expanding_Frontiers/weapons/<dir>/.",
+    "pieces": [
+      {"name": "CRUCIBLE", "dir": "crucible", "layer": "meta-weapon", "owner": "Integrity Office", "kappa": "1 on a KILL, confidence-only on no-kill", "draws": "adversarial verifier-probing of the box's OWN kappa>0 gates (false-accept/false-reject/metamorphic/silent-pass) vs an INDEPENDENT oracle", "ceiling": "proves a gate BROKEN (a re-runnable exhibit); only RAISES CONFIDENCE a gate is sound, never proves soundness (Dijkstra, machine-enforced)"},
+      {"name": "GLOVES", "dir": "gloves", "layer": "effector", "owner": "cross-cutting actuation", "kappa": "1 on token/expiry/scope/reversibility-lookup; <1 on the risk-classification boundary", "draws": "pre-call actuation gate: reversibility x blast-radius tiers, param-bound/expiry/single-use tokens, dry-run->commit, fail-closed, self-downgrade BLOCK (CVE-2025-53773)", "ceiling": "bounds catastrophe, not wisdom; tamper-resistance + dry-run attestation are pure-software-LIMITED (ARMOR-class without an external signing authority); irreversible/financial => a human"},
+      {"name": "COMPOSEAUTH_G3", "dir": "composeauth", "layer": "effector", "owner": "Registrar (actuation budget)", "kappa": "1 (exact accumulation + threshold compare)", "draws": "running blast-radius budget over GLOVES' action stream; escalates/halts on a committed threshold; catches the salami/composition attack", "ceiling": "budgets only ENUMERATED classes (reports UNCOVERED otherwise); thresholds+weights are human-owned POLICY, not derived truth"},
+      {"name": "SHIELD", "dir": "shield", "layer": "armor-hardening", "owner": "Integrity Office + Registrar", "kappa": "1 on 4 structural rails; 0 on injection-intent (abstain)", "draws": "provenance-labeling + the verifier TAINT-RAIL (hardens every weapon) + non-self-elevatable tool-cape + certificate anti-replay; injection-intent -> abstain-or-escalate", "ceiling": "NOT a weapon, NOT a complete injection defense (NIST ~80% at 25 tries); defense-in-depth"},
+      {"name": "TRIAGE", "dir": "triage", "layer": "armor", "owner": "Integrity Office", "kappa": "mixed (kappa=1 rows delegate to FACTHARNESS/CRUCIBLE; kappa<1 rows route to the panel)", "draws": "failure-class -> detector -> mitigation table run pre-ship; report carries uncovered_novel_classes, never emits 'safe'", "ceiling": "covers KNOWN classes only; absence of a flag is not a safety proof"},
+      {"name": "VAULT", "dir": "vault", "layer": "infra (memory)", "owner": "cross-cutting", "kappa": "1 on the write-gate (a valid verification record exists)", "draws": "verifier-gated cross-session memory: only machine-verified/fetched results are FACTS (with method+provenance+TTL); unverified -> LEAD, never returned as a fact", "ceiling": "flags staleness (TTL), does not model temporal change; in-memory copy-on-write closes the lead-promotion bypass"},
+      {"name": "SHOES_ROUTING", "dir": "shoes_routing", "layer": "efficiency/armor", "owner": "Registrar", "kappa": "<1 verdicts on machine-computed signals", "draws": "FOOTING (calibration/uncertainty -> route-up/ground/abstain) + ROUTE-PLANNER (cheapest rung + per-track stuck-detector)", "ceiling": "reduces cost + confident-wrongness, eliminates neither; never emits 'verified'/'safe'; cross-paraphrase comparison is kappa<1"},
+      {"name": "BOOTSTRAP", "dir": "bootstrap", "layer": "arsenal-growth", "owner": "Registrar/Dean", "kappa": "1 on the validation step (run a candidate verifier on known-answer cases)", "draws": "given a NEW problem class, find + VALIDATE-by-run an exact verifier -> register a kappa>0 department, else return kappa=0 ARMOR-only", "ceiling": "only a RUN promotes a domain (LLM 'I found a verifier' is 0%-trusted); toy-passing != frontier-correct"}
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+{"kappa":1.0,"domains":["MATH_TCS"],"task_type":"compute","triviality":"oneliner","stakes":"low","proxy_only_scorer":false,"groundable":false,"known_vs_open":"known","reasoning":"The determinant of a finite integer matrix is exactly computable by running Gaussian elimination or cofactor expansion, and the result can be independently verified by a second computation."}

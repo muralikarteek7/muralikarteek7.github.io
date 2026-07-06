@@ -1,0 +1,1 @@
+{"kappa":1.0,"domains":["MATH_TCS"],"task_type":"construct","triviality":"oneliner","stakes":"low","proxy_only_scorer":false,"groundable":true,"known_vs_open":"known","reasoning":"Determinant computation is fully computable via exact algorithms (cofactor expansion, row reduction); verification is independent machine-checkable arithmetic with no ambiguity."}

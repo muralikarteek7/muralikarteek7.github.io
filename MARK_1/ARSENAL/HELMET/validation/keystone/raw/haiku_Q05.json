@@ -1,0 +1,11 @@
+{
+  "kappa": 1.0,
+  "domains": ["CS_ENG_OR"],
+  "task_type": "construct",
+  "triviality": "oneliner",
+  "stakes": "low",
+  "proxy_only_scorer": false,
+  "groundable": false,
+  "known_vs_open": "known",
+  "reasoning": "Exact deterministic algorithm (Hungarian) produces verifiable optimal assignment with certificate of optimality; no gameable proxies."
+}

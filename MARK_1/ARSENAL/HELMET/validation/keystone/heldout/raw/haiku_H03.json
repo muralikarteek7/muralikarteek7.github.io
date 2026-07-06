@@ -1,0 +1,1 @@
+{"kappa":1.0,"domains":["MATH_TCS"],"task_type":"prove","triviality":"oneliner","stakes":"low","proxy_only_scorer":false,"groundable":false,"known_vs_open":"known","reasoning":"Elementary proof with computable verification: proof-checking is deductive, not lookup-based; kappa=1 gates to a WEAPON despite low stakes and canonical status."}

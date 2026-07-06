@@ -1,0 +1,195 @@
+{
+  "demo": "superopt",
+  "task": "count_pairs_with_sum (O(n^2) -> O(n))",
+  "objects": [
+    {
+      "name": "fast_On_candidate",
+      "verdict": {
+        "sub_weapon": "SUPEROPT",
+        "kappa": 1,
+        "entry": "count_pairs_with_sum",
+        "correct": true,
+        "correctness_mismatches": [],
+        "diff_inputs_checked": 128,
+        "ceiling_note": "SUPEROPT gates CORRECTNESS by differential test (kappa=1 relative to the tested input set) and REPORTS a measured speedup (noisy, machine-dependent, NOT a certificate). A win requires correctness AND speedup>=margin. It does not prove correctness outside the tested inputs.",
+        "ref_seconds_best": 1.1332150409999997,
+        "cand_seconds_best": 0.0025501659999997983,
+        "speedup_measured": 444.36912773524915,
+        "margin_required": 2.0,
+        "win": true,
+        "verdict": "SUPEROPT_WIN",
+        "note": "correct (differential over 128 inputs) AND 444.37x faster (measured, noisy)"
+      }
+    },
+    {
+      "name": "wrong_impostor",
+      "verdict": {
+        "sub_weapon": "SUPEROPT",
+        "kappa": 1,
+        "entry": "count_pairs_with_sum",
+        "correct": false,
+        "correctness_mismatches": [
+          {
+            "args": [
+              [
+                0,
+                0
+              ],
+              0
+            ],
+            "ref": 1,
+            "cand": 3
+          },
+          {
+            "args": [
+              [
+                3,
+                3,
+                3
+              ],
+              6
+            ],
+            "ref": 3,
+            "cand": 6
+          },
+          {
+            "args": [
+              [
+                -2,
+                2,
+                -2,
+                2,
+                0
+              ],
+              0
+            ],
+            "ref": 4,
+            "cand": 5
+          },
+          {
+            "args": [
+              [
+                1,
+                1,
+                1,
+                1
+              ],
+              2
+            ],
+            "ref": 6,
+            "cand": 10
+          },
+          {
+            "args": [
+              [
+                10,
+                10,
+                10,
+                10,
+                10,
+                10
+              ],
+              20
+            ],
+            "ref": 15,
+            "cand": 21
+          }
+        ],
+        "diff_inputs_checked": 128,
+        "ceiling_note": "SUPEROPT gates CORRECTNESS by differential test (kappa=1 relative to the tested input set) and REPORTS a measured speedup (noisy, machine-dependent, NOT a certificate). A win requires correctness AND speedup>=margin. It does not prove correctness outside the tested inputs.",
+        "verdict": "REJECTED_INCORRECT",
+        "win": false,
+        "note": "candidate disagrees with the reference -> NOT a valid superoptimization (faster-but-wrong is not a win)"
+      }
+    },
+    {
+      "name": "gaming_hardcodes_benchmark",
+      "precomputed_bench_answer": 44677,
+      "verdict": {
+        "sub_weapon": "SUPEROPT",
+        "kappa": 1,
+        "entry": "count_pairs_with_sum",
+        "correct": false,
+        "correctness_mismatches": [
+          {
+            "args": [
+              [
+                0,
+                0
+              ],
+              0
+            ],
+            "ref": 1,
+            "cand": 0
+          },
+          {
+            "args": [
+              [
+                3,
+                3,
+                3
+              ],
+              6
+            ],
+            "ref": 3,
+            "cand": 0
+          },
+          {
+            "args": [
+              [
+                -2,
+                2,
+                -2,
+                2,
+                0
+              ],
+              0
+            ],
+            "ref": 4,
+            "cand": 0
+          },
+          {
+            "args": [
+              [
+                1,
+                1,
+                1,
+                1
+              ],
+              2
+            ],
+            "ref": 6,
+            "cand": 0
+          },
+          {
+            "args": [
+              [
+                10,
+                10,
+                10,
+                10,
+                10,
+                10
+              ],
+              20
+            ],
+            "ref": 15,
+            "cand": 0
+          }
+        ],
+        "diff_inputs_checked": 128,
+        "ceiling_note": "SUPEROPT gates CORRECTNESS by differential test (kappa=1 relative to the tested input set) and REPORTS a measured speedup (noisy, machine-dependent, NOT a certificate). A win requires correctness AND speedup>=margin. It does not prove correctness outside the tested inputs.",
+        "verdict": "REJECTED_INCORRECT",
+        "win": false,
+        "note": "candidate disagrees with the reference -> NOT a valid superoptimization (faster-but-wrong is not a win)"
+      }
+    }
+  ],
+  "prediction_checks": {
+    "U1_fast_correct": true,
+    "U2_fast_win_ge_2x": true,
+    "U3_wrong_rejected": true,
+    "U4_gaming_rejected": true
+  },
+  "all_predictions_hit": true
+}

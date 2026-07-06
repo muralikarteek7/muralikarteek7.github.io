@@ -1,0 +1,11 @@
+{
+  "kappa": 1.0,
+  "domains": ["CS_ENG_OR"],
+  "task_type": "construct",
+  "triviality": "bounded",
+  "stakes": "low",
+  "proxy_only_scorer": false,
+  "groundable": false,
+  "known_vs_open": "known",
+  "reasoning": "The Hungarian algorithm produces an optimal assignment with a dual certificate (complementary slackness conditions) that can be verified exactly in O(n^2), making this a kappa=1 problem with a non-gameable exact verifier."
+}

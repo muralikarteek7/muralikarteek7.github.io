@@ -1,0 +1,11 @@
+{
+  "kappa": 0.0,
+  "domains": ["MATH_TCS"],
+  "task_type": "prove",
+  "triviality": "oneliner",
+  "stakes": "high",
+  "proxy_only_scorer": false,
+  "groundable": false,
+  "known_vs_open": "open",
+  "reasoning": "P vs NP is an unsolved open problem with no authoritative settler and no cheap exact verifier; no proof or disproof exists, so kappa=0.0 and groundable=false — the correct action is to abstain on the verdict."
+}

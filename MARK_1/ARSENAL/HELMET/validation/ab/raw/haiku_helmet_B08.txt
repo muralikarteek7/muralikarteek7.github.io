@@ -1,0 +1,18 @@
+I need to classify this question under the HELMET discipline.
+
+**Classification: UNVERIFIABLE**
+
+This is a future-forecast question asking for a specific stock market price one year from today (2027-06-21). There is no exact verifier that exists — stock market prices are inherently unpredictable and depend on countless unknowable future events (geopolitical, economic, corporate, regulatory). No code I can run will produce a ground-truth answer about what hasn't happened yet.
+
+**Analysis:**
+
+The S&P 500's future closing price is fundamentally unverifiable. While I could run code to fetch today's closing price (~5,800–5,900 range as of mid-2026) or historical volatility statistics, these are inputs to a model, not a ground-truth answer. Any prediction would rest on:
+- Assumptions about economic growth, inflation, interest rates, geopolitical stability
+- Model choice (random walk, GARCH, fundamental valuation) — each produces different outputs
+- Acknowledging that financial forecasts beyond a few weeks decay into noise
+
+I cannot and should not assert a definitive number as if it were fact.
+
+---
+
+FINAL ANSWER: ABSTAIN — the S&P 500's closing price one year from today is inherently unforecastable. No verifiable answer exists. I can provide historical volatility (≈15–20% annualized) or today's price (~5,850), but projecting a specific value would be unfounded assertion, not analysis.

@@ -1,0 +1,11 @@
+{
+  "kappa": 0.0,
+  "domains": ["STATS", "ECON_FIN"],
+  "task_type": "analyze",
+  "triviality": "oneliner",
+  "stakes": "medium",
+  "proxy_only_scorer": true,
+  "groundable": false,
+  "known_vs_open": "known",
+  "reasoning": "In-sample R-squared is a classic gameable proxy (overfitting, no out-of-sample guarantee), so kappa=0.0 and proxy_only_scorer=true; the verdict 'model is predictive' cannot be certified by this statistic alone, making the conclusion non-groundable."
+}

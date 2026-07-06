@@ -1,0 +1,3 @@
+The computation is definitive. A mean of exactly 3.46 requires a sum of 44.98 across 13 ratings. Since the sum must be an integer (the sum of 13 integers is always an integer), but 44.98 is not an integer, it is mathematically impossible to achieve this mean from any set of 13 integer ratings.
+
+FINAL ANSWER: NO

@@ -1,0 +1,1 @@
+{"kappa":0.0,"domains":["STATS"],"task_type":"explain","triviality":"oneliner","stakes":"low","proxy_only_scorer":false,"groundable":true,"known_vs_open":"known","reasoning":"Definition of p-value is a settled statistical concept with authoritative sources; no computable verifier exists, only lookup against standard references."}

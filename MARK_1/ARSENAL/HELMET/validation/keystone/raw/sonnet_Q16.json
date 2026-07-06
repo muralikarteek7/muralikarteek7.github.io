@@ -1,0 +1,11 @@
+{
+  "kappa": 0.0,
+  "domains": ["HUMANITIES_LAW_POLICY"],
+  "task_type": "decide",
+  "triviality": "bounded",
+  "stakes": "low",
+  "proxy_only_scorer": true,
+  "groundable": false,
+  "known_vs_open": "n/a",
+  "reasoning": "The only available verifier is an LLM-judge or human aesthetic rating — a paradigmatic gameable proxy — so kappa=0.0 and proxy_only_scorer=true; 'best-written' has no authoritative settler, so groundable=false."
+}

@@ -1,0 +1,387 @@
+[
+ {
+  "id": "Q01",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "CS_ENG"
+   ],
+   "task_type": "construct|prove",
+   "triviality": "bounded",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": false,
+   "known_vs_open": "known",
+   "reasoning": "Sorting network correctness is verifiable by exhaustive 0-1 principle test (256 binary strings) \u2014 exact, deterministic, non-gameable check; routes to optimization weapon."
+  }
+ },
+ {
+  "id": "Q02",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "MATH_TCS"
+   ],
+   "task_type": "construct",
+   "triviality": "bounded",
+   "stakes": "medium",
+   "proxy_only_scorer": false,
+   "groundable": false,
+   "known_vs_open": "known",
+   "reasoning": "Rigorous interval enclosure of a transcendental integral has an exact, deterministic, non-gameable verifier: interval arithmetic guarantees that the true value lies within computed bounds via provably correct error analysis."
+  }
+ },
+ {
+  "id": "Q03",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "MATH_TCS"
+   ],
+   "task_type": "prove",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": false,
+   "known_vs_open": "known",
+   "reasoning": "Formal proof has an exact, non-gameable verifier (proof kernel); the Gauss summation formula is a closed, computable theorem, not a normative or open problem."
+  }
+ },
+ {
+  "id": "Q04",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "MATH_TCS"
+   ],
+   "task_type": "analyze",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": true,
+   "known_vs_open": "known",
+   "reasoning": "Exact arithmetic verifier: 28 integers from {1..7} cannot sum to non-integer 145.32, so mean 5.19 is impossible\u2014deterministic, non-gameable, fully checkable."
+  }
+ },
+ {
+  "id": "Q05",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "CS_ENG_OR"
+   ],
+   "task_type": "construct",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": false,
+   "known_vs_open": "known",
+   "reasoning": "Exact deterministic algorithm (Hungarian) produces verifiable optimal assignment with certificate of optimality; no gameable proxies."
+  }
+ },
+ {
+  "id": "Q06",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "MATH_TCS"
+   ],
+   "task_type": "prove",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": true,
+   "known_vs_open": "known",
+   "reasoning": "Exact verifier exists: high-precision numerical verification or rigorous proof (Euler's Basel problem, settled 1734) both non-gameable and definitive."
+  }
+ },
+ {
+  "id": "Q07",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "HUMANITIES_LAW_POLICY"
+   ],
+   "task_type": "decide",
+   "triviality": "substantial",
+   "stakes": "high",
+   "proxy_only_scorer": true,
+   "groundable": false,
+   "known_vs_open": "open",
+   "reasoning": "No authoritative settler exists for normative ethics; the request for a definitive yes/no on weapon permissibility is inherently non-verifiable and invokes only gameable proxies (authority, LLM judgment)."
+  }
+ },
+ {
+  "id": "Q08",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "HUMANITIES_LAW_POLICY"
+   ],
+   "task_type": "decide",
+   "triviality": "oneliner",
+   "stakes": "high",
+   "proxy_only_scorer": false,
+   "groundable": false,
+   "known_vs_open": "open",
+   "reasoning": "Libertarian free will is an open metaphysical problem with no authoritative settler\u2014no deterministic proof, empirical test, or formal system can resolve it; abstain on the verdict per \u03ba-gate doctrine."
+  }
+ },
+ {
+  "id": "Q09",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "ECON_FIN"
+   ],
+   "task_type": "forecast",
+   "triviality": "oneliner",
+   "stakes": "medium",
+   "proxy_only_scorer": true,
+   "groundable": false,
+   "known_vs_open": "open",
+   "reasoning": "Future market price is contingent and unverifiable in advance; only gameable proxies (backtest Sharpe, historical models) available; no exact non-gameable verifier exists."
+  }
+ },
+ {
+  "id": "Q10",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "MATH_TCS"
+   ],
+   "task_type": "decide",
+   "triviality": "bounded",
+   "stakes": "high",
+   "proxy_only_scorer": false,
+   "groundable": false,
+   "known_vs_open": "open",
+   "reasoning": "P vs NP is an unsolved millennium-prize problem with no known verifier, settled-fact source, or computational resolution; no exact kappa applies to open conjectures."
+  }
+ },
+ {
+  "id": "Q11",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "HUMANITIES_LAW_POLICY"
+   ],
+   "task_type": "explain",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": true,
+   "known_vs_open": "known",
+   "reasoning": "Settled factual claim with single authoritative source (Australian government); verifiable via standard reference materials; no gameable proxy."
+  }
+ },
+ {
+  "id": "Q12",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "HUMANITIES_LAW_POLICY"
+   ],
+   "task_type": "explain",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": true,
+   "known_vs_open": "known",
+   "reasoning": "Settled historical fact with single authoritative source; deterministic, verifiable date in historical record; no ambiguity or proxy gamification."
+  }
+ },
+ {
+  "id": "Q13",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "STATS"
+   ],
+   "task_type": "explain",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": true,
+   "known_vs_open": "known",
+   "reasoning": "A p-value has a precise, settled definition in frequentist statistics; the task asks for explanation (not computation), so it routes to grounding against authoritative statistical texts, kappa=0 but groundable=true."
+  }
+ },
+ {
+  "id": "Q14",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "NAT_SCI"
+   ],
+   "task_type": "explain",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": true,
+   "known_vs_open": "known",
+   "reasoning": "Speed of light in vacuum is an exact, defined constant (299,792,458 m/s by SI definition since 2019) with a single authoritative verifier and zero ambiguity."
+  }
+ },
+ {
+  "id": "Q15",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "ECON_FIN"
+   ],
+   "task_type": "design",
+   "triviality": "bounded",
+   "stakes": "medium",
+   "proxy_only_scorer": true,
+   "groundable": false,
+   "known_vs_open": "open",
+   "reasoning": "In-sample backtested Sharpe is a gameable proxy (overfitting/selection bias); despite numerical exactness, no valid non-gameable verifier exists for future performance, rendering this an open forecasting problem with only a circular proxy scorer."
+  }
+ },
+ {
+  "id": "Q16",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "HUMANITIES_LAW_POLICY"
+   ],
+   "task_type": "decide",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": true,
+   "groundable": false,
+   "known_vs_open": "open",
+   "reasoning": "No exact non-gameable verifier exists; 'best-written' is a normative aesthetic judgment with only proxy raters (LLM/human) available, making it unsettled and subjective."
+  }
+ },
+ {
+  "id": "Q17",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "CS_ENG"
+   ],
+   "task_type": "measure",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": true,
+   "groundable": false,
+   "known_vs_open": "n/a",
+   "reasoning": "MMLU rank is exact but gameable; conflating benchmark score with 'overall capability' is a proxy trap with no authoritative verifier of capability independent of the metric itself."
+  }
+ },
+ {
+  "id": "Q18",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "STATS"
+   ],
+   "task_type": "analyze",
+   "triviality": "oneliner",
+   "stakes": "medium",
+   "proxy_only_scorer": true,
+   "groundable": false,
+   "known_vs_open": "open",
+   "reasoning": "In-sample R\u00b2 is a gameable proxy; no cheap non-gameable verifier for predictiveness exists without out-of-sample validation\u2014the verdict is empirically open."
+  }
+ },
+ {
+  "id": "Q19",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "HUMANITIES_LAW_POLICY"
+   ],
+   "task_type": "explain",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": true,
+   "known_vs_open": "known",
+   "reasoning": "Settled factual constant (Brazil's legal capital is Bras\u00edlia per the Constitution); single authoritative source; exact, non-gameable verifier."
+  }
+ },
+ {
+  "id": "Q20",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "MATH_TCS"
+   ],
+   "task_type": "construct",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": false,
+   "known_vs_open": "known",
+   "reasoning": "Exact arithmetic with deterministic verification; 17 \u00d7 23 = 391 is machine-verifiable with zero ambiguity."
+  }
+ },
+ {
+  "id": "Q21",
+  "descriptor": {
+   "kappa": 0.5,
+   "domains": [
+    "QUANT_PSYCH",
+    "SOCIAL_SCI"
+   ],
+   "task_type": "analyze",
+   "triviality": "substantial",
+   "stakes": "medium",
+   "proxy_only_scorer": true,
+   "groundable": false,
+   "known_vs_open": "open",
+   "reasoning": "Replication check is exact (kappa=1 axis: run test on open data), but policy justification is normative (kappa=0 axis: requires judgment on significance thresholds and stakeholder values); proxy-only scorer unavoidable for the 'justified' verdict; blended task yields kappa=0.5."
+  }
+ },
+ {
+  "id": "Q22",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "STATS"
+   ],
+   "task_type": "analyze",
+   "triviality": "bounded",
+   "stakes": "high",
+   "proxy_only_scorer": false,
+   "groundable": false,
+   "known_vs_open": "known",
+   "reasoning": "Exact arithmetic verification of effect size reproduction and anomaly detection in baseline tables via deterministic statistical tests; no gameable proxy, fully checkable against reported data."
+  }
+ },
+ {
+  "id": "Q23",
+  "descriptor": {
+   "kappa": 0.0,
+   "domains": [
+    "MATH_TCS"
+   ],
+   "task_type": "prove",
+   "triviality": "oneliner",
+   "stakes": "high",
+   "proxy_only_scorer": false,
+   "groundable": false,
+   "known_vs_open": "open",
+   "reasoning": "Open conjecture in number theory with no known proof, disproof, or authoritative source; no exact verifier exists; abstain on verdict per doctrine."
+  }
+ },
+ {
+  "id": "Q24",
+  "descriptor": {
+   "kappa": 1.0,
+   "domains": [
+    "MATH_TCS"
+   ],
+   "task_type": "prove",
+   "triviality": "oneliner",
+   "stakes": "low",
+   "proxy_only_scorer": false,
+   "groundable": true,
+   "known_vs_open": "known",
+   "reasoning": "Exact primality verification via deterministic arithmetic; 2^31-1 is a Mersenne number with a definite yes/no answer checkable by trial division, Miller-Rabin, or table lookup; kappa=1.0 routes to execute-and-run."
+  }
+ }
+]

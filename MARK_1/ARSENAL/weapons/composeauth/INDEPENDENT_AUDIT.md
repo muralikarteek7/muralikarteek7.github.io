@@ -1,0 +1,19 @@
+# composeauth — INDEPENDENT AUDIT (Sonnet ≠ generator, 2026-06-21)
+
+**Verdict: SOUND_WITH_CAVEATS** · selftest runs clean: True · discriminates (rejects bad input): True
+
+**Command run:** `cd /Users/varunesh/Desktop/AI_agents/MARK_1/ARSENAL/weapons/composeauth && python3 selftest_all.py`
+
+## Summary
+COMPOSEAUTH (G3) is a stateful blast-radius budget accumulator that gates sequences of GLOVES-allowed actions by tracking per-class running totals against committed thresholds, escalating or halting when a composition crosses them. The selftest suite exits 0 cleanly with 4 sub-suites covering all 5 non-waivable gate-of-gate tests plus 4 audit-regression tests (negative blast, string-to undercount, NaN/Inf, corrupt store). The tool genuinely discriminates: it correctly rejects SALAMI attacks, delete bursts, negative blast amounts, NaN/Inf, corrupt/tampered stores, and malformed entries — all fail closed to HALT, verified by independent adversarial probes. Three bugs were found: (1) api.call_external double-counts in the external_calls budget (conservative/fails-safe but incorrect), (2) _num() uses banker's rounding so fractional blast amounts can be under-counted by up to 0.5 units, and (3) SCORE_HALT=2000 cannot fire as an independent first alarm before per-class STEP_UP thresholds are exceeded, a structural constraint the README does not make explicit. None of the bugs create a safety hole (they all fail in the conservative direction or are minor precision issues), but the api.call_external double-count and the SCORE_HALT reachability gap are real correctness defects worth fixing.
+
+## Defects found (3)
+1. api.call_external double-counts external_calls: it is listed both in EFFECT_EXTRACTOR with {"external_calls": 1} AND in ALSO_EXTERNAL_CALL. The ALSO_EXTERNAL_CALL loop is designed to add a +1 external_calls tick to tools whose primary class is *not* external_calls (e.g. billing.charge). For api.call_external, whose primary class IS external_calls, the loop double-counts it — every api.call_external entry adds 2 to the counter instead of 1. The HALT threshold is >1000, so 501 actual calls budget as 1002 and HALT earlier than intended. The failure direction is conservative (not a safety gap) but the per-call budget figure is incorrect.
+2. float banker's rounding in _num(): int(round(f)) uses Python's round-half-to-even, so _num(2.5)=2 and _num(3.5)=4. A $2.50 charge budgets as $2, not $3. This is a sub-unit undercounting of fractional blast amounts. Not a security hole at typical threshold magnitudes (step_up=$100, halt=$1000) but is an accuracy defect.
+3. SCORE_HALT=2000 cannot fire as an independent first-trigger before individual class STEP_UP thresholds are exceeded. Maximum blast score achievable while ALL classes stay at or below their step_up thresholds is 600 (financial=100, data_mutation=50, broadcast=10, destruction=5, external_calls=100 -> score=100+100+50+250+100=600), well below SCORE_HALT=2000. The score only fires as a cross-class late catch between STEP_UP and per-class HALT levels. The README does not make this structural limitation explicit — a reader could believe the score provides an early independent alarm, which it does not.
+
+*This is the independent-verification-on-disk that promotes the tool from 'self-tested only' (Tier 2) to 'independently audited' — SOUND_WITH_CAVEATS: real, discriminating, with the robustness defects above to fix.*
+## FIXES APPLIED 2026-06-21 (with regression tests, selftest green)
+- **FIXED** api.call_external double-counting external_calls (was 2 → now 1): the ALSO_EXTERNAL_CALL tick now skips tools that already declare external_calls in their spec. Regression test added.
+- **FIXED** banker's-rounding under-billing (_num(2.5) was 2 → now 3): blast rounding is CEIL (fail-safe for a budget); negative blasts still raise (checked on the float before ceil). Regression test added.
+- OPEN: SCORE_HALT first-trigger reachability (design note).

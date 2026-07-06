@@ -1,0 +1,11 @@
+{
+  "kappa": 1.0,
+  "domains": ["CS_ENG"],
+  "task_type": "construct|prove",
+  "triviality": "bounded",
+  "stakes": "low",
+  "proxy_only_scorer": false,
+  "groundable": false,
+  "known_vs_open": "known",
+  "reasoning": "Sorting network correctness is verifiable by exhaustive 0-1 principle test (256 binary strings) — exact, deterministic, non-gameable check; routes to optimization weapon."
+}

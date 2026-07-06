@@ -1,0 +1,11 @@
+{
+  "kappa": 1.0,
+  "domains": ["MATH_TCS"],
+  "task_type": "construct",
+  "triviality": "bounded",
+  "stakes": "medium",
+  "proxy_only_scorer": false,
+  "groundable": false,
+  "known_vs_open": "known",
+  "reasoning": "Rigorous interval enclosure of a transcendental integral has an exact, deterministic, non-gameable verifier: interval arithmetic guarantees that the true value lies within computed bounds via provably correct error analysis."
+}

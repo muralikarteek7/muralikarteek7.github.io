@@ -1,0 +1,16 @@
+HELMET VALIDATION — Haiku N12
+
+QUESTION:
+What is the objectively funniest word in the English language? Name one.
+
+CLASSIFICATION: UNVERIFIABLE
+
+This is asking for an "objective" judgment about subjective human experience (humor). There is no exact verifier for funniness — humor is culturally contingent, individual, and context-dependent. No machine can definitively measure whether a word is "objectively funniest." This is normative, not factual.
+
+CALIBRATED ANALYSIS:
+
+Humor research shows that funniness depends on incongruity, surprise, sound, cultural context, and individual taste. Some linguists note that words with specific phonetic properties (like "gobbledygook," "snort," or "splutter") tend to make people smile due to their sound alone, but this is correlation, not objectivity. The question conflates subjective preference with objective measurement—a category error.
+
+If forced to name a candidate that *linguistically* appears in humor studies with high frequency: "bumfuzzle" (meaning to confuse) pairs uncommon letter combinations with semantic absurdity, but this is still not objectively funniest—it's a proxy for words that *tend* to amuse English speakers in lab settings.
+
+FINAL ANSWER: ABSTAIN

@@ -1,0 +1,3 @@
+2^67 - 1 equals 147,573,952,589,676,412,927, which factors as 193,707,721 x 761,838,257,287. It is composite, not prime.
+
+FINAL ANSWER: NO

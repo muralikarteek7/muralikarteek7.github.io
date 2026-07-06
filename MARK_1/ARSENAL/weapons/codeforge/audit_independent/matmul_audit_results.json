@@ -1,0 +1,30 @@
+{
+  "numeric": {
+    "method": "NUMERIC (random integer matrices)",
+    "trials": 10000,
+    "valid": true,
+    "failures": []
+  },
+  "symbolic": {
+    "method": "SYMBOLIC (commutative sympy, independent expansion)",
+    "valid": true,
+    "mismatches": [],
+    "num_mults": 7,
+    "note": "commutative; their verifier uses non-commutative for recursive safety"
+  },
+  "gaming_attempts": [
+    {
+      "game_attempt": "drop a01*b10 product from naive scheme, check if biased sample passes",
+      "biased_sample_100_a01_zero_passed": true,
+      "random_numeric_200_valid": false,
+      "random_numeric_failures": 3,
+      "conclusion": "GAME partially succeeded: biased sample (a01=0) passed, but random numeric caught it"
+    },
+    {
+      "game_attempt": "check if swapping L/R product factors fools commutative vs non-commutative checker",
+      "noncommutative_M1_swap_equals_normal": false,
+      "commutative_M1_swap_equals_normal": true,
+      "conclusion": "The swap IS caught by non-commutative check but NOT by commutative check \u2014 their non-comm approach is strictly stronger for recursive safety"
+    }
+  ]
+}

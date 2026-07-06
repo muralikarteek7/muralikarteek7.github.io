@@ -1,0 +1,177 @@
+{
+  "parts": {
+    "i_blind_planted_false_accept": {
+      "weapon": "codeforge-sortnet-PLANTED",
+      "mode": "FALSE-ACCEPT",
+      "obj": {
+        "network": [
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "n": 4
+      },
+      "gate_verdict": "ACCEPT",
+      "oracle_verdict": "WRONG",
+      "transform": null,
+      "obj2": null,
+      "gate_verdict2": null,
+      "oracle_controls_passed": true,
+      "kappa": 1,
+      "note": "gate ACCEPTs an object the independent oracle proves WRONG (re-runnable contradiction; oracle sane on controls).",
+      "KILL": true
+    },
+    "ii_planted_metamorphic": {
+      "weapon": "GRIM-metamorphic-PLANTED",
+      "mode": "METAMORPHIC",
+      "obj": {
+        "mean_str": "0.2",
+        "n": 4,
+        "items": 1
+      },
+      "gate_verdict": "ACCEPT",
+      "oracle_verdict": null,
+      "transform": "items-split (Neff-invariant)",
+      "obj2": {
+        "mean_str": "0.2",
+        "n": 2,
+        "items": 2
+      },
+      "gate_verdict2": "REJECT",
+      "oracle_controls_passed": null,
+      "kappa": 1,
+      "note": "meaning-preserving transform 'items-split (Neff-invariant)' FLIPS the verdict (ACCEPT->REJECT); a sound gate must be invariant under it. (transform confirmed meaning-preserving by the independent oracle.)",
+      "KILL": true
+    },
+    "iii_iv_real_arsenal_sweep": {
+      "codeforge_sortnet": {
+        "false_accept": {
+          "weapon": "codeforge-sortnet-REAL",
+          "probes_run": 4006,
+          "transform_classes": [
+            "structured-mutation:false-accept"
+          ],
+          "oracle_coverage": "full",
+          "residual_risk": "no false-accept found in 4006 probes; absence of a counterexample is EVIDENCE, not proof, the gate rejects all wrong objects (Dijkstra: testing shows presence, not absence).",
+          "note": "",
+          "KILL": false,
+          "label": "SURVIVED to budget"
+        },
+        "false_reject": {
+          "weapon": "codeforge-sortnet-REAL",
+          "probes_run": 4006,
+          "transform_classes": [
+            "structured-mutation:false-reject"
+          ],
+          "oracle_coverage": "full",
+          "residual_risk": "no false-reject found in 4006 probes; evidence, not proof.",
+          "note": "",
+          "KILL": false,
+          "label": "SURVIVED to budget"
+        },
+        "metamorphic": {
+          "weapon": "codeforge-sortnet-REAL",
+          "probes_run": 1000,
+          "transform_classes": [
+            "identity (determinism check)"
+          ],
+          "oracle_coverage": "oracle-validated transforms",
+          "residual_risk": "verdict stable under 1 transform classes across 1000 probes; evidence of invariance, not a proof.",
+          "note": "",
+          "KILL": false,
+          "label": "SURVIVED to budget"
+        },
+        "abstain_crash": {
+          "weapon": "codeforge-sortnet-REAL",
+          "probes_run": 6,
+          "transform_classes": [
+            "malformed-input-robustness"
+          ],
+          "oracle_coverage": "none (robustness needs no oracle)",
+          "residual_risk": "6 malformed inputs all abstained/rejected/guarded safely; evidence of robustness, not a proof.",
+          "note": "",
+          "KILL": false,
+          "label": "SURVIVED to budget"
+        }
+      },
+      "psymetrix_grim": {
+        "false_accept": {
+          "weapon": "psymetrix-grim-REAL",
+          "probes_run": 5000,
+          "transform_classes": [
+            "structured-mutation:false-accept"
+          ],
+          "oracle_coverage": "full",
+          "residual_risk": "no false-accept found in 5000 probes; absence of a counterexample is EVIDENCE, not proof, the gate rejects all wrong objects (Dijkstra: testing shows presence, not absence). CANDIDATE-STREAM REGIME PROBED: decimal precision D in {0,1,2,3}; items in {1,2,3}; n in [3,40); achievable + deliberately-off means. NOT probed: D>=4, items>=4, n>=40, non-decimal means. (a bug active only OUTSIDE this regime would not be caught here).",
+          "note": "",
+          "KILL": false,
+          "label": "SURVIVED to budget"
+        },
+        "false_reject": {
+          "weapon": "psymetrix-grim-REAL",
+          "probes_run": 5000,
+          "transform_classes": [
+            "structured-mutation:false-reject"
+          ],
+          "oracle_coverage": "full",
+          "residual_risk": "no false-reject found in 5000 probes; evidence, not proof. CANDIDATE-STREAM REGIME PROBED: decimal precision D in {0,1,2,3}; items in {1,2,3}; n in [3,40); achievable + deliberately-off means. NOT probed: D>=4, items>=4, n>=40, non-decimal means..",
+          "note": "",
+          "KILL": false,
+          "label": "SURVIVED to budget"
+        },
+        "metamorphic": {
+          "weapon": "psymetrix-grim-REAL",
+          "probes_run": 25953,
+          "transform_classes": [
+            "items-split (Neff-invariant)"
+          ],
+          "oracle_coverage": "oracle-validated transforms",
+          "residual_risk": "verdict stable under 1 transform classes across 25953 probes; evidence of invariance, not a proof.",
+          "note": "",
+          "KILL": false,
+          "label": "SURVIVED to budget"
+        },
+        "abstain_crash": {
+          "weapon": "psymetrix-grim-REAL",
+          "probes_run": 4,
+          "transform_classes": [
+            "malformed-input-robustness"
+          ],
+          "oracle_coverage": "none (robustness needs no oracle)",
+          "residual_risk": "4 malformed inputs all abstained/rejected/guarded safely; evidence of robustness, not a proof.",
+          "note": "",
+          "KILL": false,
+          "label": "SURVIVED to budget"
+        }
+      }
+    }
+  },
+  "summary": {
+    "i_planted_false_accept_caught": true,
+    "ii_planted_metamorphic_caught": true,
+    "iii_iv_real_gates_clean_sweep": true,
+    "real_gate_kills": [],
+    "predictions_met": true
+  }
+}

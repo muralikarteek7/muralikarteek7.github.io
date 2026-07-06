@@ -1,0 +1,3 @@
+Tokyo is the capital of Japan.
+
+FINAL ANSWER: Tokyo
